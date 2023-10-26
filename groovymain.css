@@ -1,9 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins&display=swap');
+*{
+  box-sizing:border-box;
+}
+
 body {
-  background-color: beige;
+  background-color: lightgoldenrodyellow;
+  color:black;
+  font-family: 'Poppins', sans-serif;
 }
-h1 {
+
+.col {
+  margin:auto;
+  width:80%;
+}
+
+div {
   color: black;
 }
-p {
+
+header>div {
+  font-family: 'Nanum Gothic', sans-serif;
+  padding:10px;
+  background-color: #eee;
+}
+
+header nav {
+  background-color: goldenrod;
   color: black;
+  margin:0;
+}
+
+header nav a {
+  background-color: goldenrod;
+  color: gray;
+  display: block;
+  padding: 0 10px;
+  font-size: 1em;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  background-color: darkolivegreen;
+  color: white;
+}
+
+header nav ul{
+  background-color: goldenrod;
+  color: black;
+  list-style: none;
+  padding:0;
+  margin:0;
+  position: relative;
+  float:left;
+}
+
+header nav ul li {
+  display: inline-block;
+  background-color: goldenrod;
+}
+
+.heading, .subheading {
+  text-align: center;
+}
+
+.heading {
+  font-size:2em;
+  color: black;
+  padding: 10px;
+}
+
+.logo {
+  float:left;
+}
+
+.main {
+  background-color: lightgoldenrodyellow;
+  clear:both;
+}
+
+.main article {
+  padding:10px;
+  font-size:1.2em;
+  border-bottom: 1px solid black;
+  overflow: hidden;
+}
+
+.main article p:first-letter{
+  font-size:1.5em;
+  color:darkolivegreen;
+}
+
+.main img {
+  float: left;
+  padding: 10px;
+  max-width:96%;
+  border:10px white solid;
+  margin:2%;
+}
+
+.menu {
+  display: none;
+}
+
+.nav {
+  clear:both;
+}
+
+.subheading {
+  font-size:1.5em;
+  color:#333333;
+  padding:0.5px;
+  margin-bottom:30px;
+}
+
+.footer {
+  background-color: darkgoldenrod;
+  color: black;
+  text-align: center;
+  height:200px;
+  padding:20px;
+}
+
+.footer:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+.footer>div {
+  float:left;
+  border:1px solid #eee;
+}
+
+.first, .third {
+  width: 25%;
+}
+.second {
+  width:50%;
+  text-align:left;
+
+}
+
+@media all and (max-width:740px) {
+  header nav ul {
+    width: 100%;
+  }
+
+  header nav ul li {
+    display: block;
+    text-align: center;
+  }
+
+  .heading {
+    padding: 0px;
+  }
+
+  .main img {
+    width:100%;
+  }
+
+  .menu {
+    width:100%;
+    background-color: goldenrod;
+    color: gray;
+    display: block;
+    text-align: center;
+  }
+
+  .subheading {
+    margin-bottom:0px;
+  }
+
+  .first, .third {
+    width: 100%;
+  }
+  .second {
+    width:100%;
+    text-align:center;
+  
+  }
+
+  .second li {
+    list-style:none;
+  }
+
+  .col {
+    margin:auto;
+    width:100%;
+  }
+
 }
