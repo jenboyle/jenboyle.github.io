@@ -26,7 +26,13 @@
     </nav>
   </header>
   <div class="main">
-    <article><p></p></article>
+    <script type="text/javascript" src="transcriptions.js"></script>
+    <input type="text" id="transcriptionchoice" onkeyup="goTranscriptionChoice()" placeholder="Search for song...">
+    <ul id="songList">
+      <li><a href="javascript:loadTab('alleyez');">All Eyez On Me - 2Pac</a></li>
+      <li><a href="javascript:loadTab('gangsta');">Gangsta Luv - Snoop Dogg ft The Dream</a></li>
+    </ul>
+    <article id="transtab"><p></p></article>
     <article><p></p></article>
   </div>
   <footer class="footer">
