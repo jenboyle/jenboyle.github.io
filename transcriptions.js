@@ -13,6 +13,7 @@ function loadTab(songname) {
 function drawTab(jsonData) {
   console.log(jsonData);
   const article = document.getElementById("transtab");
+  article.innerHTML = '';
   const psong = document.createElement("p");
   psong.textContent = jsonData.song + ' - ' + jsonData.by;
   article.appendChild(psong);
@@ -25,20 +26,43 @@ function drawTab(jsonData) {
   ptune.textContent = 'Tuning: ' + jsonData.tuning;
   article.appendChild(ptune);
 
-  const pgstring = document.createElement("p");
-  pgstring.textContent = '|' + jsonData.gintro1 + jsonData.gintro2 + '|' + jsonData.gintro3;
-  article.appendChild(pgstring);
+  if(jsonData.hasOwnProperty('eintro1')) {
+    //make strings
+    const pgstring = document.createElement("p");
+    const pdstring = document.createElement("p");
+    const pastring = document.createElement("p");
+    const pestring = document.createElement("p");
 
-  const pdstring = document.createElement("p");
-  pdstring.textContent = '|' + jsonData.dintro1 + jsonData.dintro2 + '|' + jsonData.dintro3;
-  article.appendChild(pdstring);
+    let gnotes = '|' + jsonData.gintro1;
+    let dnotes = '|' + jsonData.dintro1;
+    let anotes = '|' + jsonData.aintro1;
+    let enotes = '|' + jsonData.eintro1;
+    
+    if(jsonData.hasOwnProperty('eintro2')){
+      gnotes += jsonData.gintro2 + '|';
+      dnotes += jsonData.dintro2 + '|';
+      anotes += jsonData.aintro2 + '|';
+      enotes += jsonData.eintro2 + '|';
+    }
 
-  const pastring = document.createElement("p");
-  pastring.textContent = '|' + jsonData.aintro1 + jsonData.aintro2 + '|' + jsonData.aintro3;
-  article.appendChild(pastring);
+    if(jsonData.hasOwnProperty('eintro3')){
+      gnotes += jsonData.gintro3;
+      dnotes += jsonData.dintro3;
+      anotes += jsonData.aintro3;
+      enotes += jsonData.eintro3;
+    }
 
-  const pestring = document.createElement("p");
-  pestring.textContent = '|' + jsonData.eintro1 + jsonData.eintro2 + '|' + jsonData.eintro3;
-  article.appendChild(pestring);
+    pgstring.textContent = gnotes;
+    pdstring.textContent = dnotes;
+    pastring.textContent = anotes;
+    pestring.textContent = enotes;
+
+    article.appendChild(pgstring);
+    article.appendChild(pdstring);
+    article.appendChild(pastring);
+    article.appendChild(pestring);
+  
+    
+  }
 
 }
