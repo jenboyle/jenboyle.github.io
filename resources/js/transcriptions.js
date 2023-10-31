@@ -5,7 +5,7 @@ function goTranscriptionChoice() {
 
 function loadTab(songname) {
   console.log(songname);
-  fetch('https://groovyjen.com/' + songname + '.json')
+  fetch('https://groovyjen.com/resources/json/' + songname + '.json')
     .then((response) => response.json())
     .then((json) => drawTab(json));
 }
