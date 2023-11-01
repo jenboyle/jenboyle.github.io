@@ -27,42 +27,87 @@ function drawTab(jsonData) {
   article.appendChild(ptune);
 
   if(jsonData.hasOwnProperty('eintro1')) {
-    //make strings
-    const pgstring = document.createElement("p");
-    const pdstring = document.createElement("p");
-    const pastring = document.createElement("p");
-    const pestring = document.createElement("p");
+    const table = document.createElement("table");
 
-    let gnotes = '|' + jsonData.gintro1;
-    let dnotes = '|' + jsonData.dintro1;
-    let anotes = '|' + jsonData.aintro1;
-    let enotes = '|' + jsonData.eintro1;
+    var trg = document.createElement("tr");
+    var trd = document.createElement("tr");
+    var tra = document.createElement("tr");
+    var tre = document.createElement("tr");
+
+    drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.gintro1, jsonData.dintro1, jsonData.aintro1, jsonData.eintro1);
     
     if(jsonData.hasOwnProperty('eintro2')){
-      gnotes += jsonData.gintro2 + '|';
-      dnotes += jsonData.dintro2 + '|';
-      anotes += jsonData.aintro2 + '|';
-      enotes += jsonData.eintro2 + '|';
+      drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData.gintro2, jsonData.dintro2, jsonData.aintro2, jsonData.eintro2);
     }
 
+    
     if(jsonData.hasOwnProperty('eintro3')){
-      gnotes += jsonData.gintro3;
-      dnotes += jsonData.dintro3;
-      anotes += jsonData.aintro3;
-      enotes += jsonData.eintro3;
+      drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.gintro3, jsonData.dintro3, jsonData.aintro3, jsonData.eintro3);
     }
 
-    pgstring.textContent = gnotes;
-    pdstring.textContent = dnotes;
-    pastring.textContent = anotes;
-    pestring.textContent = enotes;
+    table.appendChild(trg);
+    table.appendChild(trd);
+    table.appendChild(tra);
+    table.appendChild(tre);
 
-    article.appendChild(pgstring);
-    article.appendChild(pdstring);
-    article.appendChild(pastring);
-    article.appendChild(pestring);
+    if(jsonData.hasOwnProperty('everse1')) {
+      trg = document.createElement("tr");
+      trd = document.createElement("tr");
+      tra = document.createElement("tr");
+      tre = document.createElement("tr");
+
+      drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.gverse1, jsonData.dverse1, jsonData.averse1, jsonData.everse1);
+    
+      if(jsonData.hasOwnProperty('everse2')){
+        drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData.gverse2, jsonData.dverse2, jsonData.averse2, jsonData.everse2);
+      }
+
+      
+      if(jsonData.hasOwnProperty('everse3')){
+        drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.gverse3, jsonData.dverse3, jsonData.averse3, jsonData.everse3);
+      }
+
+      table.appendChild(trg);
+      table.appendChild(trd);
+      table.appendChild(tra);
+      table.appendChild(tre);
+
+
+    }
+
+
+    article.appendChild(table);
   
     
   }
+
+}
+
+function drawRowsAndCols (start, end, trg, trd, tra, tre, gnotes, dnotes, anotes, enotes) {
+    var startline = '';
+    var endline = '';
+
+    if(start) {
+      startline = '|';
+    }
+    if(end) {
+      endline = '|';
+    }
+
+    var tdg = document.createElement("td");
+    tdg.textContent = startline + gnotes + endline;
+    trg.appendChild(tdg);
+    
+    var tdd = document.createElement("td");
+    tdd.textContent = startline + dnotes + endline;
+    trd.appendChild(tdd);
+  
+    var tda = document.createElement("td");
+    tda.textContent = startline + anotes + endline;
+    tra.appendChild(tda);
+  
+    var tde = document.createElement("td");
+    tde.textContent = startline + enotes + endline;
+    tre.appendChild(tde);
 
 }

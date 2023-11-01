@@ -90,6 +90,11 @@ header nav ul li {
   overflow: hidden;
 }
 
+.iframedivmid {
+  text-align: center;
+  width: 100%;
+}
+
 .main article p:first-letter{
   font-size:1.5em;
   color:darkolivegreen;
@@ -165,7 +170,7 @@ header nav ul li {
 }
 
 #transcriptionchoice {
-  background-image: url('resources/images/icons/search.png');
+  background-image: url('../images/icons/search.png');
   background-position: 10px 12px;
   background-repeat: no-repeat;
   width: 100%;
