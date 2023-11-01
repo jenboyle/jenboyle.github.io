@@ -21,18 +21,20 @@ div {
 header>div {
   font-family: 'Nanum Gothic', sans-serif;
   padding:10px;
-  background-color: #eee;
+  background-color: #b9d2c0;
+  
 }
 
 header nav {
   background-color: goldenrod;
   color: black;
   margin:0;
+  
 }
 
 header nav a {
   background-color: goldenrod;
-  color: gray;
+  color: rgb(39, 35, 35);
   display: block;
   padding: 0 10px;
   font-size: 1em;
@@ -45,6 +47,8 @@ header nav a:hover {
   color: white;
 }
 
+
+
 header nav ul{
   background-color: goldenrod;
   color: black;
@@ -52,7 +56,7 @@ header nav ul{
   padding:0;
   margin:0;
   position: relative;
-  float:left;
+  float:none;
 }
 
 header nav ul li {
@@ -91,6 +95,15 @@ header nav ul li {
   color:darkolivegreen;
 }
 
+.main article p a {
+  text-decoration: none;
+  color: darkslateblue;
+}
+
+.main article p a:hover{
+  background-color: whitesmoke;
+}
+
 .main img {
   float: left;
   padding: 10px;
@@ -105,6 +118,15 @@ header nav ul li {
 
 .nav {
   clear:both;
+}
+
+.second p a {
+  text-decoration: none;
+  color: darkslateblue;
+}
+
+.second p a:hover{
+  background-color: whitesmoke;
 }
 
 .subheading {
