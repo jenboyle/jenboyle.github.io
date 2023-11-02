@@ -43,23 +43,72 @@ function drawTab(jsonData) {
   ptune.textContent = 'Tuning: ' + jsonData.tuning;
   article.appendChild(ptune);
 
-  if(jsonData.hasOwnProperty('e1')) {
-    var table = document.createElement("table");
 
+
+  testfortab('e1', jsonData, article);
+
+  if(jsonData.hasOwnProperty('textb4verse1')) {
+    var sometext = document.createElement("div");
+    sometext.textContent = jsonData.textb4verse1;
+    article.appendChild(sometext);
+  }
+
+  testfortab('e5', jsonData, article);
+
+  if(jsonData.hasOwnProperty('textb4verse2')) {
+    sometext = document.createElement("div");
+    sometext.textContent = jsonData.textb4verse2;
+    article.appendChild(sometext);
+  }
+
+  testfortab('e9', jsonData, article);
+
+}
+
+function testfortab(jsonfield, jsonData, article) {
+
+  if(jsonData.hasOwnProperty(jsonfield)) {
+
+    var table = document.createElement("table");
     var trg = document.createElement("tr");
     var trd = document.createElement("tr");
     var tra = document.createElement("tr");
     var tre = document.createElement("tr");
 
-    drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.g1, jsonData.d1, jsonData.a1, jsonData.e1);
+    var enumber = jsonfield.substring(1,jsonfield.length);
+    var gkey = 'g' + enumber;
+    var dkey = 'd' + enumber;
+    var akey = 'a' + enumber;
+    var ekey = 'e' + enumber;
+
+    var gkey2 = 'g' + (Number(enumber) + 1);
+    var dkey2 = 'd' + (Number(enumber) + 1);
+    var akey2 = 'a' + (Number(enumber) + 1);
+    var ekey2 = 'e' + (Number(enumber) + 1);
+
+    var gkey3 = 'g' + (Number(enumber) + 2);
+    var dkey3 = 'd' + (Number(enumber) + 2);
+    var akey3 = 'a' + (Number(enumber) + 2);
+    var ekey3 = 'e' + (Number(enumber) + 2);
+
+    var gkey4 = 'g' + (Number(enumber) + 3);
+    var dkey4 = 'd' + (Number(enumber) + 3);
+    var akey4 = 'a' + (Number(enumber) + 3);
+    var ekey4 = 'e' + (Number(enumber) + 3);
+
+    drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData[gkey], jsonData[dkey], jsonData[akey], jsonData[ekey]);
     
-    if(jsonData.hasOwnProperty('e2')){
-      drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData.g2, jsonData.d2, jsonData.a2, jsonData.e2);
+    if(jsonData.hasOwnProperty(ekey2)){
+      drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData[gkey2], jsonData[dkey2], jsonData[akey2], jsonData[ekey2]);
     }
 
     
-    if(jsonData.hasOwnProperty('e3')){
-      drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.g3, jsonData.d3, jsonData.a3, jsonData.e3);
+    if(jsonData.hasOwnProperty(ekey3)){
+      drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData[gkey3], jsonData[dkey3], jsonData[akey3], jsonData[ekey3]);
+    }
+
+    if(jsonData.hasOwnProperty(ekey4)){
+      drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData[gkey4], jsonData[dkey4], jsonData[akey4], jsonData[ekey4]);
     }
 
     table.appendChild(trg);
@@ -68,89 +117,6 @@ function drawTab(jsonData) {
     table.appendChild(tre);
     article.appendChild(table);
 
-    if(jsonData.hasOwnProperty('e5')) {
-      
-
-      if(jsonData.hasOwnProperty('textb4verse1')) {
-        var sometext = document.createElement("div");
-        sometext.textContent = jsonData.textb4verse1;
-        article.appendChild(sometext);
-      }
-
-      table = document.createElement("table");
-      trg = document.createElement("tr");
-      trd = document.createElement("tr");
-      tra = document.createElement("tr");
-      tre = document.createElement("tr");
-
-      drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.g5, jsonData.d5, jsonData.a5, jsonData.e5);
-    
-      if(jsonData.hasOwnProperty('e6')){
-        drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData.g6, jsonData.d6, jsonData.a6, jsonData.e6);
-      }
-
-      
-      if(jsonData.hasOwnProperty('e7')){
-        drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.g7, jsonData.d7, jsonData.a7, jsonData.e7);
-      }
-
-      if(jsonData.hasOwnProperty('e8')){
-        drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.g8, jsonData.d8, jsonData.a8, jsonData.e8);
-      }
-
-      table.appendChild(trg);
-      table.appendChild(trd);
-      table.appendChild(tra);
-      table.appendChild(tre);
-      article.appendChild(table);
-
-
-      if(jsonData.hasOwnProperty('e9')) {
-        if(jsonData.hasOwnProperty('textb4verse2')) {
-          sometext = document.createElement("div");
-          sometext.textContent = jsonData.textb4verse2;
-          article.appendChild(sometext);
-        }
-
-        table = document.createElement("table");
-        trg = document.createElement("tr");
-        trd = document.createElement("tr");
-        tra = document.createElement("tr");
-        tre = document.createElement("tr");
-
-        drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.g9, jsonData.d9, jsonData.a9, jsonData.e9);
-      
-        if(jsonData.hasOwnProperty('e10')){
-          drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.g10, jsonData.d10, jsonData.a10, jsonData.e10);
-        }
-
-        
-        if(jsonData.hasOwnProperty('e11')){
-          drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.g11, jsonData.d11, jsonData.a11, jsonData.e11);
-        }
-
-        if(jsonData.hasOwnProperty('e12')){
-          drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.g12, jsonData.d12, jsonData.a12, jsonData.e12);
-        }
-
-        table.appendChild(trg);
-        table.appendChild(trd);
-        table.appendChild(tra);
-        table.appendChild(tre);
-        article.appendChild(table);
-
-
-      }
-
-
-    }
-
-
-
-
-    
-  
-    
   }
 
 }
