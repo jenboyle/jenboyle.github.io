@@ -69,10 +69,13 @@ function drawTab(jsonData) {
     article.appendChild(table);
 
     if(jsonData.hasOwnProperty('everse1')) {
-      var sometext = document.createElement("div");
+      
 
-      sometext.textContent = 'Verse:';
-      article.appendChild(sometext);
+      if(jsonData.hasOwnProperty('textb4verse1')) {
+        var sometext = document.createElement("div");
+        sometext.textContent = jsonData.textb4verse1;
+        article.appendChild(sometext);
+      }
 
       table = document.createElement("table");
       trg = document.createElement("tr");
@@ -91,16 +94,61 @@ function drawTab(jsonData) {
         drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.gverse3, jsonData.dverse3, jsonData.averse3, jsonData.everse3);
       }
 
+      if(jsonData.hasOwnProperty('everse4')){
+        drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.gverse4, jsonData.dverse4, jsonData.averse4, jsonData.everse4);
+      }
+
       table.appendChild(trg);
       table.appendChild(trd);
       table.appendChild(tra);
       table.appendChild(tre);
+      article.appendChild(table);
+
+
+      if(jsonData.hasOwnProperty('everse5')) {
+        if(jsonData.hasOwnProperty('textb4verse2')) {
+          sometext = document.createElement("div");
+          sometext.textContent = jsonData.textb4verse2;
+          article.appendChild(sometext);
+        }
+
+        table = document.createElement("table");
+        trg = document.createElement("tr");
+        trd = document.createElement("tr");
+        tra = document.createElement("tr");
+        tre = document.createElement("tr");
+
+        drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.gverse5, jsonData.dverse5, jsonData.averse5, jsonData.everse5);
+      
+        if(jsonData.hasOwnProperty('everse6')){
+          drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData.gverse6, jsonData.dverse6, jsonData.averse6, jsonData.everse6);
+        }
+
+        
+        if(jsonData.hasOwnProperty('everse7')){
+          drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.gverse7, jsonData.dverse7, jsonData.averse7, jsonData.everse7);
+        }
+
+        if(jsonData.hasOwnProperty('everse8')){
+          drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.gverse8, jsonData.dverse8, jsonData.averse8, jsonData.everse8);
+        }
+
+        table.appendChild(trg);
+        table.appendChild(trd);
+        table.appendChild(tra);
+        table.appendChild(tre);
+        article.appendChild(table);
+
+
+      }
 
 
     }
 
 
-    article.appendChild(table);
+
+
+    
   
     
   }
