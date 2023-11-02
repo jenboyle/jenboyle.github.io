@@ -43,7 +43,7 @@ function drawTab(jsonData) {
   ptune.textContent = 'Tuning: ' + jsonData.tuning;
   article.appendChild(ptune);
 
-  if(jsonData.hasOwnProperty('eintro1')) {
+  if(jsonData.hasOwnProperty('e1')) {
     var table = document.createElement("table");
 
     var trg = document.createElement("tr");
@@ -51,15 +51,15 @@ function drawTab(jsonData) {
     var tra = document.createElement("tr");
     var tre = document.createElement("tr");
 
-    drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.gintro1, jsonData.dintro1, jsonData.aintro1, jsonData.eintro1);
+    drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.g1, jsonData.d1, jsonData.a1, jsonData.e1);
     
-    if(jsonData.hasOwnProperty('eintro2')){
-      drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData.gintro2, jsonData.dintro2, jsonData.aintro2, jsonData.eintro2);
+    if(jsonData.hasOwnProperty('e2')){
+      drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData.g2, jsonData.d2, jsonData.a2, jsonData.e2);
     }
 
     
-    if(jsonData.hasOwnProperty('eintro3')){
-      drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.gintro3, jsonData.dintro3, jsonData.aintro3, jsonData.eintro3);
+    if(jsonData.hasOwnProperty('e3')){
+      drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.g3, jsonData.d3, jsonData.a3, jsonData.e3);
     }
 
     table.appendChild(trg);
@@ -68,7 +68,7 @@ function drawTab(jsonData) {
     table.appendChild(tre);
     article.appendChild(table);
 
-    if(jsonData.hasOwnProperty('everse1')) {
+    if(jsonData.hasOwnProperty('e5')) {
       
 
       if(jsonData.hasOwnProperty('textb4verse1')) {
@@ -83,19 +83,19 @@ function drawTab(jsonData) {
       tra = document.createElement("tr");
       tre = document.createElement("tr");
 
-      drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.gverse1, jsonData.dverse1, jsonData.averse1, jsonData.everse1);
+      drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.g5, jsonData.d5, jsonData.a5, jsonData.e5);
     
-      if(jsonData.hasOwnProperty('everse2')){
-        drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData.gverse2, jsonData.dverse2, jsonData.averse2, jsonData.everse2);
+      if(jsonData.hasOwnProperty('e6')){
+        drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData.g6, jsonData.d6, jsonData.a6, jsonData.e6);
       }
 
       
-      if(jsonData.hasOwnProperty('everse3')){
-        drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.gverse3, jsonData.dverse3, jsonData.averse3, jsonData.everse3);
+      if(jsonData.hasOwnProperty('e7')){
+        drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.g7, jsonData.d7, jsonData.a7, jsonData.e7);
       }
 
-      if(jsonData.hasOwnProperty('everse4')){
-        drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.gverse4, jsonData.dverse4, jsonData.averse4, jsonData.everse4);
+      if(jsonData.hasOwnProperty('e8')){
+        drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.g8, jsonData.d8, jsonData.a8, jsonData.e8);
       }
 
       table.appendChild(trg);
@@ -105,7 +105,7 @@ function drawTab(jsonData) {
       article.appendChild(table);
 
 
-      if(jsonData.hasOwnProperty('everse5')) {
+      if(jsonData.hasOwnProperty('e9')) {
         if(jsonData.hasOwnProperty('textb4verse2')) {
           sometext = document.createElement("div");
           sometext.textContent = jsonData.textb4verse2;
@@ -118,19 +118,19 @@ function drawTab(jsonData) {
         tra = document.createElement("tr");
         tre = document.createElement("tr");
 
-        drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.gverse5, jsonData.dverse5, jsonData.averse5, jsonData.everse5);
+        drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.g9, jsonData.d9, jsonData.a9, jsonData.e9);
       
-        if(jsonData.hasOwnProperty('everse6')){
-          drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData.gverse6, jsonData.dverse6, jsonData.averse6, jsonData.everse6);
+        if(jsonData.hasOwnProperty('e10')){
+          drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.g10, jsonData.d10, jsonData.a10, jsonData.e10);
         }
 
         
-        if(jsonData.hasOwnProperty('everse7')){
-          drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.gverse7, jsonData.dverse7, jsonData.averse7, jsonData.everse7);
+        if(jsonData.hasOwnProperty('e11')){
+          drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.g11, jsonData.d11, jsonData.a11, jsonData.e11);
         }
 
-        if(jsonData.hasOwnProperty('everse8')){
-          drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData.gverse8, jsonData.dverse8, jsonData.averse8, jsonData.everse8);
+        if(jsonData.hasOwnProperty('e12')){
+          drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData.g12, jsonData.d12, jsonData.a12, jsonData.e12);
         }
 
         table.appendChild(trg);
