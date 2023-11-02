@@ -44,7 +44,7 @@ function drawTab(jsonData) {
   article.appendChild(ptune);
 
   if(jsonData.hasOwnProperty('eintro1')) {
-    const table = document.createElement("table");
+    var table = document.createElement("table");
 
     var trg = document.createElement("tr");
     var trd = document.createElement("tr");
@@ -66,8 +66,15 @@ function drawTab(jsonData) {
     table.appendChild(trd);
     table.appendChild(tra);
     table.appendChild(tre);
+    article.appendChild(table);
 
     if(jsonData.hasOwnProperty('everse1')) {
+      var sometext = document.createElement("div");
+
+      sometext.textContent = 'Verse:';
+      article.appendChild(sometext);
+
+      table = document.createElement("table");
       trg = document.createElement("tr");
       trd = document.createElement("tr");
       tra = document.createElement("tr");
