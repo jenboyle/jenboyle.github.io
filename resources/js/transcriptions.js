@@ -1,10 +1,10 @@
-function goTranscriptionChoice() {
+function goChoice(element, ul) {
   var input, filter, ul, li, a, i, txtValue;
 
-  input = document.getElementById('transcriptionchoice');
+  input = document.getElementById(element);
 
   filter = input.value.toUpperCase();
-  ul = document.getElementById('songList');
+  ul = document.getElementById(ul);
   li = ul.getElementsByTagName('li');
 
   for (i=0; i < li.length; i++){
@@ -20,16 +20,16 @@ function goTranscriptionChoice() {
 
 }
 
-function loadTab(songname) {
+function loadTab(songname, articleelement) {
   console.log(songname);
   fetch('https://groovyjen.com/resources/json/' + songname + '.json')
     .then((response) => response.json())
-    .then((json) => drawTab(json));
+    .then((json) => drawTab(json, articleelement));
 }
 
-function drawTab(jsonData) {
+function drawTab(jsonData, articleelement) {
   console.log(jsonData);
-  const article = document.getElementById("transtab");
+  const article = document.getElementById(articleelement);
   article.innerHTML = '';
   const psong = document.createElement("p");
   psong.textContent = jsonData.song + ' - ' + jsonData.by;
@@ -62,6 +62,8 @@ function drawTab(jsonData) {
   }
 
   testfortab('e9', jsonData, article);
+  testfortab('e13', jsonData, article);
+  testfortab('e17', jsonData, article);
 
 }
 
