@@ -109,6 +109,10 @@ header nav ul li {
   background-color: whitesmoke;
 }
 
+.main article table {
+  padding-bottom: 20px;
+}
+
 .main img {
   float: left;
   padding: 10px;
