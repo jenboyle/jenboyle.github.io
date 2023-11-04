@@ -7,6 +7,11 @@ function goChoice(element, ul) {
   ul = document.getElementById(ul);
   li = ul.getElementsByTagName('li');
 
+  //show the ul
+  if(ul.style.display == "none"){
+    ul.style.display = "";
+  }
+
   for (i=0; i < li.length; i++){
     a = li[i].getElementsByTagName("a")[0];
     txtValue = a.textContent || a.innerText;
@@ -20,8 +25,11 @@ function goChoice(element, ul) {
 
 }
 
-function loadTab(songname, articleelement) {
+function loadTab(songname, articleelement, ul) {
   console.log(songname);
+  //hide the ul
+  document.getElementById(ul).style.display = "none";
+
   fetch('https://groovyjen.com/resources/json/' + songname + '.json')
     .then((response) => response.json())
     .then((json) => drawTab(json, articleelement));
