@@ -176,7 +176,7 @@ function animate(animation) {
   clearInterval(id);
   id = setInterval(frame, 10);
   function frame() {
-    if (pos == 400) {
+    if (pos == 300) {
       clearInterval(id);
     } else {
       pos++;
