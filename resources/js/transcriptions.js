@@ -172,16 +172,21 @@ function animate(animation) {
   //if(elem.style.display == "none"){
   //  elem.style.display = "";
   //}
-  var pos = 0;
+  var posx = 0;
+  var posy = 0;
   clearInterval(id);
   id = setInterval(frame, 10);
   function frame() {
-    if (pos == 300) {
+    if ((posx == 400) && (posy == 300)) {
       clearInterval(id);
+    } else if (posy == 300) {
+      posx++;
+      elem.style.left = posx + 'px';
     } else {
-      pos++;
-      elem.style.bottom = pos + 'px';
-      elem.style.left = pos + 'px';
+      posx++;
+      posy++;
+      elem.style.bottom = posy + 'px';
+      elem.style.left = posx + 'px';
     }
   }
 }
