@@ -25,19 +25,23 @@
       </ul>
     </nav>
   </header>
+
   <div class="main">
     <script type="text/javascript" src="resources/js/transcriptions.js"></script>
     <input type="text" id="transcriptionchoice" onkeyup="goChoice('transcriptionchoice','songList')" placeholder="Search for song...">
     <ul id="songList">
-      <li><a href="javascript:loadTab('alleyez', 'transtab', 'songList');">All Eyez On Me - 2Pac</a></li>
-      <li><a href="javascript:loadTab('gangsta', 'transtab', 'songList');">Gangsta Luv - Snoop Dogg ft The Dream</a></li>
-      <li><a href="javascript:loadTab('mario', 'transtab', 'songList');">Supermario Theme Tune - Nintendo</a></li>
-      <li><a href="javascript:loadTab('ohme', 'transtab', 'songList');">Oh Me - Nirvana</a></li>
-      <li><a href="javascript:loadTab('superstar', 'transtab', 'songList');">Superstar Intro - The Carpenters</a></li>
-      <li><a href="javascript:loadTab('masterplan', 'transtab', 'songList');">The Masterplan Intro - Oasis</a></li>
+      <li><a href="javascript:loadTab('alleyez', 'transtab', 'songList','no');">All Eyez On Me - 2Pac</a></li>
+      <li><a href="javascript:loadTab('gangsta', 'transtab', 'songList','no');">Gangsta Luv - Snoop Dogg ft The Dream</a></li>
+      <li><a href="javascript:loadTab('mario', 'transtab', 'songList','mario');">Supermario Theme Tune - Nintendo</a></li>
+      <li><a href="javascript:loadTab('ohme', 'transtab', 'songList','no');">Oh Me - Nirvana</a></li>
+      <li><a href="javascript:loadTab('superstar', 'transtab', 'songList','no');">Superstar Intro - The Carpenters</a></li>
+      <li><a href="javascript:loadTab('masterplan', 'transtab', 'songList','no');">The Masterplan Intro - Oasis</a></li>
     </ul>
     <article id="transtab"><p></p></article>
     <article><p></p></article>
+  </div>
+  <div id="animationcontainer">
+    <div id = "animationmario"><img src="resources/images/animations/mario.gif" width="120" height="120"></div>
   </div>
   <footer class="footer">
     <div class="first"><p class="col">Blogs</p></div>

@@ -25,7 +25,7 @@ function goChoice(element, ul) {
 
 }
 
-function loadTab(songname, articleelement, ul) {
+function loadTab(songname, articleelement, ul, animation) {
   console.log(songname);
   //hide the ul
   document.getElementById(ul).style.display = "none";
@@ -33,6 +33,11 @@ function loadTab(songname, articleelement, ul) {
   fetch('https://groovyjen.com/resources/json/' + songname + '.json')
     .then((response) => response.json())
     .then((json) => drawTab(json, articleelement));
+
+  if(animation != 'no'){
+    animate(animation);
+  }
+
 }
 
 function drawTab(jsonData, articleelement) {
@@ -158,4 +163,25 @@ function drawRowsAndCols (start, end, trg, trd, tra, tre, gnotes, dnotes, anotes
     tde.textContent = startline + enotes + endline;
     tre.appendChild(tde);
 
+}
+
+var id = null;
+function animate(animation) {
+  
+  var elem = document.getElementById('animation'+animation);
+  //if(elem.style.display == "none"){
+  //  elem.style.display = "";
+  //}
+  var pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 800) {
+      clearInterval(id);
+    } else {
+      pos++;
+      elem.style.bottom = pos + 'px';
+      elem.style.left = pos + 'px';
+    }
+  }
 }
