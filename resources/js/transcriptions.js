@@ -57,6 +57,11 @@ function drawTab(jsonData, articleelement) {
   article.appendChild(ptune);
 
 
+  if(jsonData.hasOwnProperty('textb4intro')) {
+    var sometext = document.createElement("div");
+    sometext.textContent = jsonData.textb4intro;
+    article.appendChild(sometext);
+  }
 
   testfortab('e1', jsonData, article);
 
