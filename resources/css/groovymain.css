@@ -90,9 +90,19 @@ header nav ul li {
   overflow: hidden;
 }
 
+.main note {
+  padding:5px;
+  font-size:1.2em;
+  overflow: hidden;
+}
+
 .iframedivmid {
   text-align: center;
   width: 100%;
+}
+
+.main article div {
+  padding-top: 20px;
 }
 
 .main article p:first-letter{
@@ -106,6 +116,20 @@ header nav ul li {
 }
 
 .main article p a:hover{
+  background-color: whitesmoke;
+}
+
+.main note p:first-letter{
+  font-size:1.5em;
+  color:darkolivegreen;
+}
+
+.main note p a {
+  text-decoration: none;
+  color: darkslateblue;
+}
+
+.main note p a:hover{
   background-color: whitesmoke;
 }
 
