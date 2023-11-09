@@ -221,13 +221,13 @@ header nav ul li {
   position:relative;
 }
 
-#songList {
+#songList, #blogList {
   list-style-type: none;
   padding: 0;
   margin:0;
 }
 
-#songList li a {
+#songList li a, #blogList li a {
   border: 1px solid #ddd;
   margin-top: -1px;
   background-color: gray;
@@ -238,7 +238,7 @@ header nav ul li {
   display:block;
 }
 
-#songList li a:hover:not(.header){
+#songList li a:hover:not(.header), #blogList li a:hover {
   background-color: whitesmoke;
 }
 
