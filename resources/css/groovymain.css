@@ -153,12 +153,12 @@ header nav ul li {
   clear:both;
 }
 
-.second p a {
+.first p a, .second p a, .third p a {
   text-decoration: none;
   color: darkslateblue;
 }
 
-.second p a:hover{
+.first p a:hover, second p a:hover, second p a:hover {
   background-color: whitesmoke;
 }
 
