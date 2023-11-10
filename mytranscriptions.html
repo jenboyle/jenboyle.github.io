@@ -29,7 +29,7 @@
 
   <div class="main">
     <script type="text/javascript" src="resources/js/transcriptions.js"></script>
-    <input type="text" id="transcriptionchoice" onkeyup="goChoice('transcriptionchoice','songList')" placeholder="Search for song...">
+    <input type="text" id="transcriptionchoice" onclick="showSongs('songList');" onkeyup="goChoice('transcriptionchoice','songList')" placeholder="Search for song...">
     <ul id="songList">
       <li><a href="javascript:loadTab('alleyez', 'transtab', 'songList','no');">All Eyez On Me - 2Pac</a></li>
       <li><a href="javascript:loadTab('diamondring', 'transtab', 'songList','no');">Diamond Ring - Bon Jovi</a></li>

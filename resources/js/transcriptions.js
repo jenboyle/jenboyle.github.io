@@ -34,9 +34,9 @@ function loadTab(songname, articleelement, ul, animation) {
     .then((response) => response.json())
     .then((json) => drawTab(json, articleelement));
 
-  if(animation != 'no'){
-    animate(animation);
-  }
+//  if(animation != 'no'){
+//    animate(animation);
+//  }
 
 }
 
@@ -194,4 +194,14 @@ function animate(animation) {
       elem.style.left = posx + 'px';
     }
   }
+}
+
+function showSongs(ul) {
+  ul = document.getElementById(ul);
+
+    //show the ul
+    if(ul.style.display == "none"){
+      ul.style.display = "";
+    }
+
 }

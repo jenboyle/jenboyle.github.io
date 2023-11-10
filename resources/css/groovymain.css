@@ -145,6 +145,11 @@ header nav ul li {
   margin:2%;
 }
 
+.main ul {
+  height: 300px;
+  overflow: auto;
+}
+
 .menu {
   display: none;
 }

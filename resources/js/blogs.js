@@ -1,7 +1,7 @@
-function loadBlog(blogname, articleelement) {
+function loadBlog(blogname, articleelement, ul) {
   console.log(blogname);
   //hide the ul
-  //document.getElementById(ul).style.display = "none";
+  document.getElementById(ul).style.display = "none";
 
   fetch('https://groovyjen.com/resources/json/blogs/' + blogname + '.json')
     .then((response) => response.json())
