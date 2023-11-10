@@ -21,4 +21,37 @@ function blog(jsonData, articleelement) {
   p.textContent = jsonData.para1;
   article.appendChild(p);
 
+  if(jsonData.hasOwnProperty('para2')) {
+    p.textContent = jsonData.para2;
+    article.appendChild(p);
+  }
+
+    if(jsonData.hasOwnProperty('para3')) {
+      p.textContent = jsonData.para3;
+      article.appendChild(p);
+    }
+
+    if(jsonData.hasOwnProperty('utube')) {
+        const div = document.createElement("div");
+        div.class = "iframedivmid";
+        const iframe = document.createElement("iframe");
+        iframe.width="420";
+        iframe.height="315";
+        iframe.src="https://youtube.com/embed/" + jsonData.utube;
+        div.appendChild(iframe);
+        article.appendChild(div);
+    }
+
+      if(jsonData.hasOwnProperty('para4')) {
+        p.textContent = jsonData.para4;
+        article.appendChild(p);
+      }
+
+        if(jsonData.hasOwnProperty('para5')) {
+          p.textContent = jsonData.para5;
+          article.appendChild(p);
+        }
+
+
+
 }
