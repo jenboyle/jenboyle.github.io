@@ -61,9 +61,26 @@ function blog(jsonData, articleelement) {
 }
 
 function emojiCheck(text) {
-  if(text.indexOf('&') != -1){
+  var emojitext = text;
+  if(text.indexOf('0x1F') != -1){
     console.log("hasEmojis");
+    var startindex = text.indexOf('0x1F');
+    var endindex = text.indexOf('0x1F') + 7;
+    emojitext = text.substring(0, startindex);
+    emojitext = emojitext + String.fromCodePoint(text.substring(startindex, endindex));
+    emojitext = emojitext + text.substring(endindex, text.length);
+
+    if((emojitext.lastIndexOf('0x1F') != -1) && (emojitext.lastIndexOf('0x1F') > startindex)){
+      // Two emojis
+      var emojitext2 = emojitext;
+      var startindex2 = emojitext.lastIndexOf('0x1F');
+      var endindex2 = emojitext.lastIndexOf('0x1F') + 7;
+      emojitext2 = emojitext.substring(0, startindex2);
+      emojitext2 = emojitext2 + String.fromCodePoint(emojitext.substring(startindex2, endindex2));
+      emojitext2 = emojitext2 + emojitext.substring(endindex2, emojitext.length);
+      emojitext = emojitext2;
+    }
 
   }
-  return text;
+  return emojitext;
 }
