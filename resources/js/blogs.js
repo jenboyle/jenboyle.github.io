@@ -22,13 +22,15 @@ function blog(jsonData, articleelement) {
   article.appendChild(p);
 
   if(jsonData.hasOwnProperty('para2')) {
-    p.textContent = jsonData.para2;
-    article.appendChild(p);
+    const p2 = document.createElement("p");
+    p2.textContent = jsonData.para2;
+    article.appendChild(p2);
   }
 
     if(jsonData.hasOwnProperty('para3')) {
-      p.textContent = jsonData.para3;
-      article.appendChild(p);
+      const p3 = document.createElement("p");
+      p3.textContent = jsonData.para3;
+      article.appendChild(p3);
     }
 
     if(jsonData.hasOwnProperty('utube')) {
@@ -43,13 +45,15 @@ function blog(jsonData, articleelement) {
     }
 
       if(jsonData.hasOwnProperty('para4')) {
-        p.textContent = jsonData.para4;
-        article.appendChild(p);
+        const p4 = document.createElement("p");
+        p4.textContent = jsonData.para4;
+        article.appendChild(p4);
       }
 
         if(jsonData.hasOwnProperty('para5')) {
-          p.textContent = jsonData.para5;
-          article.appendChild(p);
+          const p5 = document.createElement("p");
+          p5.textContent = jsonData.para5;
+          article.appendChild(p5);
         }
 
 
