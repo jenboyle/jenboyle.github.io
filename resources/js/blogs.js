@@ -18,18 +18,18 @@ function blog(jsonData, articleelement) {
   article.appendChild(h1);
 
   const p = document.createElement("p");
-  p.textContent = jsonData.para1;
+  p.textContent = emojiCheck(jsonData.para1);
   article.appendChild(p);
 
   if(jsonData.hasOwnProperty('para2')) {
     const p2 = document.createElement("p");
-    p2.textContent = jsonData.para2;
+    p2.textContent = emojiCheck(jsonData.para2);
     article.appendChild(p2);
   }
 
     if(jsonData.hasOwnProperty('para3')) {
       const p3 = document.createElement("p");
-      p3.textContent = jsonData.para3;
+      p3.textContent = emojiCheck(jsonData.para3);
       article.appendChild(p3);
     }
 
@@ -46,16 +46,24 @@ function blog(jsonData, articleelement) {
 
       if(jsonData.hasOwnProperty('para4')) {
         const p4 = document.createElement("p");
-        p4.textContent = jsonData.para4;
+        p4.textContent = emojiCheck(jsonData.para4);
         article.appendChild(p4);
       }
 
         if(jsonData.hasOwnProperty('para5')) {
           const p5 = document.createElement("p");
-          p5.textContent = jsonData.para5;
+          p5.textContent = emojiCheck(jsonData.para5);
           article.appendChild(p5);
         }
 
 
 
+}
+
+function emojiCheck(text) {
+  if(text.indexOf('&') != -1){
+    console.log("hasEmojis");
+
+  }
+  return text;
 }
