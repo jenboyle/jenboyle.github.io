@@ -247,6 +247,28 @@ header nav ul li {
   background-color: whitesmoke;
 }
 
+#theorycontainer {
+  width: 800px;
+  background-color: lightgoldenrodyellow;
+  margin: auto;
+}
+
+#theorychoicediv {
+  width: 200px;
+  display: inline-block;
+  float: left;
+}
+
+#theorydiv {
+  width: 600px;
+  display: inline-block;
+  float: right;
+}
+
+#theoryclear {
+  clear: both;
+}
+
 
 @media all and (max-width:740px) {
   header nav ul {
