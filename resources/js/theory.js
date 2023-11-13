@@ -25,6 +25,27 @@ function drawTheory(jsonData, element) {
   div.appendChild(ptune);
 
 
+
+  if(jsonData.hasOwnProperty('chords')) {
+
+    const chords_table = document.createElement("table");
+    const chords_tr = document.createElement("tr");
+    chords_table.appendChild(chords_tr);
+
+    var chords = jsonData.chords;
+    const chordArr = chords.split(',');
+
+    for(i=0; i<chordArr.length; i++){
+        const chords_td = document.createElement("td");
+        chords_td.textContent = chordArr[i];
+        chords_table.appendChild(chords_td);
+    }
+
+    div.appendChild(chords_table);
+
+  }
+
+
   if(jsonData.hasOwnProperty('textb4intro')) {
     var sometext = document.createElement("div");
     sometext.textContent = jsonData.textb4intro;
