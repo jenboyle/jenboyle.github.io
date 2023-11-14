@@ -78,6 +78,27 @@ function drawTheory(jsonData, element) {
 
     div.appendChild(chords_table);
 
+    //Draw chord box
+//    "chord1":"E",
+//      "e": "0",
+//      "a": "2",
+//      "d": "2",
+//      "g": "1"
+
+//    if(jsonData.hasOwnProperty('chord1')) {
+//        const chord1_table = document.createElement("table");
+//        chord1_table.className = 'chordbox';
+//        var chords1_tr = document.createElement("tr");
+//        var chords1_td1 = document.createElement("td");
+//        var chords1_td2 = document.createElement("td");
+//        var chords1_td2 = document.createElement("td");
+//        chords1_tr.appendChild(chords1_td1);
+//        chords1_tr.appendChild(chords1_td2);
+//        chords1_tr.appendChild(chords1_td3);
+//
+//
+//    }
+
   }
 
 
@@ -104,6 +125,13 @@ function drawTheory(jsonData, element) {
   }
 
   testfortab('e9', jsonData, div);
+
+    if(jsonData.hasOwnProperty('textb4verse3')) {
+      sometext = document.createElement("div");
+      sometext.textContent = jsonData.textb4verse3;
+      div.appendChild(sometext);
+    }
+
   testfortab('e13', jsonData, div);
   testfortab('e17', jsonData, div);
 
@@ -140,19 +168,19 @@ function testfortab(jsonfield, jsonData, div) {
     var akey4 = 'a' + (Number(enumber) + 3);
     var ekey4 = 'e' + (Number(enumber) + 3);
 
-    drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData[gkey], jsonData[dkey], jsonData[akey], jsonData[ekey]);
+    drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData[gkey], jsonData[dkey], jsonData[akey], jsonData[ekey]);
     
     if(jsonData.hasOwnProperty(ekey2)){
-      drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData[gkey2], jsonData[dkey2], jsonData[akey2], jsonData[ekey2]);
+      drawRowsAndCols (false, true, trg, trd, tra, tre, jsonData[gkey2], jsonData[dkey2], jsonData[akey2], jsonData[ekey2]);
     }
 
     
     if(jsonData.hasOwnProperty(ekey3)){
-      drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData[gkey3], jsonData[dkey3], jsonData[akey3], jsonData[ekey3]);
+      drawRowsAndCols (false, true, trg, trd, tra, tre, jsonData[gkey3], jsonData[dkey3], jsonData[akey3], jsonData[ekey3]);
     }
 
     if(jsonData.hasOwnProperty(ekey4)){
-      drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData[gkey4], jsonData[dkey4], jsonData[akey4], jsonData[ekey4]);
+      drawRowsAndCols (false, true, trg, trd, tra, tre, jsonData[gkey4], jsonData[dkey4], jsonData[akey4], jsonData[ekey4]);
     }
 
     table.appendChild(trg);

@@ -116,19 +116,19 @@ function testfortab(jsonfield, jsonData, article) {
     var akey4 = 'a' + (Number(enumber) + 3);
     var ekey4 = 'e' + (Number(enumber) + 3);
 
-    drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData[gkey], jsonData[dkey], jsonData[akey], jsonData[ekey]);
+    drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData[gkey], jsonData[dkey], jsonData[akey], jsonData[ekey]);
     
     if(jsonData.hasOwnProperty(ekey2)){
-      drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData[gkey2], jsonData[dkey2], jsonData[akey2], jsonData[ekey2]);
+      drawRowsAndCols (false, true, trg, trd, tra, tre, jsonData[gkey2], jsonData[dkey2], jsonData[akey2], jsonData[ekey2]);
     }
 
     
     if(jsonData.hasOwnProperty(ekey3)){
-      drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData[gkey3], jsonData[dkey3], jsonData[akey3], jsonData[ekey3]);
+      drawRowsAndCols (false, true, trg, trd, tra, tre, jsonData[gkey3], jsonData[dkey3], jsonData[akey3], jsonData[ekey3]);
     }
 
     if(jsonData.hasOwnProperty(ekey4)){
-      drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData[gkey4], jsonData[dkey4], jsonData[akey4], jsonData[ekey4]);
+      drawRowsAndCols (false, true, trg, trd, tra, tre, jsonData[gkey4], jsonData[dkey4], jsonData[akey4], jsonData[ekey4]);
     }
 
     table.appendChild(trg);
