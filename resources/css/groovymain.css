@@ -183,6 +183,7 @@ header nav ul li {
 .chord td {
   border:3px darkolivegreen solid;
   border-top:0px;
+  text-align:center;
 }
 
 .main img {
