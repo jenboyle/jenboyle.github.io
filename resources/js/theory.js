@@ -78,27 +78,6 @@ function drawTheory(jsonData, element) {
 
     div.appendChild(chords_table);
 
-    //Draw chord box
-//    "chord1":"E",
-//      "e": "0",
-//      "a": "2",
-//      "d": "2",
-//      "g": "1"
-
-//    if(jsonData.hasOwnProperty('chord1')) {
-//        const chord1_table = document.createElement("table");
-//        chord1_table.className = 'chordbox';
-//        var chords1_tr = document.createElement("tr");
-//        var chords1_td1 = document.createElement("td");
-//        var chords1_td2 = document.createElement("td");
-//        var chords1_td2 = document.createElement("td");
-//        chords1_tr.appendChild(chords1_td1);
-//        chords1_tr.appendChild(chords1_td2);
-//        chords1_tr.appendChild(chords1_td3);
-//
-//
-//    }
-
   }
 
 
@@ -135,6 +114,68 @@ function drawTheory(jsonData, element) {
   testfortab('e13', jsonData, div);
   testfortab('e17', jsonData, div);
 
+
+      //Draw chord box
+  //    "chord1":"E",
+  //      "e": "0",
+  //      "a": "2",
+  //      "d": "2",
+  //      "g": "1"
+
+      if(jsonData.hasOwnProperty('chord1')) {
+          const chord1_table = document.createElement("table");
+          chord1_table.className = 'chordbox';
+
+          const chord1_caption = document.createElement("caption");
+          chord1_caption.textContent = jsonData.chord1;
+          chord1_table.appendChild(chord1_caption);
+
+          var chords1_tr1 = document.createElement("tr");
+          var chords1_td1 = document.createElement("td");
+          var chords1_td2 = document.createElement("td");
+          var chords1_td3 = document.createElement("td");
+          chords1_tr1.appendChild(chords1_td1);
+          chords1_tr1.appendChild(chords1_td2);
+          chords1_tr1.appendChild(chords1_td3);
+
+          chord1_table.appendChild(chords1_tr1);
+
+          var chords1_tr2 = document.createElement("tr");
+          var chords1_tr2_td1 = document.createElement("td");
+          var chords1_tr2_td2 = document.createElement("td");
+          var chords1_tr2_td3 = document.createElement("td");
+          chords1_tr2.appendChild(chords1_tr2_td1);
+          chords1_tr2.appendChild(chords1_tr2_td2);
+          chords1_tr2.appendChild(chords1_tr2_td3);
+
+          chord1_table.appendChild(chords1_tr2);
+
+          var chords1_tr3 = document.createElement("tr");
+          var chords1_tr3_td1 = document.createElement("td");
+          var chords1_tr3_td2 = document.createElement("td");
+          var chords1_tr3_td3 = document.createElement("td");
+          chords1_tr3.appendChild(chords1_tr3_td1);
+          chords1_tr3.appendChild(chords1_tr3_td2);
+          chords1_tr3.appendChild(chords1_tr3_td3);
+
+          chord1_table.appendChild(chords1_tr3);
+
+          var chords1_tr4 = document.createElement("tr");
+          var chords1_tr4_td1 = document.createElement("td");
+          var chords1_tr4_td2 = document.createElement("td");
+          var chords1_tr4_td3 = document.createElement("td");
+          chords1_tr4.appendChild(chords1_tr4_td1);
+          chords1_tr4.appendChild(chords1_tr4_td2);
+          chords1_tr4.appendChild(chords1_tr4_td3);
+
+          chord1_table.appendChild(chords1_tr4);
+
+
+          div.appendChild(chord1_table);
+
+
+      }
+
 }
 
 function testfortab(jsonfield, jsonData, div) {
@@ -142,6 +183,7 @@ function testfortab(jsonfield, jsonData, div) {
   if(jsonData.hasOwnProperty(jsonfield)) {
 
     var table = document.createElement("table");
+    table.className = 'tab';
     var trg = document.createElement("tr");
     var trd = document.createElement("tr");
     var tra = document.createElement("tr");

@@ -165,7 +165,7 @@ header nav ul li {
   background-color: whitesmoke;
 }
 
-.main article table {
+.main article table, .tab {
   padding-bottom: 20px;
 }
 
@@ -184,6 +184,26 @@ header nav ul li {
   border:3px darkolivegreen solid;
   border-top:0px;
   text-align:center;
+}
+
+.chordbox {
+  border-collapse:collapse;
+  border:3px black solid;
+  margin-bottom: 20px;
+}
+
+.chordbox th {
+  border:3px black solid;
+  border-top:5px;
+  border-bottom:0px;
+}
+
+.chordbox td {
+  border:3px black solid;
+  border-top:0px;
+  text-align:center;
+  width:30px;
+  height:60px;
 }
 
 .main img {
