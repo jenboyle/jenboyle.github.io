@@ -25,6 +25,62 @@ function drawTheory(jsonData, element) {
   div.appendChild(ptune);
 
 
+
+  if(jsonData.hasOwnProperty('chords')) {
+
+    const chords_table = document.createElement("table");
+
+    const chords_caption = document.createElement("caption");
+    chords_caption.textContent = "Chords";
+    chords_table.appendChild(chords_caption);
+
+    chords_table.className = 'chord';
+    const chords_trh = document.createElement("tr");
+
+
+    var chords = jsonData.chords;
+    const chordArr = chords.split(',');
+
+    for(i=0; i<chordArr.length; i++){
+        const chords_th = document.createElement("th");
+        chords_th.textContent = (i+1);
+        chords_trh.appendChild(chords_th);
+    }
+
+    chords_table.appendChild(chords_trh);
+
+    const chords_tr = document.createElement("tr");
+
+
+
+    for(i=0; i<chordArr.length; i++){
+        const chords_td = document.createElement("td");
+        chords_td.textContent = chordArr[i];
+        chords_tr.appendChild(chords_td);
+    }
+
+    chords_table.appendChild(chords_tr);
+
+    if(jsonData.hasOwnProperty('chordtones')) {
+      const chordtones_tr = document.createElement("tr");
+      var chordtones = jsonData.chordtones;
+      const chordToneArr = chordtones.split(',');
+
+      for(i=0; i<chordArr.length; i++){
+        const chordtones_td = document.createElement("td");
+        chordtones_td.textContent = chordToneArr[i];
+        chordtones_tr.appendChild(chordtones_td);
+      }
+
+      chords_table.appendChild(chordtones_tr);
+
+    }
+
+    div.appendChild(chords_table);
+
+  }
+
+
   if(jsonData.hasOwnProperty('textb4intro')) {
     var sometext = document.createElement("div");
     sometext.textContent = jsonData.textb4intro;
@@ -48,8 +104,77 @@ function drawTheory(jsonData, element) {
   }
 
   testfortab('e9', jsonData, div);
+
+    if(jsonData.hasOwnProperty('textb4verse3')) {
+      sometext = document.createElement("div");
+      sometext.textContent = jsonData.textb4verse3;
+      div.appendChild(sometext);
+    }
+
   testfortab('e13', jsonData, div);
   testfortab('e17', jsonData, div);
+
+
+      //Draw chord box
+  //    "chord1":"E",
+  //      "e": "0",
+  //      "a": "2",
+  //      "d": "2",
+  //      "g": "1"
+
+      if(jsonData.hasOwnProperty('chord1')) {
+          const chord1_table = document.createElement("table");
+          chord1_table.className = 'chordbox';
+
+          const chord1_caption = document.createElement("caption");
+          chord1_caption.textContent = jsonData.chord1;
+          chord1_table.appendChild(chord1_caption);
+
+          var chords1_tr1 = document.createElement("tr");
+          var chords1_td1 = document.createElement("td");
+          var chords1_td2 = document.createElement("td");
+          var chords1_td3 = document.createElement("td");
+          chords1_tr1.appendChild(chords1_td1);
+          chords1_tr1.appendChild(chords1_td2);
+          chords1_tr1.appendChild(chords1_td3);
+
+          chord1_table.appendChild(chords1_tr1);
+
+          var chords1_tr2 = document.createElement("tr");
+          var chords1_tr2_td1 = document.createElement("td");
+          var chords1_tr2_td2 = document.createElement("td");
+          var chords1_tr2_td3 = document.createElement("td");
+          chords1_tr2.appendChild(chords1_tr2_td1);
+          chords1_tr2.appendChild(chords1_tr2_td2);
+          chords1_tr2.appendChild(chords1_tr2_td3);
+
+          chord1_table.appendChild(chords1_tr2);
+
+          var chords1_tr3 = document.createElement("tr");
+          var chords1_tr3_td1 = document.createElement("td");
+          var chords1_tr3_td2 = document.createElement("td");
+          var chords1_tr3_td3 = document.createElement("td");
+          chords1_tr3.appendChild(chords1_tr3_td1);
+          chords1_tr3.appendChild(chords1_tr3_td2);
+          chords1_tr3.appendChild(chords1_tr3_td3);
+
+          chord1_table.appendChild(chords1_tr3);
+
+          var chords1_tr4 = document.createElement("tr");
+          var chords1_tr4_td1 = document.createElement("td");
+          var chords1_tr4_td2 = document.createElement("td");
+          var chords1_tr4_td3 = document.createElement("td");
+          chords1_tr4.appendChild(chords1_tr4_td1);
+          chords1_tr4.appendChild(chords1_tr4_td2);
+          chords1_tr4.appendChild(chords1_tr4_td3);
+
+          chord1_table.appendChild(chords1_tr4);
+
+
+          div.appendChild(chord1_table);
+
+
+      }
 
 }
 
@@ -58,6 +183,7 @@ function testfortab(jsonfield, jsonData, div) {
   if(jsonData.hasOwnProperty(jsonfield)) {
 
     var table = document.createElement("table");
+    table.className = 'tab';
     var trg = document.createElement("tr");
     var trd = document.createElement("tr");
     var tra = document.createElement("tr");
@@ -84,19 +210,19 @@ function testfortab(jsonfield, jsonData, div) {
     var akey4 = 'a' + (Number(enumber) + 3);
     var ekey4 = 'e' + (Number(enumber) + 3);
 
-    drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData[gkey], jsonData[dkey], jsonData[akey], jsonData[ekey]);
+    drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData[gkey], jsonData[dkey], jsonData[akey], jsonData[ekey]);
     
     if(jsonData.hasOwnProperty(ekey2)){
-      drawRowsAndCols (true, true, trg, trd, tra, tre, jsonData[gkey2], jsonData[dkey2], jsonData[akey2], jsonData[ekey2]);
+      drawRowsAndCols (false, true, trg, trd, tra, tre, jsonData[gkey2], jsonData[dkey2], jsonData[akey2], jsonData[ekey2]);
     }
 
     
     if(jsonData.hasOwnProperty(ekey3)){
-      drawRowsAndCols (false, false, trg, trd, tra, tre, jsonData[gkey3], jsonData[dkey3], jsonData[akey3], jsonData[ekey3]);
+      drawRowsAndCols (false, true, trg, trd, tra, tre, jsonData[gkey3], jsonData[dkey3], jsonData[akey3], jsonData[ekey3]);
     }
 
     if(jsonData.hasOwnProperty(ekey4)){
-      drawRowsAndCols (true, false, trg, trd, tra, tre, jsonData[gkey4], jsonData[dkey4], jsonData[akey4], jsonData[ekey4]);
+      drawRowsAndCols (false, true, trg, trd, tra, tre, jsonData[gkey4], jsonData[dkey4], jsonData[akey4], jsonData[ekey4]);
     }
 
     table.appendChild(trg);
