@@ -29,16 +29,51 @@ function drawTheory(jsonData, element) {
   if(jsonData.hasOwnProperty('chords')) {
 
     const chords_table = document.createElement("table");
-    const chords_tr = document.createElement("tr");
-    chords_table.appendChild(chords_tr);
+
+    const chords_caption = document.createElement("caption");
+    chords_caption.textContent = "Chords";
+    chords_table.appendChild(chords_caption);
+
+    chords_table.className = 'chord';
+    const chords_trh = document.createElement("tr");
+
 
     var chords = jsonData.chords;
     const chordArr = chords.split(',');
 
     for(i=0; i<chordArr.length; i++){
+        const chords_th = document.createElement("th");
+        chords_th.textContent = (i+1);
+        chords_trh.appendChild(chords_th);
+    }
+
+    chords_table.appendChild(chords_trh);
+
+    const chords_tr = document.createElement("tr");
+
+
+
+    for(i=0; i<chordArr.length; i++){
         const chords_td = document.createElement("td");
         chords_td.textContent = chordArr[i];
-        chords_table.appendChild(chords_td);
+        chords_tr.appendChild(chords_td);
+    }
+
+    chords_table.appendChild(chords_tr);
+
+    if(jsonData.hasOwnProperty('chordtones')) {
+      const chordtones_tr = document.createElement("tr");
+      var chordtones = jsonData.chordtones;
+      const chordToneArr = chordtones.split(',');
+
+      for(i=0; i<chordArr.length; i++){
+        const chordtones_td = document.createElement("td");
+        chordtones_td.textContent = chordToneArr[i];
+        chordtones_tr.appendChild(chordtones_td);
+      }
+
+      chords_table.appendChild(chordtones_tr);
+
     }
 
     div.appendChild(chords_table);

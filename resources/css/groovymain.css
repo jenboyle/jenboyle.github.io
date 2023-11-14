@@ -169,6 +169,22 @@ header nav ul li {
   padding-bottom: 20px;
 }
 
+.chord {
+  border-collapse:collapse;
+  border:3px darkolivegreen solid;
+  margin-bottom: 20px;
+}
+
+.chord th {
+  border:3px darkolivegreen solid;
+  border-bottom:0px;
+}
+
+.chord td {
+  border:3px darkolivegreen solid;
+  border-top:0px;
+}
+
 .main img {
   float: left;
   padding: 10px;
