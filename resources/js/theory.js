@@ -116,157 +116,9 @@ function drawTheory(jsonData, element) {
 
 
       //Draw chord box
-
-      if(jsonData.hasOwnProperty('chord1')) {
-          const chordboxdiv = document.createElement("div");
-          chordboxdiv.style.height = '270px';
-          chordboxdiv.style.width = '100px';
-          chordboxdiv.style.backgroundColor = 'pink';
-
-          const chord1_table = document.createElement("table");
-          chord1_table.className = 'chordbox';
-          chord1_table.id = 'chord1';
-
-          const chord1_caption = document.createElement("caption");
-          chord1_caption.textContent = jsonData.chord1;
-          chord1_table.appendChild(chord1_caption);
-
-          var chords1_tr1 = document.createElement("tr");
-          var chords1_td1 = document.createElement("td");
-          var chords1_td2 = document.createElement("td");
-          var chords1_td3 = document.createElement("td");
+      checkForChords(jsonData, div);
 
 
-
-
-          chords1_tr1.appendChild(chords1_td1);
-          chords1_tr1.appendChild(chords1_td2);
-          chords1_tr1.appendChild(chords1_td3);
-
-          chord1_table.appendChild(chords1_tr1);
-
-          var chords1_tr2 = document.createElement("tr");
-          var chords1_tr2_td1 = document.createElement("td");
-          var chords1_tr2_td2 = document.createElement("td");
-          var chords1_tr2_td3 = document.createElement("td");
-          chords1_tr2.appendChild(chords1_tr2_td1);
-          chords1_tr2.appendChild(chords1_tr2_td2);
-          chords1_tr2.appendChild(chords1_tr2_td3);
-
-          chord1_table.appendChild(chords1_tr2);
-
-          var chords1_tr3 = document.createElement("tr");
-          var chords1_tr3_td1 = document.createElement("td");
-          var chords1_tr3_td2 = document.createElement("td");
-          var chords1_tr3_td3 = document.createElement("td");
-          chords1_tr3.appendChild(chords1_tr3_td1);
-          chords1_tr3.appendChild(chords1_tr3_td2);
-          chords1_tr3.appendChild(chords1_tr3_td3);
-
-          chord1_table.appendChild(chords1_tr3);
-
-          var chords1_tr4 = document.createElement("tr");
-          var chords1_tr4_td1 = document.createElement("td");
-          var chords1_tr4_td2 = document.createElement("td");
-          var chords1_tr4_td3 = document.createElement("td");
-          chords1_tr4.appendChild(chords1_tr4_td1);
-          chords1_tr4.appendChild(chords1_tr4_td2);
-          chords1_tr4.appendChild(chords1_tr4_td3);
-
-          chord1_table.appendChild(chords1_tr4);
-
-          chordboxdiv.appendChild(chord1_table);
-
-
-
-//
-//          var rect = chord1_table.getBoundingClientRect();
-//          var ypos = window.scrollY + document.querySelector('#chord1').getBoundingClientRect().top;
-//          var xpos = window.scrollX + document.querySelector('#chord1').getBoundingClientRect().left;
-//
-//console.log(rect.left + ', ' + rect.top + ', ' + rect.right + ', ' + rect.bottom);
-
-if(jsonData.chord1e == "0") {
-            //  margin-left: 400px;
-            //    margin-top: 10px;
-
-            var img = document.createElement('img');
-            img.src = "resources/images/icons/open.jpg";
-            //img.className = 'chordboximgd0';
-            img.style.position = 'relative';
-            //img.style.left = (rect.left-6) + 'px'; //e0
-            //img.style.top = rect.top;
-            img.style.left = '-10px'; //e0
-            img.style.top = '10px'; //e0
-            //img.style.left = (xpos + 200);
-            //img.style.right = ypos + 300;
-            chordboxdiv.appendChild(img);
-          }
-
-          if(jsonData.chord1a == "2") {
-            //  margin-left: 400px;
-            //    margin-top: 10px;
-
-            var img = document.createElement('img');
-            img.src = "resources/images/icons/circle.jpg";
-                      //img.className = 'chordboximgd0';
-                      img.style.position = 'relative';
-                      //img.style.left = (rect.left-6) + 'px'; //e0
-                      //img.style.top = rect.top;
-                      img.style.left = '0px'; //e0
-                      img.style.top = '105px'; //e0
-                      //img.style.left = (xpos + 200);
-                      //img.style.right = ypos + 300;
-                      chordboxdiv.appendChild(img);
-          }
-
-          if(jsonData.chord1d == "2") {
-            var img = document.createElement('img');
-            img.src = "resources/images/icons/circle.jpg";
-            //img.className = 'chordboximgd0';
-            img.style.position = 'relative';
-            //img.style.left = (rect.left-6) + 'px'; //e0
-            //img.style.top = rect.top;
-            img.style.left = '12px'; //e0
-            img.style.top = '105px'; //e0
-            chordboxdiv.appendChild(img);
-          }
-
-          if(jsonData.chord1g == "1") {
-            //  margin-left: 400px;
-            //    margin-top: 10px;
-
-            var img = document.createElement('img');
-            img.src = "resources/images/icons/circle.jpg";
-            //img.className = 'chordboximgd0';
-            img.style.position = 'relative';
-            //img.style.left = (rect.left-6) + 'px'; //e0
-            //img.style.top = rect.top;
-            img.style.left = '22px'; //e0
-            img.style.top = '50px'; //e0
-            //img.style.left = (xpos + 200);
-            //img.style.right = ypos + 300;
-            chordboxdiv.appendChild(img);
-          }
-
-
-
-div.appendChild(chordboxdiv);
-
-//  "chord2": "F#m",
-//  "chord2e": "2",
-//  "chord2a": "4",
-//  "chord2d": "4",
-//  "chord2g": "2",
-//  "chord3": "G#m",
-//  "chord3out":"4"
-//  "chord3e": "1",
-//  "chord3a": "3",
-//  "chord3d": "3",
-//  "chord3g": "1"
-
-
-      }
 
 }
 
@@ -364,4 +216,149 @@ function showTheory(ul) {
       ul.style.display = "";
     }
 
+}
+
+function checkForChords(jsonData, div) {
+  checkChords(jsonData, div, 'chord1', 'chord1e', 'chord1a', 'chord1d', 'chord1g');
+  checkChords(jsonData, div, 'chord2', 'chord2e', 'chord2a', 'chord2d', 'chord2g');
+
+}
+function checkChords(jsonData, div, chord, estr, astr, dstr, gstr) {
+      if(jsonData.hasOwnProperty(chord)) {
+          const chordboxdiv = document.createElement("div");
+          chordboxdiv.style.height = '270px';
+          chordboxdiv.style.width = '150px';
+          chordboxdiv.style.backgroundColor = 'pink';
+          chordboxdiv.style.display = 'inline-block';
+
+          const chord1_table = document.createElement("table");
+          chord1_table.className = 'chordbox';
+          chord1_table.id = chord;
+
+          const chord1_caption = document.createElement("caption");
+          chord1_caption.textContent = jsonData[chord];
+          chord1_table.appendChild(chord1_caption);
+
+          var chords1_tr1 = document.createElement("tr");
+          chords1_tr1.appendChild(document.createElement("td"));
+          chords1_tr1.appendChild(document.createElement("td"));
+          chords1_tr1.appendChild(document.createElement("td"));
+          chord1_table.appendChild(chords1_tr1);
+
+          var chords1_tr2 = document.createElement("tr");
+          chords1_tr2.appendChild(document.createElement("td"));
+          chords1_tr2.appendChild(document.createElement("td"));
+          chords1_tr2.appendChild(document.createElement("td"));
+          chord1_table.appendChild(chords1_tr2);
+
+          var chords1_tr3 = document.createElement("tr");
+          chords1_tr3.appendChild(document.createElement("td"));
+          chords1_tr3.appendChild(document.createElement("td"));
+          chords1_tr3.appendChild(document.createElement("td"));
+          chord1_table.appendChild(chords1_tr3);
+
+          var chords1_tr4 = document.createElement("tr");
+          chords1_tr4.appendChild(document.createElement("td"));
+          chords1_tr4.appendChild(document.createElement("td"));
+          chords1_tr4.appendChild(document.createElement("td"));
+          chord1_table.appendChild(chords1_tr4);
+
+          chordboxdiv.appendChild(chord1_table);
+
+
+//          var rect = chord1_table.getBoundingClientRect();
+//          var ypos = window.scrollY + document.querySelector('#chord1').getBoundingClientRect().top;
+//          var xpos = window.scrollX + document.querySelector('#chord1').getBoundingClientRect().left;
+//
+//console.log(rect.left + ', ' + rect.top + ', ' + rect.right + ', ' + rect.bottom);
+
+          if(jsonData.hasOwnProperty(estr)) {
+            var img = document.createElement('img');
+            img.style.position = 'relative';
+            if(jsonData[estr] == "0") {
+              img.src = "resources/images/icons/open.jpg";
+              img.style.left = '-10px'; //e
+              img.style.top = '10px'; //e0
+            } else if(jsonData[estr] == "2") {
+              img.src = "resources/images/icons/circle.jpg";
+              img.style.left = '-10px'; //e
+              img.style.top = '105px'; //e0
+            }
+            //  margin-left: 400px;
+            //    margin-top: 10px;
+            //img.className = 'chordboximgd0';
+            //img.style.left = (rect.left-6) + 'px'; //e0
+            //img.style.top = rect.top;
+            //img.style.left = (xpos + 200);
+            //img.style.right = ypos + 300;
+            chordboxdiv.appendChild(img);
+
+          }
+
+          if(jsonData.hasOwnProperty(astr)) {
+              var img = document.createElement('img');
+              img.style.position = 'relative';
+              if(jsonData[astr] == "2") {
+                img.src = "resources/images/icons/circle.jpg";
+                img.style.left = '0px';
+                img.style.top = '105px';
+                chordboxdiv.appendChild(img);
+              } else if(jsonData[astr] == "4") {
+                img.src = "resources/images/icons/circle.jpg";
+                img.style.left = '0px';
+                img.style.top = '225px';
+                chordboxdiv.appendChild(img);
+              }
+          }
+
+          if(jsonData.hasOwnProperty(dstr)) {
+              var img = document.createElement('img');
+              img.style.position = 'relative';
+              if(jsonData[dstr] == "2") {
+                img.src = "resources/images/icons/circle.jpg";
+                img.style.left = '12px';
+                img.style.top = '105px';
+                chordboxdiv.appendChild(img);
+              } else if(jsonData[dstr] == "4") {
+                img.src = "resources/images/icons/circle.jpg";
+                img.style.left = '12px';
+                img.style.top = '225px';
+                chordboxdiv.appendChild(img);
+              }
+          }
+
+          if(jsonData.hasOwnProperty(dstr)) {
+              var img = document.createElement('img');
+              img.style.position = 'relative';
+              if(jsonData[gstr] == "1") {
+                img.src = "resources/images/icons/circle.jpg";
+                img.style.left = '22px';
+                img.style.top = '50px';
+                chordboxdiv.appendChild(img);
+              } else if(jsonData[gstr] == "2") {
+                img.src = "resources/images/icons/circle.jpg";
+                img.style.left = '22px';
+                img.style.top = '105px';
+                chordboxdiv.appendChild(img);
+              }
+          }
+
+
+
+div.appendChild(chordboxdiv);
+
+//  "chord2": "F#m",
+//  "chord2e": "2",
+//  "chord2a": "4",
+//  "chord2d": "4",
+//  "chord2g": "2",
+//  "chord3": "G#m",
+//  "chord3out":"4",
+//  "chord3e": "1",
+//  "chord3a": "3",
+//  "chord3d": "3",
+//  "chord3g": "1"
+
+
+      }
 }
