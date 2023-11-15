@@ -189,13 +189,7 @@ header nav ul li {
 .chordbox {
   border-collapse:collapse;
   border:3px black solid;
-  margin-bottom: 20px;
-}
-
-.chordbox th {
-  border:3px black solid;
-  border-top:5px;
-  border-bottom:0px;
+  position:absolute;
 }
 
 .chordbox td {
@@ -206,7 +200,27 @@ header nav ul li {
   height:60px;
 }
 
-.main img {
+.chordboximge0 {
+  position: absolute;
+  left: -10px;
+}
+
+.chordboximga0 {
+  position: absolute;
+  left: 20px;
+}
+
+.chordboximgd0 {
+  position: absolute;
+  left: 30px;
+}
+
+.chordboximgg0 {
+  position: absolute;
+  left: 40px;
+}
+
+.boximg {
   float: left;
   padding: 10px;
   max-width:96%;
@@ -353,7 +367,7 @@ header nav ul li {
     padding: 0px;
   }
 
-  .main img {
+  .boximg {
     width:100%;
   }
 

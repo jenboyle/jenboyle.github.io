@@ -125,6 +125,7 @@ function drawTheory(jsonData, element) {
       if(jsonData.hasOwnProperty('chord1')) {
           const chord1_table = document.createElement("table");
           chord1_table.className = 'chordbox';
+          chord1_table.id = 'chord1';
 
           const chord1_caption = document.createElement("caption");
           chord1_caption.textContent = jsonData.chord1;
@@ -172,6 +173,27 @@ function drawTheory(jsonData, element) {
 
 
           div.appendChild(chord1_table);
+
+          var rect = chord1_table.getBoundingClientRect();
+          var ypos = window.scrollY + document.querySelector('#chord1').getBoundingClientRect().top;
+          var xpos = window.scrollX + document.querySelector('#chord1').getBoundingClientRect().left;
+
+          if(jsonData.e == "0") {
+
+
+            //  margin-left: 400px;
+            //    margin-top: 10px;
+
+            var img = document.createElement('img');
+            img.src = "resources/images/icons/open.jpg";
+            //img.className = 'chordboximgd0';
+            img.style.position = 'absolute';
+            img.style.xpos = xpos;
+            img.style.ypos = (ypos+200);
+            //img.style.left = (xpos + 200);
+            //img.style.right = ypos + 300;
+            div.appendChild(img);
+          }
 
 
       }
