@@ -253,6 +253,18 @@ if(jsonData.chord1e == "0") {
 
 div.appendChild(chordboxdiv);
 
+//  "chord2": "F#m",
+//  "chord2e": "2",
+//  "chord2a": "4",
+//  "chord2d": "4",
+//  "chord2g": "2",
+//  "chord3": "G#m",
+//  "chord3out":"4"
+//  "chord3e": "1",
+//  "chord3a": "3",
+//  "chord3d": "3",
+//  "chord3g": "1"
+
 
       }
 
