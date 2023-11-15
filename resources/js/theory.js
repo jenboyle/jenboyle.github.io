@@ -116,13 +116,13 @@ function drawTheory(jsonData, element) {
 
 
       //Draw chord box
-  //    "chord1":"E",
-  //      "e": "0",
-  //      "a": "2",
-  //      "d": "2",
-  //      "g": "1"
 
       if(jsonData.hasOwnProperty('chord1')) {
+          const chordboxdiv = document.createElement("div");
+          chordboxdiv.style.height = '270px';
+          chordboxdiv.style.width = '100px';
+          chordboxdiv.style.backgroundColor = 'pink';
+
           const chord1_table = document.createElement("table");
           chord1_table.className = 'chordbox';
           chord1_table.id = 'chord1';
@@ -135,6 +135,10 @@ function drawTheory(jsonData, element) {
           var chords1_td1 = document.createElement("td");
           var chords1_td2 = document.createElement("td");
           var chords1_td3 = document.createElement("td");
+
+
+
+
           chords1_tr1.appendChild(chords1_td1);
           chords1_tr1.appendChild(chords1_td2);
           chords1_tr1.appendChild(chords1_td3);
@@ -171,29 +175,83 @@ function drawTheory(jsonData, element) {
 
           chord1_table.appendChild(chords1_tr4);
 
-
-          div.appendChild(chord1_table);
-
-          var rect = chord1_table.getBoundingClientRect();
-          var ypos = window.scrollY + document.querySelector('#chord1').getBoundingClientRect().top;
-          var xpos = window.scrollX + document.querySelector('#chord1').getBoundingClientRect().left;
-
-          if(jsonData.e == "0") {
+          chordboxdiv.appendChild(chord1_table);
 
 
+
+//
+//          var rect = chord1_table.getBoundingClientRect();
+//          var ypos = window.scrollY + document.querySelector('#chord1').getBoundingClientRect().top;
+//          var xpos = window.scrollX + document.querySelector('#chord1').getBoundingClientRect().left;
+//
+//console.log(rect.left + ', ' + rect.top + ', ' + rect.right + ', ' + rect.bottom);
+
+if(jsonData.chord1e == "0") {
             //  margin-left: 400px;
             //    margin-top: 10px;
 
             var img = document.createElement('img');
             img.src = "resources/images/icons/open.jpg";
             //img.className = 'chordboximgd0';
-            img.style.position = 'absolute';
-            img.style.xpos = xpos;
-            img.style.ypos = (ypos+200);
+            img.style.position = 'relative';
+            //img.style.left = (rect.left-6) + 'px'; //e0
+            //img.style.top = rect.top;
+            img.style.left = '-10px'; //e0
+            img.style.top = '10px'; //e0
             //img.style.left = (xpos + 200);
             //img.style.right = ypos + 300;
-            div.appendChild(img);
+            chordboxdiv.appendChild(img);
           }
+
+          if(jsonData.chord1a == "2") {
+            //  margin-left: 400px;
+            //    margin-top: 10px;
+
+            var img = document.createElement('img');
+            img.src = "resources/images/icons/circle.jpg";
+                      //img.className = 'chordboximgd0';
+                      img.style.position = 'relative';
+                      //img.style.left = (rect.left-6) + 'px'; //e0
+                      //img.style.top = rect.top;
+                      img.style.left = '0px'; //e0
+                      img.style.top = '105px'; //e0
+                      //img.style.left = (xpos + 200);
+                      //img.style.right = ypos + 300;
+                      chordboxdiv.appendChild(img);
+          }
+
+          if(jsonData.chord1d == "2") {
+            var img = document.createElement('img');
+            img.src = "resources/images/icons/circle.jpg";
+            //img.className = 'chordboximgd0';
+            img.style.position = 'relative';
+            //img.style.left = (rect.left-6) + 'px'; //e0
+            //img.style.top = rect.top;
+            img.style.left = '12px'; //e0
+            img.style.top = '105px'; //e0
+            chordboxdiv.appendChild(img);
+          }
+
+          if(jsonData.chord1g == "1") {
+            //  margin-left: 400px;
+            //    margin-top: 10px;
+
+            var img = document.createElement('img');
+            img.src = "resources/images/icons/circle.jpg";
+            //img.className = 'chordboximgd0';
+            img.style.position = 'relative';
+            //img.style.left = (rect.left-6) + 'px'; //e0
+            //img.style.top = rect.top;
+            img.style.left = '22px'; //e0
+            img.style.top = '50px'; //e0
+            //img.style.left = (xpos + 200);
+            //img.style.right = ypos + 300;
+            chordboxdiv.appendChild(img);
+          }
+
+
+
+div.appendChild(chordboxdiv);
 
 
       }
