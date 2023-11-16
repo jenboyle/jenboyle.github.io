@@ -218,18 +218,53 @@ function showTheory(ul) {
 
 }
 
+//  "chord4": "A",
+//  "chord4e": "0",
+//  "chord4a": "4",
+//  "chord4d": "2",
+//  "chord4g": "2",
+//  "chord5": "B",
+//  "chord5e": "2",
+//  "chord5a": "2",
+//  "chord5d": "1",
+//  "chord5g": "x",
+//  "chord6": "C#m",
+//  "chord6out":"6",
+//  "chord6e": "4",
+//  "chord6a": "2",
+//  "chord6d": "1",
+//  "chord6g": "x",
+//
+//  "chord7": "D#Dim7",
+//  "chord7e": "2",
+//  "chord7a": "3",
+//  "chord7d": "1",
+//  "chord7g": "2",
+//
+//  "chord8": "B7",
+//  "chord8e": "x",
+//  "chord8a": "2",
+//  "chord8d": "4",
+//  "chord8g": "3"
+
 function checkForChords(jsonData, div) {
-  checkChords(jsonData, div, 'chord1', 'chord1e', 'chord1a', 'chord1d', 'chord1g');
-  checkChords(jsonData, div, 'chord2', 'chord2e', 'chord2a', 'chord2d', 'chord2g');
+  checkChords(jsonData, div, 'chord1', 'chord1e', 'chord1a', 'chord1d', 'chord1g', false, false);
+  checkChords(jsonData, div, 'chord2', 'chord2e', 'chord2a', 'chord2d', 'chord2g', false, false);
+  checkChords(jsonData, div, 'chord3', 'chord3e', 'chord3a', 'chord3d', 'chord3g', true, false);
+
+  //checkChords(jsonData, div, 'chord4', 'chord4e', 'chord4a', 'chord4d', 'chord4g', false, true);
+
 
 }
-function checkChords(jsonData, div, chord, estr, astr, dstr, gstr) {
+function checkChords(jsonData, div, chord, estr, astr, dstr, gstr, numOut, newblock) {
       if(jsonData.hasOwnProperty(chord)) {
           const chordboxdiv = document.createElement("div");
           chordboxdiv.style.height = '270px';
           chordboxdiv.style.width = '150px';
           chordboxdiv.style.backgroundColor = 'pink';
-          chordboxdiv.style.display = 'inline-block';
+          if(!newblock) {
+            chordboxdiv.style.display = 'inline-block';
+          }
 
           const chord1_table = document.createElement("table");
           chord1_table.className = 'chordbox';
@@ -272,17 +307,53 @@ function checkChords(jsonData, div, chord, estr, astr, dstr, gstr) {
 //
 //console.log(rect.left + ', ' + rect.top + ', ' + rect.right + ', ' + rect.bottom);
 
+          var fret0 = '10px';
+          var fret1 = '50px';
+          var fret2 = '105px';
+          var fret3 = '165px';
+          var fret4 = '225px';
+          var leftestr = '-10px';
+          var leftastr = '0px';
+          var leftdstr = '12px';
+          var leftgstr = '22px';
+
+
+
+
+          var numberFret = chord + 'out';
+          if(jsonData.hasOwnProperty(numberFret)) {
+             var img = document.createElement('img');
+             img.style.position = 'relative';
+             img.src = "resources/images/icons/" + jsonData[numberFret] + ".png";
+
+             //img.src = "resources/images/icons/open.jpg";
+             img.style.left = '-30px'; //e
+             img.style.top = '50px'; //e0
+
+             chordboxdiv.appendChild(img);
+
+             leftestr = '-30px';
+             leftastr = '-20px';
+             leftdstr = '-8px';
+             leftgstr = '2px';
+
+          }
+
+
+
           if(jsonData.hasOwnProperty(estr)) {
             var img = document.createElement('img');
             img.style.position = 'relative';
+            img.style.left = leftestr; //e
             if(jsonData[estr] == "0") {
               img.src = "resources/images/icons/open.jpg";
-              img.style.left = '-10px'; //e
-              img.style.top = '10px'; //e0
+              img.style.top = fret0; //e0
+            } else if(jsonData[estr] == "1") {
+              img.src = "resources/images/icons/circle.jpg";
+              img.style.top = fret1; //e0
             } else if(jsonData[estr] == "2") {
               img.src = "resources/images/icons/circle.jpg";
-              img.style.left = '-10px'; //e
-              img.style.top = '105px'; //e0
+              img.style.top = fret2; //e0
             }
             //  margin-left: 400px;
             //    margin-top: 10px;
@@ -298,47 +369,48 @@ function checkChords(jsonData, div, chord, estr, astr, dstr, gstr) {
           if(jsonData.hasOwnProperty(astr)) {
               var img = document.createElement('img');
               img.style.position = 'relative';
+              img.style.left = leftastr;
               if(jsonData[astr] == "2") {
                 img.src = "resources/images/icons/circle.jpg";
-                img.style.left = '0px';
-                img.style.top = '105px';
-                chordboxdiv.appendChild(img);
+                img.style.top = fret2;
+              } else if(jsonData[astr] == "3") {
+                img.src = "resources/images/icons/circle.jpg";
+                img.style.top = fret3;
               } else if(jsonData[astr] == "4") {
                 img.src = "resources/images/icons/circle.jpg";
-                img.style.left = '0px';
-                img.style.top = '225px';
-                chordboxdiv.appendChild(img);
+                img.style.top = fret4;
               }
+              chordboxdiv.appendChild(img);
           }
 
           if(jsonData.hasOwnProperty(dstr)) {
               var img = document.createElement('img');
               img.style.position = 'relative';
+              img.style.left = leftdstr;
               if(jsonData[dstr] == "2") {
                 img.src = "resources/images/icons/circle.jpg";
-                img.style.left = '12px';
-                img.style.top = '105px';
-                chordboxdiv.appendChild(img);
+                img.style.top = fret2;
+              } else if(jsonData[dstr] == "3") {
+                img.src = "resources/images/icons/circle.jpg";
+                img.style.top = fret3;
               } else if(jsonData[dstr] == "4") {
                 img.src = "resources/images/icons/circle.jpg";
-                img.style.left = '12px';
-                img.style.top = '225px';
-                chordboxdiv.appendChild(img);
+                img.style.top = fret4;
               }
+              chordboxdiv.appendChild(img);
           }
 
-          if(jsonData.hasOwnProperty(dstr)) {
+          if(jsonData.hasOwnProperty(gstr)) {
               var img = document.createElement('img');
               img.style.position = 'relative';
+              img.style.left = leftgstr;
               if(jsonData[gstr] == "1") {
                 img.src = "resources/images/icons/circle.jpg";
-                img.style.left = '22px';
-                img.style.top = '50px';
+                img.style.top = fret1;
                 chordboxdiv.appendChild(img);
               } else if(jsonData[gstr] == "2") {
                 img.src = "resources/images/icons/circle.jpg";
-                img.style.left = '22px';
-                img.style.top = '105px';
+                img.style.top = fret2;
                 chordboxdiv.appendChild(img);
               }
           }
@@ -347,17 +419,7 @@ function checkChords(jsonData, div, chord, estr, astr, dstr, gstr) {
 
 div.appendChild(chordboxdiv);
 
-//  "chord2": "F#m",
-//  "chord2e": "2",
-//  "chord2a": "4",
-//  "chord2d": "4",
-//  "chord2g": "2",
-//  "chord3": "G#m",
-//  "chord3out":"4",
-//  "chord3e": "1",
-//  "chord3a": "3",
-//  "chord3d": "3",
-//  "chord3g": "1"
+
 
 
       }

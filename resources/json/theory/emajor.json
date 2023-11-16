@@ -59,7 +59,36 @@
   "chord3e": "1",
   "chord3a": "3",
   "chord3d": "3",
-  "chord3g": "1"
+  "chord3g": "1",
+  "chord4": "A",
+  "chord4e": "0",
+  "chord4a": "4",
+  "chord4d": "2",
+  "chord4g": "2",
+  "chord5": "B",
+  "chord5e": "2",
+  "chord5a": "2",
+  "chord5d": "1",
+  "chord5g": "x",
+  "chord6": "C#m",
+  "chord6out":"6",
+  "chord6e": "4",
+  "chord6a": "2",
+  "chord6d": "1",
+  "chord6g": "x",
+
+  "chord7": "D#Dim7",
+  "chord7e": "2",
+  "chord7a": "3",
+  "chord7d": "1",
+  "chord7g": "2",
+
+  "chord8": "B7",
+  "chord8e": "x",
+  "chord8a": "2",
+  "chord8d": "4",
+  "chord8g": "3"
+
 
 
 
