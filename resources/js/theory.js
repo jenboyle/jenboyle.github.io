@@ -355,7 +355,10 @@ function checkChords(jsonData, div, chord, estr, astr, dstr, gstr, numOut, newbl
               var img = document.createElement('img');
               img.style.position = 'relative';
               img.style.left = leftastr;
-              if(jsonData[astr] == "2") {
+              if(jsonData[astr] == "0") {
+                img.src = "resources/images/icons/open.jpg";
+                img.style.top = fret0;
+              } else if(jsonData[astr] == "2") {
                 img.src = "resources/images/icons/circle.jpg";
                 img.style.top = fret2;
               } else if(jsonData[astr] == "3") {
