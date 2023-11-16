@@ -1,0 +1,90 @@
+{
+  "song": "C Major",
+  "by": "",
+  "key": "C",
+  "tuning": "EADG",
+  "notes": "C, D, E, F, G, A, B (0 sharps, relative minor: Am)",
+  "chords": "C, Dm, Em, F, G, Am, Bdim",
+  "chordtones": "C|E|G, D|F|A, E|G|B, F|A|C, G|B|D, A|C|E, B|D|F",
+  "textb4intro": "C Major on one string:",
+  "g1": "----------------",
+  "d1": "----------------",
+  "a1": "----------------",
+  "e1": "-8--10--12--13--",
+  "g2": "----------------",
+  "d2": "----------------",
+  "a2": "----------------",
+  "e2": "-15--17--19--20-",
+  "textb4verse1": "C Major moveable pattern:",
+  "g5": "-----------2-4-5",
+  "d5": "-----2-3-5------",
+  "a5": "-3-5------------",
+  "e5": "----------------",
+  "textb4verse2": "C Major Pentatonic:",
+  "g9": "----------------",
+  "d9": "-----------7-10-",
+  "a9": "------7-10------",
+  "e9": "-8-10-----------",
+
+  "g10": "-7-9------------",
+  "d10": "----------------",
+  "a10": "----------------",
+  "e10": "----------------",
+
+
+  "chord1":"C",
+  "chord1e": "x",
+  "chord1a": "3",
+  "chord1d": "2",
+  "chord1g": "0",
+
+
+  "chord2": "Dm",
+  "chord2e": "1",
+  "chord2a": "0",
+  "chord2d": "0",
+  "chord2g": "2",
+
+
+  "chord3": "Em",
+  "chord3e": "0",
+  "chord3a": "2",
+  "chord3d": "2",
+  "chord3g": "0",
+
+  "chord4": "F",
+  "chord4e": "1",
+  "chord4a": "0",
+  "chord4d": "3",
+  "chord4g": "2",
+
+  "chord5": "G",
+  "chord5e": "3",
+  "chord5a": "2",
+  "chord5d": "0",
+  "chord5g": "0",
+
+  "chord6": "Am",
+  "chord6e": "0",
+  "chord6a": "3",
+  "chord6d": "2",
+  "chord6g": "2",
+
+  "chord7": "BDim",
+  "chord7e": "1",
+  "chord7a": "2",
+  "chord7d": "0",
+  "chord7g": "x",
+
+  "chord8": "G7",
+  "chord8e": "3",
+  "chord8a": "1",
+  "chord8d": "3",
+  "chord8g": "0"
+
+
+
+
+
+  
+}
