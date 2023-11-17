@@ -325,22 +325,22 @@ function checkChords(jsonData, div, chord, estr, astr, dstr, gstr, numOut, newbl
             img.style.position = 'relative';
             img.style.left = leftestr; //e
             if(jsonData[estr] == "x") {
-              img.src = "resources/images/icons/mute.jpg";
+              img.src = "resources/images/icons/mute.png";
               img.style.top = fret0;
             } else if(jsonData[estr] == "0") {
-              img.src = "resources/images/icons/open.jpg";
+              img.src = "resources/images/icons/open.png";
               img.style.top = fret0; //e0
             } else if(jsonData[estr] == "1") {
-              img.src = "resources/images/icons/circle.jpg";
+              img.src = "resources/images/icons/circle.png";
               img.style.top = fret1; //e0
             } else if(jsonData[estr] == "2") {
-              img.src = "resources/images/icons/circle.jpg";
+              img.src = "resources/images/icons/circle.png";
               img.style.top = fret2; //e0
             } else if(jsonData[estr] == "3") {
-              img.src = "resources/images/icons/circle.jpg";
+              img.src = "resources/images/icons/circle.png";
               img.style.top = fret3; //e0
             } else if(jsonData[estr] == "4") {
-              img.src = "resources/images/icons/circle.jpg";
+              img.src = "resources/images/icons/circle.png";
               img.style.top = fret4; //e0
             }
             //  margin-left: 400px;
@@ -359,19 +359,19 @@ function checkChords(jsonData, div, chord, estr, astr, dstr, gstr, numOut, newbl
               img.style.position = 'relative';
               img.style.left = leftastr;
               if(jsonData[astr] == "0") {
-                img.src = "resources/images/icons/open.jpg";
+                img.src = "resources/images/icons/open.png";
                 img.style.top = fret0;
               } else if(jsonData[astr] == "1") {
-                img.src = "resources/images/icons/circle.jpg";
+                img.src = "resources/images/icons/circle.png";
                 img.style.top = fret1;
               } else if(jsonData[astr] == "2") {
-                img.src = "resources/images/icons/circle.jpg";
+                img.src = "resources/images/icons/circle.png";
                 img.style.top = fret2;
               } else if(jsonData[astr] == "3") {
-                img.src = "resources/images/icons/circle.jpg";
+                img.src = "resources/images/icons/circle.png";
                 img.style.top = fret3;
               } else if(jsonData[astr] == "4") {
-                img.src = "resources/images/icons/circle.jpg";
+                img.src = "resources/images/icons/circle.png";
                 img.style.top = fret4;
               }
               chordboxdiv.appendChild(img);
@@ -382,19 +382,19 @@ function checkChords(jsonData, div, chord, estr, astr, dstr, gstr, numOut, newbl
               img.style.position = 'relative';
               img.style.left = leftdstr;
               if(jsonData[dstr] == "0") {
-                img.src = "resources/images/icons/open.jpg";
+                img.src = "resources/images/icons/open.png";
                 img.style.top = fret0;
               } else if(jsonData[dstr] == "1") {
-                img.src = "resources/images/icons/circle.jpg";
+                img.src = "resources/images/icons/circle.png";
                 img.style.top = fret1;
               } else if(jsonData[dstr] == "2") {
-                img.src = "resources/images/icons/circle.jpg";
+                img.src = "resources/images/icons/circle.png";
                 img.style.top = fret2;
               } else if(jsonData[dstr] == "3") {
-                img.src = "resources/images/icons/circle.jpg";
+                img.src = "resources/images/icons/circle.png";
                 img.style.top = fret3;
               } else if(jsonData[dstr] == "4") {
-                img.src = "resources/images/icons/circle.jpg";
+                img.src = "resources/images/icons/circle.png";
                 img.style.top = fret4;
               }
               chordboxdiv.appendChild(img);
@@ -405,19 +405,19 @@ function checkChords(jsonData, div, chord, estr, astr, dstr, gstr, numOut, newbl
               img.style.position = 'relative';
               img.style.left = leftgstr;
               if(jsonData[gstr] == "x") {
-                img.src = "resources/images/icons/mute.jpg";
+                img.src = "resources/images/icons/mute.png";
                 img.style.top = fret0;
               } if(jsonData[gstr] == "0") {
-                img.src = "resources/images/icons/open.jpg";
+                img.src = "resources/images/icons/open.png";
                 img.style.top = fret0;
               } else if(jsonData[gstr] == "1") {
-                img.src = "resources/images/icons/circle.jpg";
+                img.src = "resources/images/icons/circle.png";
                 img.style.top = fret1;
               } else if(jsonData[gstr] == "2") {
-                img.src = "resources/images/icons/circle.jpg";
+                img.src = "resources/images/icons/circle.png";
                 img.style.top = fret2;
               } else if(jsonData[gstr] == "3") {
-                img.src = "resources/images/icons/circle.jpg";
+                img.src = "resources/images/icons/circle.png";
                 img.style.top = fret3;
               }
               chordboxdiv.appendChild(img);
