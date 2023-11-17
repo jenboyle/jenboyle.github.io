@@ -336,6 +336,9 @@ function checkChords(jsonData, div, chord, estr, astr, dstr, gstr, numOut, newbl
             } else if(jsonData[estr] == "2") {
               img.src = "resources/images/icons/circle.jpg";
               img.style.top = fret2; //e0
+            } else if(jsonData[estr] == "3") {
+              img.src = "resources/images/icons/circle.jpg";
+              img.style.top = fret3; //e0
             } else if(jsonData[estr] == "4") {
               img.src = "resources/images/icons/circle.jpg";
               img.style.top = fret4; //e0
@@ -358,6 +361,9 @@ function checkChords(jsonData, div, chord, estr, astr, dstr, gstr, numOut, newbl
               if(jsonData[astr] == "0") {
                 img.src = "resources/images/icons/open.jpg";
                 img.style.top = fret0;
+              } else if(jsonData[astr] == "1") {
+                img.src = "resources/images/icons/circle.jpg";
+                img.style.top = fret1;
               } else if(jsonData[astr] == "2") {
                 img.src = "resources/images/icons/circle.jpg";
                 img.style.top = fret2;
@@ -375,7 +381,10 @@ function checkChords(jsonData, div, chord, estr, astr, dstr, gstr, numOut, newbl
               var img = document.createElement('img');
               img.style.position = 'relative';
               img.style.left = leftdstr;
-              if(jsonData[dstr] == "1") {
+              if(jsonData[dstr] == "0") {
+                img.src = "resources/images/icons/open.jpg";
+                img.style.top = fret0;
+              } else if(jsonData[dstr] == "1") {
                 img.src = "resources/images/icons/circle.jpg";
                 img.style.top = fret1;
               } else if(jsonData[dstr] == "2") {
@@ -397,6 +406,9 @@ function checkChords(jsonData, div, chord, estr, astr, dstr, gstr, numOut, newbl
               img.style.left = leftgstr;
               if(jsonData[gstr] == "x") {
                 img.src = "resources/images/icons/mute.jpg";
+                img.style.top = fret0;
+              } if(jsonData[gstr] == "0") {
+                img.src = "resources/images/icons/open.jpg";
                 img.style.top = fret0;
               } else if(jsonData[gstr] == "1") {
                 img.src = "resources/images/icons/circle.jpg";
