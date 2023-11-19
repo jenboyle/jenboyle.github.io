@@ -57,25 +57,25 @@ function drawTab(jsonData, articleelement) {
   article.appendChild(ptune);
 
 
-  if(jsonData.hasOwnProperty('textb4intro')) {
+  if(jsonData.hasOwnProperty('textb4tab1')) {
     var sometext = document.createElement("div");
-    sometext.textContent = jsonData.textb4intro;
+    sometext.textContent = jsonData.textb4tab1;
     article.appendChild(sometext);
   }
 
   testfortab('e1', jsonData, article);
 
-  if(jsonData.hasOwnProperty('textb4verse1')) {
+  if(jsonData.hasOwnProperty('textb4tab2')) {
     var sometext = document.createElement("div");
-    sometext.textContent = jsonData.textb4verse1;
+    sometext.textContent = jsonData.textb4tab2;
     article.appendChild(sometext);
   }
 
   testfortab('e5', jsonData, article);
 
-  if(jsonData.hasOwnProperty('textb4verse2')) {
+  if(jsonData.hasOwnProperty('textb4tab3')) {
     sometext = document.createElement("div");
-    sometext.textContent = jsonData.textb4verse2;
+    sometext.textContent = jsonData.textb4tab3;
     article.appendChild(sometext);
   }
 

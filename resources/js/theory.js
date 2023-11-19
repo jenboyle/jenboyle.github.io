@@ -89,41 +89,41 @@ function drawTheory(jsonData, element) {
   }
 
 
-  if(jsonData.hasOwnProperty('textb4intro')) {
+  if(jsonData.hasOwnProperty('textb4tab1')) {
     var sometext = document.createElement("div");
-    sometext.textContent = jsonData.textb4intro;
+    sometext.textContent = jsonData.textb4tab1;
     div.appendChild(sometext);
   }
 
   testfortab('e1', jsonData, div);
 
-  if(jsonData.hasOwnProperty('textb4verse1')) {
+  if(jsonData.hasOwnProperty('textb4tab2')) {
     var sometext = document.createElement("div");
-    sometext.textContent = jsonData.textb4verse1;
+    sometext.textContent = jsonData.textb4tab2;
     div.appendChild(sometext);
   }
 
   testfortab('e5', jsonData, div);
 
-  if(jsonData.hasOwnProperty('textb4verse2')) {
+  if(jsonData.hasOwnProperty('textb4tab3')) {
     sometext = document.createElement("div");
-    sometext.textContent = jsonData.textb4verse2;
+    sometext.textContent = jsonData.textb4tab3;
     div.appendChild(sometext);
   }
 
   testfortab('e9', jsonData, div);
 
-    if(jsonData.hasOwnProperty('textb4verse3')) {
+    if(jsonData.hasOwnProperty('textb4tab4')) {
       sometext = document.createElement("div");
-      sometext.textContent = jsonData.textb4verse3;
+      sometext.textContent = jsonData.textb4tab4;
       div.appendChild(sometext);
     }
 
   testfortab('e13', jsonData, div);
 
-    if(jsonData.hasOwnProperty('textb4verse4')) {
+    if(jsonData.hasOwnProperty('textb4tab5')) {
       sometext = document.createElement("div");
-      sometext.textContent = jsonData.textb4verse4;
+      sometext.textContent = jsonData.textb4tab5;
       div.appendChild(sometext);
     }
 
