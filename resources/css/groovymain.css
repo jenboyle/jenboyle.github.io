@@ -348,6 +348,11 @@ header nav ul li {
   float: right;
 }
 
+#theorydiv p:first-letter{
+  font-size:1.5em;
+  color:darkolivegreen;
+}
+
 #theoryclear {
   clear: both;
 }

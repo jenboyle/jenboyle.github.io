@@ -120,6 +120,13 @@ function drawTheory(jsonData, element) {
     }
 
   testfortab('e13', jsonData, div);
+
+    if(jsonData.hasOwnProperty('textb4verse4')) {
+      sometext = document.createElement("div");
+      sometext.textContent = jsonData.textb4verse4;
+      div.appendChild(sometext);
+    }
+
   testfortab('e17', jsonData, div);
 
 
