@@ -16,13 +16,15 @@ function drawTheory(jsonData, element) {
   psong.textContent = jsonData.song;
   div.appendChild(psong);
 
-  const pkey = document.createElement("p");
-  pkey.textContent = 'Key: ' + jsonData.key;
-  div.appendChild(pkey);
+  if(jsonData.hasOwnProperty('key')) {
+    const pkey = document.createElement("p");
+    pkey.textContent = 'Key: ' + jsonData.key;
+    div.appendChild(pkey);
+  }
 
-  const ptune = document.createElement("p");
-  ptune.textContent = 'Tuning: ' + jsonData.tuning;
-  div.appendChild(ptune);
+//  const ptune = document.createElement("p");
+//  ptune.textContent = 'Tuning: ' + jsonData.tuning;
+//  div.appendChild(ptune);
 
 
 
@@ -77,6 +79,12 @@ function drawTheory(jsonData, element) {
     }
 
     div.appendChild(chords_table);
+
+    if(jsonData.hasOwnProperty('notes')) {
+      const notes = document.createElement("p");
+      notes.textContent = 'Notes: ' + jsonData.notes;
+      div.appendChild(notes);
+      }
 
   }
 
