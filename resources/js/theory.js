@@ -20,6 +20,8 @@ function drawTheory(jsonData, element) {
     const pkey = document.createElement("p");
     pkey.textContent = 'Key: ' + jsonData.key;
     div.appendChild(pkey);
+  } else if(jsonData.hasOwnProperty('tablefifths')){
+    drawTableFifths(jsonData, div);
   }
 
 //  const ptune = document.createElement("p");
@@ -380,4 +382,75 @@ function styleImgOnString(str, img) {
     img.style.top = fret4;
   }
 
+}
+
+function drawTableFifths(jsonData, div) {
+  drawTable(jsonData, div, 'sharps');
+  drawTable(jsonData, div, 'flats');
+
+  if(jsonData.hasOwnProperty('orderofsharps')) {
+    const sharpsdiv = document.createElement("div");
+    sharpsdiv.textContent = 'Order of Sharps: ' + jsonData.orderofsharps;
+    div.appendChild(sharpsdiv);
+  }
+
+  if(jsonData.hasOwnProperty('orderofflats')) {
+    const flatsdiv = document.createElement("div");
+    flatsdiv.textContent = 'Order of Flats: ' + jsonData.orderofflats;
+    div.appendChild(flatsdiv);
+  }
+
+}
+
+function drawTable(jsonData, div, key) {
+
+  checkkey = key + 'title';
+  if(jsonData.hasOwnProperty(checkkey)) {
+
+    const table = document.createElement("table");
+
+    const caption = document.createElement("caption");
+    caption.textContent = jsonData[checkkey];
+    table.appendChild(caption);
+
+    table.className = 'fifthstable';
+    const trh = document.createElement("tr");
+    const note_th = document.createElement("th");
+    note_th.textContent = 'Note';
+    trh.appendChild(note_th);
+
+    const amountth = document.createElement("th");
+    var capkey = key.charAt(0).toUpperCase() + key.slice(1);
+    amountth.textContent = 'Amount of ' + capkey;
+    trh.appendChild(amountth);
+
+    const whatth = document.createElement("th");
+    whatth.textContent = capkey;
+    trh.appendChild(whatth);
+
+    table.appendChild(trh);
+
+
+    for(i=1; i<8; i++){
+      const fifths_tr = document.createElement("tr");
+
+      const fifthsnote_td = document.createElement("td");
+      var notekey = i + key + 'note';
+      fifthsnote_td.textContent = jsonData[notekey];
+      fifths_tr.appendChild(fifthsnote_td);
+
+      const fifthsmany_td = document.createElement("td");
+      var manykey = i + key + 'many';
+      fifthsmany_td.textContent = jsonData[manykey];
+      fifths_tr.appendChild(fifthsmany_td);
+
+      const fifthswhat_td = document.createElement("td");
+      var whatkey = i + key + 'what';
+      fifthswhat_td.textContent = jsonData[whatkey];
+      fifths_tr.appendChild(fifthswhat_td);
+
+      table.appendChild(fifths_tr);
+    }
+    div.appendChild(table);
+  }
 }

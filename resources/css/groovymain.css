@@ -228,6 +228,27 @@ header nav ul li {
   margin:2%;
 }
 
+.fifthstable {
+
+  border-collapse:collapse;
+  margin-bottom: 20px;
+}
+
+.fifthstable th {
+  border:3px darkolivegreen solid;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+.fifthstable td {
+  border:3px darkolivegreen solid;
+  text-align:center;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
 .main ul {
   height: 300px;
   overflow: auto;

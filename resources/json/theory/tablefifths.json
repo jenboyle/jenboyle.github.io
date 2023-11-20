@@ -37,7 +37,7 @@
   "6flatsnote": "Db",
   "7flatsnote": "Gb",
 
-  "1flatsmany": "0b",
+  "1flatsmany": "",
   "2flatsmany": "1b",
   "3flatsmany": "2b",
   "4flatsmany": "3b",
@@ -53,8 +53,8 @@
   "6flatswhat": "Bb, Eb, Ab, Db, Gb",
   "7flatswhat": "Bb, Eb, Ab, Db, Gb, Cb",
 
-  "orderofsharps": "F, C, G, D, A, E, B",
-  "orderofflats": "B, E, A, D, G, C, F"
+  "orderofsharps": "F C G D A E B",
+  "orderofflats": "B E A D G C F"
 
 
 
