@@ -1,0 +1,65 @@
+{
+  "song": "Table of Fifths",
+  "by": "",
+  "tablefifths":"true",
+  "sharpstitle": "Sharps Side",
+  "1ssnote": "C",
+  "2ssnote": "G",
+  "3ssnote": "D",
+  "4ssnote": "A",
+  "5ssnote": "E",
+  "6ssnote": "B",
+  "7ssnote": "F#",
+
+  "1ssmany": "0#",
+  "2ssmany": "1#",
+  "3ssmany": "2#",
+  "4ssmany": "3#",
+  "5ssmany": "4#",
+  "6ssmany": "5#",
+  "7ssmany": "6#",
+
+  "1sswhat": "",
+  "2sswhat": "F#",
+  "3sswhat": "F#, C#",
+  "4sswhat": "F#, C#, G#",
+  "5sswhat": "F#, C#, G#, D#",
+  "6sswhat": "F#, C#, G#, D#, A#",
+  "7sswhat": "F#, C#, G#, D#, A#, E#",
+
+
+  "flatstitle": "Flats Side",
+  "1fsnote": "C",
+  "2fsnote": "F",
+  "3fsnote": "Bb",
+  "4fsnote": "Eb",
+  "5fsnote": "Ab",
+  "6fsnote": "Db",
+  "7fsnote": "Gb",
+
+  "1fsmany": "0b",
+  "2fsmany": "1b",
+  "3fsmany": "2b",
+  "4fsmany": "3b",
+  "5fsmany": "4b",
+  "6fsmany": "5b",
+  "7fsmany": "6b",
+
+  "1fswhat": "",
+  "2fswhat": "Bb",
+  "3fswhat": "Bb, Eb",
+  "4fswhat": "Bb, Eb, Ab",
+  "5fswhat": "Bb, Eb, Ab, Db",
+  "6fswhat": "Bb, Eb, Ab, Db, Gb",
+  "7fswhat": "Bb, Eb, Ab, Db, Gb, Cb",
+
+  "orderofsharps": "F, C, G, D, A, E, B",
+  "orderofflats": "B, E, A, D, G, C, F"
+
+
+
+
+
+
+  
+}
