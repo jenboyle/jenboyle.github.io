@@ -435,8 +435,8 @@ function drawTable(jsonData, div, key) {
       const fifths_tr = document.createElement("tr");
 
       const fifthskey_td = document.createElement("td");
-      var key = i + key + 'key';
-      fifthskey_td.textContent = jsonData[key];
+      var fifthskey = i + key + 'key';
+      fifthskey_td.textContent = jsonData[fifthskey];
       fifthskey_td.className = 'fifthstablecenttd';
       fifths_tr.appendChild(fifthskey_td);
 
