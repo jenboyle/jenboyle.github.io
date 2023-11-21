@@ -416,7 +416,7 @@ function drawTable(jsonData, div, key) {
     table.className = 'fifthstable';
     const trh = document.createElement("tr");
     const note_th = document.createElement("th");
-    note_th.textContent = 'Note';
+    note_th.textContent = 'Key';
     trh.appendChild(note_th);
 
     const amountth = document.createElement("th");
@@ -431,22 +431,25 @@ function drawTable(jsonData, div, key) {
     table.appendChild(trh);
 
 
-    for(i=1; i<8; i++){
+    for(i=1; i<9; i++){
       const fifths_tr = document.createElement("tr");
 
-      const fifthsnote_td = document.createElement("td");
-      var notekey = i + key + 'note';
-      fifthsnote_td.textContent = jsonData[notekey];
-      fifths_tr.appendChild(fifthsnote_td);
+      const fifthskey_td = document.createElement("td");
+      var key = i + key + 'key';
+      fifthskey_td.textContent = jsonData[key];
+      fifthskey_td.className = 'fifthstablecenttd';
+      fifths_tr.appendChild(fifthskey_td);
 
       const fifthsmany_td = document.createElement("td");
       var manykey = i + key + 'many';
       fifthsmany_td.textContent = jsonData[manykey];
+      fifthsmany_td.className = 'fifthstablecenttd';
       fifths_tr.appendChild(fifthsmany_td);
 
       const fifthswhat_td = document.createElement("td");
       var whatkey = i + key + 'what';
       fifthswhat_td.textContent = jsonData[whatkey];
+      fifthswhat_td.className = 'fifthstablelefttd';
       fifths_tr.appendChild(fifthswhat_td);
 
       table.appendChild(fifths_tr);

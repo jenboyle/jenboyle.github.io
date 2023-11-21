@@ -3,13 +3,14 @@
   "by": "",
   "tablefifths":"true",
   "sharpstitle": "Sharps Side",
-  "1sharpsnote": "C",
-  "2sharpsnote": "G",
-  "3sharpsnote": "D",
-  "4sharpsnote": "A",
-  "5sharpsnote": "E",
-  "6sharpsnote": "B",
-  "7sharpsnote": "F#",
+  "1sharpskey": "C/Am",
+  "2sharpskey": "G/Em",
+  "3sharpskey": "D/Bm",
+  "4sharpskey": "A/F#m",
+  "5sharpskey": "E/C#m",
+  "6sharpskey": "B/G#m",
+  "7sharpskey": "F#/D#m",
+  "8sharpskey": "C#/A#m",
 
   "1sharpsmany": "",
   "2sharpsmany": "1#",
@@ -18,6 +19,7 @@
   "5sharpsmany": "4#",
   "6sharpsmany": "5#",
   "7sharpsmany": "6#",
+  "8sharpsmany": "7#",
 
   "1sharpswhat": "",
   "2sharpswhat": "F#",
@@ -26,16 +28,19 @@
   "5sharpswhat": "F#, C#, G#, D#",
   "6sharpswhat": "F#, C#, G#, D#, A#",
   "7sharpswhat": "F#, C#, G#, D#, A#, E#",
+  "8sharpswhat": "F#, C#, G#, D#, A#, E# B#",
 
 
   "flatstitle": "Flats Side",
-  "1flatsnote": "C",
-  "2flatsnote": "F",
-  "3flatsnote": "Bb",
-  "4flatsnote": "Eb",
-  "5flatsnote": "Ab",
-  "6flatsnote": "Db",
-  "7flatsnote": "Gb",
+  "1flatskey": "C/Am",
+  "2flatskey": "F",
+  "3flatskey": "Bb",
+  "4flatskey": "Eb",
+  "5flatskey": "Ab",
+  "6flatskey": "Db",
+  "7flatskey": "Gb/Ebm",
+  "8flatskey": "Cb/Abm",
+
 
   "1flatsmany": "",
   "2flatsmany": "1b",
@@ -44,6 +49,7 @@
   "5flatsmany": "4b",
   "6flatsmany": "5b",
   "7flatsmany": "6b",
+  "8flatsmany": "7b",
 
   "1flatswhat": "",
   "2flatswhat": "Bb",
@@ -52,6 +58,7 @@
   "5flatswhat": "Bb, Eb, Ab, Db",
   "6flatswhat": "Bb, Eb, Ab, Db, Gb",
   "7flatswhat": "Bb, Eb, Ab, Db, Gb, Cb",
+  "8flatswhat": "Bb, Eb, Ab, Db, Gb, Cb Fb",
 
   "orderofsharps": "F C G D A E B",
   "orderofflats": "B E A D G C F"

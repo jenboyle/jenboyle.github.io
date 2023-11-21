@@ -243,9 +243,18 @@ header nav ul li {
 
 .fifthstable td {
   border:3px darkolivegreen solid;
-  text-align:center;
   padding-left: 20px;
   padding-right: 20px;
+
+}
+
+.fifthstablecenttd {
+  text-align:center;
+
+}
+
+.fifthstablelefttd {
+  text-align:left;
 
 }
 
