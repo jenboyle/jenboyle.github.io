@@ -33,11 +33,11 @@
 
   "flatstitle": "Flats Side",
   "1flatskey": "C/Am",
-  "2flatskey": "F",
-  "3flatskey": "Bb",
-  "4flatskey": "Eb",
-  "5flatskey": "Ab",
-  "6flatskey": "Db",
+  "2flatskey": "F/Dm",
+  "3flatskey": "Bb/Gm",
+  "4flatskey": "Eb/Cm",
+  "5flatskey": "Ab/Fm",
+  "6flatskey": "Db/Bbm",
   "7flatskey": "Gb/Ebm",
   "8flatskey": "Cb/Abm",
 
