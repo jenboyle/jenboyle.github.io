@@ -385,6 +385,14 @@ function styleImgOnString(str, img) {
 }
 
 function drawTableFifths(jsonData, div) {
+
+  const circleimg = document.createElement("img");
+  circleimg.src = 'resources/images/theory/circlefifths.jpg';
+  div.appendChild(circleimg);
+
+  const tabletitle = document.createElement("p");
+  tabletitle.textContent = 'Table of Fifths';
+  div.appendChild(tabletitle);
   drawTable(jsonData, div, 'sharps');
   drawTable(jsonData, div, 'flats');
 
