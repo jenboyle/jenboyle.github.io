@@ -92,7 +92,7 @@ function drawTheory(jsonData, element) {
 
 
   var tabNumber = 1;
-  for(i=1; i<11; i++){
+  for(i=1; i<12; i++){
     var prop = 'textb4tab' + i;
     if(jsonData.hasOwnProperty(prop)) {
       var sometext = document.createElement("div");
