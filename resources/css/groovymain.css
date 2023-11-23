@@ -258,11 +258,6 @@ header nav ul li {
 
 }
 
-.main ul {
-  height: 300px;
-  overflow: auto;
-}
-
 .menu {
   display: none;
 }
@@ -337,6 +332,11 @@ header nav ul li {
   width: 400px;
   height: 150px;
   position:relative;
+}
+
+#songList {
+  height: 450px;
+  overflow: auto;
 }
 
 #songList, #blogList {
