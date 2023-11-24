@@ -9,23 +9,23 @@ function playMe(file) {
   
 }
 
-function randomScale() {
+function randomKey() {
 
-  fetch('https://groovyjen.com/resources/json/theory/availablescales.json')
+  fetch('https://groovyjen.com/resources/json/theory/availablekeys.json')
       .then((response) => response.json())
-      .then((json) =>  randomScalePicker(json));
+      .then((json) =>  randomKeyPicker(json));
 
 
 }
 
 
-function randomScalePicker(json) {
+function randomKeyPicker(json) {
 
-  const pscale = document.getElementById('randomscale');
+  const pkey = document.getElementById('randomkey');
 
   var randSelect = Math.floor(Math.random() * 30) + 1;
 
 
-  pscale.innerHTML = json['scale'+randSelect];
+  pkey.innerHTML = json['key'+randSelect];
 
 }
