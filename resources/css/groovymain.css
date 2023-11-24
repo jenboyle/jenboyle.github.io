@@ -273,7 +273,6 @@ display: inline-block;
 }
 
 .jambuttons:active {
-  background-color: whitesmoke;
   box-shadow: 0 2px #666;
   transform: translateY(4px);
 }
@@ -329,6 +328,10 @@ display: inline-block;
   width:50%;
   text-align:left;
 
+}
+
+#randomkey {
+  text-align:center;
 }
 
 #transcriptionchoice {
