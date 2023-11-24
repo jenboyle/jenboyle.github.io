@@ -258,6 +258,27 @@ header nav ul li {
 
 }
 
+.jambuttons {
+display: inline-block;
+  padding: 16px;
+  background-color: #8DA399;
+  font-size: 20px;
+  border-radius: 15px;
+  border: 2px solid gray;
+  box-shadow: 0 4px #999;
+}
+
+.jambuttons:hover {
+  background-color: whitesmoke;
+}
+
+.jambuttons:active {
+  background-color: whitesmoke;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+
 .menu {
   display: none;
 }
