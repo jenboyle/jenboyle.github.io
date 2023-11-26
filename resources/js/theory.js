@@ -22,6 +22,8 @@ function drawTheory(jsonData, element) {
     div.appendChild(pkey);
   } else if(jsonData.hasOwnProperty('tablefifths')){
     drawTableFifths(jsonData, div);
+  } else if (jsonData.hasOwnProperty('fretboard')) {
+    drawFretboard(jsonData, div);
   }
 
 //  const ptune = document.createElement("p");
@@ -464,4 +466,10 @@ function drawTable(jsonData, div, key) {
     }
     div.appendChild(table);
   }
+}
+
+function drawFretboard(jsonData, div) {
+  const fretimg = document.createElement("img");
+  fretimg.src = 'resources/images/icons/fretboard.png';
+  div.appendChild(fretimg);
 }
