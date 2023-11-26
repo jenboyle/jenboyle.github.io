@@ -411,6 +411,10 @@ display: inline-block;
   clear: both;
 }
 
+.fretboard {
+  position:absolute;
+}
+
 
 @media all and (max-width:740px) {
   header nav ul, .main nav ul {

@@ -471,5 +471,74 @@ function drawTable(jsonData, div, key) {
 function drawFretboard(jsonData, div) {
   const fretimg = document.createElement("img");
   fretimg.src = 'resources/images/icons/fretboard.png';
+
+  fretimg.className = 'fretboard';
   div.appendChild(fretimg);
+
+
+
+
+
+
+
+  if(jsonData.hasOwnProperty('cmajorpent1')) {
+          var pentjson = jsonData.cmajorpent1;
+          const pentArr = pentjson.split(',');
+
+          var adjust = 25;
+
+          for(i=0; i<pentArr.length; i++){
+
+            const note1img = document.createElement("img");
+            note1img.src = 'resources/images/icons/diamond1.png';
+            note1img.style.position = 'relative';
+            //note1img.style.left = '0px';
+            //note1img.style.top = '0px';
+
+
+            var coord = pentArr[i];
+            var stringloc = coord.charAt(0);
+            var fretloc = coord.substring(1,coord.length);
+
+            if(stringloc == 'E') {
+              note1img.style.top = '0px';
+            } else if (stringloc == 'A') {
+              note1img.style.top = '25px';
+            } else if (stringloc == 'D') {
+              note1img.style.top = '50px';
+            } else if (stringloc == 'G') {
+              note1img.style.top = '75px';
+            }
+
+
+
+            if(fretloc == '0'){
+              note1img.style.left = (10-adjust) + 'px';
+            } else if(fretloc == '2'){
+              note1img.style.left = (140-adjust) + 'px';
+            } else if(fretloc == '3'){
+              note1img.style.left = (215-adjust) + 'px';
+            } else if(fretloc == '4'){
+              note1img.style.left = (310-adjust) + 'px';
+            } else if(fretloc == '5'){
+              note1img.style.left = (335-adjust) + 'px';
+            } else if(fretloc == '6'){
+              note1img.style.left = (385-adjust) + 'px';
+            }
+
+            div.appendChild(note1img);
+            adjust += 25;
+          }
+
+  }
+
+
+
+
+
+  //  cursor: url('resources/images/icons/basspointer.png');
+//  "cmajorpent1": "A3,D0,D2,G0,G2,G5",
+//  "cmajorpent2": "E8,E10,A7,A10,D7,D10",
+//  "cmajorpent3": "G5,G7,G9,G12,G14,G17"
+
 }
