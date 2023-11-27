@@ -1,3 +1,7 @@
+var pentatonicselected = 'cmajorpent1';
+var pentatonicselectedlocs = 'A3,D0,D2,G0,G2,G5';
+var div;
+
 function loadTheory(topic, element, ul) {
   console.log(topic);
   //hide the ul
@@ -10,7 +14,7 @@ function loadTheory(topic, element, ul) {
 
 function drawTheory(jsonData, element) {
   console.log(jsonData);
-  const div = document.getElementById(element);
+  div = document.getElementById(element);
   div.innerHTML = '';
   const psong = document.createElement("p");
   psong.textContent = jsonData.song;
@@ -468,29 +472,37 @@ function drawTable(jsonData, div, key) {
   }
 }
 
-function drawFretboard(jsonData, div) {
-  const fretimg = document.createElement("img");
-  fretimg.src = 'resources/images/icons/fretboard.png';
-
-  fretimg.className = 'fretboard';
-  div.appendChild(fretimg);
+function loadPent() {
+  //if(jsonData.hasOwnProperty(chosenPent)) {
+          //var pentjson = jsonData[chosenPent];
+          //const pentArr = pentjson.split(',');
 
 
 
 
+          //alert(pentatonicselected);
+          //alert(pentatonicselectedlocs);
+
+          const pentArr = pentatonicselectedlocs.split(',');
 
 
+          for(i=0; i<pentArr.length; i++){
+            if(document.getElementById("penticon" + i) != undefined) {
+            div.removeChild(document.getElementById("penticon" + i));
+            }
+          }
 
-  if(jsonData.hasOwnProperty('cmajorpent1')) {
-          var pentjson = jsonData.cmajorpent1;
-          const pentArr = pentjson.split(',');
+
 
           var adjust = 25;
 
           for(i=0; i<pentArr.length; i++){
 
             const note1img = document.createElement("img");
-            note1img.src = 'resources/images/icons/diamond1.png';
+            note1img.src = 'resources/images/icons/diamond3.png';
+            if(i==0 || i==(pentArr.length-1)) {
+              note1img.src = 'resources/images/icons/diamond1.png';
+            }
             note1img.style.position = 'relative';
             //note1img.style.left = '0px';
             //note1img.style.top = '0px';
@@ -501,13 +513,13 @@ function drawFretboard(jsonData, div) {
             var fretloc = coord.substring(1,coord.length);
 
             if(stringloc == 'E') {
-              note1img.style.top = '0px';
+              note1img.style.top = '72px';
             } else if (stringloc == 'A') {
-              note1img.style.top = '25px';
+              note1img.style.top = '47px';
             } else if (stringloc == 'D') {
-              note1img.style.top = '50px';
+              note1img.style.top = '22px';
             } else if (stringloc == 'G') {
-              note1img.style.top = '75px';
+              note1img.style.top = '-3px';
             }
 
 
@@ -524,16 +536,106 @@ function drawFretboard(jsonData, div) {
               note1img.style.left = (335-adjust) + 'px';
             } else if(fretloc == '6'){
               note1img.style.left = (385-adjust) + 'px';
+            } else if(fretloc == '7'){
+              note1img.style.left = (428-adjust) + 'px';
+            } else if(fretloc == '8'){
+              note1img.style.left = (471-adjust) + 'px';
+            } else if(fretloc == '9'){
+              note1img.style.left = (510-adjust) + 'px';
+            } else if(fretloc == '10'){
+              note1img.style.left = (540-adjust) + 'px';
             }
+
+            //"cmajorpent2": "E8,E10,A7,A10,D7,D10",
+
+            note1img.id = "penticon" + i;
 
             div.appendChild(note1img);
             adjust += 25;
           }
 
-  }
+  //}
+}
+
+function drawFretboard(jsonData, div) {
+
+  //selection
+  const pentdiv = document.createElement("div");
+  pentdiv.className = 'dropdowntheory';
+
+  const pentbutton = document.createElement("button");
+  pentbutton.id = 'pentbutton';
+  pentbutton.setAttribute('onclick','javascript:pentButtonClick();');
+  pentbutton.className = 'dropbtntheory';
+  pentbutton.textContent = 'C Major Pentatonic 1';
+
+  pentdiv.appendChild(pentbutton);
+
+  const pentdropdiv = document.createElement("div");
+  pentdropdiv.id = "myDropdowntheory";
+  pentdropdiv.className = 'dropdown-contenttheory';
+
+  const pentinput = document.createElement("input");
+  pentinput.id = "myInputtheory";
+  pentinput.type = "text";
+  pentinput.placeholder = "Search...";
+  pentinput.onkeyup = "filterFunction()";
+
+  pentdropdiv.appendChild(pentinput);
 
 
 
+
+
+  const alinkcpent = document.createElement("a");
+  //alinkcpent.href = "loadPent(" + jsonData + ", 'cmajorpent1', " + div + ")";
+  alinkcpent.href = "javascript:void(0);";
+  alinkcpent.id = 'cmajorpent1';
+  alinkcpent.value = 'A3,D0,D2,G0,G2,G5';
+  alinkcpent.onclick = function() {
+    pentatonicselected = 'cmajorpent1';
+    pentatonicselectedlocs = "A3,D0,D2,G0,G2,G5";
+    document.getElementById('pentbutton').textContent = 'C Major Pentatonic 1';
+    pentButtonClick();
+    loadPent();
+    //alert('var is:' + cmajorpent1);
+  };
+  //loadPent(" + jsonData + ", 'cmajorpent1', " + div + ")");
+  //"javascript:hi(" + jsonData + ");";
+  alinkcpent.textContent = 'C Pentatonic 1';
+  pentdropdiv.appendChild(alinkcpent);
+
+    const alinkcpent2 = document.createElement("a");
+    //alinkcpent2.href = "loadPent(" + jsonData + ", 'cmajorpent2', " + div + ")";
+    alinkcpent2.href = "javascript:void(0);";
+    alinkcpent2.id = 'cmajorpent2';
+    alinkcpent2.value = 'E8,E10,A7,A10,D7,D10';
+    alinkcpent2.onclick = function() {
+      pentatonicselected = 'cmajorpent2';
+      pentatonicselectedlocs = "E8,E10,A7,A10,D7,D10";
+      document.getElementById('pentbutton').textContent = 'C Major Pentatonic 2';
+      pentButtonClick();
+      loadPent();
+      //alert('var is:' + cmajorpent2);
+    };
+
+    //loadPent(" + jsonData + ", 'cmajorpent2', " + div + ")");
+    //"javascript:hi(" + jsonData + ");";
+    alinkcpent2.textContent = 'C Pentatonic 2';
+    pentdropdiv.appendChild(alinkcpent2);
+
+  pentdiv.appendChild(pentdropdiv);
+
+  div.appendChild(pentdiv);
+
+  const fretimg = document.createElement("img");
+  fretimg.src = 'resources/images/theory/fretboard.png';
+
+  fretimg.className = 'fretboard';
+  div.appendChild(fretimg);
+
+  //initial
+    loadPent();
 
 
   //  cursor: url('resources/images/icons/basspointer.png');
@@ -542,3 +644,24 @@ function drawFretboard(jsonData, div) {
 //  "cmajorpent3": "G5,G7,G9,G12,G14,G17"
 
 }
+
+function pentButtonClick() {
+  document.getElementById('myDropdowntheory').classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById('myInputtheory');
+  filter = input.value.toUpperCase();
+  dddiv = document.getElementById('myDropdowntheory');
+  a = dddiv.getElementsByTagName("a");
+  for (i=0; i< a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
