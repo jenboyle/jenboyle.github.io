@@ -1,5 +1,5 @@
 var pentatonicselected = 'cmajorpent1';
-var pentatonicselectedlocs = 'A3,D0,D2,G0,G2,G5';
+var pentatonicselectedlocs = 'E8,E10,A7,A10,D7,D10';
 var div;
 
 function loadTheory(topic, element, ul) {
@@ -583,46 +583,76 @@ function drawFretboard(jsonData, div) {
 
   pentdropdiv.appendChild(pentinput);
 
+  for(i=0; i<2; i++) {
+    var pent_name = 'pent_name'+(i+1);
+    var pent_id = 'pent_id'+(i+1);
+    var pent_locs = 'pent_locs'+(i+1);
+
+    if(jsonData.hasOwnProperty(pent_name)) {
+      var alinkpent = document.createElement("a");
+      alinkpent.href = "javascript:void(0);";
+        alinkpent.id = jsonData[pent_id];
+        alinkpent.value = jsonData[pent_locs];
+        alinkpent.textContent = jsonData[pent_name];
+
+        alinkpent.onclick = function() {
+          pentatonicselected = this.id;//jsonData[pent_id];
+          pentatonicselectedlocs = this.value;//jsonData[pent_locs];
+          document.getElementById('pentbutton').textContent = this.textContent;
+          pentButtonClick();
+          loadPent();
+          //alert('var is:' + cmajorpent1);
+          //alinkpent.textContent = this.textContent;
+
+        };
+
+
+        pentdropdiv.appendChild(alinkpent);
+
+
+
+    }
+  }
 
 
 
 
-  const alinkcpent = document.createElement("a");
-  //alinkcpent.href = "loadPent(" + jsonData + ", 'cmajorpent1', " + div + ")";
-  alinkcpent.href = "javascript:void(0);";
-  alinkcpent.id = 'cmajorpent1';
-  alinkcpent.value = 'A3,D0,D2,G0,G2,G5';
-  alinkcpent.onclick = function() {
-    pentatonicselected = 'cmajorpent1';
-    pentatonicselectedlocs = "A3,D0,D2,G0,G2,G5";
-    document.getElementById('pentbutton').textContent = 'C Major Pentatonic 1';
-    pentButtonClick();
-    loadPent();
-    //alert('var is:' + cmajorpent1);
-  };
-  //loadPent(" + jsonData + ", 'cmajorpent1', " + div + ")");
-  //"javascript:hi(" + jsonData + ");";
-  alinkcpent.textContent = 'C Pentatonic 1';
-  pentdropdiv.appendChild(alinkcpent);
-
-    const alinkcpent2 = document.createElement("a");
-    //alinkcpent2.href = "loadPent(" + jsonData + ", 'cmajorpent2', " + div + ")";
-    alinkcpent2.href = "javascript:void(0);";
-    alinkcpent2.id = 'cmajorpent2';
-    alinkcpent2.value = 'E8,E10,A7,A10,D7,D10';
-    alinkcpent2.onclick = function() {
-      pentatonicselected = 'cmajorpent2';
-      pentatonicselectedlocs = "E8,E10,A7,A10,D7,D10";
-      document.getElementById('pentbutton').textContent = 'C Major Pentatonic 2';
-      pentButtonClick();
-      loadPent();
-      //alert('var is:' + cmajorpent2);
-    };
-
-    //loadPent(" + jsonData + ", 'cmajorpent2', " + div + ")");
-    //"javascript:hi(" + jsonData + ");";
-    alinkcpent2.textContent = 'C Pentatonic 2';
-    pentdropdiv.appendChild(alinkcpent2);
+//  const alinkcpent = document.createElement("a");
+//  //alinkcpent.href = "loadPent(" + jsonData + ", 'cmajorpent1', " + div + ")";
+//  alinkcpent.href = "javascript:void(0);";
+//  alinkcpent.id = 'cmajorpent1';
+//  alinkcpent.value = 'A3,D0,D2,G0,G2,G5';
+//  alinkcpent.onclick = function() {
+//    pentatonicselected = 'cmajorpent1';
+//    pentatonicselectedlocs = "A3,D0,D2,G0,G2,G5";
+//    document.getElementById('pentbutton').textContent = 'C Major Pentatonic 1';
+//    pentButtonClick();
+//    loadPent();
+//    //alert('var is:' + cmajorpent1);
+//  };
+//  //loadPent(" + jsonData + ", 'cmajorpent1', " + div + ")");
+//  //"javascript:hi(" + jsonData + ");";
+//  alinkcpent.textContent = 'C Pentatonic 1';
+//  pentdropdiv.appendChild(alinkcpent);
+//
+//    const alinkcpent2 = document.createElement("a");
+//    //alinkcpent2.href = "loadPent(" + jsonData + ", 'cmajorpent2', " + div + ")";
+//    alinkcpent2.href = "javascript:void(0);";
+//    alinkcpent2.id = 'cmajorpent2';
+//    alinkcpent2.value = 'E8,E10,A7,A10,D7,D10';
+//    alinkcpent2.onclick = function() {
+//      pentatonicselected = 'cmajorpent2';
+//      pentatonicselectedlocs = "E8,E10,A7,A10,D7,D10";
+//      document.getElementById('pentbutton').textContent = 'C Major Pentatonic 2';
+//      pentButtonClick();
+//      loadPent();
+//      //alert('var is:' + cmajorpent2);
+//    };
+//
+//    //loadPent(" + jsonData + ", 'cmajorpent2', " + div + ")");
+//    //"javascript:hi(" + jsonData + ");";
+//    alinkcpent2.textContent = 'C Pentatonic 2';
+//    pentdropdiv.appendChild(alinkcpent2);
 
   pentdiv.appendChild(pentdropdiv);
 
