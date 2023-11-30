@@ -565,6 +565,10 @@ function loadPent() {
 
 function drawFretboard(jsonData, div) {
 
+  //initial
+  pentatonicselected = 'cmajorpent1';
+  pentatonicselectedlocs = 'E8,E10,A7,A10,D7,D10';
+
   //selection
   const pentdiv = document.createElement("div");
   pentdiv.className = 'dropdowntheory';
