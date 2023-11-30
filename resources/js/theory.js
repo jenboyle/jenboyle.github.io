@@ -526,6 +526,8 @@ function loadPent() {
 
             if(fretloc == '0'){
               note1img.style.left = (10-adjust) + 'px';
+            } else if(fretloc == '1'){
+              note1img.style.left = (75-adjust) + 'px';
             } else if(fretloc == '2'){
               note1img.style.left = (140-adjust) + 'px';
             } else if(fretloc == '3'){
@@ -583,11 +585,11 @@ function drawFretboard(jsonData, div) {
   pentinput.id = "myInputtheory";
   pentinput.type = "text";
   pentinput.placeholder = "Search...";
-  pentinput.onkeyup = "filterFunction()";
+  pentinput.setAttribute('onkeyup', 'javascript:filterFunction();');
 
   pentdropdiv.appendChild(pentinput);
 
-  for(i=0; i<11; i++) {
+  for(i=0; i<19; i++) {
     var pent_name = 'pent_name'+(i+1);
     var pent_id = 'pent_id'+(i+1);
     var pent_locs = 'pent_locs'+(i+1);
