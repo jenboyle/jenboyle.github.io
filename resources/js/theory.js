@@ -531,7 +531,7 @@ function loadPent() {
             } else if(fretloc == '3'){
               note1img.style.left = (215-adjust) + 'px';
             } else if(fretloc == '4'){
-              note1img.style.left = (310-adjust) + 'px';
+              note1img.style.left = (280-adjust) + 'px';
             } else if(fretloc == '5'){
               note1img.style.left = (335-adjust) + 'px';
             } else if(fretloc == '6'){
@@ -544,6 +544,10 @@ function loadPent() {
               note1img.style.left = (510-adjust) + 'px';
             } else if(fretloc == '10'){
               note1img.style.left = (540-adjust) + 'px';
+            } else if(fretloc == '11'){
+              note1img.style.left = (570-adjust) + 'px';
+            } else if(fretloc == '12'){
+              note1img.style.left = (600-adjust) + 'px';
             }
 
             //"cmajorpent2": "E8,E10,A7,A10,D7,D10",
@@ -583,7 +587,7 @@ function drawFretboard(jsonData, div) {
 
   pentdropdiv.appendChild(pentinput);
 
-  for(i=0; i<2; i++) {
+  for(i=0; i<11; i++) {
     var pent_name = 'pent_name'+(i+1);
     var pent_id = 'pent_id'+(i+1);
     var pent_locs = 'pent_locs'+(i+1);
