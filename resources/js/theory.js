@@ -679,9 +679,6 @@ function drawFretboard(jsonData, div) {
 
 
   //  cursor: url('resources/images/icons/basspointer.png');
-//  "cmajorpent1": "A3,D0,D2,G0,G2,G5",
-//  "cmajorpent2": "E8,E10,A7,A10,D7,D10",
-//  "cmajorpent3": "G5,G7,G9,G12,G14,G17"
 
 }
 

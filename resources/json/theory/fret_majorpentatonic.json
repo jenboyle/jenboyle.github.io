@@ -2,6 +2,7 @@
   "song": "Major Pentatonic",
   "by": "",
   "fretboard":"true",
+  "fret_choices": 19,
 
   "pent_name1": "C Major Pentatonic 1",
   "pent_locs1": "E8,E10,A7,A10,D7,D10",
