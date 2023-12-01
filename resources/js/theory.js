@@ -527,7 +527,7 @@ function loadPent() {
             if(fretloc == '0'){
               note1img.style.left = (10-adjust) + 'px';
             } else if(fretloc == '1'){
-              note1img.style.left = (75-adjust) + 'px';
+              note1img.style.left = (68-adjust) + 'px';
             } else if(fretloc == '2'){
               note1img.style.left = (140-adjust) + 'px';
             } else if(fretloc == '3'){
@@ -545,9 +545,9 @@ function loadPent() {
             } else if(fretloc == '9'){
               note1img.style.left = (510-adjust) + 'px';
             } else if(fretloc == '10'){
-              note1img.style.left = (540-adjust) + 'px';
+              note1img.style.left = (541-adjust) + 'px';
             } else if(fretloc == '11'){
-              note1img.style.left = (570-adjust) + 'px';
+              note1img.style.left = (573-adjust) + 'px';
             } else if(fretloc == '12'){
               note1img.style.left = (600-adjust) + 'px';
             }
@@ -566,8 +566,15 @@ function loadPent() {
 function drawFretboard(jsonData, div) {
 
   //initial
-  pentatonicselected = 'cmajorpent1';
-  pentatonicselectedlocs = 'E8,E10,A7,A10,D7,D10';
+  var buttonInitialText = 'C Major Pentatonic 1';
+  if(jsonData.song.indexOf('Major') != -1){
+    pentatonicselected = 'cmajorpent1';
+    pentatonicselectedlocs = 'E8,E10,A7,A10,D7,D10';
+  } else if(jsonData.song.indexOf('Minor') != -1){
+    pentatonicselected = 'cminorpent1';
+    pentatonicselectedlocs = 'A3,A6,D3,D5,G3,G5';
+    buttonInitialText = 'C Minor Pentatonic 1';
+  }
 
   //selection
   const pentdiv = document.createElement("div");
@@ -577,7 +584,7 @@ function drawFretboard(jsonData, div) {
   pentbutton.id = 'pentbutton';
   pentbutton.setAttribute('onclick','javascript:pentButtonClick();');
   pentbutton.className = 'dropbtntheory';
-  pentbutton.textContent = 'C Major Pentatonic 1';
+  pentbutton.textContent = buttonInitialText;
 
   pentdiv.appendChild(pentbutton);
 
@@ -593,35 +600,37 @@ function drawFretboard(jsonData, div) {
 
   pentdropdiv.appendChild(pentinput);
 
-  for(i=0; i<19; i++) {
-    var pent_name = 'pent_name'+(i+1);
-    var pent_id = 'pent_id'+(i+1);
-    var pent_locs = 'pent_locs'+(i+1);
+  if(jsonData.hasOwnProperty('fret_choices')) {
+      for(i=0; i<jsonData.fret_choices; i++) {
+        var pent_name = 'pent_name'+(i+1);
+        var pent_id = 'pent_id'+(i+1);
+        var pent_locs = 'pent_locs'+(i+1);
 
-    if(jsonData.hasOwnProperty(pent_name)) {
-      var alinkpent = document.createElement("a");
-      alinkpent.href = "javascript:void(0);";
-        alinkpent.id = jsonData[pent_id];
-        alinkpent.value = jsonData[pent_locs];
-        alinkpent.textContent = jsonData[pent_name];
+        if(jsonData.hasOwnProperty(pent_name)) {
+          var alinkpent = document.createElement("a");
+          alinkpent.href = "javascript:void(0);";
+            alinkpent.id = jsonData[pent_id];
+            alinkpent.value = jsonData[pent_locs];
+            alinkpent.textContent = jsonData[pent_name];
 
-        alinkpent.onclick = function() {
-          pentatonicselected = this.id;//jsonData[pent_id];
-          pentatonicselectedlocs = this.value;//jsonData[pent_locs];
-          document.getElementById('pentbutton').textContent = this.textContent;
-          pentButtonClick();
-          loadPent();
-          //alert('var is:' + cmajorpent1);
-          //alinkpent.textContent = this.textContent;
+            alinkpent.onclick = function() {
+              pentatonicselected = this.id;//jsonData[pent_id];
+              pentatonicselectedlocs = this.value;//jsonData[pent_locs];
+              document.getElementById('pentbutton').textContent = this.textContent;
+              pentButtonClick();
+              loadPent();
+              //alert('var is:' + cmajorpent1);
+              //alinkpent.textContent = this.textContent;
 
-        };
-
-
-        pentdropdiv.appendChild(alinkpent);
+            };
 
 
+            pentdropdiv.appendChild(alinkpent);
 
-    }
+
+
+        }
+      }
   }
 
 
