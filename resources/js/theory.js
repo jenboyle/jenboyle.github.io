@@ -91,6 +91,21 @@ function drawTheory(jsonData, element) {
     if(jsonData.hasOwnProperty('notes')) {
       const notes = document.createElement("p");
       notes.textContent = 'Notes: ' + jsonData.notes;
+
+      const relativelink = document.createElement("a");
+        //relativelink.href = "javascript:loadTheory('cmajor', 'theorydiv', 'theoryList');"
+        relativelink.href = "javascript:loadTheory('" + jsonData.relativelink + "', 'theorydiv', 'theoryList');"
+        //"relativelink": "bmajor",
+        //  "relativelinktext": "B",
+        relativelink.textContent = jsonData.relativelinktext;
+        //<a href="javascript:loadTheory('cmajor', 'theorydiv', 'theoryList');">C Major</a>
+      notes.appendChild(relativelink);
+
+      const endbracket = document.createElement("b");
+      endbracket.textContent = ")";
+      notes.appendChild(endbracket);
+
+
       div.appendChild(notes);
       }
 
