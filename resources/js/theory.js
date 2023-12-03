@@ -576,6 +576,10 @@ function loadPent() {
 
 function drawFretboard(jsonData, div) {
 
+  const when = document.createElement("p");
+    when.textContent = jsonData.when;
+    div.appendChild(when);
+
   //initial
   var buttonInitialText = 'C Major Pentatonic 1';
   if(jsonData.song.indexOf('Major') != -1){
