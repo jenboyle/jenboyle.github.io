@@ -101,10 +101,6 @@ function drawTheory(jsonData, element) {
         //<a href="javascript:loadTheory('cmajor', 'theorydiv', 'theoryList');">C Major</a>
       notes.appendChild(relativelink);
 
-      const endbracket = document.createElement("b");
-      endbracket.textContent = ")";
-      notes.appendChild(endbracket);
-
 
       div.appendChild(notes);
       }
