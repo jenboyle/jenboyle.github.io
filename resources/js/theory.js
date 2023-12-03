@@ -21,6 +21,14 @@ function drawTheory(jsonData, element) {
   div.appendChild(psong);
 
   if(jsonData.hasOwnProperty('key')) {
+    const aka = document.createElement("p");
+    if (jsonData.song.indexOf('Major') != -1)
+      aka.textContent = 'AKA: Ionian Mode';
+    else {
+      aka.textContent = 'AKA: Aeolian Mode/Natural Minor Scale';
+    }
+    div.appendChild(aka);
+
     const pkey = document.createElement("p");
     pkey.textContent = 'Key: ' + jsonData.key;
     div.appendChild(pkey);
