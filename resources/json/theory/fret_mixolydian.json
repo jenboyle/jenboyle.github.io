@@ -1,0 +1,89 @@
+{
+  "song": "Mixolydian",
+  "when": "This mode can be played with dominant 7 chords",
+  "fretboard":"true",
+  "fret_choices": 19,
+
+  "fret_name1": "C Mixolydian 1",
+  "fret_locs1": "A3,D0,D2,D3,G0,G2,G3,G5",
+  "fret_id1": "cmix1",
+
+
+  "fret_name2": "C Mixolydian 2",
+  "fret_locs2": "E8,E10,A7,A8,A10,D7,D8,D10",
+  "fret_id2": "cmix2",
+
+  "fret_name3": "D Mixolydian 1",
+  "fret_locs3": "D0,D2,D4,G0,G2,G4,G5,G7",
+  "fret_id3": "dmix1",
+
+  "fret_name4": "D Mixolydian 2",
+  "fret_locs4": "A5,A7,D4,D5,D7,G4,G5,G7",
+  "fret_id4": "dmix2",
+
+  "fret_name5": "D Mixolydian 3",
+  "fret_locs5": "E10,E12,A9,A10,A12,D9,D10,D12",
+  "fret_id5": "dmix3",
+
+  "fret_name6": "E Mixolydian 1",
+  "fret_locs6": "E0,E2,E4,A0,A2,A4,D0,D2",
+  "fret_id6": "emix1",
+
+  "fret_name7": "E Mixolydian 2",
+  "fret_locs7": "D2,D4,G1,G2,G4,G6,G7,G9",
+  "fret_id7": "emix2",
+
+  "fret_name8": "E Mixolydian 3",
+  "fret_locs8": "A7,A9,D6,D7,D9,G6,G7,G9",
+  "fret_id8": "emix3",
+
+  "fret_name9": "F Mixolydian 1",
+  "fret_locs9": "E1,E3,A0,A1,A3,D0,D1,D3",
+  "fret_id9": "fmix1",
+
+  "fret_name10": "F Mixolydian 2",
+  "fret_locs10": "D3,D5,G2,G3,G5,G7,G8,G10",
+  "fret_id10": "fmix2",
+
+
+  "fret_name11": "F Mixolydian 3",
+  "fret_locs11": "A8,A10,D7,D8,D10,G7,G8,G10",
+  "fret_id11": "fmix3",
+
+  "fret_name12": "G Mixolydian 1",
+  "fret_locs12": "E3,E5,A2,A3,A5,D2,D3,D5",
+  "fret_id12": "gmix1",
+
+  "fret_name13": "G Mixolydian 2",
+  "fret_locs13": "G0,G2,G4,G5,G7,G9,G10,G12",
+  "fret_id13": "gmix2",
+
+  "fret_name14": "G Mixolydian 3",
+  "fret_locs14": "D5,D7,G4,G5,G7,G9,G10,G12",
+  "fret_id14": "gmix3",
+
+  "fret_name15": "G Mixolydian 4",
+  "fret_locs15": "A10,A12,D9,D10,D12,G9,G10,G12",
+  "fret_id15": "gmix4",
+
+  "fret_name16": "A Mixolydian 1",
+  "fret_locs16": "A0,A2,A4,D0,D2,D4,G0,G2",
+  "fret_id16": "amix1",
+
+  "fret_name17": "A Mixolydian 2",
+  "fret_locs17": "E5,E7,A4,A5,A7,D4,D5,D7",
+  "fret_id17": "amix2",
+
+  "fret_name18": "B Mixolydian 1",
+  "fret_locs18": "A2,A4,D1,D2,D4,G1,G2,G4",
+  "fret_id18": "bmix1",
+
+  "fret_name19": "B Mixolydian 2",
+  "fret_locs19": "E7,E9,A6,A7,A9,D6,D7,D9",
+  "fret_id19": "bmix2"
+
+
+
+
+
+}
