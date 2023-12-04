@@ -597,6 +597,10 @@ function drawFretboard(jsonData, div) {
     pentatonicselected = 'cminorpent1';
     pentatonicselectedlocs = 'A3,A6,D3,D5,G3,G5';
     buttonInitialText = 'C Minor Pentatonic 1';
+  } else if(jsonData.song.indexOf('Blues') != -1){
+    pentatonicselected = 'cblues1';
+    pentatonicselectedlocs = 'A3,A6,D3,D4,D5,G3,G5';
+    buttonInitialText = 'C Blues 1';
   }
 
   //selection
@@ -625,9 +629,9 @@ function drawFretboard(jsonData, div) {
 
   if(jsonData.hasOwnProperty('fret_choices')) {
       for(i=0; i<jsonData.fret_choices; i++) {
-        var pent_name = 'pent_name'+(i+1);
-        var pent_id = 'pent_id'+(i+1);
-        var pent_locs = 'pent_locs'+(i+1);
+        var pent_name = 'fret_name'+(i+1);
+        var pent_id = 'fret_id'+(i+1);
+        var pent_locs = 'fret_locs'+(i+1);
 
         if(jsonData.hasOwnProperty(pent_name)) {
           var alinkpent = document.createElement("a");
