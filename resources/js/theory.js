@@ -590,6 +590,10 @@ function drawFretboard(jsonData, div) {
     fretscaleselected = 'cdor1';
     fretscaleselectedlocs = 'A3,D0,D1,D3,G0,G2,G3,G5';
     buttonInitialText = 'C Dorian 1';
+  } else if(jsonData.song.indexOf('Melodic') != -1){
+    fretscaleselected = 'cmelminor1';
+    fretscaleselectedlocs = 'A3,D0,D1,D3,G0,G2,G4,G5';
+    buttonInitialText = 'C Melodic Minor 1';
   }
 
   //selection
