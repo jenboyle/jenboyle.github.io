@@ -578,7 +578,7 @@ function drawFretboard(jsonData, div) {
   if(jsonData.song.indexOf('Major') != -1){
     fretscaleselected = 'cmajorpent1';
     fretscaleselectedlocs = 'E8,E10,A7,A10,D7,D10';
-  } else if(jsonData.song.indexOf('Minor') != -1){
+  } else if(jsonData.song.indexOf('Minor Pentatonic') != -1){
     fretscaleselected = 'cminorpent1';
     fretscaleselectedlocs = 'A3,A6,D3,D5,G3,G5';
     buttonInitialText = 'C Minor Pentatonic 1';
