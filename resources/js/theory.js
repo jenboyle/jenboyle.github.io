@@ -1,11 +1,9 @@
-var pentatonicselected = 'cmajorpent1';
-var pentatonicselectedlocs = 'E8,E10,A7,A10,D7,D10';
+var fretscaleselected = 'cmajorpent1';
+var fretscaleselectedlocs = 'E8,E10,A7,A10,D7,D10';
 var div;
 
 function loadTheory(topic, element, ul) {
   console.log(topic);
-  //hide the ul
-  //document.getElementById(ul).style.display = "none";
 
   fetch('https://groovyjen.com/resources/json/theory/' + topic + '.json')
     .then((response) => response.json())
@@ -37,10 +35,6 @@ function drawTheory(jsonData, element) {
   } else if (jsonData.hasOwnProperty('fretboard')) {
     drawFretboard(jsonData, div);
   }
-
-//  const ptune = document.createElement("p");
-//  ptune.textContent = 'Tuning: ' + jsonData.tuning;
-//  div.appendChild(ptune);
 
 
 
@@ -101,12 +95,9 @@ function drawTheory(jsonData, element) {
       notes.textContent = 'Notes: ' + jsonData.notes;
 
       const relativelink = document.createElement("a");
-        //relativelink.href = "javascript:loadTheory('cmajor', 'theorydiv', 'theoryList');"
-        relativelink.href = "javascript:loadTheory('" + jsonData.relativelink + "', 'theorydiv', 'theoryList');"
-        //"relativelink": "bmajor",
-        //  "relativelinktext": "B",
-        relativelink.textContent = jsonData.relativelinktext;
-        //<a href="javascript:loadTheory('cmajor', 'theorydiv', 'theoryList');">C Major</a>
+      relativelink.href = "javascript:loadTheory('" + jsonData.relativelink + "', 'theorydiv', 'theoryList');"
+      relativelink.textContent = jsonData.relativelinktext;
+
       notes.appendChild(relativelink);
 
 
@@ -236,20 +227,20 @@ function showTheory(ul) {
 
 
 function checkForChords(jsonData, div) {
-  checkChords(jsonData, div, 'chord1', 'chord1e', 'chord1a', 'chord1d', 'chord1g', false, false);
-  checkChords(jsonData, div, 'chord2', 'chord2e', 'chord2a', 'chord2d', 'chord2g', false, false);
-  checkChords(jsonData, div, 'chord3', 'chord3e', 'chord3a', 'chord3d', 'chord3g', true, false);
+  checkChords(jsonData, div, 'chord1', 'chord1e', 'chord1a', 'chord1d', 'chord1g', false);
+  checkChords(jsonData, div, 'chord2', 'chord2e', 'chord2a', 'chord2d', 'chord2g', false);
+  checkChords(jsonData, div, 'chord3', 'chord3e', 'chord3a', 'chord3d', 'chord3g', false);
 
-  checkChords(jsonData, div, 'chord4', 'chord4e', 'chord4a', 'chord4d', 'chord4g', false, true);
-  checkChords(jsonData, div, 'chord5', 'chord5e', 'chord5a', 'chord5d', 'chord5g', false, false);
-  checkChords(jsonData, div, 'chord6', 'chord6e', 'chord6a', 'chord6d', 'chord6g', true, false);
+  checkChords(jsonData, div, 'chord4', 'chord4e', 'chord4a', 'chord4d', 'chord4g', true);
+  checkChords(jsonData, div, 'chord5', 'chord5e', 'chord5a', 'chord5d', 'chord5g', false);
+  checkChords(jsonData, div, 'chord6', 'chord6e', 'chord6a', 'chord6d', 'chord6g', false);
 
-  checkChords(jsonData, div, 'chord7', 'chord7e', 'chord7a', 'chord7d', 'chord7g', false, true);
-  checkChords(jsonData, div, 'chord8', 'chord8e', 'chord8a', 'chord8d', 'chord8g', false, false);
+  checkChords(jsonData, div, 'chord7', 'chord7e', 'chord7a', 'chord7d', 'chord7g', true);
+  checkChords(jsonData, div, 'chord8', 'chord8e', 'chord8a', 'chord8d', 'chord8g', false);
 
 
 }
-function checkChords(jsonData, div, chord, estr, astr, dstr, gstr, numOut, newblock) {
+function checkChords(jsonData, div, chord, estr, astr, dstr, gstr, newblock) {
       if(jsonData.hasOwnProperty(chord)) {
           const chordboxdiv = document.createElement("div");
           chordboxdiv.style.height = '300px';
@@ -491,18 +482,12 @@ function drawTable(jsonData, div, key) {
   }
 }
 
-function loadPent() {
+function loadFret() {
   //if(jsonData.hasOwnProperty(chosenPent)) {
           //var pentjson = jsonData[chosenPent];
           //const pentArr = pentjson.split(',');
 
-
-
-
-          //alert(pentatonicselected);
-          //alert(pentatonicselectedlocs);
-
-          const pentArr = pentatonicselectedlocs.split(',');
+          const pentArr = fretscaleselectedlocs.split(',');
 
 
           for(i=0; i<pentArr.length; i++){
@@ -591,16 +576,20 @@ function drawFretboard(jsonData, div) {
   //initial
   var buttonInitialText = 'C Major Pentatonic 1';
   if(jsonData.song.indexOf('Major') != -1){
-    pentatonicselected = 'cmajorpent1';
-    pentatonicselectedlocs = 'E8,E10,A7,A10,D7,D10';
+    fretscaleselected = 'cmajorpent1';
+    fretscaleselectedlocs = 'E8,E10,A7,A10,D7,D10';
   } else if(jsonData.song.indexOf('Minor') != -1){
-    pentatonicselected = 'cminorpent1';
-    pentatonicselectedlocs = 'A3,A6,D3,D5,G3,G5';
+    fretscaleselected = 'cminorpent1';
+    fretscaleselectedlocs = 'A3,A6,D3,D5,G3,G5';
     buttonInitialText = 'C Minor Pentatonic 1';
-  } else if(jsonData.song.indexOf('Blues') != -1){
-    pentatonicselected = 'cblues1';
-    pentatonicselectedlocs = 'A3,A6,D3,D4,D5,G3,G5';
-    buttonInitialText = 'C Blues 1';
+  } else if(jsonData.song.indexOf('Mixolydian') != -1){
+    fretscaleselected = 'cmix1';
+    fretscaleselectedlocs = 'A3,D0,D2,D3,G0,G2,G3,G5';
+    buttonInitialText = 'C Mixolydian 1';
+  } else if(jsonData.song.indexOf('Dorian') != -1){
+    fretscaleselected = 'cdor1';
+    fretscaleselectedlocs = 'A3,D0,D1,D3,G0,G2,G3,G5';
+    buttonInitialText = 'C Dorian 1';
   }
 
   //selection
@@ -641,11 +630,11 @@ function drawFretboard(jsonData, div) {
             alinkpent.textContent = jsonData[pent_name];
 
             alinkpent.onclick = function() {
-              pentatonicselected = this.id;//jsonData[pent_id];
-              pentatonicselectedlocs = this.value;//jsonData[pent_locs];
+              fretscaleselected = this.id;//jsonData[pent_id];
+              fretscaleselectedlocs = this.value;//jsonData[pent_locs];
               document.getElementById('pentbutton').textContent = this.textContent;
               pentButtonClick();
-              loadPent();
+              loadFret();
               //alert('var is:' + cmajorpent1);
               //alinkpent.textContent = this.textContent;
 
@@ -662,44 +651,6 @@ function drawFretboard(jsonData, div) {
 
 
 
-
-//  const alinkcpent = document.createElement("a");
-//  //alinkcpent.href = "loadPent(" + jsonData + ", 'cmajorpent1', " + div + ")";
-//  alinkcpent.href = "javascript:void(0);";
-//  alinkcpent.id = 'cmajorpent1';
-//  alinkcpent.value = 'A3,D0,D2,G0,G2,G5';
-//  alinkcpent.onclick = function() {
-//    pentatonicselected = 'cmajorpent1';
-//    pentatonicselectedlocs = "A3,D0,D2,G0,G2,G5";
-//    document.getElementById('pentbutton').textContent = 'C Major Pentatonic 1';
-//    pentButtonClick();
-//    loadPent();
-//    //alert('var is:' + cmajorpent1);
-//  };
-//  //loadPent(" + jsonData + ", 'cmajorpent1', " + div + ")");
-//  //"javascript:hi(" + jsonData + ");";
-//  alinkcpent.textContent = 'C Pentatonic 1';
-//  pentdropdiv.appendChild(alinkcpent);
-//
-//    const alinkcpent2 = document.createElement("a");
-//    //alinkcpent2.href = "loadPent(" + jsonData + ", 'cmajorpent2', " + div + ")";
-//    alinkcpent2.href = "javascript:void(0);";
-//    alinkcpent2.id = 'cmajorpent2';
-//    alinkcpent2.value = 'E8,E10,A7,A10,D7,D10';
-//    alinkcpent2.onclick = function() {
-//      pentatonicselected = 'cmajorpent2';
-//      pentatonicselectedlocs = "E8,E10,A7,A10,D7,D10";
-//      document.getElementById('pentbutton').textContent = 'C Major Pentatonic 2';
-//      pentButtonClick();
-//      loadPent();
-//      //alert('var is:' + cmajorpent2);
-//    };
-//
-//    //loadPent(" + jsonData + ", 'cmajorpent2', " + div + ")");
-//    //"javascript:hi(" + jsonData + ");";
-//    alinkcpent2.textContent = 'C Pentatonic 2';
-//    pentdropdiv.appendChild(alinkcpent2);
-
   pentdiv.appendChild(pentdropdiv);
 
   div.appendChild(pentdiv);
@@ -711,7 +662,7 @@ function drawFretboard(jsonData, div) {
   div.appendChild(fretimg);
 
   //initial
-    loadPent();
+    loadFret();
 
 
   //  cursor: url('resources/images/icons/basspointer.png');
