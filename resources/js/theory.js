@@ -2,7 +2,16 @@ var fretscaleselected = 'cmajorpent1';
 var fretscaleselectedlocs = 'E8,E10,A7,A10,D7,D10';
 var div;
 
-function loadTheory(topic, element, ul) {
+function checkInitial() {
+  const queryString = window.location.search;
+  if(queryString.length > 0) {
+    const urlParams = new URLSearchParams(queryString);
+    const selection = urlParams.get('selection');
+    loadTheory(selection, 'theorydiv');
+  }
+}
+
+function loadTheory(topic, element) {
   console.log(topic);
 
   fetch('https://groovyjen.com/resources/json/theory/' + topic + '.json')

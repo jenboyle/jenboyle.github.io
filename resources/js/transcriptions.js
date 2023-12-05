@@ -49,8 +49,22 @@ function drawTab(jsonData, articleelement) {
   article.appendChild(psong);
 
   const pkey = document.createElement("p");
-  pkey.textContent = 'Key: ' + jsonData.key;
+  if(jsonData.hasOwnProperty('theorylink')) {
+    const linkkey = document.createElement("a");
+    linkkey.href="basstheory.html?selection=" + jsonData.theorylink;
+    linkkey.textContent = jsonData.key;
+    pkey.textContent = 'Key: ';
+    pkey.appendChild(linkkey);
+
+  } else {
+    pkey.textContent = 'Key: ' + jsonData.key;
+  }
+
   article.appendChild(pkey);
+
+
+
+
 
   const ptune = document.createElement("p");
   ptune.textContent = 'Tuning: ' + jsonData.tuning;
