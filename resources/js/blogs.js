@@ -21,46 +21,28 @@ function blog(jsonData, articleelement) {
   pdate.textContent = jsonData.date;
   article.appendChild(pdate);
 
-  const p = document.createElement("p");
-  p.textContent = emojiCheck(jsonData.para1);
-  article.appendChild(p);
+  if(jsonData.hasOwnProperty('paras')) {
+    for (i=0; i<jsonData.paras; i++) {
+      var index = i+1;
+      var para = 'para' + index;
+      const p = document.createElement("p");
+      p.textContent = emojiCheck(jsonData[para]);
+      article.appendChild(p);
 
-  if(jsonData.hasOwnProperty('para2')) {
-    const p2 = document.createElement("p");
-    p2.textContent = emojiCheck(jsonData.para2);
-    article.appendChild(p2);
-  }
-
-    if(jsonData.hasOwnProperty('para3')) {
-      const p3 = document.createElement("p");
-      p3.textContent = emojiCheck(jsonData.para3);
-      article.appendChild(p3);
-    }
-
-    if(jsonData.hasOwnProperty('utube')) {
-        const div = document.createElement("div");
-        div.class = "iframedivmid";
-        const iframe = document.createElement("iframe");
-        iframe.width="420";
-        iframe.height="315";
-        iframe.src="https://youtube.com/embed/" + jsonData.utube;
-        div.appendChild(iframe);
-        article.appendChild(div);
-    }
-
-      if(jsonData.hasOwnProperty('para4')) {
-        const p4 = document.createElement("p");
-        p4.textContent = emojiCheck(jsonData.para4);
-        article.appendChild(p4);
-      }
-
-        if(jsonData.hasOwnProperty('para5')) {
-          const p5 = document.createElement("p");
-          p5.textContent = emojiCheck(jsonData.para5);
-          article.appendChild(p5);
+      if(jsonData.hasOwnProperty('utube')) {
+        if(jsonData.utubeplacement == index){
+          const div = document.createElement("div");
+          div.class = "iframedivmid";
+          const iframe = document.createElement("iframe");
+          iframe.width="420";
+          iframe.height="315";
+          iframe.src="https://youtube.com/embed/" + jsonData.utube;
+          div.appendChild(iframe);
+          article.appendChild(div);
         }
-
-
+      }
+    }
+  }
 
 }
 
