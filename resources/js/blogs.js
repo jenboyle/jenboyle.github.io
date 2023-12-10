@@ -17,6 +17,10 @@ function blog(jsonData, articleelement) {
   h1.textContent = jsonData.h1;
   article.appendChild(h1);
 
+  const pdate = document.createElement("p");
+  pdate.textContent = jsonData.date;
+  article.appendChild(pdate);
+
   const p = document.createElement("p");
   p.textContent = emojiCheck(jsonData.para1);
   article.appendChild(p);
