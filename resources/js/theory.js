@@ -603,6 +603,10 @@ function drawFretboard(jsonData, div) {
     fretscaleselected = 'cmelminor1';
     fretscaleselectedlocs = 'A3,D0,D1,D3,G0,G2,G4,G5';
     buttonInitialText = 'C Melodic Minor 1';
+  } else if(jsonData.song.indexOf('Blues') != -1){
+    fretscaleselected = 'cblues1';
+    fretscaleselectedlocs = 'A3,A6,D3,D4,D5,G3,G5';
+    buttonInitialText = 'C Blues 1';
   }
 
   //selection
