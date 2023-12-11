@@ -1,6 +1,6 @@
 {
   "song": "Phrygian",
-  "when": "Third mode of major scale can be played with minor chords",
+  "when": "Third mode of major scale.  It can be played with minor chords.",
   "fretboard":"true",
   "fret_choices": 17,
   "formula": "1,b2,b3,4,5,b6,b7",

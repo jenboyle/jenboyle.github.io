@@ -1,6 +1,6 @@
 {
   "song": "Dorian",
-  "when": "Second mode of major scale can be played with minor chords",
+  "when": "Second mode of major scale.  It can be played with minor chords.",
   "fretboard":"true",
   "fret_choices": 19,
   "formula": "1,2,b3,4,5,6,b7",
