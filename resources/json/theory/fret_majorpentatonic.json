@@ -3,6 +3,7 @@
   "when": "This scale can be played in major keys",
   "fretboard":"true",
   "fret_choices": 19,
+  "formula": "1,2,3,5,6",
 
   "fret_name1": "C Major Pentatonic 1",
   "fret_locs1": "E8,E10,A7,A10,D7,D10",

@@ -1,8 +1,9 @@
 {
   "song": "Blues",
-  "when": "This scale can be played over minor and dominant 7th chords",
+  "when": "This scale can be played over minor and dominant 7th chords, same as a pentatonic minor with extra flattened fifth note",
   "fretboard":"true",
   "fret_choices": 17,
+  "formula": "1,b3,4,b5,5,b7",
 
   "fret_name1": "C Blues 1",
   "fret_locs1": "A3,A6,D3,D4,D5,G3,G5",

@@ -584,7 +584,7 @@ function drawFretboard(jsonData, div) {
 
     if(jsonData.hasOwnProperty('formula')) {
       const formula = document.createElement("p");
-      formula.textContent = jsonData.formula;
+      formula.textContent = 'Formula: ' + jsonData.formula;
       div.appendChild(formula);
     }
 
