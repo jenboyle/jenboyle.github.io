@@ -1,0 +1,82 @@
+{
+  "song": "Phrygian",
+  "when": "Third mode of major scale can be played with minor chords",
+  "fretboard":"true",
+  "fret_choices": 17,
+  "formula": "1,b2,b3,4,5,b6,b7",
+
+  "fret_name1": "C Phrygian 1",
+  "fret_locs1": "A3,A4,A6,D3,D5,D6,G3,G5",
+  "fret_id1": "cphr1",
+
+
+  "fret_name2": "C Phrygian 2",
+  "fret_locs2": "E8,E9,E11,A8,A10,A11,D8,D10",
+  "fret_id2": "cphr2",
+
+  "fret_name3": "D Phrygian 1",
+  "fret_locs3": "D0,D1,D3,G0,G2,G3,G5,G7",
+  "fret_id3": "dphr1",
+
+  "fret_name4": "D Phrygian 2",
+  "fret_locs4": "A5,A6,A8,D5,D7,D8,G5,G7",
+  "fret_id4": "dphr2",
+
+  "fret_name5": "E Phrygian 1",
+  "fret_locs5": "E0,E1,E3,A0,A2,A3,D0,D2",
+  "fret_id5": "ephr1",
+
+  "fret_name6": "E Phrygian 2",
+  "fret_locs6": "D2,D3,D5,G2,G4,G5,G7,G9",
+  "fret_id6": "ephr2",
+
+  "fret_name7": "E Phrygian 3",
+  "fret_locs7": "A7,A8,A10,D7,D9,D10,G7,G9",
+  "fret_id7": "ephr3",
+
+  "fret_name8": "F Phrygian 1",
+  "fret_locs8": "E1,E2,E4,A1,A3,A4,D1,D3",
+  "fret_id8": "fphr1",
+
+  "fret_name9": "F Phrygian 2",
+  "fret_locs9": "D3,D4,D6,G3,G5,G6,G8,G10",
+  "fret_id9": "fphr2",
+
+
+  "fret_name10": "F Phrygian 3",
+  "fret_locs10": "A8,A9,A11,D8,D10,D11,G8,G10",
+  "fret_id10": "fphr3",
+
+  "fret_name11": "G Phrygian 1",
+  "fret_locs11": "E3,E4,E6,A3,A5,A6,D3,D5",
+  "fret_id11": "gphr1",
+
+  "fret_name12": "G Phrygian 2",
+  "fret_locs12": "G0,G1,G3,G5,G7,G8,G10,G12",
+  "fret_id12": "gphr2",
+
+  "fret_name13": "G Phrygian 3",
+  "fret_locs13": "D5,D6,D8,G5,G7,G8,G10,G12",
+  "fret_id13": "gphr3",
+
+  "fret_name14": "A Phrygian 1",
+  "fret_locs14": "A0,A1,A3,D0,D2,D3,G0,G2",
+  "fret_id14": "aphr1",
+
+  "fret_name15": "A Phrygian 2",
+  "fret_locs15": "E5,E6,E8,A5,A7,A8,D5,D7",
+  "fret_id15": "aphr2",
+
+  "fret_name16": "B Phrygian 1",
+  "fret_locs16": "A2,A3,D0,D2,D4,G0,G2,G4",
+  "fret_id16": "bphr1",
+
+  "fret_name17": "B Phrygian 2",
+  "fret_locs17": "E7,E8,E10,A7,A9,A10,D7,D9",
+  "fret_id17": "bphr2"
+
+
+
+
+
+}

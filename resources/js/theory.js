@@ -613,6 +613,10 @@ function drawFretboard(jsonData, div) {
     fretscaleselected = 'cblues1';
     fretscaleselectedlocs = 'A3,A6,D3,D4,D5,G3,G5';
     buttonInitialText = 'C Blues 1';
+  } else if(jsonData.song.indexOf('Phrygian') != -1){
+    fretscaleselected = 'cphr1';
+    fretscaleselectedlocs = 'A3,A4,A6,D3,D5,D6,G3,G5';
+    buttonInitialText = 'C Phrygian 1';
   }
 
   //selection
