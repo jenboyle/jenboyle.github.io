@@ -3,6 +3,7 @@
   "when": "This mode can be played with minor chords",
   "fretboard":"true",
   "fret_choices": 19,
+  "formula": "1,2,b3,4,5,6,b7",
 
   "fret_name1": "C Dorian 1",
   "fret_locs1": "A3,D0,D1,D3,G0,G2,G3,G5",

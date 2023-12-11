@@ -582,6 +582,12 @@ function drawFretboard(jsonData, div) {
     when.textContent = jsonData.when;
     div.appendChild(when);
 
+    if(jsonData.hasOwnProperty('formula')) {
+      const formula = document.createElement("p");
+      formula.textContent = jsonData.formula;
+      div.appendChild(formula);
+    }
+
   //initial
   var buttonInitialText = 'C Major Pentatonic 1';
   if(jsonData.song.indexOf('Major') != -1){
