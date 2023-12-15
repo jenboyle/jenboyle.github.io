@@ -3,6 +3,7 @@
   "when": "Fifth mode of major scale.  It can be played with dominant 7 chords.",
   "fretboard":"true",
   "fret_choices": 19,
+  "formula": "1,2,3,4,5,6,b7",
 
   "fret_name1": "C Mixolydian 1",
   "fret_locs1": "A3,D0,D2,D3,G0,G2,G3,G5",

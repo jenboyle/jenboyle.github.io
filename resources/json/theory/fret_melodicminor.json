@@ -3,6 +3,7 @@
   "when": "This scale ascending is minor but raised sixth and seventh or major with flat third",
   "fretboard":"true",
   "fret_choices": 17,
+  "formula": "1,2,b3,4,5,6,7",
 
   "fret_name1": "C Melodic Minor 1",
   "fret_locs1": "A3,D0,D1,D3,G0,G2,G4,G5",
