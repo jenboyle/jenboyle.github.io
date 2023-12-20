@@ -12,8 +12,6 @@ function checkInitial() {
 }
 
 function loadTheory(topic, element) {
-  console.log(topic);
-
   fetch('https://groovyjen.com/resources/json/theory/' + topic + '.json')
     .then((response) => response.json())
     .then((json) => drawTheory(json, element));

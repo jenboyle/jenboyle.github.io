@@ -96,14 +96,18 @@ header nav ul li {
 
 
 
-.heading, .subheading {
+.subheading {
   text-align: center;
+  text-shadow: 1.5px 1.5px grey;
 }
 
 .heading {
   font-size:2em;
   color: black;
   padding: 10px;
+  text-align: center;
+  text-shadow:0 0 3px #516c51, 0 0 5px #c36eb5, 0 0 2px #787aa2;
+  /*text-shadow: 0 0 3px green, 0 0 5px red, 0 0 2px orange;*/
 }
 
 .logo {
@@ -325,7 +329,6 @@ display: inline-block;
 }
 .footertwo {
   width:50%;
-  text-align:left;
 
 }
 
@@ -342,6 +345,7 @@ display: inline-block;
   padding: 12px 20px 12px 40px;
   border: gray solid 1px;
   margin-bottom: 12px;
+  box-shadow: 5px 5px 5px #a6c7a2;
 }
 
 #animationmario {
@@ -355,6 +359,24 @@ display: inline-block;
   width: 400px;
   height: 150px;
   position:relative;
+}
+
+#bassanimation {
+  margin: 10px;
+  width: 100px;
+  height: 99px;
+  position:relative;
+  animation-name: bassanimate;
+  animation-duration: 4s;
+  animation-delay:1s;
+  animation-direction:alternate;
+  animation-timing-function:ease-in;
+  animation-iteration-count:6;
+}
+
+@keyframes bassanimate {
+  0% {left:0px; top:0px;right:0px;bottom:0px;}
+  100% {left:400px; top:0px;right:0px;bottom:0px;}
 }
 
 #songList {
