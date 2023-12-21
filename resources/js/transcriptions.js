@@ -104,6 +104,7 @@ function testfortab(jsonfield, jsonData, article) {
   if(jsonData.hasOwnProperty(jsonfield)) {
 
     var table = document.createElement("table");
+    table.className = 'transcriptiontable';
     var trg = document.createElement("tr");
     var trd = document.createElement("tr");
     var tra = document.createElement("tr");

@@ -262,6 +262,16 @@ header nav ul li {
 
 }
 
+.transcriptiontable td {
+  /*background-color: purple; */
+  text-align: justify;
+  text-align-last: center;
+}
+
+
+
+
+
 .jambuttons {
 display: inline-block;
   padding: 16px;
