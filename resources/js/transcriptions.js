@@ -30,9 +30,16 @@ function loadTab(songname, articleelement, ul, animation) {
   //hide the ul
   document.getElementById(ul).style.display = "none";
 
+  const article = document.getElementById(articleelement);
+  article.innerHTML = '';
+
+  if(songname != 'improvisation') {
+
   fetch('https://groovyjen.com/resources/json/' + songname + '.json')
     .then((response) => response.json())
     .then((json) => drawTab(json, articleelement));
+
+    }
 
 //  if(animation != 'no'){
 //    animate(animation);
@@ -219,4 +226,8 @@ function showSongs(ul) {
       ul.style.display = "";
     }
 
+}
+
+function hideSongList(ul) {
+  document.getElementById(ul).style.display = "none";
 }
