@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="keywords" content="bass, tabs, groovyjen, transcriptions, gear, percussion, jam, bass jam">
 </head>
-<body onload="hideSongList('songList');">
+<body>
   <header>
     <div>
       <div class="logo"><img src="resources/images/me/gig1.png" width="143" height="108"></div>
@@ -29,7 +29,7 @@
   <div class="main">
     <script type="text/javascript" src="resources/js/transcriptions.js"></script>
     <input type="text" id="transcriptionchoice" onclick="showSongs('songList');" onkeyup="goChoice('transcriptionchoice','songList')" placeholder="Search for song...">
-    <ul id="songList">
+    <ul id="songList" class="initialsongulhide">
       <li><a href="javascript:loadTab('improvisation', 'transtab', 'songList','improvisation');">Improvisation</a></li>
       <li><a href="javascript:loadTab('letsgroove', 'transtab', 'songList','letsgroove');">Let's Groove - Earth Wind & Fire</a></li>
       <li><a href="javascript:loadTab('mario', 'transtab', 'songList','mario');">Supermario Theme Tune - Nintendo</a></li>

@@ -221,13 +221,11 @@ function animate(animation) {
 function showSongs(ul) {
   ul = document.getElementById(ul);
 
+  ul.classList.remove('initialsongulhide');
+
     //show the ul
     if(ul.style.display == "none"){
       ul.style.display = "";
     }
 
-}
-
-function hideSongList(ul) {
-  document.getElementById(ul).style.display = "none";
 }

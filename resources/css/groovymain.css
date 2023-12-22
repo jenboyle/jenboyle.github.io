@@ -506,6 +506,10 @@ display: inline-block;
   display: block;
 }
 
+.initialsongulhide {
+  display: none;
+}
+
 @media all and (max-width:740px) {
   header nav ul, .main nav ul {
     width: 100%;
