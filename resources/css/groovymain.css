@@ -270,7 +270,7 @@ header nav ul li {
 
 
 
-
+/* Buttons */
 
 .jambuttons {
 display: inline-block;
@@ -291,6 +291,26 @@ display: inline-block;
   transform: translateY(4px);
 }
 
+.gamebuttons {
+display: inline-block;
+  padding: 16px;
+  background-color: #8DA399;
+  font-size: 20px;
+  border-radius: 15px;
+  border: 2px solid gray;
+  box-shadow: 0 4px #999;
+}
+
+.gamebuttons:hover {
+  background-color: whitesmoke;
+}
+
+.gamebuttons:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+/* ^^ buttons ^^ */
 
 .menu {
   display: none;
