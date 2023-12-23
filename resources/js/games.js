@@ -113,6 +113,7 @@ function relativesGameCheckAnswer(answerkey, answerselected) {
     var nextq = document.createElement("a");
     nextq.href = 'javascript:relativesGame()';
     nextq.textContent = String.fromCodePoint('9193');
+    nextq.className += 'gamebutton';
     gameanswer.appendChild(nextq);
   } else {
     gameanswer.textContent = 'Try Again';
@@ -124,7 +125,7 @@ function relativesGameCheckAnswer(answerkey, answerselected) {
 function showHelp() {
   var gamehelp = document.getElementById('gamehelp');
   gamehelp.classList.remove('gamehelphidden');
-  gamehelp.className += 'gamehelpshow';
+  gamehelp.className = 'gamebutton';
   //  gamehelp.setAttribute('onclick', function help(){
   //    if(this.textContent == '&#129300;') {
   //      this.textContent += 'If you are in a major key move down 3 semitones to find the relative minor. If you are in a minor key move up 3 semitones to find the relative major.';
