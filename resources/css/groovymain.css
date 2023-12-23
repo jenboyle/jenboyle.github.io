@@ -7,6 +7,11 @@ div {
   color: black;
 }
 
+.gameanswer {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 body {
   background-color: lightgoldenrodyellow;
   color:black;
@@ -307,6 +312,26 @@ display: inline-block;
 .gamebuttons:active {
   box-shadow: 0 2px #666;
   transform: translateY(4px);
+}
+
+.answerbuttons {
+display: inline-block;
+  padding: 5px;
+  background-color: #a38da2;
+  font-size: 18px;
+  border-radius: 70px;
+  border: 2px solid #550f5e;
+  box-shadow: 0 1px #5b336a;
+  margin: 5px;
+}
+
+.answerbuttons:hover {
+  background-color: #dfbcbc;
+}
+
+.answerbuttons:active {
+  box-shadow: 0 1px #a54949;
+  transform: translateY(2px);
 }
 
 /* ^^ buttons ^^ */

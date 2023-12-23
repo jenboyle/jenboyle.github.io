@@ -81,7 +81,7 @@ function relativesGame() {
   var gameanswers = document.getElementById('gameanswers');
   for (var i=0; i<24; i++) {
     var qbutton = document.createElement("button");
-    qbutton.className = 'gamebuttons';
+    qbutton.className = 'answerbuttons';
     //qbutton.id = 'relatives
     qbutton.type = 'button';
     qbutton.textContent = relatives[i].key;
@@ -101,8 +101,10 @@ function relativesGameCheckAnswer(answerkey, answerselected) {
 
   if(answerkey == answerselected) {
     gameanswer.textContent = 'Well Done';
+    gameanswer.style.background = 'green';
   } else {
     gameanswer.textContent = 'Try Again';
+    gameanswer.style.background = 'red';
   }
 
 }
