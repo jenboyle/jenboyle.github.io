@@ -57,15 +57,18 @@ function showNextGameSelection(game) {
   var gamereturn = document.getElementById('gamereturn');
   gamereturn.appendChild(returnbutton);
 
-
-
-
 }
 
 function relativesGame() {
   document.getElementById('gameselection').style.display="none";
 
   var gamemain = document.getElementById('gamemain');
+  gamemain.innerHTML = '';
+  var gameanswers = document.getElementById('gameanswers');
+  gameanswers.innerHTML = '';
+  var gameanswer = document.getElementById('gameanswer');
+  gameanswer.innerHTML = '';
+  gameanswer.style.background = 'lightgoldenrodyellow';
 
   //need a random 0-23
   var randomscale = Math.floor(Math.random() * 24);
@@ -78,7 +81,7 @@ function relativesGame() {
   var relativeanswer = relatives[randomscale]['rel'];
 
 
-  var gameanswers = document.getElementById('gameanswers');
+
   for (var i=0; i<24; i++) {
     var qbutton = document.createElement("button");
     qbutton.className = 'answerbuttons';
@@ -89,6 +92,10 @@ function relativesGame() {
     qbutton.setAttribute('onclick',ansmethod);
     gameanswers.appendChild(qbutton);
   }
+
+  showHelp();
+
+
 
 
   //console.log(relativeanswer);
@@ -102,9 +109,42 @@ function relativesGameCheckAnswer(answerkey, answerselected) {
   if(answerkey == answerselected) {
     gameanswer.textContent = 'Well Done';
     gameanswer.style.background = 'green';
+
+    var nextq = document.createElement("a");
+    nextq.href = 'javascript:relativesGame()';
+    nextq.textContent = String.fromCodePoint('9193');
+    gameanswer.appendChild(nextq);
   } else {
     gameanswer.textContent = 'Try Again';
     gameanswer.style.background = 'red';
   }
 
+}
+
+function showHelp() {
+  var gamehelp = document.getElementById('gamehelp');
+  gamehelp.classList.remove('gamehelphidden');
+  gamehelp.className += 'gamehelpshow';
+  //  gamehelp.setAttribute('onclick', function help(){
+  //    if(this.textContent == '&#129300;') {
+  //      this.textContent += 'If you are in a major key move down 3 semitones to find the relative minor. If you are in a minor key move up 3 semitones to find the relative major.';
+  //    } else {
+  //      this.textContent = '&#129300;';
+  //    }
+  //  });
+
+  //gamehelp.style.display = '';
+  //mag glass 128269
+}
+
+function help(){
+    var gamehelp = document.getElementById('gamehelp');
+    if(document.getElementById('gamemain').innerHTML.indexOf('relative') != -1){
+        if(gamehelp.textContent.length < 3) {
+          gamehelp.textContent = 'If you are in a major key move down 3 semitones to find the relative minor. If you are in a minor key move up 3 semitones to find the relative major.';
+        }
+//        else {
+//          gamehelp.textContent = '&#129300;';
+//        }
+    }
 }

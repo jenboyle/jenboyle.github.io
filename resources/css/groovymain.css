@@ -12,6 +12,15 @@ div {
   padding-bottom: 20px;
 }
 
+.gamehelphidden {
+  display:none;
+  text-decoration: none;
+}
+
+.gamehelpshow a {
+  text-decoration: none;
+}
+
 body {
   background-color: lightgoldenrodyellow;
   color:black;
