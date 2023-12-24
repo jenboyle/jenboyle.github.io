@@ -12,6 +12,7 @@ var relatives = [{'key':'Ab Major', 'rel': 'F Minor'}, {'key':'A Major', 'rel':'
 var circle = [{'key':'C', 'sign': 'no sharps or flats', 'twowrong': '1 sharp,1 flat'}, {'key':'F', 'sign': '1 flat', 'twowrong': '1 sharp,3 flats'}];
 
 var previousRelative = '';
+var loadedGame = '';
 
 
 
@@ -67,6 +68,7 @@ function showNextGameSelection(game) {
 
 function relativesGame() {
   clearGameSpace();
+  loadedGame = 'Relatives';
   //randomize the game
   relatives.sort(function(){
     return 0.5 - Math.random();
@@ -129,6 +131,7 @@ function checkAnswer(answerkey, answerselected, nextmethod) {
 
 function circleOfFifthsGame() {
   clearGameSpace();
+  loadedGame = 'Circle';
   var gamemain = document.getElementById('gamemain');
   var gameanswers = document.getElementById('gameanswers');
   //var gameanswer = document.getElementById('gameanswer');
@@ -156,6 +159,8 @@ function circleOfFifthsGame() {
         gameanswers.appendChild(cbutton);
       }
 
+  showHelp();
+
 
 }
 
@@ -176,15 +181,44 @@ function showHelp() {
 }
 
 function help(){
-    var gamehelp = document.getElementById('gamehelp');
-    if(document.getElementById('gamemain').innerHTML.indexOf('relative') != -1){
-        if(gamehelp.textContent.length < 3) {
-          gamehelp.textContent = 'If you are in a major key move down 3 semitones to find the relative minor. If you are in a minor key move up 3 semitones to find the relative major.';
+    var helpdetail = document.getElementById('helpdetail');
+//    if(document.getElementById('gamemain').innerHTML.indexOf('relative') != -1){
+//        if(gamehelp.textContent.length < 3) {
+//          gamehelp.textContent = 'If you are in a major key move down 3 semitones to find the relative minor. If you are in a minor key move up 3 semitones to find the relative major.';
+//        }
+//    }
+
+
+
+        switch(loadedGame) {
+          case 'Circle':
+            if(helpdetail.innerText.length == 0) {
+              if(document.getElementById('gamemain').innerHTML.indexOf('key of C') != -1){
+                helpdetail.textContent = 'Cosy Cat has no sharps or flats';
+              } else if(document.getElementById('gamemain').innerHTML.indexOf('key of F') != -1){
+                helpdetail.textContent = "Cosy Cat's knife cuts the fillet of fish";
+              }
+            } else {
+              helpdetail.textContent = '';
+            }
+            break;
+          case 'Relatives':
+            if((helpdetail.innerText.length == 0) && (document.getElementById('gamemain').innerHTML.indexOf('Minor') != -1)) {
+              helpdetail.textContent = 'If you are in a minor key move up 3 semitones to find the relative major.';
+            } else if((helpdetail.innerText.length == 0) && (document.getElementById('gamemain').innerHTML.indexOf('Major') != -1)) {
+              helpdetail.textContent = 'If you are in a major key move down 3 semitones to find the relative minor.';
+            } else {
+              helpdetail.textContent = '';
+            }
+            break;
+          default:
+              //gamehelp.href = 'javascript:help();';
+              //gamehelp.innerText = String.fromCodePoint('129300');
         }
 //        else {
-//          gamehelp.textContent = '&#129300;';
+//          gamehelp.innerText = '&#129300;';
 //        }
-    }
+
 }
 
 function clearGameSpace() {
@@ -198,5 +232,10 @@ function clearGameSpace() {
   var gameanswer = document.getElementById('gameanswer');
   gameanswer.innerHTML = '';
   gameanswer.style.background = 'lightgoldenrodyellow';
+
+  var helpdetail = document.getElementById('helpdetail');
+  //gamehelp.href = 'javascript:help();';
+  helpdetail.textContent = '';
+
 
 }
