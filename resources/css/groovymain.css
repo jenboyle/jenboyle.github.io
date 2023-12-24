@@ -306,7 +306,7 @@ display: inline-block;
 }
 
 .gamebuttons {
-display: inline-block;
+  display: inline-block;
   color: black;
   padding: 16px;
   background-color: #8DA399;
@@ -329,7 +329,7 @@ display: inline-block;
 display: inline-block;
   color: black;
   padding: 5px;
-  background-color: #a38da2;
+  background-color: #c9aec8;
   font-size: 18px;
   border-radius: 70px;
   border: 2px solid #550f5e;
@@ -338,11 +338,11 @@ display: inline-block;
 }
 
 .answerbuttons:hover {
-  background-color: #dfbcbc;
+  background-color: #d9d0d9;
 }
 
 .answerbuttons:active {
-  box-shadow: 0 1px #a54949;
+  box-shadow: 0 1px #796379;
   transform: translateY(2px);
 }
 

@@ -9,7 +9,8 @@ var relatives = [{'key':'Ab Major', 'rel': 'F Minor'}, {'key':'A Major', 'rel':'
                  {'key':'A Minor', 'rel': 'C Major'}, {'key':'Bb Minor', 'rel': 'Db Major'}, {'key':'B Minor', 'rel':'D Major'}, {'key':'C Minor', 'rel':'Eb Major'},
                  {'key':'C# Minor', 'rel': 'E Major'}, {'key':'D Minor', 'rel': 'F Major'}, {'key':'Eb Minor', 'rel': 'Gb Major'}, {'key':'E Minor', 'rel': 'G Major'}];
 
-                 //right or wrong, guess again hint or do you want to know the answer, Next, answers right out of
+var previousRelative = '';
+// or do you want to know the answer, answers right out of
 
 function showNextGameSelection(game) {
 
@@ -62,6 +63,10 @@ function showNextGameSelection(game) {
 function relativesGame() {
   document.getElementById('gameselection').style.display="none";
 
+  relatives.sort(function(){
+    return 0.5 - Math.random();
+  });
+
   var gamemain = document.getElementById('gamemain');
   gamemain.innerHTML = '';
   var gameanswers = document.getElementById('gameanswers');
@@ -72,6 +77,13 @@ function relativesGame() {
 
   //need a random 0-23
   var randomscale = Math.floor(Math.random() * 24);
+
+  //ensure it is different from last question
+  while(randomscale == previousRelative) {
+    randomscale = Math.floor(Math.random() * 24);
+  }
+
+  previousRelative = randomscale;
 
   var relativequestion = document.createElement("div");
   relativequestion.textContent = 'What is the relative key of ' + relatives[randomscale]['key'] + '?' ;
@@ -107,7 +119,7 @@ function relativesGameCheckAnswer(answerkey, answerselected) {
   var gameanswer = document.getElementById('gameanswer');
 
   if(answerkey == answerselected) {
-    gameanswer.textContent = 'Well Done';
+    gameanswer.textContent = 'Well Done ';
     gameanswer.style.background = 'green';
 
     var nextq = document.createElement("a");
