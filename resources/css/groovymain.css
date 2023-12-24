@@ -8,6 +8,7 @@ div {
 }
 
 .gameanswer {
+  background-color: lightgoldenrodyellow;
   text-align: center;
   padding-bottom: 20px;
 }
@@ -306,6 +307,7 @@ display: inline-block;
 
 .gamebuttons {
 display: inline-block;
+  color: black;
   padding: 16px;
   background-color: #8DA399;
   font-size: 20px;
@@ -325,6 +327,7 @@ display: inline-block;
 
 .answerbuttons {
 display: inline-block;
+  color: black;
   padding: 5px;
   background-color: #a38da2;
   font-size: 18px;
