@@ -1,6 +1,6 @@
 var nextSelectionArr = [{'id':'eartraining','games':[{'gameid1':'dronetest', 'gametext1':'Drone Test'}]},
                         {'id':'musictheory','games':[{'gameid1':'relatives', 'gametext1':'Relatives Test', 'gamemethod1':'relativesGame();'},
-                          {'gameid2':'relativemajor', 'gametext2':'Relative Major'}]}];
+                          {'gameid2':'circleoffifths', 'gametext2':'Circle of Fifths', 'gamemethod2':'circleOfFifthsGame();'}]}];
 
 var relatives = [{'key':'Ab Major', 'rel': 'F Minor'}, {'key':'A Major', 'rel':'F# Minor'}, {'key':'Bb Major', 'rel': 'G Minor'}, {'key':'B Major', 'rel':'G# Minor'},
                  {'key':'C Major', 'rel': 'A Minor'}, {'key':'Db Major', 'rel': 'Bb Minor'}, {'key':'D Major', 'rel':'B Minor'}, {'key':'Eb Major', 'rel':'C Minor'},
@@ -9,7 +9,12 @@ var relatives = [{'key':'Ab Major', 'rel': 'F Minor'}, {'key':'A Major', 'rel':'
                  {'key':'A Minor', 'rel': 'C Major'}, {'key':'Bb Minor', 'rel': 'Db Major'}, {'key':'B Minor', 'rel':'D Major'}, {'key':'C Minor', 'rel':'Eb Major'},
                  {'key':'C# Minor', 'rel': 'E Major'}, {'key':'D Minor', 'rel': 'F Major'}, {'key':'Eb Minor', 'rel': 'Gb Major'}, {'key':'E Minor', 'rel': 'G Major'}];
 
+var circle = [{'key':'C', 'sign': 'no sharps or flats', 'twowrong': '1 sharp,1 flat'}, {'key':'F', 'sign': '1 flat', 'twowrong': '1 sharp,3 flats'}];
+
 var previousRelative = '';
+
+
+
 // or do you want to know the answer, answers right out of
 
 function showNextGameSelection(game) {
@@ -61,19 +66,14 @@ function showNextGameSelection(game) {
 }
 
 function relativesGame() {
-  document.getElementById('gameselection').style.display="none";
-
+  clearGameSpace();
+  //randomize the game
   relatives.sort(function(){
     return 0.5 - Math.random();
   });
 
   var gamemain = document.getElementById('gamemain');
-  gamemain.innerHTML = '';
   var gameanswers = document.getElementById('gameanswers');
-  gameanswers.innerHTML = '';
-  var gameanswer = document.getElementById('gameanswer');
-  gameanswer.innerHTML = '';
-  gameanswer.style.background = 'lightgoldenrodyellow';
 
   //need a random 0-23
   var randomscale = Math.floor(Math.random() * 24);
@@ -100,22 +100,15 @@ function relativesGame() {
     //qbutton.id = 'relatives
     qbutton.type = 'button';
     qbutton.textContent = relatives[i].key;
-    var ansmethod = 'javascript:relativesGameCheckAnswer("' + relativeanswer + '", "' + relatives[i].key + '");';
+    var ansmethod = 'javascript:checkAnswer("' + relativeanswer + '", "' + relatives[i].key + '","javascript:relativesGame()");';
     qbutton.setAttribute('onclick',ansmethod);
     gameanswers.appendChild(qbutton);
   }
 
   showHelp();
-
-
-
-
-  //console.log(relativeanswer);
-
-
 }
 
-function relativesGameCheckAnswer(answerkey, answerselected) {
+function checkAnswer(answerkey, answerselected, nextmethod) {
   var gameanswer = document.getElementById('gameanswer');
 
   if(answerkey == answerselected) {
@@ -123,7 +116,7 @@ function relativesGameCheckAnswer(answerkey, answerselected) {
     gameanswer.style.background = 'green';
 
     var nextq = document.createElement("a");
-    nextq.href = 'javascript:relativesGame()';
+    nextq.href = nextmethod;
     nextq.textContent = String.fromCodePoint('9193');
     nextq.className += 'gamebutton';
     gameanswer.appendChild(nextq);
@@ -131,6 +124,38 @@ function relativesGameCheckAnswer(answerkey, answerselected) {
     gameanswer.textContent = 'Try Again';
     gameanswer.style.background = 'red';
   }
+
+}
+
+function circleOfFifthsGame() {
+  clearGameSpace();
+  var gamemain = document.getElementById('gamemain');
+  var gameanswers = document.getElementById('gameanswers');
+  //var gameanswer = document.getElementById('gameanswer');
+
+  //need a random 0-1
+  var randomquestion = Math.floor(Math.random() * 2);
+
+  var circlequestion = document.createElement("div");
+    circlequestion.textContent = 'The key of ' + circle[randomquestion]['key'] + ' has?' ;
+
+    gamemain.appendChild(circlequestion);
+
+    var circleanswer = circle[randomquestion]['sign'];
+
+    var answeroptions = [circle[randomquestion].sign, ...circle[randomquestion].twowrong.split(',')].sort();
+
+      for (var i=0; i<3; i++) {
+        var cbutton = document.createElement("button");
+        cbutton.className = 'answerbuttons';
+        //cbutton.id = 'relatives
+        cbutton.type = 'button';
+        cbutton.textContent = answeroptions[i];
+        var ansmethod = 'javascript:checkAnswer("' + circleanswer + '", "' + answeroptions[i] + '","javascript:circleOfFifthsGame()");';
+        cbutton.setAttribute('onclick',ansmethod);
+        gameanswers.appendChild(cbutton);
+      }
+
 
 }
 
@@ -160,4 +185,18 @@ function help(){
 //          gamehelp.textContent = '&#129300;';
 //        }
     }
+}
+
+function clearGameSpace() {
+  document.getElementById('gameselection').style.display="none";
+  var gamemain = document.getElementById('gamemain');
+  gamemain.innerHTML = '';
+
+  var gameanswers = document.getElementById('gameanswers');
+  gameanswers.innerHTML = '';
+
+  var gameanswer = document.getElementById('gameanswer');
+  gameanswer.innerHTML = '';
+  gameanswer.style.background = 'lightgoldenrodyellow';
+
 }
