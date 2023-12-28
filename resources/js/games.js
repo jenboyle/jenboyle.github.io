@@ -9,7 +9,37 @@ var relatives = [{'key':'Ab Major', 'rel': 'F Minor'}, {'key':'A Major', 'rel':'
                  {'key':'A Minor', 'rel': 'C Major'}, {'key':'Bb Minor', 'rel': 'Db Major'}, {'key':'B Minor', 'rel':'D Major'}, {'key':'C Minor', 'rel':'Eb Major'},
                  {'key':'C# Minor', 'rel': 'E Major'}, {'key':'D Minor', 'rel': 'F Major'}, {'key':'Eb Minor', 'rel': 'Gb Major'}, {'key':'E Minor', 'rel': 'G Major'}];
 
-var circle = [{'key':'C', 'sign': 'no sharps or flats', 'twowrong': '1 sharp,1 flat'}, {'key':'F', 'sign': '1 flat', 'twowrong': '1 sharp,3 flats'}];
+var circle = [{'key':'C', 'sign': 'no sharps or flats', 'twowrong': '1 sharp,1 flat'},
+              {'key':'F', 'sign': '1 flat', 'twowrong': '1 sharp,3 flats'},
+              {'key':'F_TOGGLE', 'sign': '1 flat', 'flatsharp': 'Bb', 'twowrong': 'Eb,Ab'},
+              {'key':'G', 'sign': '1 sharp', 'twowrong': 'no sharps or flats,3 flats'},
+              {'key':'G_TOGGLE', 'sign': '1 sharp', 'flatsharp': 'F#', 'twowrong': 'C#,G#'},
+              {'key':'A', 'sign': '3 sharps', 'twowrong': 'no sharps or flats,1 sharp'},
+              {'key':'A_TOGGLE', 'sign': '3 sharps', 'flatsharp': 'F# C# G#', 'twowrong': 'F# C# D#,F# G# A#'},
+              {'key':'D', 'sign': '2 sharps', 'twowrong': 'no sharps or flats,1 sharp'},
+              {'key':'D_TOGGLE', 'sign': '2 sharps', 'flatsharp': 'F# C#', 'twowrong': 'C# G#,F# G#'},
+              {'key':'E', 'sign': '4 sharps', 'twowrong': 'no sharps or flats,3 sharps'},
+              {'key':'E_TOGGLE', 'sign': '4 sharps', 'flatsharp': 'F# C# G# D#', 'twowrong': 'C# G# A# F#,F# G# C# E#'},
+              {'key':'Eb', 'sign': '3 flats', 'twowrong': '1 flat,2 flats'},
+              {'key':'Eb_TOGGLE', 'sign': '3 flats', 'flatsharp': 'Bb Eb Ab', 'twowrong': 'Eb Ab Db,Bb Db Ab'},
+              {'key':'Bb', 'sign': '2 flats', 'twowrong': '1 flat,3 flats'},
+              {'key':'Bb_TOGGLE', 'sign': '2 flats', 'flatsharp': 'Bb Eb', 'twowrong': 'Eb Ab,Bb Db'},
+              {'key':'Ab', 'sign': '4 flats', 'twowrong': '1 flat,2 flats'},
+              {'key':'Ab_TOGGLE', 'sign': '4 flats', 'flatsharp': 'Bb Eb Ab Db', 'twowrong': 'Eb Ab Cb Fb,Bb Db Gb Ab'},
+              {'key':'F#', 'sign': '6 sharps', 'twowrong': '3 sharps,4 sharps'},
+              {'key':'F#_TOGGLE', 'sign': '6 sharps', 'flatsharp': 'F# C# G# D# A# E#', 'twowrong': 'F# C# G# D# E# B#,B# E# A# D# C# G#'},
+              {'key':'Gb', 'sign': '6 flats', 'twowrong': '3 flat,4 flats'},
+              {'key':'Gb_TOGGLE', 'sign': '6 flats', 'flatsharp': 'Bb Eb Ab Db Gb Cb', 'twowrong': 'Bb Db Eb Ab Cb Fb,Bb Db Gb Ab Eb Fb'},
+              {'key':'B', 'sign': '5 sharps', 'twowrong': '3 sharps,4 sharps'},
+              {'key':'B_TOGGLE', 'sign': '5 sharps', 'flatsharp': 'F# C# G# D# A#', 'twowrong': 'C# G# D# E# B#,B# E# A# D# C#'},
+              {'key':'Db', 'sign': '5 flats', 'twowrong': '3 flat,4 flats'},
+              {'key':'Db_TOGGLE', 'sign': '5 flats', 'flatsharp': 'Bb Eb Ab Db Gb', 'twowrong': 'Bb Eb Ab Cb Fb,Bb Db Gb Eb Fb'},
+              {'key':'C#', 'sign': '7 sharps', 'twowrong': '1 sharps,5 sharps'},
+              {'key':'C#_TOGGLE', 'sign': '7 sharps', 'flatsharp': 'F# C# G# D# A# E# B#', 'twowrong': 'F# C# G# D# A# E# B# C,B# E# A# D# C# G# D#'}];
+
+//var circleSigns = ['no sharps or flats', '1 flat', '1 sharp', '2 sharps', '3 sharps', '4 sharps'];
+// future have intermediate beginner advanced change the question to not say how many
+//var circleFlatSharps = ['Bb', 'F#', 'F# C# G#', 'F# C#', 'F# C# G# D#'];
 
 var previousRelative = '';
 var loadedGame = '';
@@ -21,7 +51,7 @@ var loadedGame = '';
 function showNextGameSelection(game) {
 
   //hide first set buttons
-  document.getElementById('eartraining').style.display = "none";
+  //document.getElementById('eartraining').style.display = "none";
   document.getElementById('musictheory').style.display = "none";
 
   //show next button set
@@ -136,17 +166,38 @@ function circleOfFifthsGame() {
   var gameanswers = document.getElementById('gameanswers');
   //var gameanswer = document.getElementById('gameanswer');
 
-  //need a random 0-1
-  var randomquestion = Math.floor(Math.random() * 2);
+  //need a random 0-26     27
+  var randomquestion = Math.floor(Math.random() * 27);
+
+  var qtoggle = false;
+  var circlekey = circle[randomquestion]['key'];
+  if(circlekey.indexOf('_TOGGLE') != -1) {
+    qtoggle = true;
+    circlekey = circlekey.substring(0,circlekey.indexOf('_'));
+  }
 
   var circlequestion = document.createElement("div");
-    circlequestion.textContent = 'The key of ' + circle[randomquestion]['key'] + ' has?' ;
+  circlequestion.textContent = 'The key of ' + circlekey + ' has ?' ;
+  var circleanswer = circle[randomquestion]['sign'];
+  var answeroptions = [circle[randomquestion].sign, ...circle[randomquestion].twowrong.split(',')].sort();
+
+  if(qtoggle) {
+    var plural = ((circle[randomquestion]['sign'].indexOf('sharps') != -1) || (circle[randomquestion]['sign'].indexOf('flats') != -1));
+    var singorplu = plural ? 'are they?' : 'is it?';
+    circlequestion.textContent = 'The key of ' + circlekey + ' has ' +
+       circle[randomquestion]['sign'] + '. What ' + singorplu;
+    circleanswer = circle[randomquestion]['flatsharp'];
+    answeroptions = [circle[randomquestion].flatsharp, ...circle[randomquestion].twowrong.split(',')].sort();
+  }
+
+  //{'key':'F', 'qtoggle':'true', 'sign': '1 flat', 'flatsharp': 'Bb', 'twowrong': 'Eb,Ab'}];
+
 
     gamemain.appendChild(circlequestion);
 
-    var circleanswer = circle[randomquestion]['sign'];
 
-    var answeroptions = [circle[randomquestion].sign, ...circle[randomquestion].twowrong.split(',')].sort();
+
+
 
       for (var i=0; i<3; i++) {
         var cbutton = document.createElement("button");
@@ -193,10 +244,18 @@ function help(){
         switch(loadedGame) {
           case 'Circle':
             if(helpdetail.innerText.length == 0) {
-              if(document.getElementById('gamemain').innerHTML.indexOf('key of C') != -1){
-                helpdetail.textContent = 'Cosy Cat has no sharps or flats';
-              } else if(document.getElementById('gamemain').innerHTML.indexOf('key of F') != -1){
-                helpdetail.textContent = "Cosy Cat's knife cuts the fillet of fish";
+              if(document.getElementById('gamemain').innerHTML.indexOf('flat') != -1){
+                helpdetail.textContent = "Order of Flats: B E A D G C F";
+              } else if(document.getElementById('gamemain').innerHTML.indexOf('sharp') != -1){
+                helpdetail.textContent = "Order of Sharps: F C G D A E B";
+              } else if(document.getElementById('gamemain').innerHTML.indexOf('b has ?') != -1){
+                helpdetail.textContent = 'The order in circle of fifths is C F Bb Eb Ab Db Gb Cb, try making up a mnemonic to remember';
+              } else if(document.getElementById('gamemain').innerHTML.indexOf('F has ?') != -1){
+                helpdetail.textContent = 'The order of flats in circle of fifths is C F Bb Eb Ab Db Gb Cb, try making up a mnemonic to remember';
+              } else if(document.getElementById('gamemain').innerHTML.indexOf('C has ?') != -1){
+                helpdetail.textContent = 'The key of C has no sharps or flats';
+              } else if(document.getElementById('gamemain').innerHTML.indexOf('has ?') != -1){
+                helpdetail.textContent = 'The order of sharps in circle of fifths is C G D A E B F# C#, try making up a mnemonic to remember';
               }
             } else {
               helpdetail.textContent = '';
