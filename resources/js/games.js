@@ -2,6 +2,13 @@ var nextSelectionArr = [{'id':'eartraining','games':[{'gameid1':'dronetest', 'ga
                         {'id':'musictheory','games':[{'gameid1':'relatives', 'gametext1':'Relatives Test', 'gamemethod1':'relativesGame();'},
                           {'gameid2':'circleoffifths', 'gametext2':'Circle of Fifths', 'gamemethod2':'circleOfFifthsGame();'}]}];
 
+var relativesfull = [{'key':'Ab Major', 'rel': 'F Minor'}, {'key':'A Major', 'rel':'F# Minor'}, {'key':'Bb Major', 'rel': 'G Minor'}, {'key':'B Major', 'rel':'G# Minor'},
+                 {'key':'C Major', 'rel': 'A Minor'}, {'key':'Db Major', 'rel': 'Bb Minor'}, {'key':'D Major', 'rel':'B Minor'}, {'key':'Eb Major', 'rel':'C Minor'},
+                 {'key':'E Major', 'rel': 'C# Minor'}, {'key':'F Major', 'rel': 'D Minor'}, {'key':'Gb Major', 'rel': 'Eb Minor'}, {'key':'G Major', 'rel': 'E Minor'},
+                 {'key':'F Minor', 'rel': 'Ab Major'}, {'key':'F# Minor', 'rel':'A Major'}, {'key':'G Minor', 'rel': 'Bb Major'}, {'key':'G# Minor', 'rel':'B Major'},
+                 {'key':'A Minor', 'rel': 'C Major'}, {'key':'Bb Minor', 'rel': 'Db Major'}, {'key':'B Minor', 'rel':'D Major'}, {'key':'C Minor', 'rel':'Eb Major'},
+                 {'key':'C# Minor', 'rel': 'E Major'}, {'key':'D Minor', 'rel': 'F Major'}, {'key':'Eb Minor', 'rel': 'Gb Major'}, {'key':'E Minor', 'rel': 'G Major'}];
+
 var relatives = [{'key':'Ab Major', 'rel': 'F Minor'}, {'key':'A Major', 'rel':'F# Minor'}, {'key':'Bb Major', 'rel': 'G Minor'}, {'key':'B Major', 'rel':'G# Minor'},
                  {'key':'C Major', 'rel': 'A Minor'}, {'key':'Db Major', 'rel': 'Bb Minor'}, {'key':'D Major', 'rel':'B Minor'}, {'key':'Eb Major', 'rel':'C Minor'},
                  {'key':'E Major', 'rel': 'C# Minor'}, {'key':'F Major', 'rel': 'D Minor'}, {'key':'Gb Major', 'rel': 'Eb Minor'}, {'key':'G Major', 'rel': 'E Minor'},
@@ -107,15 +114,10 @@ function relativesGame() {
   var gamemain = document.getElementById('gamemain');
   var gameanswers = document.getElementById('gameanswers');
 
-  //need a random 0-23
-  var randomscale = Math.floor(Math.random() * 24);
+  console.log('relativvvveslen' + relatives.length);
 
-  //ensure it is different from last question
-  while(randomscale == previousRelative) {
-    randomscale = Math.floor(Math.random() * 24);
-  }
-
-  previousRelative = randomscale;
+  //need a random 0-23 rel length 24
+  var randomscale = Math.floor(Math.random() * relatives.length);
 
   var relativequestion = document.createElement("div");
   relativequestion.textContent = 'What is the relative key of ' + relatives[randomscale]['key'] + '?' ;
@@ -131,10 +133,22 @@ function relativesGame() {
     qbutton.className = 'answerbuttons';
     //qbutton.id = 'relatives
     qbutton.type = 'button';
-    qbutton.textContent = relatives[i].key;
-    var ansmethod = 'javascript:checkAnswer("' + relativeanswer + '", "' + relatives[i].key + '","javascript:relativesGame()");';
+    qbutton.textContent = relativesfull[i].key;
+    var ansmethod = 'javascript:checkAnswer("' + relativeanswer + '", "' + relativesfull[i].key + '","javascript:relativesGame()");';
     qbutton.setAttribute('onclick',ansmethod);
     gameanswers.appendChild(qbutton);
+  }
+
+  //remove item
+  relatives.splice(randomscale, 1);
+  if(relatives.length == 0) {
+    //repopulate array
+    relatives = [{'key':'Ab Major', 'rel': 'F Minor'}, {'key':'A Major', 'rel':'F# Minor'}, {'key':'Bb Major', 'rel': 'G Minor'}, {'key':'B Major', 'rel':'G# Minor'},
+                 {'key':'C Major', 'rel': 'A Minor'}, {'key':'Db Major', 'rel': 'Bb Minor'}, {'key':'D Major', 'rel':'B Minor'}, {'key':'Eb Major', 'rel':'C Minor'},
+                 {'key':'E Major', 'rel': 'C# Minor'}, {'key':'F Major', 'rel': 'D Minor'}, {'key':'Gb Major', 'rel': 'Eb Minor'}, {'key':'G Major', 'rel': 'E Minor'},
+                 {'key':'F Minor', 'rel': 'Ab Major'}, {'key':'F# Minor', 'rel':'A Major'}, {'key':'G Minor', 'rel': 'Bb Major'}, {'key':'G# Minor', 'rel':'B Major'},
+                 {'key':'A Minor', 'rel': 'C Major'}, {'key':'Bb Minor', 'rel': 'Db Major'}, {'key':'B Minor', 'rel':'D Major'}, {'key':'C Minor', 'rel':'Eb Major'},
+                 {'key':'C# Minor', 'rel': 'E Major'}, {'key':'D Minor', 'rel': 'F Major'}, {'key':'Eb Minor', 'rel': 'Gb Major'}, {'key':'E Minor', 'rel': 'G Major'}];
   }
 
   showHelp();
