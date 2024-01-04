@@ -77,38 +77,22 @@ function drawTab(jsonData, articleelement) {
   ptune.textContent = 'Tuning: ' + jsonData.tuning;
   article.appendChild(ptune);
 
+  var tabline = 1;
+  for(tabstart=1; tabstart<18; tabstart+=4) {
 
-  if(jsonData.hasOwnProperty('textb4tab1')) {
-    var sometext = document.createElement("div");
-    sometext.textContent = jsonData.textb4tab1;
-    article.appendChild(sometext);
+    var textb4linetab = 'textb4tab' + tabline;
+    if(jsonData.hasOwnProperty(textb4linetab)) {
+      var sometext = document.createElement("div");
+      sometext.textContent = jsonData[textb4linetab];
+      article.appendChild(sometext);
+    }
+
+    testfortab('e'+tabstart, jsonData, article);
+
+
+    tabline++;
+
   }
-
-  testfortab('e1', jsonData, article);
-
-  if(jsonData.hasOwnProperty('textb4tab2')) {
-    var sometext = document.createElement("div");
-    sometext.textContent = jsonData.textb4tab2;
-    article.appendChild(sometext);
-  }
-
-  testfortab('e5', jsonData, article);
-
-  if(jsonData.hasOwnProperty('textb4tab3')) {
-    sometext = document.createElement("div");
-    sometext.textContent = jsonData.textb4tab3;
-    article.appendChild(sometext);
-  }
-
-  testfortab('e9', jsonData, article);
-
-  if(jsonData.hasOwnProperty('textb4tab4')) {
-    sometext = document.createElement("div");
-    sometext.textContent = jsonData.textb4tab4;
-    article.appendChild(sometext);
-  }
-  testfortab('e13', jsonData, article);
-  testfortab('e17', jsonData, article);
 
 }
 
