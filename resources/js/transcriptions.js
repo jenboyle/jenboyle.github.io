@@ -35,7 +35,7 @@ function loadTab(songname, folder, articleelement, ul, animation) {
 
   if(songname != 'improvisation') {
 
-  fetch('https://groovyjen.com/resources/json/songs/folder/' + songname + '.json')
+  fetch('https://groovyjen.com/resources/json/songs/' + folder + '/' + songname + '.json')
     .then((response) => response.json())
     .then((json) => drawTab(json, articleelement));
 
