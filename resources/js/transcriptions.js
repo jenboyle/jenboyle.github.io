@@ -101,6 +101,12 @@ function drawTab(jsonData, articleelement) {
   }
 
   testfortab('e9', jsonData, article);
+
+  if(jsonData.hasOwnProperty('textb4tab4')) {
+    sometext = document.createElement("div");
+    sometext.textContent = jsonData.textb4tab4;
+    article.appendChild(sometext);
+  }
   testfortab('e13', jsonData, article);
   testfortab('e17', jsonData, article);
 
