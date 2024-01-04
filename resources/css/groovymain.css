@@ -538,6 +538,10 @@ display: inline-block;
   display: none;
 }
 
+.showblogs {
+  display:none;
+}
+
 /* footer */
 .footercol {
   margin:auto;

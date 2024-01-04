@@ -29,10 +29,10 @@
   <div class="main">
 
     <script type="text/javascript" src="resources/js/blogs.js"></script>
-
+    <div class="showblogs" id="showblogs" onmouseover="showBlogs('showblogs', 'blogList')">All Blogs</div>
     <ul id="blogList">
-      <li><a href="javascript:loadBlog('socialdos', 'blog', 'blogList');">Playing Bass on Social Media Part Dos</a></li>
-      <li><a href="javascript:loadBlog('social', 'blog', 'blogList');">Playing Bass on Social Media</a></li>
+      <li><a href="javascript:loadBlog('socialdos', 'blog', 'blogList','showblogs');">Playing Bass on Social Media Part Dos</a></li>
+      <li><a href="javascript:loadBlog('social', 'blog', 'blogList', 'showblogs');">Playing Bass on Social Media</a></li>
     </ul>
     <article id="blog"><p></p></article>
   </div>
