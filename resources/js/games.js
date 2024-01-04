@@ -259,17 +259,17 @@ function help(){
           case 'Circle':
             if(helpdetail.innerText.length == 0) {
               if(document.getElementById('gamemain').innerHTML.indexOf('flat') != -1){
-                helpdetail.textContent = "Order of Flats: B E A D G C F";
+                helpdetail.textContent = " Order of Flats: B E A D G C F";
               } else if(document.getElementById('gamemain').innerHTML.indexOf('sharp') != -1){
-                helpdetail.textContent = "Order of Sharps: F C G D A E B";
+                helpdetail.textContent = " Order of Sharps: F C G D A E B";
               } else if(document.getElementById('gamemain').innerHTML.indexOf('b has ?') != -1){
-                helpdetail.textContent = 'The order in circle of fifths is C F Bb Eb Ab Db Gb Cb, try making up a mnemonic to remember';
+                helpdetail.textContent = ' The order in circle of fifths is C F Bb Eb Ab Db Gb Cb, try making up a mnemonic to remember';
               } else if(document.getElementById('gamemain').innerHTML.indexOf('F has ?') != -1){
-                helpdetail.textContent = 'The order of flats in circle of fifths is C F Bb Eb Ab Db Gb Cb, try making up a mnemonic to remember';
+                helpdetail.textContent = ' The order of flats in circle of fifths is C F Bb Eb Ab Db Gb Cb, try making up a mnemonic to remember';
               } else if(document.getElementById('gamemain').innerHTML.indexOf('C has ?') != -1){
-                helpdetail.textContent = 'The key of C has no sharps or flats';
+                helpdetail.textContent = ' The key of C has no sharps or flats';
               } else if(document.getElementById('gamemain').innerHTML.indexOf('has ?') != -1){
-                helpdetail.textContent = 'The order of sharps in circle of fifths is C G D A E B F# C#, try making up a mnemonic to remember';
+                helpdetail.textContent = ' The order of sharps in circle of fifths is C G D A E B F# C#, try making up a mnemonic to remember';
               }
             } else {
               helpdetail.textContent = '';
@@ -277,9 +277,9 @@ function help(){
             break;
           case 'Relatives':
             if((helpdetail.innerText.length == 0) && (document.getElementById('gamemain').innerHTML.indexOf('Minor') != -1)) {
-              helpdetail.textContent = 'If you are in a minor key move up 3 semitones to find the relative major.';
+              helpdetail.textContent = ' If you are in a minor key move up 3 semitones to find the relative major.';
             } else if((helpdetail.innerText.length == 0) && (document.getElementById('gamemain').innerHTML.indexOf('Major') != -1)) {
-              helpdetail.textContent = 'If you are in a major key move down 3 semitones to find the relative minor.';
+              helpdetail.textContent = ' If you are in a major key move down 3 semitones to find the relative minor.';
             } else {
               helpdetail.textContent = '';
             }
