@@ -38,6 +38,18 @@ function blog(jsonData, articleelement) {
       p.textContent = emojiCheck(jsonData[para]);
       article.appendChild(p);
 
+      if(jsonData.hasOwnProperty('pic1') && jsonData.pic1placement.startsWith(''+index)) {
+        var pic1 = document.createElement("img");
+        pic1.src = "resources/images/blogs/" + jsonData.pic1;
+        article.appendChild(pic1);
+      }
+
+      if(jsonData.hasOwnProperty('pic2') && jsonData.pic1placement.startsWith(''+index)) {
+        var pic2 = document.createElement("img");
+        pic2.src = "resources/images/blogs/" + jsonData.pic2;
+        article.appendChild(pic2);
+      }
+
       if(jsonData.hasOwnProperty('utube')) {
         if(jsonData.utubeplacement == index){
           const div = document.createElement("div");
