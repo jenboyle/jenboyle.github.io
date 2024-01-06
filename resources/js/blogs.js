@@ -41,13 +41,26 @@ function blog(jsonData, articleelement) {
       if(jsonData.hasOwnProperty('pic1') && jsonData.pic1placement.startsWith(''+index)) {
         var pic1 = document.createElement("img");
         pic1.src = "resources/images/blogs/" + jsonData.pic1;
-        article.appendChild(pic1);
+        if(jsonData.pic1placement.indexOf('_') != -1){
+          var divpic1 = document.createElement("div");
+          divpic1.appendChild(pic1);
+          article.appendChild(divpic1);
+        } else {
+          article.appendChild(pic1);
+        }
+
       }
 
-      if(jsonData.hasOwnProperty('pic2') && jsonData.pic1placement.startsWith(''+index)) {
+      if(jsonData.hasOwnProperty('pic2') && jsonData.pic2placement.startsWith(''+index)) {
         var pic2 = document.createElement("img");
         pic2.src = "resources/images/blogs/" + jsonData.pic2;
-        article.appendChild(pic2);
+        if(jsonData.pic2placement.indexOf('_') != -1){
+          var divpic2 = document.createElement("div");
+          divpic2.appendChild(pic2);
+          article.appendChild(divpic2);
+        } else {
+          article.appendChild(pic2);
+        }
       }
 
       if(jsonData.hasOwnProperty('utube')) {
