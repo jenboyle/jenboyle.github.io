@@ -14,7 +14,14 @@ function goChoice(element, ul) {
 
   for (i=0; i < li.length; i++){
     a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
+    var div = li[i].getElementsByTagName("div")[0];
+    if(div != undefined) {
+      div = div.textContent;
+      txtValue = a.textContent + div;
+    } else {
+      txtValue = a.textContent || a.innerText;
+    }
+
 
     if(txtValue.toUpperCase().indexOf(filter) > -1) {
       li[i].style.display = "";

@@ -436,11 +436,17 @@ display: inline-block;
   text-decoration: none;
   font-size: 18px;
   color: darkslateblue;
-  display:block;
+  display: block;
+  width: 70%;
 }
 
 #songList li a:hover:not(.header), #blogList li a:hover {
   background-color: whitesmoke;
+}
+
+#songList li {
+  justify-content:space-between;
+  display: flex;
 }
 
 #theorycontainer {
