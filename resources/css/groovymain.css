@@ -437,7 +437,7 @@ display: inline-block;
   font-size: 18px;
   color: darkslateblue;
   display: block;
-  width: 70%;
+  width: 80%;
 }
 
 #songList li a:hover:not(.header), #blogList li a:hover {
