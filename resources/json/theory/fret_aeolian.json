@@ -1,0 +1,82 @@
+{
+  "song": "Aeolian",
+  "when": "Sixth mode of major scale. AKA Natural Minor Scale. It can be played with minor chords.",
+  "fretboard":"true",
+  "fret_choices": 17,
+  "formula": "1,2,b3,4,5,b6,b7",
+
+  "fret_name1": "C Aeolian 1",
+  "fret_locs1": "A3,D0,D1,D3,G0,G1,G3,G5",
+  "fret_id1": "caeo1",
+
+
+  "fret_name2": "C Aeolian 2",
+  "fret_locs2": "E8,E10,E11,A8,A10,A11,D8,D10",
+  "fret_id2": "caeo2",
+
+  "fret_name3": "D Aeolian 1",
+  "fret_locs3": "D0,D2,D3,G0,G2,G3,G5,G7",
+  "fret_id3": "daeo1",
+
+  "fret_name4": "D Aeolian 2",
+  "fret_locs4": "A5,A7,A8,D5,D7,D8,G5,G7",
+  "fret_id4": "daeo2",
+
+  "fret_name5": "E Aeolian 1",
+  "fret_locs5": "E0,E2,E3,A0,A2,A3,D0,D2",
+  "fret_id5": "eaeo1",
+
+  "fret_name6": "E Aeolian 2",
+  "fret_locs6": "D2,D4,D5,G2,G4,G5,G7,G9",
+  "fret_id6": "eaeo2",
+
+  "fret_name7": "E Aeolian 3",
+  "fret_locs7": "A7,A9,A10,D7,D9,D10,G7,G9",
+  "fret_id7": "eaeo3",
+
+  "fret_name8": "F Aeolian 1",
+  "fret_locs8": "E1,E3,E4,A1,A3,A4,D1,D3",
+  "fret_id8": "faeo1",
+
+  "fret_name9": "F Aeolian 2",
+  "fret_locs9": "D3,D5,D6,G3,G5,G6,G8,G10",
+  "fret_id9": "faeo2",
+
+
+  "fret_name10": "F Aeolian 3",
+  "fret_locs10": "A8,A10,A11,D8,D10,D11,G8,G10",
+  "fret_id10": "faeo3",
+
+  "fret_name11": "G Aeolian 1",
+  "fret_locs11": "E3,E5,E6,A3,A5,A6,D3,D5",
+  "fret_id11": "gaeo1",
+
+  "fret_name12": "G Aeolian 2",
+  "fret_locs12": "G0,G2,G3,G5,G7,G8,G10,G12",
+  "fret_id12": "gaeo2",
+
+  "fret_name13": "G Aeolian 3",
+  "fret_locs13": "D5,D7,D8,G5,G7,G8,G10,G12",
+  "fret_id13": "gaeo3",
+
+  "fret_name14": "A Aeolian 1",
+  "fret_locs14": "A0,A2,A3,D0,D2,D3,G0,G2",
+  "fret_id14": "aaeo1",
+
+  "fret_name15": "A Aeolian 2",
+  "fret_locs15": "E5,E7,E8,A5,A7,A8,D5,D7",
+  "fret_id15": "aaeo2",
+
+  "fret_name16": "B Aeolian 1",
+  "fret_locs16": "A2,A4,D0,D2,D4,G0,G2,G4",
+  "fret_id16": "baeo1",
+
+  "fret_name17": "B Aeolian 2",
+  "fret_locs17": "E7,E9,E10,A7,A9,A10,D7,D9",
+  "fret_id17": "baeo2"
+
+
+
+
+
+}
