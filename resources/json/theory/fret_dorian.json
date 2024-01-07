@@ -2,7 +2,7 @@
   "song": "Dorian",
   "when": "Second mode of major scale.  It can be played with minor chords.",
   "fretboard":"true",
-  "fret_choices": 19,
+  "fret_choices": 18,
   "formula": "1,2,b3,4,5,6,b7",
 
   "fret_name1": "C Dorian 1",
@@ -63,25 +63,21 @@
   "fret_locs14": "D5,D7,D8,G5,G7,G9,G10,G12",
   "fret_id14": "gdor3",
 
-  "fret_name15": "G Dorian 4",
-  "fret_locs15": "A10,A12,A13,D10,D12,G9,G10,G12",
-  "fret_id15": "gdor4",
+  "fret_name15": "A Dorian 1",
+  "fret_locs15": "A0,A2,A3,D0,D2,D4,G0,G2",
+  "fret_id15": "ador1",
 
-  "fret_name16": "A Dorian 1",
-  "fret_locs16": "A0,A2,A3,D0,D2,D4,G0,G2",
-  "fret_id16": "ador1",
+  "fret_name16": "A Dorian 2",
+  "fret_locs16": "E5,E7,E8,A5,A7,D4,D5,D7",
+  "fret_id16": "ador2",
 
-  "fret_name17": "A Dorian 2",
-  "fret_locs17": "E5,E7,E8,A5,A7,D4,D5,D7",
-  "fret_id17": "ador2",
+  "fret_name17": "B Dorian 1",
+  "fret_locs17": "A2,A4,D0,D2,D4,G1,G2,G4",
+  "fret_id17": "bdor1",
 
-  "fret_name18": "B Dorian 1",
-  "fret_locs18": "A2,A4,D0,D2,D4,G1,G2,G4",
-  "fret_id18": "bdor1",
-
-  "fret_name19": "B Dorian 2",
-  "fret_locs19": "E7,E9,E10,A7,A9,D6,D7,D9",
-  "fret_id19": "bdor2"
+  "fret_name18": "B Dorian 2",
+  "fret_locs18": "E7,E9,E10,A7,A9,D6,D7,D9",
+  "fret_id18": "bdor2"
 
 
 

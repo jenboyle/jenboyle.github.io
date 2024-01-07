@@ -12,6 +12,7 @@ function checkInitial() {
 }
 
 function loadTheory(topic, element) {
+  window.scrollTo({ top:0, behavior: 'smooth'});
   fetch('https://groovyjen.com/resources/json/theory/' + topic + '.json')
     .then((response) => response.json())
     .then((json) => drawTheory(json, element));
@@ -619,6 +620,10 @@ function drawFretboard(jsonData, div) {
     fretscaleselected = 'clyd1';
     fretscaleselectedlocs = 'A3,D0,D2,D4,G0,G2,G4,G5';
     buttonInitialText = 'C Lydian 1';
+  } else if(jsonData.song.indexOf('Aeolian') != -1){
+    fretscaleselected = 'caeo1';
+    fretscaleselectedlocs = 'A3,D0,D1,D3,G0,G1,G3,G5';
+    buttonInitialText = 'C Aeolian 1';
   }
 
   //selection
