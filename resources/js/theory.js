@@ -602,7 +602,7 @@ function drawFretboard(jsonData, div) {
     buttonInitialText = 'C Mixolydian 1';
   } else if(jsonData.song.indexOf('Dorian') != -1){
     fretscaleselected = 'cdor1';
-    fretscaleselectedlocs = 'A3,D0,D1,D3,G0,G2,G3,G5';
+    fretscaleselectedlocs = 'A3,A5,A6,D3,D5,G2,G3,G5';
     buttonInitialText = 'C Dorian 1';
   } else if(jsonData.song.indexOf('Melodic') != -1){
     fretscaleselected = 'cmelminor1';

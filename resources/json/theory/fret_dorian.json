@@ -2,82 +2,86 @@
   "song": "Dorian",
   "when": "Second mode of major scale.  It can be played with minor chords.",
   "fretboard":"true",
-  "fret_choices": 18,
+  "fret_choices": 19,
   "formula": "1,2,b3,4,5,6,b7",
 
   "fret_name1": "C Dorian 1",
-  "fret_locs1": "A3,D0,D1,D3,G0,G2,G3,G5",
+  "fret_locs1": "A3,A5,A6,D3,D5,G2,G3,G5",
   "fret_id1": "cdor1",
 
-
   "fret_name2": "C Dorian 2",
-  "fret_locs2": "E8,E10,E11,A8,A10,D7,D8,D10",
+  "fret_locs2": "A3,D0,D1,D3,G0,G2,G3,G5",
   "fret_id2": "cdor2",
 
-  "fret_name3": "D Dorian 1",
-  "fret_locs3": "D0,D2,D3,G0,G2,G4,G5,G7",
-  "fret_id3": "ddor1",
 
-  "fret_name4": "D Dorian 2",
-  "fret_locs4": "A5,A7,A8,D5,D7,G4,G5,G7",
-  "fret_id4": "ddor2",
+  "fret_name3": "C Dorian 3",
+  "fret_locs3": "E8,E10,E11,A8,A10,D7,D8,D10",
+  "fret_id3": "cdor3",
 
-  "fret_name5": "D Dorian 3",
-  "fret_locs5": "E10,E12,E13,A10,A12,D9,D10,D12",
-  "fret_id5": "ddor3",
+  "fret_name4": "D Dorian 1",
+  "fret_locs4": "D0,D2,D3,G0,G2,G4,G5,G7",
+  "fret_id4": "ddor1",
 
-  "fret_name6": "E Dorian 1",
-  "fret_locs6": "E0,E2,E3,A0,A2,A4,D0,D2",
-  "fret_id6": "edor1",
+  "fret_name5": "D Dorian 2",
+  "fret_locs5": "A5,A7,A8,D5,D7,G4,G5,G7",
+  "fret_id5": "ddor2",
 
-  "fret_name7": "E Dorian 2",
-  "fret_locs7": "D2,D4,D5,G2,G4,G6,G7,G9",
-  "fret_id7": "edor2",
+  "fret_name6": "D Dorian 3",
+  "fret_locs6": "E10,E12,E13,A10,A12,D9,D10,D12",
+  "fret_id6": "ddor3",
 
-  "fret_name8": "E Dorian 3",
-  "fret_locs8": "A7,A9,A10,D7,D9,G6,G7,G9",
-  "fret_id8": "edor3",
+  "fret_name7": "E Dorian 1",
+  "fret_locs7": "E0,E2,E3,A0,A2,A4,D0,D2",
+  "fret_id7": "edor1",
 
-  "fret_name9": "F Dorian 1",
-  "fret_locs9": "E1,E3,E4,A1,A3,D0,D1,D3",
-  "fret_id9": "fdor1",
+  "fret_name8": "E Dorian 2",
+  "fret_locs8": "D2,D4,D5,G2,G4,G6,G7,G9",
+  "fret_id8": "edor2",
 
-  "fret_name10": "F Dorian 2",
-  "fret_locs10": "D3,D5,D6,G3,G5,G7,G8,G10",
-  "fret_id10": "fdor2",
+  "fret_name9": "E Dorian 3",
+  "fret_locs9": "A7,A9,A10,D7,D9,G6,G7,G9",
+  "fret_id9": "edor3",
+
+  "fret_name10": "F Dorian 1",
+  "fret_locs10": "E1,E3,E4,A1,A3,D0,D1,D3",
+  "fret_id10": "fdor1",
+
+  "fret_name11": "F Dorian 2",
+  "fret_locs11": "D3,D5,D6,G3,G5,G7,G8,G10",
+  "fret_id11": "fdor2",
 
 
-  "fret_name11": "F Dorian 3",
-  "fret_locs11": "A8,A10,A11,D8,D10,G7,G8,G10",
-  "fret_id11": "fdor3",
+  "fret_name12": "F Dorian 3",
+  "fret_locs12": "A8,A10,A11,D8,D10,G7,G8,G10",
+  "fret_id12": "fdor3",
 
-  "fret_name12": "G Dorian 1",
-  "fret_locs12": "E3,E5,E6,A3,A5,D2,D3,D5",
-  "fret_id12": "gdor1",
+  "fret_name13": "G Dorian 1",
+  "fret_locs13": "E3,E5,E6,A3,A5,D2,D3,D5",
+  "fret_id13": "gdor1",
 
-  "fret_name13": "G Dorian 2",
-  "fret_locs13": "G0,G2,G3,G5,G7,G9,G10,G12",
-  "fret_id13": "gdor2",
+  "fret_name14": "G Dorian 2",
+  "fret_locs14": "G0,G2,G3,G5,G7,G9,G10,G12",
+  "fret_id14": "gdor2",
 
-  "fret_name14": "G Dorian 3",
-  "fret_locs14": "D5,D7,D8,G5,G7,G9,G10,G12",
-  "fret_id14": "gdor3",
+  "fret_name15": "G Dorian 3",
+  "fret_locs15": "D5,D7,D8,G5,G7,G9,G10,G12",
+  "fret_id15": "gdor3",
 
-  "fret_name15": "A Dorian 1",
-  "fret_locs15": "A0,A2,A3,D0,D2,D4,G0,G2",
-  "fret_id15": "ador1",
+  "fret_name16": "A Dorian 1",
+  "fret_locs16": "A0,A2,A3,D0,D2,D4,G0,G2",
+  "fret_id16": "ador1",
 
-  "fret_name16": "A Dorian 2",
-  "fret_locs16": "E5,E7,E8,A5,A7,D4,D5,D7",
-  "fret_id16": "ador2",
+  "fret_name17": "A Dorian 2",
+  "fret_locs17": "E5,E7,E8,A5,A7,D4,D5,D7",
+  "fret_id17": "ador2",
 
-  "fret_name17": "B Dorian 1",
-  "fret_locs17": "A2,A4,D0,D2,D4,G1,G2,G4",
-  "fret_id17": "bdor1",
+  "fret_name18": "B Dorian 1",
+  "fret_locs18": "A2,A4,D0,D2,D4,G1,G2,G4",
+  "fret_id18": "bdor1",
 
-  "fret_name18": "B Dorian 2",
-  "fret_locs18": "E7,E9,E10,A7,A9,D6,D7,D9",
-  "fret_id18": "bdor2"
+  "fret_name19": "B Dorian 2",
+  "fret_locs19": "E7,E9,E10,A7,A9,D6,D7,D9",
+  "fret_id19": "bdor2"
 
 
 
