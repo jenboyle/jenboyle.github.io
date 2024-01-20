@@ -66,7 +66,7 @@ function blog(jsonData, articleelement) {
       if(jsonData.hasOwnProperty('utube')) {
         if(jsonData.utubeplacement == index){
           const div = document.createElement("div");
-          div.class = "iframedivmid";
+          div.className = "iframedivmid";
           const iframe = document.createElement("iframe");
           iframe.width="420";
           iframe.height="315";
