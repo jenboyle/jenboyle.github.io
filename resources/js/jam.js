@@ -47,6 +47,7 @@ function randomKey() {
 function randomKeyPicker(json) {
 
   const pkey = document.getElementById('randomkey');
+  pkey.innerHTML = '';
 
   var randSelect = Math.floor(Math.random() * 30) + 1;
 
@@ -56,10 +57,19 @@ function randomKeyPicker(json) {
   }
 
   previousRandomIndex = randSelect;
+          //const p = document.createElement("p");
+  if(json.hasOwnProperty('key' + randSelect + 'link')) {
 
 
+    const linkkey = document.createElement("a");
+    linkkey.href="basstheory.html?selection=" + jsonData['key' + randSelect + 'link'];
+    linkkey.textContent = json['key'+randSelect];
+            pkey.appendChild(linkkey);
+        } else {
+  pkey.textContent = json['key'+randSelect];
+  }
 
-  pkey.innerHTML = json['key'+randSelect];
+  //pkey.appendChild(p);
 
 }
 
