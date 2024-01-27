@@ -282,11 +282,12 @@ header nav ul li {
   text-align-last: center;
 }
 
-.strum {
+.randomtables {
+  margin:0 auto;
   margin-bottom: 20px;
 }
 
-.strum td {
+.randomtables td {
   text-align:center;
   width: 30px;
 }
@@ -295,18 +296,23 @@ header nav ul li {
   color: #289d89;
 }
 
+.progressioncolour {
+  color: #677969;
+}
+
 
 
 /* Buttons */
 
 .jambuttons {
-display: inline-block;
+  display: block;
   padding: 16px;
   background-color: #8DA399;
   font-size: 20px;
   border-radius: 15px;
   border: 2px solid gray;
   box-shadow: 0 4px #999;
+  margin: 0 auto;
 }
 
 .jambuttons:hover {
