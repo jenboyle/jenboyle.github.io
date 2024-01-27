@@ -62,7 +62,7 @@ function randomKeyPicker(json) {
 
 
     const linkkey = document.createElement("a");
-    linkkey.href="basstheory.html?selection=" + jsonData['key' + randSelect + 'link'];
+    linkkey.href="basstheory.html?selection=" + json['key' + randSelect + 'link'];
     linkkey.textContent = json['key'+randSelect];
             pkey.appendChild(linkkey);
         } else {
