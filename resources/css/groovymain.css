@@ -282,6 +282,19 @@ header nav ul li {
   text-align-last: center;
 }
 
+.strum {
+  margin-bottom: 20px;
+}
+
+.strum td {
+  text-align:center;
+  width: 30px;
+}
+
+.strumcolour {
+  color: #289d89;
+}
+
 
 
 /* Buttons */
