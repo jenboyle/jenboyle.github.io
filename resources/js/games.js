@@ -164,11 +164,17 @@ function notationGame(level){
   loadedGame = 'Notation';
 
   
-
-  var notationimageseasy = ["resources/images/games/notation/slap_an_e.jpg", "resources/images/games/notation/slap_pop_e_g.jpg"];
+  var texts = ["Slap a low E, try to memorize the notation", "Slap the note", "Slap a low E and pop a muted G string, try to memorize the notation", "Slap and pop the notes"];
+  var notationimageseasy = ["resources/images/games/notation/slap_an_e.png", "resources/images/games/notation/slap_an_e_no_tab.png", "resources/images/games/notation/slap_pop_e_g.png","resources/images/games/notation/slap_pop_e_g_no_tab.png"];
   var gamemain = document.getElementById('gamemain');
+
+  var textdiv = document.createElement('div');
+  textdiv.textContent = texts[notationeasycounter];
+  gamemain.appendChild(textdiv);
+
   var img = document.createElement('img');
   img.src = notationimageseasy[notationeasycounter];
+  img.className = 'notationimages';
   gamemain.appendChild(img);
 
   var nextq = document.createElement("a");
@@ -179,7 +185,7 @@ function notationGame(level){
     gameanswer.appendChild(nextq);
 
   notationeasycounter++;
-  if (notationeasycounter == 2) {
+  if (notationeasycounter == notationimageseasy.length) {
     notationeasycounter = 0;
   }
 }
