@@ -1,6 +1,7 @@
 var nextSelectionArr = [{'id':'eartraining','games':[{'gameid1':'dronetest', 'gametext1':'Drone Test'}]},
                         {'id':'musictheory','games':[{'gameid1':'relatives', 'gametext1':'Relatives Test', 'gamemethod1':'relativesGame();'},
-                          {'gameid2':'circleoffifths', 'gametext2':'Circle of Fifths', 'gamemethod2':'circleOfFifthsGame();'}]}];
+                          {'gameid2':'circleoffifths', 'gametext2':'Circle of Fifths', 'gamemethod2':'circleOfFifthsGame();'}]},
+                          {'id':'notation','games':[{'gameid1':'easy', 'gametext1':'Easy', 'gamemethod1':'notationGame("easy");'}]}];
 
 var relativesfull = [{'key':'Ab Major', 'rel': 'F Minor'}, {'key':'A Major', 'rel':'F# Minor'}, {'key':'Bb Major', 'rel': 'G Minor'}, {'key':'B Major', 'rel':'G# Minor'},
                  {'key':'C Major', 'rel': 'A Minor'}, {'key':'Db Major', 'rel': 'Bb Minor'}, {'key':'D Major', 'rel':'B Minor'}, {'key':'Eb Major', 'rel':'C Minor'},
@@ -51,6 +52,8 @@ var circle = [{'key':'C', 'sign': 'no sharps or flats', 'twowrong': '1 sharp,1 f
 var previousRelative = '';
 var loadedGame = '';
 
+var notationeasycounter = 0;
+
 
 
 // or do you want to know the answer, answers right out of
@@ -60,6 +63,8 @@ function showNextGameSelection(game) {
   //hide first set buttons
   //document.getElementById('eartraining').style.display = "none";
   document.getElementById('musictheory').style.display = "none";
+  document.getElementById('notation').style.display = "none";
+  
 
   //show next button set
   var gamediv = document.getElementById('gameselection');
@@ -152,6 +157,31 @@ function relativesGame() {
   }
 
   showHelp();
+}
+
+function notationGame(level){
+  clearGameSpace();
+  loadedGame = 'Notation';
+
+  
+
+  var notationimageseasy = ["resources/images/games/notation/slap_an_e.jpg", "resources/images/games/notation/slap_pop_e_g.jpg"];
+  var gamemain = document.getElementById('gamemain');
+  var img = document.createElement('img');
+  img.src = notationimageseasy[notationeasycounter];
+  gamemain.appendChild(img);
+
+  var nextq = document.createElement("a");
+    nextq.href = 'javascript:notationGame("Easy")';
+    nextq.textContent = String.fromCodePoint('9193');
+    nextq.className += 'gamebutton';
+    var gameanswer = document.getElementById('gameanswer');
+    gameanswer.appendChild(nextq);
+
+  notationeasycounter++;
+  if (notationeasycounter == 2) {
+    notationeasycounter = 0;
+  }
 }
 
 function checkAnswer(answerkey, answerselected, nextmethod) {
