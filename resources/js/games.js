@@ -164,8 +164,22 @@ function notationGame(level){
   loadedGame = 'Notation';
 
   
-  var texts = ["Slap a low E, try to memorize the notation", "Slap the note", "Slap a low E and pop a muted G string, try to memorize the notation", "Slap and pop the notes"];
-  var notationimageseasy = ["resources/images/games/notation/slap_an_e.png", "resources/images/games/notation/slap_an_e_no_tab.png", "resources/images/games/notation/slap_pop_e_g.png","resources/images/games/notation/slap_pop_e_g_no_tab.png"];
+  var texts = ["Slap a low E, try to memorize the notation",
+               "Slap the note",
+               "Slap a low E and pop a muted G string, try to memorize the notation",
+               "Slap and pop the notes",
+               "Play notes on notation spaces, try to memorize the notation",
+               "Play the notes on notation spaces",
+               "Play notes on notation lines, try to memorize the notation",
+               "Play the notes on notation lines"];
+  var notationimageseasy = ["resources/images/games/notation/slap_an_e.png",
+                            "resources/images/games/notation/slap_an_e_no_tab.png",
+                            "resources/images/games/notation/slap_pop_e_g.png",
+                            "resources/images/games/notation/slap_pop_e_g_no_tab.png",
+                            "resources/images/games/notation/spaces.png",
+                            "resources/images/games/notation/spaces_no_tab.png",
+                            "resources/images/games/notation/lines.png",
+                            "resources/images/games/notation/lines_no_tab.png"];
   var gamemain = document.getElementById('gamemain');
 
   var textdiv = document.createElement('div');
