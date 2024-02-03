@@ -83,7 +83,7 @@
   "fret_locs19": "E7,E9,A6,A9,D6,D9",
   "fret_id19": "bmajorpent2",
 
-  "patterns": "true",
+  "patterns": 2,
 
   "pattern1": "EROOTPOS, EPOS2, AMIN1, APOS2, DMIN1, DPOS2, GMIN1, GPOS1",
   "pattern2": "EPOS, EPOS2, APOS, APOS2, DROOTPOS, DPOS2, GMIN1, GPOS2"
