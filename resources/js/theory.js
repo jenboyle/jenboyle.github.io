@@ -525,43 +525,54 @@ function loadFret() {
             var fretloc = coord.substring(1,coord.length);
 
             if(stringloc == 'E') {
-              note1img.style.top = '72px';
+              note1img.style.top = '62px';
             } else if (stringloc == 'A') {
-              note1img.style.top = '47px';
+              note1img.style.top = '40px';
             } else if (stringloc == 'D') {
-              note1img.style.top = '22px';
+              note1img.style.top = '19px';
             } else if (stringloc == 'G') {
-              note1img.style.top = '-3px';
+              note1img.style.top = '1px';
+            }
+
+            if((fretloc == '0') || (fretloc == '1') || (fretloc == '2')){
+              if(stringloc == 'E') {
+                note1img.style.top = '60px';
+              } else if (stringloc == 'D') {
+                  note1img.style.top = '22px';
+              } else if (stringloc == 'G') {
+                note1img.style.top = '3px';
+              }
             }
 
 
 
+
             if(fretloc == '0'){
-              note1img.style.left = (10-adjust) + 'px';
+              note1img.style.left = (14-adjust) + 'px';
             } else if(fretloc == '1'){
               note1img.style.left = (68-adjust) + 'px';
             } else if(fretloc == '2'){
               note1img.style.left = (140-adjust) + 'px';
             } else if(fretloc == '3'){
-              note1img.style.left = (215-adjust) + 'px';
+              note1img.style.left = (208-adjust) + 'px';
             } else if(fretloc == '4'){
-              note1img.style.left = (280-adjust) + 'px';
+              note1img.style.left = (272-adjust) + 'px';
             } else if(fretloc == '5'){
-              note1img.style.left = (335-adjust) + 'px';
+              note1img.style.left = (330-adjust) + 'px';
             } else if(fretloc == '6'){
               note1img.style.left = (385-adjust) + 'px';
             } else if(fretloc == '7'){
-              note1img.style.left = (428-adjust) + 'px';
+              note1img.style.left = (433-adjust) + 'px';
             } else if(fretloc == '8'){
-              note1img.style.left = (471-adjust) + 'px';
+              note1img.style.left = (477-adjust) + 'px';
             } else if(fretloc == '9'){
-              note1img.style.left = (510-adjust) + 'px';
+              note1img.style.left = (520-adjust) + 'px';
             } else if(fretloc == '10'){
-              note1img.style.left = (541-adjust) + 'px';
+              note1img.style.left = (560-adjust) + 'px';
             } else if(fretloc == '11'){
-              note1img.style.left = (573-adjust) + 'px';
-            } else if(fretloc == '12'){
               note1img.style.left = (600-adjust) + 'px';
+            } else if(fretloc == '12'){
+              note1img.style.left = (638-adjust) + 'px';
             }
 
             //"cmajorpent2": "E8,E10,A7,A10,D7,D10",
@@ -690,13 +701,31 @@ function drawFretboard(jsonData, div) {
   div.appendChild(pentdiv);
 
   const fretimg = document.createElement("img");
-  fretimg.src = 'resources/images/theory/fretboard.png';
+  fretimg.src = 'resources/images/theory/fretboarddos.jpg';
 
   fretimg.className = 'fretboard';
   div.appendChild(fretimg);
 
   //initial
     loadFret();
+
+
+//    if(jsonData.hasOwnProperty('patterns')) {
+//        for (p=0; p<jsonData.patterns; p++) {
+//            var pattp1 = document.createElement("p");
+//            var patts = ["One", "Two"];
+//            pattp1.textContent = "Pattern " + patts[p] + ":";
+//
+//            div.appendChild(pattp1);
+//
+//
+//            const patternimg = document.createElement("img");
+//            patternimg.src = 'resources/images/theory/pattern.jpg';
+//
+//            //patternimg.className = 'pattern';
+//            div.appendChild(patternimg);
+//        }
+//      }
 
 
   //  cursor: url('resources/images/icons/basspointer.png');
