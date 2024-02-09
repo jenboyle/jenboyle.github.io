@@ -498,7 +498,7 @@ function loadFret() {
           const pentArr = fretscaleselectedlocs.split(',');
 
 
-          for(i=0; i<pentArr.length; i++){
+          for(i=0; i<15; i++){
             if(document.getElementById("penticon" + i) != undefined) {
             div.removeChild(document.getElementById("penticon" + i));
             }
@@ -512,6 +512,11 @@ function loadFret() {
 
             const note1img = document.createElement("img");
             note1img.src = 'resources/images/icons/diamond3.png';
+
+//            if(jsonData.hasOwnProperty('fret_rootszeroindex' + i)) {
+//
+//            } else
+
             if(i==0 || i==(pentArr.length-1)) {
               note1img.src = 'resources/images/icons/diamond1.png';
             }
@@ -573,6 +578,16 @@ function loadFret() {
               note1img.style.left = (600-adjust) + 'px';
             } else if(fretloc == '12'){
               note1img.style.left = (638-adjust) + 'px';
+            } else if(fretloc == '13'){
+              note1img.style.left = (669-adjust) + 'px';
+            } else if(fretloc == '14'){
+              note1img.style.left = (700-adjust) + 'px';
+            } else if(fretloc == '15'){
+              note1img.style.left = (730-adjust) + 'px';
+            } else if(fretloc == '16'){
+              note1img.style.left = (756-adjust) + 'px';
+            } else if(fretloc == '17'){
+              note1img.style.left = (781-adjust) + 'px';
             }
 
             //"cmajorpent2": "E8,E10,A7,A10,D7,D10",
