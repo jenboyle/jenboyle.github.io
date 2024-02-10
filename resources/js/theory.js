@@ -1,5 +1,6 @@
 var fretscaleselected = 'cmajorpent1';
-var fretscaleselectedlocs = 'E8,E10,A7,A10,D7,D10';
+var fretscaleselectedlocs = 'E8,E10,A7,A10,D7,D10,G7,G10';
+var fretrootszeroindex = '0,5';
 var div;
 
 function checkInitial() {
@@ -513,13 +514,26 @@ function loadFret() {
             const note1img = document.createElement("img");
             note1img.src = 'resources/images/icons/diamond3.png';
 
+            if(fretrootszeroindex != undefined && fretrootszeroindex.length > 0 ) {
+              if(fretrootszeroindex.indexOf(',') != -1) {
+                var roots = fretrootszeroindex.split(',');
+                for(var r=0; r<roots.length; r++){
+                  if(roots[r]==i) {
+                    note1img.src = 'resources/images/icons/diamond1.png';
+                  }
+                }
+              } else if(fretrootszeroindex==i) {
+                note1img.src = 'resources/images/icons/diamond1.png';
+              }
+            } else if(i==0 || i==(pentArr.length-1)) {
+              note1img.src = 'resources/images/icons/diamond1.png';
+            }
+
 //            if(jsonData.hasOwnProperty('fret_rootszeroindex' + i)) {
 //
 //            } else
 
-            if(i==0 || i==(pentArr.length-1)) {
-              note1img.src = 'resources/images/icons/diamond1.png';
-            }
+
             note1img.style.position = 'relative';
             //note1img.style.left = '0px';
             //note1img.style.top = '0px';
@@ -618,6 +632,7 @@ function drawFretboard(jsonData, div) {
   if(jsonData.song.indexOf('Major') != -1){
     fretscaleselected = 'cmajorpent1';
     fretscaleselectedlocs = 'E8,E10,A7,A10,D7,D10,G7,G10';
+    fretrootszeroindex = '0,5';
   } else if(jsonData.song.indexOf('Minor Pentatonic') != -1){
     fretscaleselected = 'cminorpent1';
     fretscaleselectedlocs = 'A3,A6,D3,D5,G3,G5';
@@ -681,6 +696,7 @@ function drawFretboard(jsonData, div) {
         var pent_name = 'fret_name'+(i+1);
         var pent_id = 'fret_id'+(i+1);
         var pent_locs = 'fret_locs'+(i+1);
+        var pent_roots_zero_index = 'fret_rootszeroindex'+(i+1);
 
         if(jsonData.hasOwnProperty(pent_name)) {
           var alinkpent = document.createElement("a");
@@ -688,10 +704,14 @@ function drawFretboard(jsonData, div) {
             alinkpent.id = jsonData[pent_id];
             alinkpent.value = jsonData[pent_locs];
             alinkpent.textContent = jsonData[pent_name];
+            if(jsonData.hasOwnProperty(pent_roots_zero_index)){
+              alinkpent.zroots = jsonData[pent_roots_zero_index];
+            }
 
             alinkpent.onclick = function() {
               fretscaleselected = this.id;//jsonData[pent_id];
               fretscaleselectedlocs = this.value;//jsonData[pent_locs];
+              fretrootszeroindex = this.zroots;
               document.getElementById('pentbutton').textContent = this.textContent;
               pentButtonClick();
               loadFret();

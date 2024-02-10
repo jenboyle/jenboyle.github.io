@@ -8,6 +8,7 @@
   "fret_name1": "C Major Pentatonic 1",
   "fret_locs1": "E8,E10,A7,A10,D7,D10,G7,G10",
   "fret_id1": "cmajorpent1",
+  "fret_rootszeroindex1": "0,5",
   "fret_notes1": "C,D,E,G,A",
 
 
@@ -55,6 +56,7 @@
   "fret_name9": "D Major Pentatonic 3",
   "fret_locs9": "E10,E12,A9,A12,D9,D12,G9,G11",
   "fret_id9": "dmajorpent3",
+  "fret_rootszeroindex9": "0,5",
   "fret_notes9": "D,E,F#,A,B",
 
   "fret_name10": "D Major Pentatonic 4",
@@ -100,6 +102,7 @@
   "fret_name17": "E Major Pentatonic 4",
   "fret_locs17": "E12,E14,A11,A14,D11,D14,G11,G13",
   "fret_id17": "emajorpent4",
+  "fret_rootszeroindex17": "0,5",
   "fret_notes17": "E,F#,G#,B,C#",
 
   "fret_name18": "E Major Pentatonic 5",
@@ -129,6 +132,7 @@
   "fret_name22": "F Major Pentatonic 1",
   "fret_locs22": "E1,E3,A0,A3,D0,D3,G0,G2",
   "fret_id22": "fmajorpent1",
+  "fret_rootszeroindex22": "0,5",
   "fret_notes22": "F,G,A,C,D",
 
   "fret_name23": "F Major Pentatonic 2",
@@ -144,6 +148,7 @@
   "fret_name25": "F Major Pentatonic 4",
   "fret_locs25": "E13,E15,A12,A15,D12,D15,G12,G14",
   "fret_id25": "fmajorpent4",
+  "fret_rootszeroindex25": "0,5",
   "fret_notes25": "F,G,A,C,D",
 
   "fret_name26": "F Major Pentatonic 5",
@@ -174,6 +179,7 @@
   "fret_name30": "G Major Pentatonic 1",
   "fret_locs30": "E3,E5,A2,A5,D2,D5,G2,G5",
   "fret_id30": "gmajorpent1",
+  "fret_rootszeroindex30": "0,5",
   "fret_notes30": "G,A,B,D,E",
 
   "fret_name31": "G Major Pentatonic 2",
@@ -224,6 +230,7 @@
   "fret_locs39": "E5,E7,A4,A7,D4,D7,G4,G6",
   "fret_id39": "amajorpent2",
   "fret_notes39": "A,B,C#,E,F#",
+  "fret_rootszeroindex39": "0,5",
 
   "fret_name40": "A Major Pentatonic 3",
   "fret_locs40": "E7,E9,A7,A9,D7,D9,G6,G9",
@@ -257,6 +264,7 @@
   "fret_name45": "B Major Pentatonic 2",
   "fret_locs45": "E7,E9,A6,A9,D6,D9,G6,G8",
   "fret_id45": "bmajorpent2",
+  "fret_rootszeroindex45": "0,5",
   "fret_notes45": "B,C#,D#,F#,G#",
 
   "fret_name46": "B Major Pentatonic 3",
