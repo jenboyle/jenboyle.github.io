@@ -26,6 +26,10 @@ var progressions = [{'progression': 'I,V,VI,IV', 'num': '1,5,6,4'},
                     {'progression': 'I,V,VI,III,IV,I,IV,V', 'num': '1,5,6,3,4,1,4,5'},
                     {'progression': 'I,IV,V,IV', 'num': '1,4,5,4'}];
 
+var spices = ['Add a muted note', 'Add a slap', 'Add a pop', 'Add a slap and pop',
+              'Add a harmonic', 'Add a slide', 'Add a bend note', 'Add an open note',
+              'Play notes quiet', 'Play notes louder', 'Trill a note', 'Vibrato a note'];
+
 function playMe(file) {
 
   var audio = document.createElement('audio');
@@ -202,5 +206,19 @@ function randomChordProgression() {
                                          {'progression': 'I,IV,V,IV', 'num': '1,4,5,4'}];
     }
 
+
+}function randomSpice() {
+
+  var randomspice = Math.floor(Math.random() * spices.length);
+
+  var spice = document.getElementById('randomspice');
+  spice.innerHTML = spices[randomspice];
+
+  spices.splice(randomspice, 1);
+  if(spices.length == 0) {
+    spices = ['Add a muted note', 'Add a slap', 'Add a pop', 'Add a slap and pop',
+              'Add a harmonic', 'Add a slide', 'Add a bend note', 'Add an open note',
+              'Play notes quiet', 'Play notes louder', 'Trill a note', 'Vibrato a note']
+  }
 
 }
