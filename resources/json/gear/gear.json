@@ -77,6 +77,17 @@
           "description": "I think I noticed a difference when I first got this for the garage. Some people use acoustic foam panels, but I had done some reading and decided to get a bass trap. I have 2 as I ordered one and it went missing so I ordered another and the first showed up a good time later and the company allowed to keep it for free!"
         }
       ]
+    },
+    {
+      "title": "Gear Wants",
+      "articles": [
+        {
+          "article": "Pedal Wants",
+          "image1": "resources/images/pedals/sy1.jpg",
+          "image2": "resources/images/pedals/plumes.jpg",
+          "description": "Thanks to all the pedal pushers this list is ever growing... Starting to think I should maybe just learn how to build my own."
+        }
+      ]
     }
   ]
 }
