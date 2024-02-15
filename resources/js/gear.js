@@ -37,16 +37,13 @@ function gear(jsonData, divelement) {
           article.append(img2);
         }
 
-        if(jsonData.gear[i].articles[j].article.indexOf('Wants') != -1) {
-          const pnl = document.createElement("p");
-          pnl.textContent = emojiCheck(jsonData.gear[i].articles[j].description);
-          article.append(pnl);
-        } else {
-          const adiv = document.createElement("div");
-          adiv.textContent = emojiCheck(jsonData.gear[i].articles[j].description);
-          article.append(adiv);
-        }
+        const adiv = document.createElement("div");
+        adiv.textContent = emojiCheck(jsonData.gear[i].articles[j].description);
 
+        if(jsonData.gear[i].articles[j].article.indexOf('Wants') != -1) {
+          adiv.className = "divunderimgs";
+        }
+        article.append(adiv);
 
         div.append(article);
       }
