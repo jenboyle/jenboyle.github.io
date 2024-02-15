@@ -38,7 +38,7 @@ function gear(jsonData, divelement) {
         }
 
         const adiv = document.createElement("div");
-        adiv.textContent = jsonData.gear[i].articles[j].description;
+        adiv.textContent = emojiCheck(jsonData.gear[i].articles[j].description);
         article.append(adiv);
 
         div.append(article);
