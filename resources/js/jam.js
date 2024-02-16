@@ -28,7 +28,8 @@ var progressions = [{'progression': 'I,V,VI,IV', 'num': '1,5,6,4'},
 
 var spices = ['Add a muted note', 'Add a slap', 'Add a pop', 'Add a slap and pop',
               'Add a harmonic', 'Add a slide', 'Add a bend note', 'Add an open note',
-              'Play notes quiet', 'Play notes louder', 'Trill a note', 'Vibrato a note'];
+              'Play notes quiet', 'Play note(s) louder (accent)', 'Play notes staccato',
+              'Trill a note', 'Vibrato a note'];
 
 function playMe(file) {
 
@@ -217,8 +218,9 @@ function randomChordProgression() {
   spices.splice(randomspice, 1);
   if(spices.length == 0) {
     spices = ['Add a muted note', 'Add a slap', 'Add a pop', 'Add a slap and pop',
-              'Add a harmonic', 'Add a slide', 'Add a bend note', 'Add an open note',
-              'Play notes quiet', 'Play notes louder', 'Trill a note', 'Vibrato a note']
+                           'Add a harmonic', 'Add a slide', 'Add a bend note', 'Add an open note',
+                           'Play notes quiet', 'Play note(s) louder (accent)', 'Play notes staccato',
+                           'Trill a note', 'Vibrato a note'];
   }
 
 }

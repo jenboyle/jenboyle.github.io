@@ -641,6 +641,10 @@ function drawFretboard(jsonData, div) {
     fretscaleselected = 'cmix1';
     fretscaleselectedlocs = 'A3,D0,D2,D3,G0,G2,G3,G5';
     buttonInitialText = 'C Mixolydian 1';
+  } else if(jsonData.song.indexOf('Ionian') != -1){
+    fretscaleselected = 'cion1';
+    fretscaleselectedlocs = 'A3,A5,D2,D3,D5,G2,G4,G5';
+    buttonInitialText = 'C Ionian 1';
   } else if(jsonData.song.indexOf('Dorian') != -1){
     fretscaleselected = 'cdor1';
     fretscaleselectedlocs = 'A3,A5,A6,D3,D5,G2,G3,G5';
