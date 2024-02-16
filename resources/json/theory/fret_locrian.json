@@ -1,6 +1,6 @@
 {
   "song": "Locrian",
-  "when": "Seventh mode of major scale. AKA Natural Minor Scale. It can be played with minor chords.",
+  "when": "Seventh mode of major scale. It can be played with minor and diminished chords.",
   "fretboard":"true",
   "fret_choices": 13,
   "formula": "1,b2,b3,4,b5,b6,b7",
