@@ -640,7 +640,7 @@ function drawFretboard(jsonData, div) {
     buttonInitialText = 'C Minor Pentatonic 1';
   } else if(jsonData.song.indexOf('Mixolydian') != -1){
     fretscaleselected = 'cmix1';
-    fretscaleselectedlocs = 'A3,D0,D2,D3,G0,G2,G3,G5';
+    fretscaleselectedlocs = 'E8,E10,A7,A8,A10,D7,D8,D10';
     buttonInitialText = 'C Mixolydian 1';
   } else if(jsonData.song.indexOf('Ionian') != -1){
     fretscaleselected = 'cion1';
@@ -652,7 +652,7 @@ function drawFretboard(jsonData, div) {
     buttonInitialText = 'C Dorian 1';
   } else if(jsonData.song.indexOf('Melodic') != -1){
     fretscaleselected = 'cmelminor1';
-    fretscaleselectedlocs = 'A3,D0,D1,D3,G0,G2,G4,G5';
+    fretscaleselectedlocs = 'E8,E10,E11,A8,A10,D7,D9,D10';
     buttonInitialText = 'C Melodic Minor 1';
   } else if(jsonData.song.indexOf('Blues') != -1){
     fretscaleselected = 'cblues1';
@@ -664,11 +664,11 @@ function drawFretboard(jsonData, div) {
     buttonInitialText = 'C Phrygian 1';
   } else if(jsonData.song.indexOf('Lydian') != -1){
     fretscaleselected = 'clyd1';
-    fretscaleselectedlocs = 'A3,D0,D2,D4,G0,G2,G4,G5';
+    fretscaleselectedlocs = 'E8,E10,A7,A9,A10,D7,D9,D10';
     buttonInitialText = 'C Lydian 1';
   } else if(jsonData.song.indexOf('Aeolian') != -1){
     fretscaleselected = 'caeo1';
-    fretscaleselectedlocs = 'A3,D0,D1,D3,G0,G1,G3,G5';
+    fretscaleselectedlocs = 'E8,E10,E11,A8,A10,A11,D8,D10';
     buttonInitialText = 'C Aeolian 1';
   }
 

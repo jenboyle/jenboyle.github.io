@@ -6,12 +6,12 @@
   "formula": "1,2,3,4,5,6,b7",
 
   "fret_name1": "C Mixolydian 1",
-  "fret_locs1": "A3,D0,D2,D3,G0,G2,G3,G5",
+  "fret_locs1": "E8,E10,A7,A8,A10,D7,D8,D10",
   "fret_id1": "cmix1",
 
 
   "fret_name2": "C Mixolydian 2",
-  "fret_locs2": "E8,E10,A7,A8,A10,D7,D8,D10",
+  "fret_locs2": "A3,D0,D2,D3,G0,G2,G3,G5",
   "fret_id2": "cmix2",
 
   "fret_name3": "D Mixolydian 1",

@@ -6,12 +6,12 @@
   "formula": "1,2,3,#4,5,6,7",
 
   "fret_name1": "C Lydian 1",
-  "fret_locs1": "A3,D0,D2,D4,G0,G2,G4,G5",
+  "fret_locs1": "E8,E10,A7,A9,A10,D7,D9,D10",
   "fret_id1": "clyd1",
 
 
   "fret_name2": "C Lydian 2",
-  "fret_locs2": "E8,E10,A7,A9,A10,D7,D9,D10",
+  "fret_locs2": "A3,D0,D2,D4,G0,G2,G4,G5",
   "fret_id2": "clyd2",
 
   "fret_name3": "D Lydian 1",
