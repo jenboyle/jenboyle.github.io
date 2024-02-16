@@ -1,6 +1,6 @@
 var fretscaleselected = 'cmajorpent1';
 var fretscaleselectedlocs = 'E8,E10,A7,A10,D7,D10,G7,G10';
-var fretrootszeroindex = '0,5';
+var fretrootszeroindex;// = '0,5';
 var div;
 
 function checkInitial() {
@@ -628,6 +628,7 @@ function drawFretboard(jsonData, div) {
     }
 
   //initial
+  fretrootszeroindex = '';
   var buttonInitialText = 'C Major Pentatonic 1';
   if(jsonData.song.indexOf('Major') != -1){
     fretscaleselected = 'cmajorpent1';
