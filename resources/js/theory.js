@@ -670,6 +670,10 @@ function drawFretboard(jsonData, div) {
     fretscaleselected = 'caeo1';
     fretscaleselectedlocs = 'E8,E10,E11,A8,A10,A11,D8,D10';
     buttonInitialText = 'C Aeolian 1';
+  } else if(jsonData.song.indexOf('Locrian') != -1){
+    fretscaleselected = 'cloc1';
+    fretscaleselectedlocs = 'E8,E9,E11,A8,A9,A11,D8,D10';
+    buttonInitialText = 'C Locrian 1';
   }
 
   //selection
