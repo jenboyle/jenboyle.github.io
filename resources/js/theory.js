@@ -97,6 +97,44 @@ function drawTheory(jsonData, element) {
 
     }
 
+    var majoroptions = [{'scale':'Ionian', 'link': "javascript:loadTheory('fret_ionian', 'theorydiv');"},
+                        {'scale':'Dorian', 'link': "javascript:loadTheory('fret_dorian', 'theorydiv');"},
+                        {'scale':'Phrygian', 'link': "javascript:loadTheory('fret_phrygian', 'theorydiv');"},
+                        {'scale':'Lydian', 'link': "javascript:loadTheory('fret_lydian', 'theorydiv');"},
+                        {'scale':'Mixolydian', 'link': "javascript:loadTheory('fret_mixolydian', 'theorydiv');"},
+                        {'scale':'Aeolian', 'link': "javascript:loadTheory('fret_aeolian', 'theorydiv');"},
+                        {'scale':'Locrian', 'link': "javascript:loadTheory('fret_locrian', 'theorydiv');"}];
+    const options_tr = document.createElement("tr");
+
+
+
+    if (jsonData.song.indexOf('Major') != -1)
+      for(i=0; i<7; i++){
+        const options_td = document.createElement("td");
+
+        const optionlink = document.createElement("a");
+        optionlink.href = majoroptions[i]['link'];
+        optionlink.textContent = majoroptions[i]['scale'];
+
+        options_td.appendChild(optionlink);
+        options_tr.appendChild(options_td);
+      }
+    else {
+      var minindexes = [5,6,0,1,2,3,4];
+      for(i=0; i<7; i++){
+        const options_td = document.createElement("td");
+
+        const optionlink = document.createElement("a");
+        optionlink.href = majoroptions[minindexes[i]]['link'];
+        optionlink.textContent = majoroptions[minindexes[i]]['scale'];
+
+        options_td.appendChild(optionlink);
+        options_tr.appendChild(options_td);
+      }
+    }
+
+    chords_table.appendChild(options_tr);
+
     div.appendChild(chords_table);
 
     if(jsonData.hasOwnProperty('notes')) {
