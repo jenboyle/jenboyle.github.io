@@ -716,6 +716,10 @@ function drawFretboard(jsonData, div) {
     fretscaleselected = 'cmajortriad';
     fretscaleselectedlocs = 'A3,D2,D5,G5';
     buttonInitialText = 'C Major Triad Arpeggio';
+  } else if (jsonData.song.indexOf('Minor Triad Arpeggio') != -1) {
+    fretscaleselected = 'cminortriad';
+    fretscaleselectedlocs = 'A3,A6,D5,G5';
+    buttonInitialText = 'C Minor Triad Arpeggio';
   }
 
   //selection
