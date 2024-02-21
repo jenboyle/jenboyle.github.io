@@ -712,6 +712,10 @@ function drawFretboard(jsonData, div) {
     fretscaleselected = 'cloc1';
     fretscaleselectedlocs = 'E8,E9,E11,A8,A9,A11,D8,D10';
     buttonInitialText = 'C Locrian 1';
+  } else if(jsonData.song.indexOf('Major Triad Arpeggio') != -1){
+    fretscaleselected = 'cmajortriad';
+    fretscaleselectedlocs = 'A3,D2,D5,G5';
+    buttonInitialText = 'C Major Triad Arpeggio';
   }
 
   //selection

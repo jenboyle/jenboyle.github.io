@@ -1,0 +1,73 @@
+{
+  "song": "Major Triad Arpeggios",
+  "when": "This arpeggio can be played over major chords",
+  "fretboard":"true",
+  "fret_choices": 12,
+  "formula": "1,3,5",
+
+  "fret_name1": "C Major Triad Arpeggio",
+  "fret_locs1": "A3,D2,D5,G5",
+  "fret_id1": "cmajortriad",
+  "fret_notes1": "C,E,G,C",
+
+
+  "fret_name2": "C# Major Triad Arpeggio",
+  "fret_locs2": "A4,D3,D6,G6",
+  "fret_id2": "csharpmajortriad",
+  "fret_notes2": "C#,F,G#,C#",
+
+  "fret_name3": "D Major Triad Arpeggio",
+  "fret_locs3": "A5,D4,D7,G7",
+  "fret_id3": "dmajortriad",
+  "fret_notes3": "D,F#,A,D",
+
+  "fret_name4": "Eb Major Triad Arpeggio",
+  "fret_locs4": "A6,D5,D8,G8",
+  "fret_id4": "ebmajortriad",
+  "fret_notes4": "Eb,G,Bb,Eb",
+
+  "fret_name5": "E Major Triad Arpeggio",
+  "fret_locs5": "A7,D6,D9,G9",
+  "fret_id5": "emajortriad",
+  "fret_notes5": "E,G#,B,E",
+
+  "fret_name6": "F Major Triad Arpeggio",
+  "fret_locs6": "A8,D7,D10,G10",
+  "fret_id6": "fmajortriad",
+  "fret_notes6": "F,A,C,F",
+
+
+
+  "fret_name7": "F# Major Triad Arpeggio",
+  "fret_locs7": "E2,A1,A4,D4",
+  "fret_id7": "fsharpmajortriad",
+  "fret_notes7": "F#,A#,C#,F#",
+
+  "fret_name8": "G Major Triad Arpeggio",
+  "fret_locs8": "E3,A2,A5,D5",
+  "fret_id8": "gmajortriad",
+  "fret_notes8": "G,B,D,G",
+
+  "fret_name9": "Ab Major Triad Arpeggio",
+  "fret_locs9": "E4,A3,A6,D6",
+  "fret_id9": "abmajortriad",
+  "fret_notes9": "Ab,C,Eb,Ab",
+
+  "fret_name10": "A Major Triad Arpeggio",
+  "fret_locs10": "E5,A4,A7,D7",
+  "fret_id10": "amajortriad",
+  "fret_notes10": "A,C#,E,A",
+
+  "fret_name11": "Bb Major Triad Arpeggio",
+  "fret_locs11": "E6,A5,A8,D8",
+  "fret_id11": "bbmajortriad",
+  "fret_notes11": "Bb,D,F,Bb",
+
+  "fret_name12": "B Major Triad Arpeggio",
+  "fret_locs12": "E7,A6,A9,D9",
+  "fret_id12": "bmajortriad",
+  "fret_notes12": "B,D#,F#,B"
+
+
+
+}
