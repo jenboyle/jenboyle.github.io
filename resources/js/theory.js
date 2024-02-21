@@ -668,7 +668,7 @@ function drawFretboard(jsonData, div) {
   //initial
   fretrootszeroindex = '';
   var buttonInitialText = 'C Major Pentatonic 1';
-  if(jsonData.song.indexOf('Major') != -1){
+  if(jsonData.song.indexOf('Major Pentatonic') != -1){
     fretscaleselected = 'cmajorpent1';
     fretscaleselectedlocs = 'E8,E10,A7,A10,D7,D10,G7,G10';
     fretrootszeroindex = '0,5';
