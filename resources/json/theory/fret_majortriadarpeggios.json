@@ -2,7 +2,7 @@
   "song": "Major Triad Arpeggios",
   "when": "This arpeggio can be played over major chords",
   "fretboard":"true",
-  "fret_choices": 12,
+  "fret_choices": 14,
   "formula": "1,3,5",
   "idkey": "majortriad",
 
@@ -44,35 +44,40 @@
   "fret_id7": "f#majortriad",
   "fret_notes7": "F#,A#,C#,F#",
 
-  "fret_name8": "G Major Triad Arpeggio",
-  "fret_locs8": "E3,A2,A5,D5",
-  "fret_id8": "gmajortriad",
-  "fret_notes8": "G,B,D,G",
+  "fret_name8": "Gb Major Triad Arpeggio",
+  "fret_locs8": "E2,A1,A4,D4",
+  "fret_id8": "gbmajortriad",
+  "fret_notes8": "Gb,Bb,Db,Gb",
 
-  "fret_name9": "Ab Major Triad Arpeggio",
-  "fret_locs9": "E4,A3,A6,D6",
-  "fret_id9": "abmajortriad",
-  "fret_notes9": "Ab,C,Eb,Ab",
+  "fret_name9": "G Major Triad Arpeggio",
+  "fret_locs9": "E3,A2,A5,D5",
+  "fret_id9": "gmajortriad",
+  "fret_notes9": "G,B,D,G",
 
-  "fret_name10": "A Major Triad Arpeggio",
-  "fret_locs10": "E5,A4,A7,D7",
-  "fret_id10": "amajortriad",
-  "fret_notes10": "A,C#,E,A",
+  "fret_name10": "Ab Major Triad Arpeggio",
+  "fret_locs10": "E4,A3,A6,D6",
+  "fret_id10": "abmajortriad",
+  "fret_notes10": "Ab,C,Eb,Ab",
 
-  "fret_name11": "Bb Major Triad Arpeggio",
-  "fret_locs11": "E6,A5,A8,D8",
-  "fret_id11": "bbmajortriad",
-  "fret_notes11": "Bb,D,F,Bb",
+  "fret_name11": "A Major Triad Arpeggio",
+  "fret_locs11": "E5,A4,A7,D7",
+  "fret_id11": "amajortriad",
+  "fret_notes11": "A,C#,E,A",
 
-  "fret_name12": "B Major Triad Arpeggio",
-  "fret_locs12": "E7,A6,A9,D9",
-  "fret_id12": "bmajortriad",
-  "fret_notes12": "B,D#,F#,B",
+  "fret_name12": "Bb Major Triad Arpeggio",
+  "fret_locs12": "E6,A5,A8,D8",
+  "fret_id12": "bbmajortriad",
+  "fret_notes12": "Bb,D,F,Bb",
 
-  "fret_name13": "Cb Major Triad Arpeggio",
+  "fret_name13": "B Major Triad Arpeggio",
   "fret_locs13": "E7,A6,A9,D9",
-  "fret_id13": "cbmajortriad",
-  "fret_notes13": "Cb,Eb,Gb,Cb"
+  "fret_id13": "bmajortriad",
+  "fret_notes13": "B,D#,F#,B",
+
+  "fret_name14": "Cb Major Triad Arpeggio",
+  "fret_locs14": "E7,A6,A9,D9",
+  "fret_id14": "cbmajortriad",
+  "fret_notes14": "Cb,Eb,Gb,Cb"
 
 
 
