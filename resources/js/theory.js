@@ -825,21 +825,12 @@ function drawFretboard(jsonData, div, context) {
   if(context != undefined) {
     if (context.indexOf('C') == -1){
       console.log("context" + context);
-      if(jsonData.song.indexOf('Ionian') != -1){
-          fretscaleselected = context.toLowerCase() + jsonData.idkey;
-          for(jd=0;jd<jsonData.fret_choices;jd++) {
-            var fret_id = 'fret_id'+(jd+1);
-            var fret_locs = 'fret_locs'+(jd+1);
-            if(jsonData[fret_id] == fretscaleselected.trim()) {
-              fretscaleselectedlocs = jsonData[fret_locs];
-            }
-          }
-          buttonInitialText = context + ' Ionian';
-          document.getElementById('pentbutton').textContent = buttonInitialText;
-        }
+      processContext(jsonData, context);
+
     } else if( (context.indexOf('#') != -1) || (context.indexOf('b') != -1) ) {
       //C# and Cb also need check context
       console.log("context" + context);
+      processContext(jsonData, context);
     }
   }
 
@@ -867,6 +858,32 @@ function drawFretboard(jsonData, div, context) {
 
   //  cursor: url('resources/images/icons/basspointer.png');
 
+}
+
+function processContext(jsonData, context) {
+  if(jsonData.song.indexOf('Ionian') != -1){
+    fretscaleselected = context.toLowerCase() + jsonData.idkey;
+    for(jd=0;jd<jsonData.fret_choices;jd++) {
+      var fret_id = 'fret_id'+(jd+1);
+      var fret_locs = 'fret_locs'+(jd+1);
+      if(jsonData[fret_id] == fretscaleselected.trim()) {
+        fretscaleselectedlocs = jsonData[fret_locs];
+      }
+    }
+    buttonInitialText = context + ' Ionian';
+    document.getElementById('pentbutton').textContent = buttonInitialText;
+  } else if (jsonData.song.indexOf('Major Triad Arpeggio') != -1){
+    fretscaleselected = context.toLowerCase() + jsonData.idkey;
+    for(jd=0;jd<jsonData.fret_choices;jd++) {
+      var fret_id = 'fret_id'+(jd+1);
+      var fret_locs = 'fret_locs'+(jd+1);
+      if(jsonData[fret_id] == fretscaleselected.trim()) {
+        fretscaleselectedlocs = jsonData[fret_locs];
+      }
+    }
+    buttonInitialText = context + ' Major Triad Arpeggio';
+    document.getElementById('pentbutton').textContent = buttonInitialText;
+  }
 }
 
 function pentButtonClick() {
