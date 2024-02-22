@@ -42,7 +42,7 @@ function drawTheory(jsonData, element, context) {
   } else if(jsonData.hasOwnProperty('tablefifths')){
     drawTableFifths(jsonData, div);
   } else if (jsonData.hasOwnProperty('fretboard')) {
-    drawFretboard(jsonData, div);
+    drawFretboard(jsonData, div, context);
   }
 
 
@@ -678,7 +678,7 @@ function loadFret() {
   //}
 }
 
-function drawFretboard(jsonData, div) {
+function drawFretboard(jsonData, div, context) {
 
   const when = document.createElement("p");
     when.textContent = jsonData.when;
@@ -708,7 +708,7 @@ function drawFretboard(jsonData, div) {
   } else if(jsonData.song.indexOf('Ionian') != -1){
     fretscaleselected = 'cion1';
     fretscaleselectedlocs = 'A3,A5,D2,D3,D5,G2,G4,G5';
-    buttonInitialText = 'C Ionian 1';
+    buttonInitialText = 'C Ionian';
   } else if(jsonData.song.indexOf('Dorian') != -1){
     fretscaleselected = 'cdor1';
     fretscaleselectedlocs = 'A3,A5,A6,D3,D5,G2,G3,G5';
@@ -745,6 +745,17 @@ function drawFretboard(jsonData, div) {
     fretscaleselected = 'cminortriad';
     fretscaleselectedlocs = 'A3,A6,D5,G5';
     buttonInitialText = 'C Minor Triad Arpeggio';
+  }
+
+
+  //^^^ This is all in C - so if we have a context AND context is not C then need check context
+  if(context != undefined) {
+    if (context.indexOf('C') == -1){
+      console.log("context" + context);
+    } else if( (context.indexOf('#') != -1) || (context.indexOf('b') != -1) ) {
+      //C# and Cb also need check context
+      console.log("context" + context);
+    }
   }
 
   //selection
