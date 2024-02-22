@@ -1,6 +1,6 @@
 var fretscaleselected = 'cmajorpent1';
 var fretscaleselectedlocs = 'E8,E10,A7,A10,D7,D10,G7,G10';
-var fretrootszeroindex;// = '0,5';
+var fretrootszeroindex;
 var div;
 
 function checkInitial() {
@@ -12,14 +12,14 @@ function checkInitial() {
   }
 }
 
-function loadTheory(topic, element) {
+function loadTheory(topic, element, context) {
   window.scrollTo({ top:0, behavior: 'smooth'});
   fetch('https://groovyjen.com/resources/json/theory/' + topic + '.json')
     .then((response) => response.json())
-    .then((json) => drawTheory(json, element));
+    .then((json) => drawTheory(json, element, context));
 }
 
-function drawTheory(jsonData, element) {
+function drawTheory(jsonData, element, context) {
   console.log(jsonData);
   div = document.getElementById(element);
   div.innerHTML = '';
@@ -76,6 +76,7 @@ function drawTheory(jsonData, element) {
 
     for(i=0; i<chordArr.length; i++){
         const chords_td = document.createElement("td");
+        chords_td.id = 'chord'+i;
         chords_td.textContent = chordArr[i];
         chords_tr.appendChild(chords_td);
     }
@@ -97,43 +98,67 @@ function drawTheory(jsonData, element) {
 
     }
 
-    var majoroptions = [{'scale':'Ionian', 'link': "javascript:loadTheory('fret_ionian', 'theorydiv');"},
-                        {'scale':'Dorian', 'link': "javascript:loadTheory('fret_dorian', 'theorydiv');"},
-                        {'scale':'Phrygian', 'link': "javascript:loadTheory('fret_phrygian', 'theorydiv');"},
-                        {'scale':'Lydian', 'link': "javascript:loadTheory('fret_lydian', 'theorydiv');"},
-                        {'scale':'Mixolydian', 'link': "javascript:loadTheory('fret_mixolydian', 'theorydiv');"},
-                        {'scale':'Aeolian', 'link': "javascript:loadTheory('fret_aeolian', 'theorydiv');"},
-                        {'scale':'Locrian', 'link': "javascript:loadTheory('fret_locrian', 'theorydiv');"}];
-    const options_tr = document.createElement("tr");
 
-
+    var majoroptions = [{'scales':[{'scale':'Ionian', 'link': "javascript:loadTheory('fret_ionian', 'theorydiv', document.getElementById('chord0').textContent);"},
+                                  {'scale':'Major Triad', 'link': "javascript:loadTheory('fret_majortriadarpeggios', 'theorydiv', document.getElementById('chord0').textContent);"}]},
+                        {'scales':[{'scale':'Dorian', 'link': "javascript:loadTheory('fret_dorian', 'theorydiv', document.getElementById('chord1').textContent);"},
+                                  {'scale':'', 'link': ""}]},
+                        {'scales':[{'scale':'Phrygian', 'link': "javascript:loadTheory('fret_phrygian', 'theorydiv', document.getElementById('chord2').textContent);"},
+                                  {'scale':'', 'link': ""}]},
+                        {'scales':[{'scale':'Lydian', 'link': "javascript:loadTheory('fret_lydian', 'theorydiv', document.getElementById('chord3').textContent);"},
+                                  {'scale':'Major Triad', 'link': "javascript:loadTheory('fret_majortriadarpeggios', 'theorydiv', document.getElementById('chord3').textContent);"}]},
+                        {'scales':[{'scale':'Mixolydian', 'link': "javascript:loadTheory('fret_mixolydian', 'theorydiv', document.getElementById('chord4').textContent);"},
+                                  {'scale':'Major Triad', 'link': "javascript:loadTheory('fret_majortriadarpeggios', 'theorydiv', document.getElementById('chord4').textContent);"}]},
+                        {'scales':[{'scale':'Aeolian', 'link': "javascript:loadTheory('fret_aeolian', 'theorydiv', document.getElementById('chord5').textContent);"},
+                                  {'scale':'', 'link': ""}]},
+                        {'scales':[{'scale':'Locrian', 'link': "javascript:loadTheory('fret_locrian', 'theorydiv', document.getElementById('chord6').textContent);"},
+                                  {'scale':'', 'link': ""}]}];
 
     if (jsonData.song.indexOf('Major') != -1)
-      for(i=0; i<7; i++){
-        const options_td = document.createElement("td");
+      for(options=0; options<2; options++){
+        const options_tr = document.createElement("tr");
+        for(i=0; i<7; i++){
+          const options_td = document.createElement("td");
 
-        const optionlink = document.createElement("a");
-        optionlink.href = majoroptions[i]['link'];
-        optionlink.textContent = majoroptions[i]['scale'];
+          if(majoroptions[i].scales[options].scale != '') {
+            const optionlink = document.createElement("a");
+            optionlink.href = majoroptions[i].scales[options].link;
+            optionlink.textContent = majoroptions[i].scales[options].scale;
+            optionlink.className = 'options';
 
-        options_td.appendChild(optionlink);
-        options_tr.appendChild(options_td);
+            options_td.appendChild(optionlink);
+          }
+          options_tr.appendChild(options_td);
+        }
+        chords_table.appendChild(options_tr);
       }
     else {
       var minindexes = [5,6,0,1,2,3,4];
-      for(i=0; i<7; i++){
-        const options_td = document.createElement("td");
+      for(options=0; options<2; options++){
+        const options_tr = document.createElement("tr");
+        for(i=0; i<7; i++){
+          const options_td = document.createElement("td");
 
-        const optionlink = document.createElement("a");
-        optionlink.href = majoroptions[minindexes[i]]['link'];
-        optionlink.textContent = majoroptions[minindexes[i]]['scale'];
+          if(majoroptions[minindexes[i]].scales[options].scale != '') {
 
-        options_td.appendChild(optionlink);
-        options_tr.appendChild(options_td);
+            const optionlink = document.createElement("a");
+            var link = majoroptions[minindexes[i]].scales[options].link;
+            var editlink = link.substring(0,link.indexOf('chord'));
+            editlink += "chord" +i;//+ minindexes[i];
+            editlink += link.substring(link.indexOf('chord')+6, link.length);
+
+            optionlink.href = editlink;//majoroptions[minindexes[i]].scales[options].link;
+            optionlink.textContent = majoroptions[minindexes[i]].scales[options].scale;
+            optionlink.className = 'options';
+            options_td.appendChild(optionlink);
+          }
+          options_tr.appendChild(options_td);
+        }
+        chords_table.appendChild(options_tr);
       }
     }
 
-    chords_table.appendChild(options_tr);
+
 
     div.appendChild(chords_table);
 

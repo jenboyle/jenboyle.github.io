@@ -207,6 +207,8 @@ header nav ul li {
   border:3px darkolivegreen solid;
   border-top:0px;
   text-align:center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .chordbox {
@@ -309,6 +311,14 @@ header nav ul li {
   padding-top:30px;
 }
 
+.options {
+  text-decoration: none;
+  color: darkslateblue;
+}
+
+.options:hover{
+  background-color: whitesmoke;
+}
 
 
 /* Buttons */
