@@ -830,7 +830,7 @@ function drawFretboard(jsonData, div, context) {
           for(jd=0;jd<jsonData.fret_choices;jd++) {
             var fret_id = 'fret_id'+(jd+1);
             var fret_locs = 'fret_locs'+(jd+1);
-            if(jsonData[fret_id] == fretscaleselected) {
+            if(jsonData[fret_id] == fretscaleselected.trim()) {
               fretscaleselectedlocs = jsonData[fret_locs];
             }
           }
