@@ -11,7 +11,7 @@
 
   "fret_name2": "Db Ionian",
   "fret_locs2": "A4,A6,D3,D4,D6,G3,G5,G6",
-  "fret_id2": "csharpion1",
+  "fret_id2": "dbion1",
 
 
   "fret_name3": "D Ionian",
@@ -32,7 +32,7 @@
 
   "fret_name7": "Gb Ionian",
   "fret_locs7": "A9,A11,D8,D9,D11,G8,G10,G11",
-  "fret_id7": "fsharpion1",
+  "fret_id7": "gbion1",
 
   "fret_name8": "G Ionian",
   "fret_locs8": "E3,E5,A2,A3,A5,D2,D4,D5",
@@ -48,7 +48,7 @@
 
   "fret_name11": "Bb Ionian",
   "fret_locs11": "E6,E8,A5,A6,A8,D5,D7,D8",
-  "fret_id11": "bbion2",
+  "fret_id11": "bbion1",
 
 
   "fret_name12": "B Ionian",

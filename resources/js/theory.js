@@ -747,17 +747,6 @@ function drawFretboard(jsonData, div, context) {
     buttonInitialText = 'C Minor Triad Arpeggio';
   }
 
-
-  //^^^ This is all in C - so if we have a context AND context is not C then need check context
-  if(context != undefined) {
-    if (context.indexOf('C') == -1){
-      console.log("context" + context);
-    } else if( (context.indexOf('#') != -1) || (context.indexOf('b') != -1) ) {
-      //C# and Cb also need check context
-      console.log("context" + context);
-    }
-  }
-
   //selection
   const pentdiv = document.createElement("div");
   pentdiv.className = 'dropdowntheory';
@@ -831,6 +820,28 @@ function drawFretboard(jsonData, div, context) {
 
   fretimg.className = 'fretboard';
   div.appendChild(fretimg);
+
+  //^^^ This is all set in C - so if we have a context AND context is not C then need check context
+  if(context != undefined) {
+    if (context.indexOf('C') == -1){
+      console.log("context" + context);
+      if(jsonData.song.indexOf('Ionian') != -1){
+          fretscaleselected = context.toLowerCase() + 'ion1';
+          for(jd=0;jd<jsonData.fret_choices;jd++) {
+            var fret_id = 'fret_id'+(jd+1);
+            var fret_locs = 'fret_locs'+(jd+1);
+            if(jsonData[fret_id] == fretscaleselected) {
+              fretscaleselectedlocs = jsonData[fret_locs];
+            }
+          }
+          buttonInitialText = context + ' Ionian';
+          document.getElementById('pentbutton').textContent = buttonInitialText;
+        }
+    } else if( (context.indexOf('#') != -1) || (context.indexOf('b') != -1) ) {
+      //C# and Cb also need check context
+      console.log("context" + context);
+    }
+  }
 
   //initial
     loadFret();
