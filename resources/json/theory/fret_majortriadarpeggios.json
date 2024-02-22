@@ -12,10 +12,10 @@
   "fret_notes1": "C,E,G,C",
 
 
-  "fret_name2": "C# Major Triad Arpeggio",
+  "fret_name2": "Db Major Triad Arpeggio",
   "fret_locs2": "A4,D3,D6,G6",
-  "fret_id2": "c#majortriad",
-  "fret_notes2": "C#,F,G#,C#",
+  "fret_id2": "dbmajortriad",
+  "fret_notes2": "Db,F,Ab,Db",
 
   "fret_name3": "D Major Triad Arpeggio",
   "fret_locs3": "A5,D4,D7,G7",
@@ -67,7 +67,12 @@
   "fret_name12": "B Major Triad Arpeggio",
   "fret_locs12": "E7,A6,A9,D9",
   "fret_id12": "bmajortriad",
-  "fret_notes12": "B,D#,F#,B"
+  "fret_notes12": "B,D#,F#,B",
+
+  "fret_name13": "Cb Major Triad Arpeggio",
+  "fret_locs13": "E7,A6,A9,D9",
+  "fret_id13": "cbmajortriad",
+  "fret_notes13": "Cb,Eb,Gb,Cb"
 
 
 
