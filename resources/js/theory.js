@@ -826,7 +826,7 @@ function drawFretboard(jsonData, div, context) {
     if (context.indexOf('C') == -1){
       console.log("context" + context);
       if(jsonData.song.indexOf('Ionian') != -1){
-          fretscaleselected = context.toLowerCase() + 'ion1';
+          fretscaleselected = context.toLowerCase() + jsonData.idkey;
           for(jd=0;jd<jsonData.fret_choices;jd++) {
             var fret_id = 'fret_id'+(jd+1);
             var fret_locs = 'fret_locs'+(jd+1);
