@@ -861,41 +861,25 @@ function drawFretboard(jsonData, div, context) {
 }
 
 function processContext(jsonData, context) {
-  if(jsonData.song.indexOf('Ionian') != -1){
-    fretscaleselected = context.toLowerCase() + jsonData.idkey;
-    for(jd=0;jd<jsonData.fret_choices;jd++) {
-      var fret_id = 'fret_id'+(jd+1);
-      var fret_locs = 'fret_locs'+(jd+1);
-      if(jsonData[fret_id] == fretscaleselected.trim()) {
-        fretscaleselectedlocs = jsonData[fret_locs];
+  var modes = ['Ionian', 'Major Triad Arpeggio', 'Dorian', 'Phrygian'];
+  var modesText = [' Ionian', ' Major Triad Arpeggio', ' Dorian 1', ' Phrygian 1'];
+
+  for(mode=0; mode<modes.length; mode++){
+    if(jsonData.song.indexOf(modes[mode]) != -1){
+      fretscaleselected = context.toLowerCase() + jsonData.idkey;
+      fretscaleselected = fretscaleselected.replace('m','').trim();
+      for(jd=0;jd<jsonData.fret_choices;jd++) {
+        var fret_id = 'fret_id'+(jd+1);
+        var fret_locs = 'fret_locs'+(jd+1);
+        if(jsonData[fret_id] == fretscaleselected) {
+          fretscaleselectedlocs = jsonData[fret_locs];
+        }
       }
+      buttonInitialText = context + modesText[mode];
+      document.getElementById('pentbutton').textContent = buttonInitialText;
     }
-    buttonInitialText = context + ' Ionian';
-    document.getElementById('pentbutton').textContent = buttonInitialText;
-  } else if (jsonData.song.indexOf('Major Triad Arpeggio') != -1){
-    fretscaleselected = context.toLowerCase() + jsonData.idkey;
-    for(jd=0;jd<jsonData.fret_choices;jd++) {
-      var fret_id = 'fret_id'+(jd+1);
-      var fret_locs = 'fret_locs'+(jd+1);
-      if(jsonData[fret_id] == fretscaleselected.trim()) {
-        fretscaleselectedlocs = jsonData[fret_locs];
-      }
-    }
-    buttonInitialText = context + ' Major Triad Arpeggio';
-    document.getElementById('pentbutton').textContent = buttonInitialText;
-  } else if(jsonData.song.indexOf('Dorian') != -1){
-    fretscaleselected = context.toLowerCase() + jsonData.idkey;
-    fretscaleselected = fretscaleselected.replace('m','').trim();
-    for(jd=0;jd<jsonData.fret_choices;jd++) {
-      var fret_id = 'fret_id'+(jd+1);
-      var fret_locs = 'fret_locs'+(jd+1);
-      if(jsonData[fret_id] == fretscaleselected) {
-        fretscaleselectedlocs = jsonData[fret_locs];
-      }
-    }
-    buttonInitialText = context + ' Dorian 1';
-    document.getElementById('pentbutton').textContent = buttonInitialText;
   }
+
 }
 
 function pentButtonClick() {
