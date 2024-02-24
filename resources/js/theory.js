@@ -861,13 +861,14 @@ function drawFretboard(jsonData, div, context) {
 }
 
 function processContext(jsonData, context) {
-  var modes =     ['Ionian', 'Major Triad Arpeggio', 'Dorian', 'Phrygian', 'Lydian', 'Mixolydian', 'Aeolian'];
-  var modesText = [' Ionian', ' Major Triad Arpeggio', ' Dorian 1', ' Phrygian 1', ' Lydian 1', ' Mixolydian 1', ' Aeolian 1'];
+  var modes =     ['Ionian', 'Major Triad Arpeggio', 'Dorian', 'Phrygian', 'Lydian', 'Mixolydian', 'Aeolian', 'Locrian'];
+  var modesText = [' Ionian', ' Major Triad Arpeggio', ' Dorian 1', ' Phrygian 1', ' Lydian 1', ' Mixolydian 1', ' Aeolian 1', ' Locrian 1'];
 
   for(mode=0; mode<modes.length; mode++){
     if(jsonData.song.indexOf(modes[mode]) != -1){
       fretscaleselected = context.toLowerCase() + jsonData.idkey;
       fretscaleselected = fretscaleselected.replace('m','').trim();
+      fretscaleselected = fretscaleselected.replace('dim','');
       for(jd=0;jd<jsonData.fret_choices;jd++) {
         var fret_id = 'fret_id'+(jd+1);
         var fret_locs = 'fret_locs'+(jd+1);
