@@ -883,6 +883,18 @@ function processContext(jsonData, context) {
     }
     buttonInitialText = context + ' Major Triad Arpeggio';
     document.getElementById('pentbutton').textContent = buttonInitialText;
+  } else if(jsonData.song.indexOf('Dorian') != -1){
+    fretscaleselected = context.toLowerCase() + jsonData.idkey;
+    fretscaleselected = fretscaleselected.replace('m','').trim();
+    for(jd=0;jd<jsonData.fret_choices;jd++) {
+      var fret_id = 'fret_id'+(jd+1);
+      var fret_locs = 'fret_locs'+(jd+1);
+      if(jsonData[fret_id] == fretscaleselected) {
+        fretscaleselectedlocs = jsonData[fret_locs];
+      }
+    }
+    buttonInitialText = context + ' Dorian 1';
+    document.getElementById('pentbutton').textContent = buttonInitialText;
   }
 }
 
