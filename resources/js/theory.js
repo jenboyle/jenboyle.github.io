@@ -866,9 +866,10 @@ function processContext(jsonData, context) {
 
   for(mode=0; mode<modes.length; mode++){
     if(jsonData.song.indexOf(modes[mode]) != -1){
-      fretscaleselected = context.toLowerCase() + jsonData.idkey;
-      fretscaleselected = fretscaleselected.replace('m','').trim();
-      fretscaleselected = fretscaleselected.replace('dim','');
+      fretscaleselected = context.toLowerCase();
+      fretscaleselected = fretscaleselected.replace('dim','').trim();
+      fretscaleselected = fretscaleselected.replace('m','');
+      fretscaleselected = fretscaleselected + jsonData.idkey;
       for(jd=0;jd<jsonData.fret_choices;jd++) {
         var fret_id = 'fret_id'+(jd+1);
         var fret_locs = 'fret_locs'+(jd+1);
@@ -876,7 +877,9 @@ function processContext(jsonData, context) {
           fretscaleselectedlocs = jsonData[fret_locs];
         }
       }
-      buttonInitialText = context + modesText[mode];
+      var note4selection = context.replace('dim','');
+      note4selection = note4selection.replace('m','');
+      buttonInitialText = note4selection + modesText[mode];
       document.getElementById('pentbutton').textContent = buttonInitialText;
     }
   }
