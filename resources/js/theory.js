@@ -861,8 +861,8 @@ function drawFretboard(jsonData, div, context) {
 }
 
 function processContext(jsonData, context) {
-  var modes =     ['Ionian', 'Major Triad Arpeggio', 'Dorian', 'Phrygian', 'Lydian', 'Mixolydian'];
-  var modesText = [' Ionian', ' Major Triad Arpeggio', ' Dorian 1', ' Phrygian 1', ' Lydian 1', ' Mixolydian 1'];
+  var modes =     ['Ionian', 'Major Triad Arpeggio', 'Dorian', 'Phrygian', 'Lydian', 'Mixolydian', 'Aeolian'];
+  var modesText = [' Ionian', ' Major Triad Arpeggio', ' Dorian 1', ' Phrygian 1', ' Lydian 1', ' Mixolydian 1', ' Aeolian 1'];
 
   for(mode=0; mode<modes.length; mode++){
     if(jsonData.song.indexOf(modes[mode]) != -1){
