@@ -14,7 +14,7 @@
 
   "fret_name2": "C# Minor Triad Arpeggio",
   "fret_locs2": "A4,A7,D6,G6",
-  "fret_id2": "csharpminortriad",
+  "fret_id2": "c#minortriad",
   "fret_notes2": "C#,E,G#,C#",
 
   "fret_name3": "D Minor Triad Arpeggio",
@@ -46,7 +46,7 @@
 
   "fret_name8": "F# Minor Triad Arpeggio",
   "fret_locs8": "E2,E5,A4,D4",
-  "fret_id8": "fsharpminortriad",
+  "fret_id8": "f#minortriad",
   "fret_notes8": "F#,A,C#,F#",
 
 

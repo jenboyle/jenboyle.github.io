@@ -110,7 +110,7 @@ function drawTheory(jsonData, element, context) {
                         {'scales':[{'scale':'Mixolydian', 'link': "javascript:loadTheory('fret_mixolydian', 'theorydiv', document.getElementById('chord4').textContent);"},
                                   {'scale':'Major Triad', 'link': "javascript:loadTheory('fret_majortriadarpeggios', 'theorydiv', document.getElementById('chord4').textContent);"}]},
                         {'scales':[{'scale':'Aeolian', 'link': "javascript:loadTheory('fret_aeolian', 'theorydiv', document.getElementById('chord5').textContent);"},
-                                  {'scale':'Minor Triad', 'link': "javascript:loadTheory('fret_minortriadarpeggios', 'theorydiv', document.getElementById('chord4').textContent);"}]},
+                                  {'scale':'Minor Triad', 'link': "javascript:loadTheory('fret_minortriadarpeggios', 'theorydiv', document.getElementById('chord5').textContent);"}]},
                         {'scales':[{'scale':'Locrian', 'link': "javascript:loadTheory('fret_locrian', 'theorydiv', document.getElementById('chord6').textContent);"},
                                   {'scale':'', 'link': ""}]}];
 
