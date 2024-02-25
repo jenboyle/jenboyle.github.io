@@ -1,0 +1,72 @@
+{
+  "song": "Diminished Triad Arpeggios",
+  "when": "This arpeggio can be played over diminished chords",
+  "fretboard":"true",
+  "fret_choices": 14,
+  "formula": "1,b3,b5",
+  "idkey": "dimtriad",
+
+  "fret_name1": "C Diminished Triad Arpeggio",
+  "fret_locs1": "A3,A6,D4,G5",
+  "fret_id1": "cdimtriad",
+
+
+  "fret_name2": "C# Diminished Triad Arpeggio",
+  "fret_locs2": "A4,A7,D5,G6",
+  "fret_id2": "c#dimtriad",
+
+  "fret_name3": "D Diminished Triad Arpeggio",
+  "fret_locs3": "A5,A8,D6,G7",
+  "fret_id3": "ddimtriad",
+
+  "fret_name4": "D# Diminished Triad Arpeggio",
+  "fret_locs4": "A6,A9,D7,G8",
+  "fret_id4": "d#dimtriad",
+
+  "fret_name5": "Eb Diminished Triad Arpeggio",
+  "fret_locs5": "A6,A9,D7,G8",
+  "fret_id5": "ebdimtriad",
+
+  "fret_name6": "E Diminished Triad Arpeggio",
+  "fret_locs6": "A7,A10,D8,G9",
+  "fret_id6": "edimtriad",
+
+  "fret_name7": "F Diminished Triad Arpeggio",
+  "fret_locs7": "A8,A11,D9,G10",
+  "fret_id7": "fdimtriad",
+
+
+
+  "fret_name8": "F# Diminished Triad Arpeggio",
+  "fret_locs8": "E2,E5,A3,D4",
+  "fret_id8": "f#dimtriad",
+
+
+
+  "fret_name9": "G Diminished Triad Arpeggio",
+  "fret_locs9": "E3,E6,A4,D5",
+  "fret_id9": "gdimtriad",
+
+  "fret_name10": "G# Diminished Triad Arpeggio",
+  "fret_locs10": "E4,E7,A5,D6",
+  "fret_id10": "g#dimtriad",
+
+  "fret_name11": "Ab Diminished Triad Arpeggio",
+  "fret_locs11": "E4,E7,A5,D6",
+  "fret_id11": "abdimtriad",
+
+  "fret_name12": "A Diminished Triad Arpeggio",
+  "fret_locs12": "E5,E8,A6,D7",
+  "fret_id12": "adimtriad",
+
+  "fret_name13": "Bb Diminished Triad Arpeggio",
+  "fret_locs13": "E6,E9,A7,D8",
+  "fret_id13": "bbdimtriad",
+
+  "fret_name14": "B Diminished Triad Arpeggio",
+  "fret_locs14": "E7,E10,A8,D9",
+  "fret_id14": "bdimtriad"
+
+
+
+}
