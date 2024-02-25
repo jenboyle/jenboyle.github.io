@@ -102,15 +102,15 @@ function drawTheory(jsonData, element, context) {
     var majoroptions = [{'scales':[{'scale':'Ionian', 'link': "javascript:loadTheory('fret_ionian', 'theorydiv', document.getElementById('chord0').textContent);"},
                                   {'scale':'Major Triad', 'link': "javascript:loadTheory('fret_majortriadarpeggios', 'theorydiv', document.getElementById('chord0').textContent);"}]},
                         {'scales':[{'scale':'Dorian', 'link': "javascript:loadTheory('fret_dorian', 'theorydiv', document.getElementById('chord1').textContent);"},
-                                  {'scale':'', 'link': ""}]},
+                                  {'scale':'Minor Triad', 'link': "javascript:loadTheory('fret_minortriadarpeggios', 'theorydiv', document.getElementById('chord1').textContent);"}]},
                         {'scales':[{'scale':'Phrygian', 'link': "javascript:loadTheory('fret_phrygian', 'theorydiv', document.getElementById('chord2').textContent);"},
-                                  {'scale':'', 'link': ""}]},
+                                  {'scale':'Minor Triad', 'link': "javascript:loadTheory('fret_minortriadarpeggios', 'theorydiv', document.getElementById('chord2').textContent);"}]},
                         {'scales':[{'scale':'Lydian', 'link': "javascript:loadTheory('fret_lydian', 'theorydiv', document.getElementById('chord3').textContent);"},
                                   {'scale':'Major Triad', 'link': "javascript:loadTheory('fret_majortriadarpeggios', 'theorydiv', document.getElementById('chord3').textContent);"}]},
                         {'scales':[{'scale':'Mixolydian', 'link': "javascript:loadTheory('fret_mixolydian', 'theorydiv', document.getElementById('chord4').textContent);"},
                                   {'scale':'Major Triad', 'link': "javascript:loadTheory('fret_majortriadarpeggios', 'theorydiv', document.getElementById('chord4').textContent);"}]},
                         {'scales':[{'scale':'Aeolian', 'link': "javascript:loadTheory('fret_aeolian', 'theorydiv', document.getElementById('chord5').textContent);"},
-                                  {'scale':'', 'link': ""}]},
+                                  {'scale':'Minor Triad', 'link': "javascript:loadTheory('fret_minortriadarpeggios', 'theorydiv', document.getElementById('chord4').textContent);"}]},
                         {'scales':[{'scale':'Locrian', 'link': "javascript:loadTheory('fret_locrian', 'theorydiv', document.getElementById('chord6').textContent);"},
                                   {'scale':'', 'link': ""}]}];
 
@@ -861,8 +861,8 @@ function drawFretboard(jsonData, div, context) {
 }
 
 function processContext(jsonData, context) {
-  var modes =     ['Ionian', 'Major Triad Arpeggio', 'Dorian', 'Phrygian', 'Lydian', 'Mixolydian', 'Aeolian', 'Locrian'];
-  var modesText = [' Ionian', ' Major Triad Arpeggio', ' Dorian 1', ' Phrygian 1', ' Lydian 1', ' Mixolydian 1', ' Aeolian 1', ' Locrian 1'];
+  var modes =     ['Ionian', 'Major Triad Arpeggio', 'Dorian', 'Minor Triad Arpeggio', 'Phrygian', 'Lydian', 'Mixolydian', 'Aeolian', 'Locrian'];
+  var modesText = [' Ionian', ' Major Triad Arpeggio', ' Dorian 1', 'Minor Triad Arpeggio', ' Phrygian 1', ' Lydian 1', ' Mixolydian 1', ' Aeolian 1', ' Locrian 1'];
 
   for(mode=0; mode<modes.length; mode++){
     if(jsonData.song.indexOf(modes[mode]) != -1){

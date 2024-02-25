@@ -2,8 +2,9 @@
   "song": "Minor Triad Arpeggios",
   "when": "This arpeggio can be played over minor chords",
   "fretboard":"true",
-  "fret_choices": 12,
+  "fret_choices": 14,
   "formula": "1,b3,5",
+  "idkey": "minortriad",
 
   "fret_name1": "C Minor Triad Arpeggio",
   "fret_locs1": "A3,A6,D5,G5",
@@ -21,52 +22,64 @@
   "fret_id3": "dminortriad",
   "fret_notes3": "D,F,A,D",
 
-  "fret_name4": "Eb Minor Triad Arpeggio",
+  "fret_name4": "D# Minor Triad Arpeggio",
   "fret_locs4": "A6,A9,D8,G8",
-  "fret_id4": "ebminortriad",
-  "fret_notes4": "Eb,Gb,Bb,Eb",
+  "fret_id4": "d#minortriad",
+  "fret_notes4": "D#,F#,A#,D#",
 
-  "fret_name5": "E Minor Triad Arpeggio",
-  "fret_locs5": "A7,A10,D9,G9",
-  "fret_id5": "eminortriad",
-  "fret_notes5": "E,G,B,E",
+  "fret_name5": "Eb Minor Triad Arpeggio",
+  "fret_locs5": "A6,A9,D8,G8",
+  "fret_id5": "ebminortriad",
+  "fret_notes5": "Eb,Gb,Bb,Eb",
 
-  "fret_name6": "F Minor Triad Arpeggio",
-  "fret_locs6": "A8,A11,D10,G10",
-  "fret_id6": "fminortriad",
-  "fret_notes6": "F,Ab,C,F",
+  "fret_name6": "E Minor Triad Arpeggio",
+  "fret_locs6": "A7,A10,D9,G9",
+  "fret_id6": "eminortriad",
+  "fret_notes6": "E,G,B,E",
+
+  "fret_name7": "F Minor Triad Arpeggio",
+  "fret_locs7": "A8,A11,D10,G10",
+  "fret_id7": "fminortriad",
+  "fret_notes7": "F,Ab,C,F",
 
 
 
-  "fret_name7": "F# Minor Triad Arpeggio",
-  "fret_locs7": "E2,E5,A4,D4",
-  "fret_id7": "fsharpminortriad",
-  "fret_notes7": "F#,A,C#,F#",
+  "fret_name8": "F# Minor Triad Arpeggio",
+  "fret_locs8": "E2,E5,A4,D4",
+  "fret_id8": "fsharpminortriad",
+  "fret_notes8": "F#,A,C#,F#",
 
-  "fret_name8": "G Minor Triad Arpeggio",
-  "fret_locs8": "E3,E6,A5,D5",
-  "fret_id8": "gminortriad",
-  "fret_notes8": "G,Bb,D,G",
 
-  "fret_name9": "Ab Minor Triad Arpeggio",
-  "fret_locs9": "E4,E7,A6,D6",
-  "fret_id9": "abminortriad",
-  "fret_notes9": "Ab,Cb,Eb,Ab",
 
-  "fret_name10": "A Minor Triad Arpeggio",
-  "fret_locs10": "E5,E8,A7,D7",
-  "fret_id10": "aminortriad",
-  "fret_notes10": "A,C,E,A",
+  "fret_name9": "G Minor Triad Arpeggio",
+  "fret_locs9": "E3,E6,A5,D5",
+  "fret_id9": "gminortriad",
+  "fret_notes9": "G,Bb,D,G",
 
-  "fret_name11": "Bb Minor Triad Arpeggio",
-  "fret_locs11": "E6,E9,A8,D8",
-  "fret_id11": "bbminortriad",
-  "fret_notes11": "Bb,Db,F,Bb",
+  "fret_name10": "G# Minor Triad Arpeggio",
+  "fret_locs10": "E4,E7,A6,D6",
+  "fret_id10": "g#minortriad",
+  "fret_notes10": "G#,B,D#,G#",
 
-  "fret_name12": "B Minor Triad Arpeggio",
-  "fret_locs12": "E7,E10,A9,D9",
-  "fret_id12": "bminortriad",
-  "fret_notes12": "B,D,F#,B"
+  "fret_name11": "Ab Minor Triad Arpeggio",
+  "fret_locs11": "E4,E7,A6,D6",
+  "fret_id11": "abminortriad",
+  "fret_notes11": "Ab,Cb,Eb,Ab",
+
+  "fret_name12": "A Minor Triad Arpeggio",
+  "fret_locs12": "E5,E8,A7,D7",
+  "fret_id12": "aminortriad",
+  "fret_notes12": "A,C,E,A",
+
+  "fret_name13": "Bb Minor Triad Arpeggio",
+  "fret_locs13": "E6,E9,A8,D8",
+  "fret_id13": "bbminortriad",
+  "fret_notes13": "Bb,Db,F,Bb",
+
+  "fret_name14": "B Minor Triad Arpeggio",
+  "fret_locs14": "E7,E10,A9,D9",
+  "fret_id14": "bminortriad",
+  "fret_notes14": "B,D,F#,B"
 
 
 
