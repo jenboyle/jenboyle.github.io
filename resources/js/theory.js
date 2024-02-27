@@ -112,7 +112,7 @@ function drawTheory(jsonData, element, context) {
                         {'scales':[{'scale':'Aeolian', 'link': "javascript:loadTheory('fret_aeolian', 'theorydiv', document.getElementById('chord5').textContent);"},
                                   {'scale':'Minor Triad', 'link': "javascript:loadTheory('fret_minortriadarpeggios', 'theorydiv', document.getElementById('chord5').textContent);"}]},
                         {'scales':[{'scale':'Locrian', 'link': "javascript:loadTheory('fret_locrian', 'theorydiv', document.getElementById('chord6').textContent);"},
-                                  {'scale':'', 'link': ""}]}];
+                                  {'scale':'Diminished Triad', 'link': "javascript:loadTheory('fret_diminishedtriadarpeggios', 'theorydiv', document.getElementById('chord6').textContent);"}]}];
 
     if (jsonData.song.indexOf('Major') != -1)
       for(options=0; options<2; options++){
@@ -745,6 +745,10 @@ function drawFretboard(jsonData, div, context) {
     fretscaleselected = 'cminortriad';
     fretscaleselectedlocs = 'A3,A6,D5,G5';
     buttonInitialText = 'C Minor Triad Arpeggio';
+  } else if (jsonData.song.indexOf('Diminished Triad Arpeggio') != -1) {
+    fretscaleselected = 'cdimtriad';
+    fretscaleselectedlocs = 'A3,A6,D4,G5';
+    buttonInitialText = 'C Diminished Triad Arpeggio';
   }
 
   //selection
@@ -861,8 +865,8 @@ function drawFretboard(jsonData, div, context) {
 }
 
 function processContext(jsonData, context) {
-  var modes =     ['Ionian', 'Major Triad Arpeggio', 'Dorian', 'Minor Triad Arpeggio', 'Phrygian', 'Lydian', 'Mixolydian', 'Aeolian', 'Locrian'];
-  var modesText = [' Ionian', ' Major Triad Arpeggio', ' Dorian 1', ' Minor Triad Arpeggio', ' Phrygian 1', ' Lydian 1', ' Mixolydian 1', ' Aeolian 1', ' Locrian 1'];
+  var modes =     ['Ionian', 'Major Triad Arpeggio', 'Dorian', 'Minor Triad Arpeggio', 'Phrygian', 'Lydian', 'Mixolydian', 'Aeolian', 'Locrian', 'Diminished Triad Arpeggio'];
+  var modesText = [' Ionian', ' Major Triad Arpeggio', ' Dorian 1', ' Minor Triad Arpeggio', ' Phrygian 1', ' Lydian 1', ' Mixolydian 1', ' Aeolian 1', ' Locrian 1', ' Diminished Triad Arpeggio'];
 
   for(mode=0; mode<modes.length; mode++){
     if(jsonData.song.indexOf(modes[mode]) != -1){
