@@ -2,6 +2,8 @@ var fretscaleselected = 'cmajorpent1';
 var fretscaleselectedlocs = 'E8,E10,A7,A10,D7,D10,G7,G10';
 var fretrootszeroindex;
 var div;
+var backtopic;
+var backButton = false;
 
 function checkInitial() {
   const queryString = window.location.search;
@@ -12,7 +14,13 @@ function checkInitial() {
   }
 }
 
-function loadTheory(topic, element, context) {
+function loadTheory(topic, element, context, back) {
+  if(back == undefined) {
+    backtopic = topic;
+    backButton = false;
+  } else {
+    backButton = true;
+  }
   window.scrollTo({ top:0, behavior: 'smooth'});
   fetch('https://groovyjen.com/resources/json/theory/' + topic + '.json')
     .then((response) => response.json())
@@ -23,6 +31,15 @@ function drawTheory(jsonData, element, context) {
   console.log(jsonData);
   div = document.getElementById(element);
   div.innerHTML = '';
+
+  if(backButton) {
+    const backlink = document.createElement("a");
+    backlink.href = "javascript:loadTheory('" + backtopic + "', 'theorydiv');";
+    backlink.textContent = "Back";
+    backlink.className = 'options';
+    div.appendChild(backlink);
+  }
+
   const psong = document.createElement("p");
   psong.textContent = jsonData.song;
   div.appendChild(psong);
@@ -99,20 +116,20 @@ function drawTheory(jsonData, element, context) {
     }
 
 
-    var majoroptions = [{'scales':[{'scale':'Ionian', 'link': "javascript:loadTheory('fret_ionian', 'theorydiv', document.getElementById('chord0').textContent);"},
-                                  {'scale':'Major Triad', 'link': "javascript:loadTheory('fret_majortriadarpeggios', 'theorydiv', document.getElementById('chord0').textContent);"}]},
-                        {'scales':[{'scale':'Dorian', 'link': "javascript:loadTheory('fret_dorian', 'theorydiv', document.getElementById('chord1').textContent);"},
-                                  {'scale':'Minor Triad', 'link': "javascript:loadTheory('fret_minortriadarpeggios', 'theorydiv', document.getElementById('chord1').textContent);"}]},
-                        {'scales':[{'scale':'Phrygian', 'link': "javascript:loadTheory('fret_phrygian', 'theorydiv', document.getElementById('chord2').textContent);"},
-                                  {'scale':'Minor Triad', 'link': "javascript:loadTheory('fret_minortriadarpeggios', 'theorydiv', document.getElementById('chord2').textContent);"}]},
-                        {'scales':[{'scale':'Lydian', 'link': "javascript:loadTheory('fret_lydian', 'theorydiv', document.getElementById('chord3').textContent);"},
-                                  {'scale':'Major Triad', 'link': "javascript:loadTheory('fret_majortriadarpeggios', 'theorydiv', document.getElementById('chord3').textContent);"}]},
-                        {'scales':[{'scale':'Mixolydian', 'link': "javascript:loadTheory('fret_mixolydian', 'theorydiv', document.getElementById('chord4').textContent);"},
-                                  {'scale':'Major Triad', 'link': "javascript:loadTheory('fret_majortriadarpeggios', 'theorydiv', document.getElementById('chord4').textContent);"}]},
-                        {'scales':[{'scale':'Aeolian', 'link': "javascript:loadTheory('fret_aeolian', 'theorydiv', document.getElementById('chord5').textContent);"},
-                                  {'scale':'Minor Triad', 'link': "javascript:loadTheory('fret_minortriadarpeggios', 'theorydiv', document.getElementById('chord5').textContent);"}]},
-                        {'scales':[{'scale':'Locrian', 'link': "javascript:loadTheory('fret_locrian', 'theorydiv', document.getElementById('chord6').textContent);"},
-                                  {'scale':'Diminished Triad', 'link': "javascript:loadTheory('fret_diminishedtriadarpeggios', 'theorydiv', document.getElementById('chord6').textContent);"}]}];
+    var majoroptions = [{'scales':[{'scale':'Ionian', 'link': "javascript:loadTheory('fret_ionian', 'theorydiv', document.getElementById('chord0').textContent, true);"},
+                                  {'scale':'Major Triad', 'link': "javascript:loadTheory('fret_majortriadarpeggios', 'theorydiv', document.getElementById('chord0').textContent, true);"}]},
+                        {'scales':[{'scale':'Dorian', 'link': "javascript:loadTheory('fret_dorian', 'theorydiv', document.getElementById('chord1').textContent, true);"},
+                                  {'scale':'Minor Triad', 'link': "javascript:loadTheory('fret_minortriadarpeggios', 'theorydiv', document.getElementById('chord1').textContent, true);"}]},
+                        {'scales':[{'scale':'Phrygian', 'link': "javascript:loadTheory('fret_phrygian', 'theorydiv', document.getElementById('chord2').textContent, true);"},
+                                  {'scale':'Minor Triad', 'link': "javascript:loadTheory('fret_minortriadarpeggios', 'theorydiv', document.getElementById('chord2').textContent, true);"}]},
+                        {'scales':[{'scale':'Lydian', 'link': "javascript:loadTheory('fret_lydian', 'theorydiv', document.getElementById('chord3').textContent, true);"},
+                                  {'scale':'Major Triad', 'link': "javascript:loadTheory('fret_majortriadarpeggios', 'theorydiv', document.getElementById('chord3').textContent, true);"}]},
+                        {'scales':[{'scale':'Mixolydian', 'link': "javascript:loadTheory('fret_mixolydian', 'theorydiv', document.getElementById('chord4').textContent, true);"},
+                                  {'scale':'Major Triad', 'link': "javascript:loadTheory('fret_majortriadarpeggios', 'theorydiv', document.getElementById('chord4').textContent, true);"}]},
+                        {'scales':[{'scale':'Aeolian', 'link': "javascript:loadTheory('fret_aeolian', 'theorydiv', document.getElementById('chord5').textContent, true);"},
+                                  {'scale':'Minor Triad', 'link': "javascript:loadTheory('fret_minortriadarpeggios', 'theorydiv', document.getElementById('chord5').textContent, true);"}]},
+                        {'scales':[{'scale':'Locrian', 'link': "javascript:loadTheory('fret_locrian', 'theorydiv', document.getElementById('chord6').textContent, true);"},
+                                  {'scale':'Diminished Triad', 'link': "javascript:loadTheory('fret_diminishedtriadarpeggios', 'theorydiv', document.getElementById('chord6').textContent, true);"}]}];
 
     if (jsonData.song.indexOf('Major') != -1)
       for(options=0; options<2; options++){
