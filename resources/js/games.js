@@ -70,11 +70,11 @@ function showNextGameSelection(game) {
   var gamediv = document.getElementById('gameselection');
 
 
-  for (i=0; i<nextSelectionArr.length; i++) {
+  for (var i=0; i<nextSelectionArr.length; i++) {
 
 
       if (nextSelectionArr[i].id == game) {
-        for (j=0; j<nextSelectionArr[i].games.length; j++) {
+        for (var j=0; j<nextSelectionArr[i].games.length; j++) {
           var counter = j+1;
 
           var button = document.createElement("button");

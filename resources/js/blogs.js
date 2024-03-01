@@ -31,7 +31,7 @@ function blog(jsonData, articleelement) {
   article.appendChild(pdate);
 
   if(jsonData.hasOwnProperty('paras')) {
-    for (i=0; i<jsonData.paras; i++) {
+    for (var i=0; i<jsonData.paras; i++) {
       var index = i+1;
       var para = 'para' + index;
       const p = document.createElement("p");
