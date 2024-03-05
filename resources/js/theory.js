@@ -32,6 +32,9 @@ function drawTheory(jsonData, element, context) {
   div = document.getElementById(element);
   div.innerHTML = '';
 
+  var extracontent = document.getElementById('extracontent');
+  extracontent.innerHTML = '';
+
   if(backButton) {
     const backlink = document.createElement("a");
     backlink.href = "javascript:loadTheory('" + backtopic + "', 'theorydiv');";
@@ -857,6 +860,219 @@ function drawFretboard(jsonData, div, context) {
 
   //initial
     loadFret();
+
+
+
+        if(jsonData.hasOwnProperty('rompatterns')) {
+          const rompatttext = document.createElement("p");
+              rompatttext.textContent = jsonData.rompatterntext;
+              rompatttext.style.position = 'relative';
+              rompatttext.style.left = '380px';
+              rompatttext.style.top = '-1200px';
+              //var footdiv = document.getElementById('foot');
+              //document.insertBefore(rompatttext, footdiv);
+              var extracontent = document.getElementById('extracontent');
+              extracontent.appendChild(rompatttext);
+
+              var rppositionsleft = ['380px', '520px', '660px'];
+              var rppositionstop = ['-1200px', '-1500px', '-1800px'];
+
+              for(var rp=0; rp<jsonData.rompatterns; rp++) {
+
+              const chordboxdiv = document.createElement("div");
+              chordboxdiv.style.height = '300px';
+              chordboxdiv.style.width = '150px';
+              //chordboxdiv.style.backgroundColor = 'pink';
+//                        if(newblock) {
+//                          // div for next block
+//                          div.appendChild(document.createElement("div"));
+//                        }
+              chordboxdiv.style.position = 'relative';
+              chordboxdiv.style.left = rppositionsleft[rp];
+              //'380px' + ((rp*50) + 'px') ;
+              chordboxdiv.style.top = rppositionstop[rp];
+              //'-1200px';
+
+              const chord1_table = document.createElement("table");
+              chord1_table.className = 'chordbox';
+              chord1_table.id = 'rompattern1';
+
+              //const chord1_caption = document.createElement("caption");
+              //chord1_caption.textContent = jsonData[chord];
+              //chord1_table.appendChild(chord1_caption);
+
+              var chords1_tr1 = document.createElement("tr");
+                        chords1_tr1.appendChild(document.createElement("td"));
+                        chords1_tr1.appendChild(document.createElement("td"));
+                        chords1_tr1.appendChild(document.createElement("td"));
+                        chord1_table.appendChild(chords1_tr1);
+
+                        var chords1_tr2 = document.createElement("tr");
+                        chords1_tr2.appendChild(document.createElement("td"));
+                        chords1_tr2.appendChild(document.createElement("td"));
+                        chords1_tr2.appendChild(document.createElement("td"));
+                        chord1_table.appendChild(chords1_tr2);
+
+                        var chords1_tr3 = document.createElement("tr");
+                        chords1_tr3.appendChild(document.createElement("td"));
+                        chords1_tr3.appendChild(document.createElement("td"));
+                        chords1_tr3.appendChild(document.createElement("td"));
+                        chord1_table.appendChild(chords1_tr3);
+
+                        var chords1_tr4 = document.createElement("tr");
+                        chords1_tr4.appendChild(document.createElement("td"));
+                        chords1_tr4.appendChild(document.createElement("td"));
+                        chords1_tr4.appendChild(document.createElement("td"));
+                        chord1_table.appendChild(chords1_tr4);
+
+                        var chords1_tr5 = document.createElement("tr");
+                        chords1_tr5.appendChild(document.createElement("td"));
+                        chords1_tr5.appendChild(document.createElement("td"));
+                        chords1_tr5.appendChild(document.createElement("td"));
+                        chord1_table.appendChild(chords1_tr5);
+
+                        chordboxdiv.appendChild(chord1_table);
+
+
+
+                        //"rompattern1": "I_E2,III_A1,V_A4,I_D4",
+                        //"rompattern2": "I_E5,III_A4,V_D2,I_G2",
+                        //"rompattern3": "I_E1,III_E5,V_A3,I_D3"
+
+                        rpid = 'rompattern' + (rp + 1);
+                        const rompattArr = jsonData[rpid].split(',');
+
+                        var leftestr = -12;
+                        var leftastr = -12;
+                        var leftdstr = -12;
+                        var leftgstr = -12;
+
+                        var adjust = 30;
+
+                        for(i=0; i<rompattArr.length; i++){
+
+                        const numPosArr = rompattArr[i].split('_');
+
+                        var img = document.createElement('img');
+
+
+                        switch(numPosArr[0]) {
+                          case 'I':
+                            img.src = "resources/images/theory/roman/1.png";
+                            break;
+                          case 'III':
+                            img.src = "resources/images/theory/roman/3.png";
+                            break;
+                          case 'V':
+                            img.src = "resources/images/theory/roman/5.png";
+                            break;
+                          default:
+                            img.src = "resources/images/theory/roman/1.png";
+                        }
+
+
+                        img.style.position = 'relative';
+
+                        //"rompattern1": "I_E2,III_A1,V_A4,I_D4",
+                        //"rompattern2": "I_E5,III_A4,V_D2,I_G2",
+                        //"rompattern3": "I_E1,III_E5,V_A3,I_D3"
+                        var twoonsamestring = 25;
+                        switch(numPosArr[1].charAt(0)) {
+                           case 'E':
+                             img.style.left = leftestr + 'px';
+                             leftestr = leftestr - adjust;
+                             if(i==1) {
+                             //two es
+                               leftastr = leftastr - adjust;
+                             }
+                             break;
+                           case 'A':
+                             img.style.left = leftastr + 'px';
+                             leftastr = leftastr - adjust;
+                             if(i==2) {
+                               //two as
+                               leftdstr = leftdstr - adjust;
+                             }
+                             break;
+                           case 'D':
+                             img.style.left = leftdstr + 'px';
+                             //leftdstr = leftdstr - twoonsamestring;
+                             break;
+                           case 'G':
+                             img.style.left = leftgstr + 'px';
+                             //leftgstr = leftgstr - twoonsamestring;
+                             break;
+                           default:
+                             img.style.left = leftestr;
+                        }
+
+                        //"rompattern1": "I_E2,III_A1,V_A4,I_D4",
+                        //"rompattern2": "I_E5,III_A4,V_D2,I_G2",
+                        //"rompattern3": "I_E1,III_E5,V_A3,I_D3"
+                        var fret0 = '10px';
+                        var fret1 = '20px';//+ 40
+                          var fret2 = '80px';// +55
+                          var fret3 = '140px';// + 60
+                          var fret4 = '200px';// + 60
+                          var fret5 = '260px';//
+
+                          switch(numPosArr[1].charAt(1)) {
+                            case '0':
+                              img.style.top = fret0;
+                              break;
+                            case '1':
+                              img.style.top = fret1;
+                              break;
+                            case '2':
+                              img.style.top = fret2;
+                              break;
+                            case '3':
+                              img.style.top = fret3;
+                              break;
+                            case '4':
+                              img.style.top = fret4;
+                              break;
+                            case '5':
+                              img.style.top = fret5;
+                              break;
+                            default:
+                              img.style.top = fret0;
+                          }
+
+
+
+
+                        //styleImgOnString(jsonData[astr], img);
+                        chordboxdiv.appendChild(img);
+
+                        }
+
+
+                        extracontent.appendChild(chordboxdiv);
+
+
+
+
+                        }
+
+
+
+
+//            for (p=0; p<jsonData.patterns; p++) {
+//                var pattp1 = document.createElement("p");
+//                var patts = ["One", "Two"];
+//                pattp1.textContent = "Pattern " + patts[p] + ":";
+//
+//                div.appendChild(pattp1);
+//
+//
+//                const patternimg = document.createElement("img");
+//                patternimg.src = 'resources/images/theory/pattern.jpg';
+//
+//                //patternimg.className = 'pattern';
+//                div.appendChild(patternimg);
+//            }
+          }
 
 
 //    if(jsonData.hasOwnProperty('patterns')) {
