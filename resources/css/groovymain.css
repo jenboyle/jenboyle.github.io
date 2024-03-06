@@ -619,6 +619,10 @@ display: inline-block;
 
 /* ^^ footer ^^ */
 
+  #extracontent {
+    padding-top: 80px;
+  }
+
 @media all and (max-width:740px) {
   header nav ul, .main nav ul {
     width: 100%;
@@ -634,9 +638,7 @@ display: inline-block;
   }
 
 
-  #extracontent {
-    padding-top: 70px;
-  }
+
 
   .boximg {
     width:100%;
