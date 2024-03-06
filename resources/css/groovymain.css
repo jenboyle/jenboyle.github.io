@@ -7,18 +7,17 @@ div {
   color: black;
 }
 
+.initialsongulhide, .showblogs, .gamehelphidden, .menu {
+  display:none;
+}
+
 .gameanswer {
   background-color: lightgoldenrodyellow;
   text-align: center;
   padding-bottom: 20px;
 }
 
-.gamehelphidden {
-  display:none;
-  text-decoration: none;
-}
-
-.gamebutton, .gamebutton a {
+.gamebutton, .gamebutton a, .gamehelphidden {
   text-decoration: none;
 }
 
@@ -261,7 +260,6 @@ header nav ul li {
 
 .fifthstablelefttd {
   text-align:left;
-
 }
 
 .transcriptiontable td {
@@ -323,7 +321,7 @@ header nav ul li {
 }
 
 .answerbuttons {
-display: inline-block;
+  display: inline-block;
   color: black;
   padding: 5px;
   background-color: #c9aec8;
@@ -344,10 +342,6 @@ display: inline-block;
 }
 
 /* ^^ buttons ^^ */
-
-.menu {
-  display: none;
-}
 
 .subheading {
   font-size:1.5em;
@@ -520,14 +514,6 @@ display: inline-block;
 
 .show {
   display: block;
-}
-
-.initialsongulhide {
-  display: none;
-}
-
-.showblogs {
-  display:none;
 }
 
 /* footer */
