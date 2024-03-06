@@ -563,6 +563,11 @@ display: inline-block;
 
 /* ^^ footer ^^ */
 
+#extracontent {
+  padding-top: 100px;
+  /*display: none;*/
+}
+
 @media all and (max-width:740px) {
   header nav ul, .main nav ul, .footerone, .footertwo, .footerthree, .footercol, .boximg, .menu {
     width: 100%;
@@ -575,11 +580,6 @@ display: inline-block;
 
   .heading {
     padding: 0px;
-  }
-
-  #extracontent {
-    /*padding-top: 110px;*/
-    display: none;
   }
 
   .menu {
