@@ -578,7 +578,8 @@ display: inline-block;
   }
 
   #extracontent {
-    padding-top: 110px;
+    /*padding-top: 110px;*/
+    display: none;
   }
 
   .menu {
