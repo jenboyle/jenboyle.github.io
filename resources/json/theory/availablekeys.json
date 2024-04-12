@@ -38,6 +38,7 @@
   "key13link": "bmajor",
 
   "key14": "F# Major",
+  "key14link": "fsharpmajor",
 
   "key15": "C# Major",
 
@@ -80,6 +81,7 @@
   "key28link": "gsharpminor",
 
   "key29": "D#m",
+  "key29link": "dsharpminor",
 
   "key30": "A#m"
 
