@@ -1,25 +1,25 @@
-function showBlogs(div, ul) {
-  document.getElementById(div).style.display = "none";
-  document.getElementById(ul).style.display = "";
+function showBlogs(div: string, ul: string) {
+  document.getElementById(div)!.style.display = "none";
+  document.getElementById(ul)!.style.display = "";
 }
 
-function loadBlog(blogname, articleelement, ul, div) {
+function loadBlog(blogname: string, articleelement: string, ul: string, div: string) {
   console.log(blogname);
   //hide the ul
-  document.getElementById(ul).style.display = "none";
+  document.getElementById(ul)!.style.display = "none";
 
-  div = document.getElementById(div);
-  div.classList.remove('showblogs');
-  div.style.display = "";
+  const div1 = document.getElementById(div)!;
+  div1.classList.remove('showblogs');
+  div1.style.display = "";
 
   fetch('https://groovyjen.com/resources/json/blogs/' + blogname + '.json')
     .then((response) => response.json())
     .then((json) => blog(json, articleelement));
 }
 
-function blog(jsonData, articleelement) {
+function blog(jsonData, articleelement: string) {
   console.log(jsonData);
-  const article = document.getElementById(articleelement);
+  const article = document.getElementById(articleelement)!;
   article.innerHTML = '';
 
   const h1 = document.createElement("h1");
