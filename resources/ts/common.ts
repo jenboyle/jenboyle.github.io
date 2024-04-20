@@ -1,4 +1,4 @@
-function emojiCheck(text) {
+function emojiCheck(text: string): string {
   var emojitext = text;
   if(text.indexOf('0x1F') != -1){
     console.log("hasEmojis");
