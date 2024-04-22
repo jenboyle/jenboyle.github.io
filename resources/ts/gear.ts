@@ -1,15 +1,15 @@
-function loadGear(divelement) {
+function loadGear(divelement: string) {
   fetch('https://groovyjen.com/resources/json/gear/gear.json')
     .then((response) => response.json())
     .then((json) => gear(json, divelement));
 }
 
-function gear(jsonData, divelement) {
+function gear(jsonData, divelement: string) {
   console.log(jsonData);
-  const div = document.getElementById(divelement);
+  const div = document.getElementById(divelement)!;
 
   if(jsonData.hasOwnProperty('gear')) {
-    for (i=0; i<jsonData.gear.length; i++) {
+    for (var i=0; i<jsonData.gear.length; i++) {
       const p = document.createElement("p");
       const article = document.createElement("article");
 
@@ -17,14 +17,14 @@ function gear(jsonData, divelement) {
       article.append(p);
       div.append(article);
 
-      for (j=0; j<jsonData.gear[i].articles.length; j++) {
+      for (var j=0; j<jsonData.gear[i].articles.length; j++) {
         const p = document.createElement("p");
         const article = document.createElement("article");
 
         p.textContent = jsonData.gear[i].articles[j].article;
         article.append(p);
 
-        for(im=1; im<6; im++) {
+        for(var im=1; im<6; im++) {
           var imfield = 'image'+im;
           if(jsonData.gear[i].articles[j].hasOwnProperty(imfield)) {
             const img = document.createElement("img");
