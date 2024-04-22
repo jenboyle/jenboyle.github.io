@@ -1,11 +1,11 @@
-function goChoice(element, ul) {
+function goChoice(element: string, ulist: string) {
   var input, filter, ul, li, a, i, txtValue;
 
-  input = document.getElementById(element);
+  input = <HTMLInputElement>document.getElementById(element)!;
 
   filter = input.value.toUpperCase();
-  ul = document.getElementById(ul);
-  li = ul.getElementsByTagName('li');
+  ul = document.getElementById(ulist)!;
+  li = ul.getElementsByTagName('li')!;
 
   //show the ul
   if(ul.style.display == "none"){
@@ -32,12 +32,12 @@ function goChoice(element, ul) {
 
 }
 
-function loadTab(songname, folder, articleelement, ul, animation) {
+function loadTab(songname: string, folder: string, articleelement: string, ul: string, animation: boolean) {
   console.log(songname);
   //hide the ul
-  document.getElementById(ul).style.display = "none";
+  document.getElementById(ul)!.style.display = "none";
 
-  const article = document.getElementById(articleelement);
+  const article = document.getElementById(articleelement)!;
   article.innerHTML = '';
 
   if(songname != 'improvisation') {
@@ -54,9 +54,9 @@ function loadTab(songname, folder, articleelement, ul, animation) {
 
 }
 
-function drawTab(jsonData, articleelement) {
+function drawTab(jsonData, articleelement: string) {
   console.log(jsonData);
-  const article = document.getElementById(articleelement);
+  const article = document.getElementById(articleelement)!;
   article.innerHTML = '';
   const psong = document.createElement("p");
   psong.textContent = jsonData.song + ' - ' + jsonData.by;
@@ -85,7 +85,7 @@ function drawTab(jsonData, articleelement) {
   article.appendChild(ptune);
 
   var tabline = 1;
-  for(tabstart=1; tabstart<18; tabstart+=4) {
+  for(var tabstart=1; tabstart<18; tabstart+=4) {
 
     var textb4linetab = 'textb4tab' + tabline;
     if(jsonData.hasOwnProperty(textb4linetab)) {
@@ -103,7 +103,7 @@ function drawTab(jsonData, articleelement) {
 
 }
 
-function testfortab(jsonfield, jsonData, article) {
+function testfortab(jsonfield: string, jsonData, article) {
 
   if(jsonData.hasOwnProperty(jsonfield)) {
 
@@ -160,7 +160,7 @@ function testfortab(jsonfield, jsonData, article) {
 
 }
 
-function drawRowsAndCols (start, end, trg, trd, tra, tre, gnotes, dnotes, anotes, enotes) {
+function drawRowsAndCols (start: boolean, end: boolean, trg, trd, tra, tre, gnotes: string, dnotes: string, anotes: string, enotes: string) {
     var startline = '';
     var endline = '';
 
@@ -190,9 +190,9 @@ function drawRowsAndCols (start, end, trg, trd, tra, tre, gnotes, dnotes, anotes
 }
 
 var id = null;
-function animate(animation) {
+function animate(animation: string) {
   
-  var elem = document.getElementById('animation'+animation);
+  var elem = document.getElementById('animation'+animation)!;
   //if(elem.style.display == "none"){
   //  elem.style.display = "";
   //}
@@ -215,8 +215,8 @@ function animate(animation) {
   }
 }
 
-function showSongs(ul) {
-  ul = document.getElementById(ul);
+function showSongs(ulist: string) {
+  var ul = document.getElementById(ulist)!;
 
   ul.classList.remove('initialsongulhide');
 
