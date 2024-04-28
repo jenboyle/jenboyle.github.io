@@ -12,7 +12,10 @@ var nextSelectionArr = [
                                             [{'gameid1':'easy', 'gametext1':'Easy', 'gamemethod1':'notationGame("easy");'}]
                         },
                         {'id':'school','games':
-                                            [{'gameid1':'chemistry', 'gametext1':'Chemistry', 'gamemethod1':'chemistryGame();'}]
+                                            [
+                                            {'gameid1':'chemistry', 'gametext1':'Chemistry', 'gamemethod1':'chemistryGame();'},
+                                            {'gameid2':'biology', 'gametext2':'Biology', 'gamemethod2':'biologyGame();'}
+                                            ]
                         }
                         ];
 
@@ -71,7 +74,31 @@ var chemistry = [{'question':'What is meant by the term element?', 'answer': 'CO
                  {'question':'Who created the periodic table of elements?', 'answer': 'CONTAINS(DMITRI)ANDCONTAINS(MENDELEEV)', 'help': 'Dmitri Mendeleev created the periodic table of elements'},
                  {'question':'Who discovered radium, polenium and treatments for cancer?', 'answer': 'CONTAINS(MARIE)ANDCONTAINS(CURIE)', 'help': 'Marie Curie from Poland and France discovered these'},
                  {'question':'Who discovered synthetic fibers?', 'answer': 'CONTAINS(STEPHANIE)ANDCONTAINS(KWOLEK)', 'help': 'Stephanie Louise Kwolek discovered synthetic fibers'}];
-var chemText;
+
+var biologyfull = [{'question':'What is the nucleus?', 'answer': 'CONTAINS(CONTROL)', 'help': 'The nucleus controls all activities in the cell'},
+                   {'question':'What are the 5 senses?', 'answer': 'CONTAINS(SIGHT)ANDCONTAINS(SMELL)ANDCONTAINSTHREE(HEAR)ANDCONTAINSFOUR(TASTE)ANDCONTAINSFIVE(TOUCH)', 'help': 'The 5 senses are Sight, Smell, Hearing, Taste and Touch'},
+                   {'question':'What is a tissue?', 'answer': 'CONTAINS(SIMILAR)ANDCONTAINS(CELLS)ANDCONTAINSTHREE(JOB)', 'help': 'A tissue is similar cells working together to do a job. eg nerve cells nerve tissue, eg xylem cells xylem tissue'},
+                   {'question':'What is the job of a kidney?', 'answer': 'CONTAINS(CLEAN)ANDCONTAINS(BLOOD)', 'help': 'A kidneys job is to clean blood.'},
+                   {'question':'What is the job of a heart?', 'answer': 'CONTAINS(PUMP)ANDCONTAINS(BLOOD)ANDCONTAINSTHREE(BODY)', 'help': 'A heart pumps blood around the body'},
+                   {'question':'Name an Animal Organ', 'answer': 'ONEOF(KIDNEY_HEART_LUNGS_EYE_STOMACH_LIVER)', 'help': 'Examples of animal organs: Kidney, Heart, Lungs, Eye'},
+                   {'question':'Name a Plant Organ', 'answer': 'ONEOF(STEM_FLOWER_LEAF)', 'help': 'Examples of plant organs: Stem, Flower, Leaf'}];
+
+var biology = [{'question':'What is the nucleus?', 'answer': 'CONTAINS(CONTROL)', 'help': 'The nucleus controls all activities in the cell'},
+                                 {'question':'What are the 5 senses?', 'answer': 'CONTAINS(SIGHT)ANDCONTAINS(SMELL)ANDCONTAINSTHREE(HEAR)ANDCONTAINSFOUR(TASTE)ANDCONTAINSFIVE(TOUCH)', 'help': 'The 5 senses are Sight, Smell, Hearing, Taste and Touch'},
+                                 {'question':'What is a tissue?', 'answer': 'CONTAINS(SIMILAR)ANDCONTAINS(CELLS)ANDCONTAINSTHREE(JOB)', 'help': 'A tissue is similar cells working together to do a job. eg nerve cells nerve tissue, eg xylem cells xylem tissue'},
+                                 {'question':'What is the job of a kidney?', 'answer': 'CONTAINS(CLEAN)ANDCONTAINS(BLOOD)', 'help': 'A kidneys job is to clean blood.'},
+                                 {'question':'What is the job of a heart?', 'answer': 'CONTAINS(PUMP)ANDCONTAINS(BLOOD)ANDCONTAINSTHREE(BODY)', 'help': 'A heart pumps blood around the body'},
+                                 {'question':'Name an Animal Organ', 'answer': 'ONEOF(KIDNEY_HEART_LUNGS_EYE_STOMACH_LIVER)', 'help': 'Examples of animal organs: Kidney, Heart, Lungs, Eye'},
+                                 {'question':'Name a Plant Organ', 'answer': 'ONEOF(STEM_FLOWER_LEAF)', 'help': 'Examples of plant organs: Stem, Flower, Leaf'}];
+
+//[{'question':'What is the nucleus?', 'answer': 'CONTAINS(CONTROL)', 'help': 'The nucleus controls all activities in the cell'},
+//               {'question':'What are the 5 senses?', 'answer': 'CONTAINS(SIGHT)ANDCONTAINS(SMELL)ANDCONTAINSTHREE(HEAR)ANDCONTAINSFOUR(TASTE)ANDCONTAINSFIVE(TOUCH)', 'help': 'The 5 senses are Sight, Smell, Hearing, Taste and Touch'},
+//               {'question':'What is a tissue?', 'answer': 'CONTAINS(SIMILAR)ANDCONTAINS(CELLS)ANDCONTAINSTHREE(JOB)', 'help': 'A tissue is similar cells working together to do a job. eg nerve cells nerve tissue, eg xylem cells xylem tissue'}];
+var schoolText;
+
+var schoollist = {'chemistry': chemistryfull, 'biology': biologyfull};
+
+
 //var circleSigns = ['no sharps or flats', '1 flat', '1 sharp', '2 sharps', '3 sharps', '4 sharps'];
 // future have intermediate beginner advanced change the question to not say how many
 //var circleFlatSharps = ['Bb', 'F#', 'F# C# G#', 'F# C#', 'F# C# G# D#'];
@@ -235,8 +262,8 @@ function notationGame(level){
 function checkAnswer(answerkey, answerselected, nextmethod) {
   var gameanswer = document.getElementById('gameanswer');
 
-  if(answerselected == 'Chemistry') {
-    var studentAnswer = document.getElementById('chemText').value.toUpperCase();
+  if(answerselected.startsWith('School')) {
+    var studentAnswer = document.getElementById('schoolText').value.toUpperCase();
     var correct = false;
     //'CONTAINS(atom)ANDCONTAINSOR(one_1)'}];
     var contains = answerkey.indexOf('CONTAINS(');
@@ -255,6 +282,47 @@ function checkAnswer(answerkey, answerselected, nextmethod) {
       var doesItContain = studentAnswer.indexOf(clause) != -1;
       console.log(doesItContain);
       correct = correct && doesItContain;
+    }
+
+    var andContainsthree = answerkey.indexOf('ANDCONTAINSTHREE(');
+    if (andContainsthree != -1){
+      var clause = answerkey.substring(andContainsthree+17, answerkey.indexOf(')', andContainsthree));
+      console.log(clause);
+      var doesItContain = studentAnswer.indexOf(clause) != -1;
+      console.log(doesItContain);
+      correct = correct && doesItContain;
+    }
+
+    var andContainsfour = answerkey.indexOf('ANDCONTAINSFOUR(');
+        if (andContainsfour != -1){
+          var clause = answerkey.substring(andContainsfour+16, answerkey.indexOf(')', andContainsfour));
+          console.log(clause);
+          var doesItContain = studentAnswer.indexOf(clause) != -1;
+          console.log(doesItContain);
+          correct = correct && doesItContain;
+        }
+
+            var andContainsfive = answerkey.indexOf('ANDCONTAINSFIVE(');
+                if (andContainsfive != -1){
+                  var clause = answerkey.substring(andContainsfive+16, answerkey.indexOf(')', andContainsfive));
+                  console.log(clause);
+                  var doesItContain = studentAnswer.indexOf(clause) != -1;
+                  console.log(doesItContain);
+                  correct = correct && doesItContain;
+                }
+    //ONEOF(KIDNEY_HEART_LUNGS_EYE_STOMACH_LIVER)
+    var oneof = answerkey.indexOf('ONEOF(');
+    if (oneof != -1){
+      var clause = answerkey.substring(oneof+6, answerkey.indexOf(')', oneof)).split('_');
+      console.log(clause);
+      var doesItContain = false;
+      for(var i=0; i<clause.length; i++){
+        if(studentAnswer.indexOf(clause[i]) != -1) {
+          doesItContain = true;
+        }
+      }
+      console.log(doesItContain);
+      correct = doesItContain;
     }
 
     var andContainsOR = answerkey.indexOf('ANDCONTAINSOR(');
@@ -369,7 +437,14 @@ function help(){
 //          gamehelp.textContent = 'If you are in a major key move down 3 semitones to find the relative minor. If you are in a minor key move up 3 semitones to find the relative major.';
 //        }
 //    }
+        var schoolfulllist = [];
 
+        if(loadedGame.startsWith('School')) {
+          var loadedGameInfo = loadedGame.split('_');
+          loadedGame = loadedGameInfo[0];
+          //var schoollist =[{'chemistry': chemistryfull}, {'biology': biologyfull}];
+          schoolfulllist = schoollist[loadedGameInfo[1]];
+        }
 
 
         switch(loadedGame) {
@@ -401,21 +476,17 @@ function help(){
               helpdetail.textContent = '';
             }
             break;
-          case 'Chemistry':
-              //console.log('hi' + question)
+          case 'School':
               if(helpdetail.innerText.length == 0) {
-                  chemistryfull.forEach(question => {
-                      if(document.getElementById('gamemain').innerHTML.indexOf(question.question) !=-1 ) {
-                        helpdetail.textContent = question.help;
-                      }
-                  });
+                schoolfulllist.forEach(question => {
+                  if(document.getElementById('gamemain').innerHTML.indexOf(question.question) !=-1 ) {
+                    helpdetail.textContent = question.help;
+                  }
+                });
               } else {
                 helpdetail.textContent = '';
               }
-
-
-            //helpdetail.textContent
-            break;
+              break;
           default:
               //gamehelp.href = 'javascript:help();';
               //gamehelp.innerText = String.fromCodePoint('129300');
@@ -442,12 +513,11 @@ function clearGameSpace() {
   //gamehelp.href = 'javascript:help();';
   helpdetail.textContent = '';
 
-
 }
 
 function chemistryGame() {
   clearGameSpace();
-  loadedGame = 'Chemistry';
+  loadedGame = 'School_chemistry';
 
   var gamemain = document.getElementById('gamemain');
   var gameanswers = document.getElementById('gameanswers');
@@ -462,17 +532,12 @@ function chemistryGame() {
 
     gamemain.appendChild(chemistryQuestion);
 
-    //var chemistry = [{'question':'What is meant by the term element?', 'answer': 'CONTAINS(atom)ANDCONTAINSOR(one_1)'}];
+    schoolText = document.createElement("input");
+    schoolText.type = 'text';
+    schoolText.id = 'schoolText';
+    gamemain.appendChild(schoolText);
 
-
-
-
-    chemText = document.createElement("input");
-    chemText.type = 'text';
-    chemText.id = 'chemText';
-    gamemain.appendChild(chemText);
-
-    var chemanswer = document.getElementById('chemText').value;
+    var chemanswer = document.getElementById('schoolText').value;
 
 
     //for (var i=0; i<1; i++) {
@@ -498,4 +563,49 @@ function chemistryGame() {
     showHelp();
 
 
+}
+
+function biologyGame() {
+  clearGameSpace();
+  loadedGame = 'School_biology';
+
+  var gamemain = document.getElementById('gamemain');
+  var gameanswers = document.getElementById('gameanswers');
+
+    //need a random 0-23 rel length 24
+    var randomQ = Math.floor(Math.random() * biology.length);
+
+    var schoolQuestion = document.createElement("div");
+    schoolQuestion.textContent = biology[randomQ]['question'];
+
+    gamemain.appendChild(schoolQuestion);
+
+    schoolText = document.createElement("input");
+    schoolText.type = 'text';
+    schoolText.id = 'schoolText';
+    gamemain.appendChild(schoolText);
+
+    var schoolAnswer = document.getElementById('schoolText').value;
+
+    //for (var i=0; i<1; i++) {
+      var qbutton = document.createElement("button");
+      qbutton.className = 'answerbuttons';
+      //qbutton.id = 'relatives
+      qbutton.type = 'button';
+      qbutton.textContent = 'Check Answer';
+      var ansmethod = 'javascript:checkAnswer("' + biology[randomQ]['answer'] + '", "' + loadedGame + '","javascript:biologyGame()");';
+      qbutton.setAttribute('onclick',ansmethod);
+      gameanswers.appendChild(qbutton);
+    //}
+
+    //remove item
+    biology.splice(randomQ, 1);
+    if(biology.length == 0) {
+      //repopulate array
+      biologyfull.forEach(question => {
+        biology.push(question);
+      });
+    }
+
+    showHelp();
 }
