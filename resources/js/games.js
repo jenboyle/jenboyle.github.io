@@ -1,7 +1,20 @@
-var nextSelectionArr = [{'id':'eartraining','games':[{'gameid1':'dronetest', 'gametext1':'Drone Test'}]},
-                        {'id':'musictheory','games':[{'gameid1':'relatives', 'gametext1':'Relatives Test', 'gamemethod1':'relativesGame();'},
-                          {'gameid2':'circleoffifths', 'gametext2':'Circle of Fifths', 'gamemethod2':'circleOfFifthsGame();'}]},
-                          {'id':'notation','games':[{'gameid1':'easy', 'gametext1':'Easy', 'gamemethod1':'notationGame("easy");'}]}];
+var nextSelectionArr = [
+                        {'id':'eartraining','games':
+                                            [{'gameid1':'dronetest', 'gametext1':'Drone Test'}]
+                        },
+                        {'id':'musictheory','games':
+                                            [
+                                             {'gameid1':'relatives', 'gametext1':'Relatives Test', 'gamemethod1':'relativesGame();'},
+                                             {'gameid2':'circleoffifths', 'gametext2':'Circle of Fifths', 'gamemethod2':'circleOfFifthsGame();'}
+                                            ]
+                        },
+                        {'id':'notation','games':
+                                            [{'gameid1':'easy', 'gametext1':'Easy', 'gamemethod1':'notationGame("easy");'}]
+                        },
+                        {'id':'school','games':
+                                            [{'gameid1':'chemistry', 'gametext1':'Chemistry', 'gamemethod1':'chemistryGame();'}]
+                        }
+                        ];
 
 var relativesfull = [{'key':'Ab Major', 'rel': 'F Minor'}, {'key':'A Major', 'rel':'F# Minor'}, {'key':'Bb Major', 'rel': 'G Minor'}, {'key':'B Major', 'rel':'G# Minor'},
                  {'key':'C Major', 'rel': 'A Minor'}, {'key':'Db Major', 'rel': 'Bb Minor'}, {'key':'D Major', 'rel':'B Minor'}, {'key':'Eb Major', 'rel':'C Minor'},
@@ -45,6 +58,20 @@ var circle = [{'key':'C', 'sign': 'no sharps or flats', 'twowrong': '1 sharp,1 f
               {'key':'C#', 'sign': '7 sharps', 'twowrong': '1 sharps,5 sharps'},
               {'key':'C#_TOGGLE', 'sign': '7 sharps', 'flatsharp': 'F# C# G# D# A# E# B#', 'twowrong': 'F# C# G# D# A# E# B# C,B# E# A# D# C# G# D#'}];
 
+var chemistryfull = [{'question':'What is meant by the term element?', 'answer': 'CONTAINS(ATOM)ANDCONTAINSOR(ONE_1)', 'help': 'An element is a substance made up of one atom'},
+                 {'question':'What is Chemistry?', 'answer': 'CONTAINS(MATTER)', 'help': 'Chemistry is the study of matter'},
+                 {'question':'What is an atom?', 'answer': 'CONTAINS(PARTICLE)', 'help': 'An atom is a tiny particle'},
+                 {'question':'Who created the periodic table of elements?', 'answer': 'CONTAINS(DMITRI)ANDCONTAINS(MENDELEEV)', 'help': 'Dmitri Mendeleev from Russia created the periodic table of elements'},
+                 {'question':'Who discovered radium, polenium and treatments for cancer?', 'answer': 'CONTAINS(MARIE)ANDCONTAINS(CURIE)', 'help': 'Marie Curie from Poland and France discovered these'},
+                 {'question':'Who discovered synthetic fibers?', 'answer': 'CONTAINS(STEPHANIE)ANDCONTAINS(KWOLEK)', 'help': 'Stephanie Louise Kwolek discovered synthetic fibers'}];
+
+var chemistry = [{'question':'What is meant by the term element?', 'answer': 'CONTAINS(ATOM)ANDCONTAINSOR(ONE_1)', 'help': 'An element is a substance made up of one atom'},
+                 {'question':'What is Chemistry?', 'answer': 'CONTAINS(MATTER)', 'help': 'Chemistry is the study of matter'},
+                 {'question':'What is an atom?', 'answer': 'CONTAINS(PARTICLE)', 'help': 'An atom is a tiny particle'},
+                 {'question':'Who created the periodic table of elements?', 'answer': 'CONTAINS(DMITRI)ANDCONTAINS(MENDELEEV)', 'help': 'Dmitri Mendeleev created the periodic table of elements'},
+                 {'question':'Who discovered radium, polenium and treatments for cancer?', 'answer': 'CONTAINS(MARIE)ANDCONTAINS(CURIE)', 'help': 'Marie Curie from Poland and France discovered these'},
+                 {'question':'Who discovered synthetic fibers?', 'answer': 'CONTAINS(STEPHANIE)ANDCONTAINS(KWOLEK)', 'help': 'Stephanie Louise Kwolek discovered synthetic fibers'}];
+var chemText;
 //var circleSigns = ['no sharps or flats', '1 flat', '1 sharp', '2 sharps', '3 sharps', '4 sharps'];
 // future have intermediate beginner advanced change the question to not say how many
 //var circleFlatSharps = ['Bb', 'F#', 'F# C# G#', 'F# C#', 'F# C# G# D#'];
@@ -64,6 +91,7 @@ function showNextGameSelection(game) {
   //document.getElementById('eartraining').style.display = "none";
   document.getElementById('musictheory').style.display = "none";
   document.getElementById('notation').style.display = "none";
+  document.getElementById('school').style.display = "none";
   
 
   //show next button set
@@ -207,6 +235,45 @@ function notationGame(level){
 function checkAnswer(answerkey, answerselected, nextmethod) {
   var gameanswer = document.getElementById('gameanswer');
 
+  if(answerselected == 'Chemistry') {
+    var studentAnswer = document.getElementById('chemText').value.toUpperCase();
+    var correct = false;
+    //'CONTAINS(atom)ANDCONTAINSOR(one_1)'}];
+    var contains = answerkey.indexOf('CONTAINS(');
+    if (contains != -1){
+      var checkForContains = answerkey.substring(contains+9, answerkey.indexOf(')'));
+      console.log(checkForContains);
+      var doesItContain = studentAnswer.indexOf(checkForContains) != -1;
+      console.log(doesItContain);
+      correct = doesItContain;
+    }
+
+    var andContains = answerkey.indexOf('ANDCONTAINS(');
+    if (andContains != -1){
+      var clause = answerkey.substring(andContains+12, answerkey.indexOf(')', andContains));
+      console.log(clause);
+      var doesItContain = studentAnswer.indexOf(clause) != -1;
+      console.log(doesItContain);
+      correct = correct && doesItContain;
+    }
+
+    var andContainsOR = answerkey.indexOf('ANDCONTAINSOR(');
+    if (andContainsOR != -1){
+        var clause = answerkey.substring(andContainsOR+14, answerkey.indexOf(')', andContainsOR)).split('_');
+        var value1 = clause[0];
+        var value2 = clause[1];
+        console.log(clause);
+        var doesItContainValue1 = studentAnswer.indexOf(clause[0]) != -1;
+        var doesItContainValue2 = studentAnswer.indexOf(clause[1]) != -1;
+        var doesItContainOr = (doesItContainValue1 + doesItContainValue2) > 0;
+        console.log(doesItContainOr);
+        correct = correct && doesItContainOr;
+    }
+  answerkey = true;//this is true as question truth
+  answerselected = correct;
+
+  }
+
   if(answerkey == answerselected) {
     gameanswer.textContent = 'Well Done ';
     gameanswer.style.background = 'green';
@@ -334,6 +401,21 @@ function help(){
               helpdetail.textContent = '';
             }
             break;
+          case 'Chemistry':
+              //console.log('hi' + question)
+              if(helpdetail.innerText.length == 0) {
+                  chemistryfull.forEach(question => {
+                      if(document.getElementById('gamemain').innerHTML.indexOf(question.question) !=-1 ) {
+                        helpdetail.textContent = question.help;
+                      }
+                  });
+              } else {
+                helpdetail.textContent = '';
+              }
+
+
+            //helpdetail.textContent
+            break;
           default:
               //gamehelp.href = 'javascript:help();';
               //gamehelp.innerText = String.fromCodePoint('129300');
@@ -359,6 +441,61 @@ function clearGameSpace() {
   var helpdetail = document.getElementById('helpdetail');
   //gamehelp.href = 'javascript:help();';
   helpdetail.textContent = '';
+
+
+}
+
+function chemistryGame() {
+  clearGameSpace();
+  loadedGame = 'Chemistry';
+
+  var gamemain = document.getElementById('gamemain');
+  var gameanswers = document.getElementById('gameanswers');
+
+  console.log('chemistry' + chemistry.length);
+
+    //need a random 0-23 rel length 24
+    var randomchemQ = Math.floor(Math.random() * chemistry.length);
+
+    var chemistryQuestion = document.createElement("div");
+    chemistryQuestion.textContent = chemistry[randomchemQ]['question'];
+
+    gamemain.appendChild(chemistryQuestion);
+
+    //var chemistry = [{'question':'What is meant by the term element?', 'answer': 'CONTAINS(atom)ANDCONTAINSOR(one_1)'}];
+
+
+
+
+    chemText = document.createElement("input");
+    chemText.type = 'text';
+    chemText.id = 'chemText';
+    gamemain.appendChild(chemText);
+
+    var chemanswer = document.getElementById('chemText').value;
+
+
+    //for (var i=0; i<1; i++) {
+      var qbutton = document.createElement("button");
+      qbutton.className = 'answerbuttons';
+      //qbutton.id = 'relatives
+      qbutton.type = 'button';
+      qbutton.textContent = 'Check Answer';
+      var ansmethod = 'javascript:checkAnswer("' + chemistry[randomchemQ]['answer'] + '", "' + loadedGame + '","javascript:chemistryGame()");';
+      qbutton.setAttribute('onclick',ansmethod);
+      gameanswers.appendChild(qbutton);
+    //}
+
+    //remove item
+    chemistry.splice(randomchemQ, 1);
+    if(chemistry.length == 0) {
+      //repopulate array
+      chemistryfull.forEach(question => {
+        chemistry.push(question);
+      });
+    }
+
+    showHelp();
 
 
 }
