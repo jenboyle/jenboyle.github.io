@@ -66,14 +66,18 @@ var chemistryfull = [{'question':'What is meant by the term element?', 'answer':
                  {'question':'What is an atom?', 'answer': 'CONTAINS(PARTICLE)', 'help': 'An atom is a tiny particle'},
                  {'question':'Who created the periodic table of elements?', 'answer': 'CONTAINS(DMITRI)ANDCONTAINS(MENDELEEV)', 'help': 'Dmitri Mendeleev from Russia created the periodic table of elements'},
                  {'question':'Who discovered radium, polenium and treatments for cancer?', 'answer': 'CONTAINS(MARIE)ANDCONTAINS(CURIE)', 'help': 'Marie Curie from Poland and France discovered these'},
-                 {'question':'Who discovered synthetic fibers?', 'answer': 'CONTAINS(STEPHANIE)ANDCONTAINS(KWOLEK)', 'help': 'Stephanie Louise Kwolek discovered synthetic fibers'}];
+                 {'question':'Who discovered synthetic fibers?', 'answer': 'CONTAINS(STEPHANIE)ANDCONTAINS(KWOLEK)', 'help': 'Stephanie Louise Kwolek discovered synthetic fibers'},
+                 {'question':'In this Oxygen symbol, what does the number 8 represent?', 'answer': 'CONTAINS(ATOMIC)ANDCONTAINS(NUMBER)', 'help': 'This is the atomic number', 'img': 'resources/images/games/school/chemistry/oxygen.png'},
+                 {'question':'In this Oxygen symbol, what does the number 15.999 represent?', 'answer': 'CONTAINS(MASS)', 'help': 'This is the mass number', 'img': 'resources/images/games/school/chemistry/oxygen.png'}];
 
 var chemistry = [{'question':'What is meant by the term element?', 'answer': 'CONTAINS(ATOM)ANDCONTAINSOR(ONE_1)', 'help': 'An element is a substance made up of one atom'},
                  {'question':'What is Chemistry?', 'answer': 'CONTAINS(MATTER)', 'help': 'Chemistry is the study of matter'},
                  {'question':'What is an atom?', 'answer': 'CONTAINS(PARTICLE)', 'help': 'An atom is a tiny particle'},
                  {'question':'Who created the periodic table of elements?', 'answer': 'CONTAINS(DMITRI)ANDCONTAINS(MENDELEEV)', 'help': 'Dmitri Mendeleev created the periodic table of elements'},
                  {'question':'Who discovered radium, polenium and treatments for cancer?', 'answer': 'CONTAINS(MARIE)ANDCONTAINS(CURIE)', 'help': 'Marie Curie from Poland and France discovered these'},
-                 {'question':'Who discovered synthetic fibers?', 'answer': 'CONTAINS(STEPHANIE)ANDCONTAINS(KWOLEK)', 'help': 'Stephanie Louise Kwolek discovered synthetic fibers'}];
+                 {'question':'Who discovered synthetic fibers?', 'answer': 'CONTAINS(STEPHANIE)ANDCONTAINS(KWOLEK)', 'help': 'Stephanie Louise Kwolek discovered synthetic fibers'},
+                 {'question':'In this Oxygen symbol, what does the number 8 represent?', 'answer': 'CONTAINS(ATOMIC)ANDCONTAINS(NUMBER)', 'help': 'This is the atomic number', 'img': 'resources/images/games/school/chemistry/oxygen.png'},
+                 {'question':'In this Oxygen symbol, what does the number 15.999 represent?', 'answer': 'CONTAINS(MASS)', 'help': 'This is the mass number', 'img': 'resources/images/games/school/chemistry/oxygen.png'}];
 
 var biologyfull = [{'question':'What is the nucleus?', 'answer': 'CONTAINS(CONTROL)', 'help': 'The nucleus controls all activities in the cell'},
                    {'question':'What are the 5 senses?', 'answer': 'CONTAINS(SIGHT)ANDCONTAINS(SMELL)ANDCONTAINSTHREE(HEAR)ANDCONTAINSFOUR(TASTE)ANDCONTAINSFIVE(TOUCH)', 'help': 'The 5 senses are Sight, Smell, Hearing, Taste and Touch'},
@@ -81,7 +85,19 @@ var biologyfull = [{'question':'What is the nucleus?', 'answer': 'CONTAINS(CONTR
                    {'question':'What is the job of a kidney?', 'answer': 'CONTAINS(CLEAN)ANDCONTAINS(BLOOD)', 'help': 'A kidneys job is to clean blood.'},
                    {'question':'What is the job of a heart?', 'answer': 'CONTAINS(PUMP)ANDCONTAINS(BLOOD)ANDCONTAINSTHREE(BODY)', 'help': 'A heart pumps blood around the body'},
                    {'question':'Name an Animal Organ', 'answer': 'ONEOF(KIDNEY_HEART_LUNGS_EYE_STOMACH_LIVER)', 'help': 'Examples of animal organs: Kidney, Heart, Lungs, Eye'},
-                   {'question':'Name a Plant Organ', 'answer': 'ONEOF(STEM_FLOWER_LEAF)', 'help': 'Examples of plant organs: Stem, Flower, Leaf'}];
+                   {'question':'Name a Plant Organ', 'answer': 'ONEOF(STEM_FLOWER_LEAF)', 'help': 'Examples of plant organs: Stem, Flower, Leaf'},
+                   {'question':'What does a nerve cell do?', 'answer': 'ONEOF(MESSAGE_SIGNAL_IMPULSE)', 'help': 'A nerve cell carries messages'},
+                   {'question':'What does a red blood cell do?', 'answer': 'CONTAINS(OXYGEN)', 'help': 'A red blood cell carries oxygen from the lungs to the body.'},
+                   {'question':'Why does a red blood cell have no nucleus?', 'answer': 'CONTAINS(HAEMOGLOBIN)', 'help': 'A red blood cell has no nucleus room for red haemoglobin to carry oxygen from lungs to the body.'},
+                   {'question':'What does a xylem cell do', 'answer': 'CONTAINS(WATER)', 'help': 'A xylem (plant) cell carries water from roots to the rest of the plant. Wall strengthened lignin'},
+                   {'question':'What does a sperm cell do?', 'answer': 'CONTAINS(SWIM)ANDCONTAINS(EGG)', 'help': 'A sperm cell swims to the egg'},
+                   {'question':'What characteristics does a sperm cell have?', 'answer': 'CONTAINS(TAIL)', 'help': 'A sperm cell has a tail'},
+                   {'question':'What characteristics does a red blood cell have?', 'answer': 'CONTAINS(FLAT)ANDCONTAINS(DISC)', 'help': 'A red blood cell is a flat disc'},
+                   {'question':'What characteristics does a nerve cell have?', 'answer': 'CONTAINS(WIRE)', 'help': 'A nerve cell is wire like'},
+                   {'question':'Name this cell', 'answer': 'CONTAINS(ANIMAL)', 'help': 'This is an animal cell', 'img': 'resources/images/games/school/biology/animalcell.png'},
+                   {'question':'Here is a cell, name it', 'answer': 'CONTAINS(PLANT)', 'help': 'This is a plant cell', 'img': 'resources/images/games/school/biology/plantcell.png'},
+                   {'question':'Name these three areas of the cell from top to bottom', 'answer': 'ORDER(CHLOROPLAST,VACUOLE,CELL WALL)', 'help': 'The labels in order are Chloroplast, Vacuole and Cell Wall', 'img': 'resources/images/games/school/biology/plantlabel.png', 'multi':'2_3'},
+                   {'question':'Name these three common areas of the cells from top to bottom', 'answer': 'ORDER(NUCLEUS,CYTOPLASM,CELL MEMBRANE)', 'help': 'The labels in order are Nucleus, Cytoplasm and Cell Membrane', 'img': 'resources/images/games/school/biology/animalandplant3common.png', 'multi':'2_3'}];
 
 var biology = [{'question':'What is the nucleus?', 'answer': 'CONTAINS(CONTROL)', 'help': 'The nucleus controls all activities in the cell'},
                                  {'question':'What are the 5 senses?', 'answer': 'CONTAINS(SIGHT)ANDCONTAINS(SMELL)ANDCONTAINSTHREE(HEAR)ANDCONTAINSFOUR(TASTE)ANDCONTAINSFIVE(TOUCH)', 'help': 'The 5 senses are Sight, Smell, Hearing, Taste and Touch'},
@@ -89,7 +105,27 @@ var biology = [{'question':'What is the nucleus?', 'answer': 'CONTAINS(CONTROL)'
                                  {'question':'What is the job of a kidney?', 'answer': 'CONTAINS(CLEAN)ANDCONTAINS(BLOOD)', 'help': 'A kidneys job is to clean blood.'},
                                  {'question':'What is the job of a heart?', 'answer': 'CONTAINS(PUMP)ANDCONTAINS(BLOOD)ANDCONTAINSTHREE(BODY)', 'help': 'A heart pumps blood around the body'},
                                  {'question':'Name an Animal Organ', 'answer': 'ONEOF(KIDNEY_HEART_LUNGS_EYE_STOMACH_LIVER)', 'help': 'Examples of animal organs: Kidney, Heart, Lungs, Eye'},
-                                 {'question':'Name a Plant Organ', 'answer': 'ONEOF(STEM_FLOWER_LEAF)', 'help': 'Examples of plant organs: Stem, Flower, Leaf'}];
+                                 {'question':'Name a Plant Organ', 'answer': 'ONEOF(STEM_FLOWER_LEAF)', 'help': 'Examples of plant organs: Stem, Flower, Leaf'},
+                                 {'question':'What does a nerve cell do?', 'answer': 'ONEOF(MESSAGE_SIGNAL_IMPULSE)', 'help': 'A nerve cell carries messages'},
+                                 {'question':'What does a red blood cell do?', 'answer': 'CONTAINS(OXYGEN)', 'help': 'A red blood cell carries oxygen from the lungs to the body.'},
+                                 {'question':'Why does a red blood cell have no nucleus?', 'answer': 'CONTAINS(HAEMOGLOBIN)', 'help': 'A red blood cell has no nucleus room for red haemoglobin to carry oxygen from lungs to the body.'},
+                                 {'question':'What does a xylem cell do', 'answer': 'CONTAINS(WATER)', 'help': 'A xylem (plant) cell carries water from roots to the rest of the plant. Wall strengthened lignin'},
+                                 {'question':'What does a sperm cell do?', 'answer': 'CONTAINS(SWIM)ANDCONTAINS(EGG)', 'help': 'A sperm cell swims to the egg'},
+                                 {'question':'What characteristics does a sperm cell have?', 'answer': 'CONTAINS(TAIL)', 'help': 'A sperm cell has a tail'},
+                                 {'question':'What characteristics does a red blood cell have?', 'answer': 'CONTAINS(FLAT)ANDCONTAINS(DISC)', 'help': 'A red blood cell is a flat disc'},
+                                 {'question':'What characteristics does a nerve cell have?', 'answer': 'CONTAINS(WIRE)', 'help': 'A nerve cell is wire like'},
+                                 {'question':'Name this cell', 'answer': 'CONTAINS(ANIMAL)', 'help': 'This is an animal cell', 'img': 'resources/images/games/school/biology/animalcell.png'},
+                                 {'question':'Here is a cell, name it', 'answer': 'CONTAINS(PLANT)', 'help': 'This is a plant cell', 'img': 'resources/images/games/school/biology/plantcell.png'},
+                                 {'question':'Name these three areas of the cell from top to bottom', 'answer': 'ORDER(CHLOROPLAST,VACUOLE,CELL WALL)', 'help': 'The labels in order are Chloroplast, Vacuole and Cell Wall', 'img': 'resources/images/games/school/biology/plantlabel.png', 'multi':'2_3'},
+                                 {'question':'Name these three common areas of the cells from top to bottom', 'answer': 'ORDER(NUCLEUS,CYTOPLASM,CELL MEMBRANE)', 'help': 'The labels in order are Nucleus, Cytoplasm and Cell Membrane', 'img': 'resources/images/games/school/biology/animalandplant3common.png', 'multi':'2_3'}];
+
+
+//input     animal cell
+
+//which of these is not a characteristic of life
+
+
+
 
 //[{'question':'What is the nucleus?', 'answer': 'CONTAINS(CONTROL)', 'help': 'The nucleus controls all activities in the cell'},
 //               {'question':'What are the 5 senses?', 'answer': 'CONTAINS(SIGHT)ANDCONTAINS(SMELL)ANDCONTAINSTHREE(HEAR)ANDCONTAINSFOUR(TASTE)ANDCONTAINSFIVE(TOUCH)', 'help': 'The 5 senses are Sight, Smell, Hearing, Taste and Touch'},
@@ -325,6 +361,28 @@ function checkAnswer(answerkey, answerselected, nextmethod) {
       correct = doesItContain;
     }
 
+    //ORDER(CHLOROPLAST,VACUOLE,CELL WALL)
+    var order = answerkey.indexOf('ORDER(');
+        if (order != -1){
+          var clause = answerkey.substring(order+6, answerkey.indexOf(')', order)).split(',');
+          console.log(clause);
+          var doesItContain = false;
+          var conditionsMet = true;
+          var ensureOrderlastStuAnsIndex = -1;
+          for(var i=0; i<clause.length; i++){
+            var stuAnsIndex = studentAnswer.indexOf(clause[i]);
+            if(stuAnsIndex != -1 && (stuAnsIndex > ensureOrderlastStuAnsIndex)) {
+              doesItContain = true;
+              ensureOrderlastStuAnsIndex = stuAnsIndex;
+            } else {
+              conditionsMet = false;
+            }
+          }
+          console.log('doesItContain' + doesItContain);
+          console.log('conditionsMet' + conditionsMet);
+          correct = doesItContain && conditionsMet;
+        }
+
     var andContainsOR = answerkey.indexOf('ANDCONTAINSOR(');
     if (andContainsOR != -1){
         var clause = answerkey.substring(andContainsOR+14, answerkey.indexOf(')', andContainsOR)).split('_');
@@ -532,6 +590,14 @@ function chemistryGame() {
 
     gamemain.appendChild(chemistryQuestion);
 
+    //optional image
+        if(chemistry[randomchemQ]['img'] != undefined) {
+            var img = document.createElement('img');
+            img.src = chemistry[randomchemQ]['img'];
+            img.className = 'notationimages';
+            gamemain.appendChild(img);
+        }
+
     schoolText = document.createElement("input");
     schoolText.type = 'text';
     schoolText.id = 'schoolText';
@@ -579,6 +645,15 @@ function biologyGame() {
     schoolQuestion.textContent = biology[randomQ]['question'];
 
     gamemain.appendChild(schoolQuestion);
+
+    //optional image
+    if(biology[randomQ]['img'] != undefined) {
+        var img = document.createElement('img');
+        img.src = biology[randomQ]['img'];
+        img.className = 'notationimages';
+        gamemain.appendChild(img);
+    }
+
 
     schoolText = document.createElement("input");
     schoolText.type = 'text';
