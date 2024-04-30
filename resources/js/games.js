@@ -148,8 +148,8 @@ var spanishfull = [{'question':'Hola ¿Cómo te llamas?', 'answer': 'SOMETHING()
 var spanish = [{'question':'Hola ¿Cómo te llamas?', 'answer': 'SOMETHING()', 'help': 'Hello, what is your name?'}];
 
 
-var technologyfull = [{'question':'What colour and shape is a mandatory sign?', 'answer': 'CONTAINS(BLUE)ANDCONTAINS(CIRCLE)', 'help': 'A mandatory sign identifies a particular course of action that must be taken. They are represented in white on a solid blue circle.'},
-                                       {'question':'What is a mandatory sign?', 'answer': 'CONTAINS(ACTION)', 'help': 'A mandatory sign is represented in white on a solid blue circle.'},
+var technologyfull = [{'question':'What colour and shape is a mandatory sign?', 'answer': 'CONTAINS(BLUE)ANDCONTAINS(CIRCLE)', 'help': 'A mandatory sign is represented in white on a solid blue circle.'},
+                                       {'question':'What is a mandatory sign?', 'answer': 'CONTAINS(ACTION)', 'help': 'A mandatory sign identifies a particular course of action that must be taken.'},
                                        {'question':'What does this mandatory sign mean?', 'answer': 'CONTAINS(HEAD)', 'help': 'Head protection must be worn', 'img': 'resources/images/games/school/technology/head.png'},
                                        {'question':'What does this must do sign mean?', 'answer': 'CONTAINS(HEAD)ANDCONTAINS(EYE)', 'help': 'Head and eye protection must be worn', 'img': 'resources/images/games/school/technology/headandeye.png'},
                                        {'question':'What does this prohibition sign mean?', 'answer': 'CONTAINS(NO)ANDCONTAINS(SMOKING)', 'help': 'No smoking', 'img': 'resources/images/games/school/technology/nosmoking.png'},
@@ -173,8 +173,8 @@ var technologyfull = [{'question':'What colour and shape is a mandatory sign?', 
                                        {'question':'What is this sign?', 'answer': 'ONEOF(HAZARD WARNING_CAUTION', 'help': 'This is a hazard warning sign', 'img': 'resources/images/games/school/technology/hazard.png'}];
 
 
-var technology = [{'question':'What colour and shape is a mandatory sign?', 'answer': 'CONTAINS(BLUE)ANDCONTAINS(CIRCLE)', 'help': 'A mandatory sign identifies a particular course of action that must be taken. They are represented in white on a solid blue circle.'},
-                  {'question':'What is a mandatory sign?', 'answer': 'CONTAINS(ACTION)', 'help': 'A mandatory sign is represented in white on a solid blue circle.'},
+var technology = [{'question':'What colour and shape is a mandatory sign?', 'answer': 'CONTAINS(BLUE)ANDCONTAINS(CIRCLE)', 'help': 'A mandatory sign is represented in white on a solid blue circle.'},
+                  {'question':'What is a mandatory sign?', 'answer': 'CONTAINS(ACTION)', 'help': 'A mandatory sign identifies a particular course of action that must be taken.'},
                   {'question':'What does this mandatory sign mean?', 'answer': 'CONTAINS(HEAD)', 'help': 'Head protection must be worn', 'img': 'resources/images/games/school/technology/head.png'},
                   {'question':'What does this must do sign mean?', 'answer': 'CONTAINS(HEAD)ANDCONTAINS(EYE)', 'help': 'Head and eye protection must be worn', 'img': 'resources/images/games/school/technology/headandeye.png'},
                   {'question':'What does this prohibition sign mean?', 'answer': 'CONTAINS(NO)ANDCONTAINS(SMOKING)', 'help': 'No smoking', 'img': 'resources/images/games/school/technology/nosmoking.png'},
