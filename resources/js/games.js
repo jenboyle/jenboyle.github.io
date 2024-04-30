@@ -157,10 +157,22 @@ var technologyfull = [{'question':'What colour and shape is a mandatory sign?', 
                                        {'question':'What is a prohibition sign?', 'answer': 'CONTAINS(FORBIDDEN)', 'help': 'A prohibition sign indicates behaviour that is forbidden.'},
                                        {'question':'What does this safe condition sign mean?', 'answer': 'CONTAINS(FIRST)ANDCONTAINS(AID)', 'help': 'First Aid', 'img': 'resources/images/games/school/technology/firstaid.png'},
                                        {'question':'What is a safe condition sign?', 'answer': 'CONTAINS(SAFETY)', 'help': 'A safe condition sign indicates the presence of a safety facility'},
-                                       {'question':'What colour is a safe condition sign?', 'answer': 'CONTAINS(GREEN)ANDCONTAINS(SQUARE)', 'help': 'A safe condition sign is represented in white on a solid green square'},
+                                       {'question':'What colour and shape is a safe condition sign?', 'answer': 'CONTAINS(GREEN)ANDCONTAINS(SQUARE)', 'help': 'A safe condition sign is represented in white on a solid green square'},
                                        {'question':'What is a hazard sign?', 'answer': 'CONTAINS(HARM)', 'help': 'A hazard sign indicates a specific source of potential harm'},
-                                       {'question':'What colour and shape is a safe condition sign?', 'answer': 'CONTAINS(YELLOW)ANDCONTAINS(TRIANGLE)', 'help': 'Hazard signs are printed in black on a yellow background and are triangle shape'}
-                                                         ];
+                                       {'question':'What colour and shape is a hazard sign?', 'answer': 'CONTAINS(YELLOW)ANDCONTAINS(TRIANGLE)', 'help': 'Hazard signs are printed in black on a yellow background and are triangle shape'},
+                                       {'question':'What does this hazard sign mean?', 'answer': 'CONTAINS(HIGH)ANDCONTAINS(VOLTAGE)', 'help': 'Danger high voltage', 'img': 'resources/images/games/school/technology/highvoltage.png'},
+                                       {'question':'What does this safety sign mean?', 'answer': 'CONTAINS(EMERGENCY)ANDCONTAINS(STOP)ANDCONTAINSTHREE(BUTTON)', 'help': 'Emergency stop button', 'img': 'resources/images/games/school/technology/emergencystopbutton.png'},
+                                       {'question':'What does this forbidden behaviour mean?', 'answer': 'CONTAINS(NO)ANDCONTAINS(RUNNING)', 'help': 'No running', 'img': 'resources/images/games/school/technology/norunning.png'},
+                                       {'question':'What does this prohibited behaviour?', 'answer': 'CONTAINS(NO)ANDCONTAINS(EATING)', 'help': 'No eating', 'img': 'resources/images/games/school/technology/noeating.png'},
+                                       {'question':'What does this source of potential harm sign mean?', 'answer': 'CONTAINS(RISK)ANDCONTAINS(EXPLOSION)', 'help': 'Risk of explosion', 'img': 'resources/images/games/school/technology/riskofexplosion.png'},
+                                       {'question':'What safety facility is present?', 'answer': 'CONTAINS(EMERGENCY)ANDCONTAINS(EYE)ANDCONTAINSTHREE(WASH)', 'help': 'Emergency eye wash', 'img': 'resources/images/games/school/technology/emergencyeyewash.png'},
+                                       {'question':'What course of action must be taken?', 'answer': 'CONTAINS(WEAR)ANDCONTAINS(PROTECTIVE)ANDCONTAINSTHREE(GLOVES)', 'help': 'Wear protective gloves', 'img': 'resources/images/games/school/technology/wearprotectivegloves.png'},
+                                       {'question':'What is mandatory?', 'answer': 'CONTAINS(WEAR)ANDCONTAINS(GOGGLES)', 'help': 'Wear protective goggles', 'img': 'resources/images/games/school/technology/weargoggles.png'},
+                                       {'question':'What is the harm?', 'answer': 'CONTAINS(TOXIC)', 'help': 'This hazard sign means toxic', 'img': 'resources/images/games/school/technology/toxic.png'},
+                                       {'question':'What is the hazard?', 'answer': 'CONTAINS(CORROSIVE)', 'help': 'This hazard sign means corrosive', 'img': 'resources/images/games/school/technology/corrosive.png'},
+                                       {'question':'What is this sign?', 'answer': 'ONEOF(HAZARD WARNING_CAUTION', 'help': 'This is a hazard warning sign', 'img': 'resources/images/games/school/technology/hazard.png'}];
+
+
 var technology = [{'question':'What colour and shape is a mandatory sign?', 'answer': 'CONTAINS(BLUE)ANDCONTAINS(CIRCLE)', 'help': 'A mandatory sign identifies a particular course of action that must be taken. They are represented in white on a solid blue circle.'},
                   {'question':'What is a mandatory sign?', 'answer': 'CONTAINS(ACTION)', 'help': 'A mandatory sign is represented in white on a solid blue circle.'},
                   {'question':'What does this mandatory sign mean?', 'answer': 'CONTAINS(HEAD)', 'help': 'Head protection must be worn', 'img': 'resources/images/games/school/technology/head.png'},
@@ -170,10 +182,20 @@ var technology = [{'question':'What colour and shape is a mandatory sign?', 'ans
                   {'question':'What is a prohibition sign?', 'answer': 'CONTAINS(FORBIDDEN)', 'help': 'A prohibition sign indicates behaviour that is forbidden.'},
                   {'question':'What does this safe condition sign mean?', 'answer': 'CONTAINS(FIRST)ANDCONTAINS(AID)', 'help': 'First Aid', 'img': 'resources/images/games/school/technology/firstaid.png'},
                   {'question':'What is a safe condition sign?', 'answer': 'CONTAINS(SAFETY)', 'help': 'A safe condition sign indicates the presence of a safety facility'},
-                  {'question':'What colour is a safe condition sign?', 'answer': 'CONTAINS(GREEN)ANDCONTAINS(SQUARE)', 'help': 'A safe condition sign is represented in white on a solid green square'},
+                  {'question':'What colour and shape is a safe condition sign?', 'answer': 'CONTAINS(GREEN)ANDCONTAINS(SQUARE)', 'help': 'A safe condition sign is represented in white on a solid green square'},
                   {'question':'What is a hazard sign?', 'answer': 'CONTAINS(HARM)', 'help': 'A hazard sign indicates a specific source of potential harm'},
-                  {'question':'What colour and shape is a safe condition sign?', 'answer': 'CONTAINS(YELLOW)ANDCONTAINS(TRIANGLE)', 'help': 'Hazard signs are printed in black on a yellow background and are triangle shape'}
-                                    ];
+                  {'question':'What colour and shape is a hazard sign?', 'answer': 'CONTAINS(YELLOW)ANDCONTAINS(TRIANGLE)', 'help': 'Hazard signs are printed in black on a yellow background and are triangle shape'},
+                  {'question':'What does this hazard sign mean?', 'answer': 'CONTAINS(HIGH)ANDCONTAINS(VOLTAGE)', 'help': 'Danger high voltage', 'img': 'resources/images/games/school/technology/highvoltage.png'},
+                  {'question':'What does this safety sign mean?', 'answer': 'CONTAINS(EMERGENCY)ANDCONTAINS(STOP)ANDCONTAINSTHREE(BUTTON)', 'help': 'Emergency stop button', 'img': 'resources/images/games/school/technology/emergencystopbutton.png'},
+                  {'question':'What does this forbidden behaviour mean?', 'answer': 'CONTAINS(NO)ANDCONTAINS(RUNNING)', 'help': 'No running', 'img': 'resources/images/games/school/technology/norunning.png'},
+                  {'question':'What does this prohibited behaviour?', 'answer': 'CONTAINS(NO)ANDCONTAINS(EATING)', 'help': 'No eating', 'img': 'resources/images/games/school/technology/noeating.png'},
+                  {'question':'What does this source of potential harm sign mean?', 'answer': 'CONTAINS(RISK)ANDCONTAINS(EXPLOSION)', 'help': 'Risk of explosion', 'img': 'resources/images/games/school/technology/riskofexplosion.png'},
+                  {'question':'What safety facility is present?', 'answer': 'CONTAINS(EMERGENCY)ANDCONTAINS(EYE)ANDCONTAINSTHREE(WASH)', 'help': 'Emergency eye wash', 'img': 'resources/images/games/school/technology/emergencyeyewash.png'},
+                  {'question':'What course of action must be taken?', 'answer': 'CONTAINS(WEAR)ANDCONTAINS(PROTECTIVE)ANDCONTAINSTHREE(GLOVES)', 'help': 'Wear protective gloves', 'img': 'resources/images/games/school/technology/wearprotectivegloves.png'},
+                  {'question':'What is mandatory?', 'answer': 'CONTAINS(WEAR)ANDCONTAINS(GOGGLES)', 'help': 'Wear protective goggles', 'img': 'resources/images/games/school/technology/weargoggles.png'},
+                  {'question':'What is the harm?', 'answer': 'CONTAINS(TOXIC)', 'help': 'This hazard sign means toxic', 'img': 'resources/images/games/school/technology/toxic.png'},
+                  {'question':'What is the hazard?', 'answer': 'CONTAINS(CORROSIVE)', 'help': 'This hazard sign means corrosive', 'img': 'resources/images/games/school/technology/corrosive.png'},
+                  {'question':'What is this sign?', 'answer': 'ONEOF(HAZARD WARNING_CAUTION', 'help': 'This is a hazard warning sign', 'img': 'resources/images/games/school/technology/hazard.png'}];
 
 
 
