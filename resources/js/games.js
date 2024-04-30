@@ -14,7 +14,8 @@ var nextSelectionArr = [
                         {'id':'school','games':
                                             [
                                             {'gameid1':'chemistry', 'gametext1':'Chemistry', 'gamemethod1':'chemistryGame();'},
-                                            {'gameid2':'biology', 'gametext2':'Biology', 'gamemethod2':'biologyGame();'}
+                                            {'gameid2':'biology', 'gametext2':'Biology', 'gamemethod2':'biologyGame();'},
+                                            {'gameid3':'spanish', 'gametext3':'Spanish', 'gamemethod3':'spanishGame();'}
                                             ]
                         }
                         ];
@@ -68,7 +69,17 @@ var chemistryfull = [{'question':'What is meant by the term element?', 'answer':
                  {'question':'Who discovered radium, polenium and treatments for cancer?', 'answer': 'CONTAINS(MARIE)ANDCONTAINS(CURIE)', 'help': 'Marie Curie from Poland and France discovered these'},
                  {'question':'Who discovered synthetic fibers?', 'answer': 'CONTAINS(STEPHANIE)ANDCONTAINS(KWOLEK)', 'help': 'Stephanie Louise Kwolek discovered synthetic fibers'},
                  {'question':'In this Oxygen symbol, what does the number 8 represent?', 'answer': 'CONTAINS(ATOMIC)ANDCONTAINS(NUMBER)', 'help': 'This is the atomic number', 'img': 'resources/images/games/school/chemistry/oxygen.png'},
-                 {'question':'In this Oxygen symbol, what does the number 15.999 represent?', 'answer': 'CONTAINS(MASS)', 'help': 'This is the mass number', 'img': 'resources/images/games/school/chemistry/oxygen.png'}];
+                 {'question':'In this Oxygen symbol, what does the number 15.999 represent?', 'answer': 'CONTAINS(MASS)', 'help': 'This is the mass number', 'img': 'resources/images/games/school/chemistry/oxygen.png'},
+                 {'question':"Give two features of Mendeleev's periodic table", 'answer': 'TWOOF(INCREASING ATOMIC MASS_NO NOBLE GASES_GAPS_SEPARATE BLOCK)', 'help': '1. Increasing atomic mass, 2. No noble gases not discovered, 3. Gaps for undiscovered, 4. Separate block transition metals'},
+                 {'question':"Give two features of the modern periodic table", 'answer': 'TWOOF(INCREASING ATOMIC NUMBER_NOBLE GASES_NO GAPS_GROUP)', 'help': '1. Increasing atomic number, 2. Noble gases present, 3. No gaps, 4. Separate block transition metals group II and group III'},
+                 {'question':"Is a mixture hard or easy to separate?", 'answer': 'CONTAINS(EASY)', 'help': 'A mixture is easy to separate by filtering and evaporation'},
+                 {'question':'Identify this hazard symbol?', 'answer': 'CONTAINS(EXPLOSIVE)', 'help': 'This is an explosive hazard symbol', 'img': 'resources/images/games/school/chemistry/explosive.jpg'},
+                 {'question':'What is this hazard symbol?', 'answer': 'CONTAINS(FLAMMABLE)', 'help': 'This is a flammable hazard symbol', 'img': 'resources/images/games/school/chemistry/flammable.jpg'},
+                 {'question':'Name this hazard symbol', 'answer': 'CONTAINS(CAUTION)', 'help': 'This is a caution hazard symbol', 'img': 'resources/images/games/school/chemistry/caution.jpg'},
+                 {'question':'Name this apparatus to find the temperature of a liquid', 'answer': 'CONTAINS(THERMOMETER)', 'help': 'This is a thermometer', 'img': 'resources/images/games/school/chemistry/thermometer.jpg'},
+                 {'question':'You would use this to find the mass of an object', 'answer': 'CONTAINS(TOP PAN BALANCE)', 'help': 'This is a top pan balance', 'img': 'resources/images/games/school/chemistry/toppanbalance.jpg'},
+                 {'question':'What is this apparatus?', 'answer': 'CONTAINS(TEST TUBE HOLDER)', 'help': 'This is a test tube holder', 'img': 'resources/images/games/school/chemistry/testtubeholder.jpg'},
+                 {'question':'Name this apparatus?', 'answer': 'CONTAINS(TRIPOD)', 'help': 'This is a tripod', 'img': 'resources/images/games/school/chemistry/tripod.jpg'}];
 
 var chemistry = [{'question':'What is meant by the term element?', 'answer': 'CONTAINS(ATOM)ANDCONTAINSOR(ONE_1)', 'help': 'An element is a substance made up of one atom'},
                  {'question':'What is Chemistry?', 'answer': 'CONTAINS(MATTER)', 'help': 'Chemistry is the study of matter'},
@@ -77,7 +88,17 @@ var chemistry = [{'question':'What is meant by the term element?', 'answer': 'CO
                  {'question':'Who discovered radium, polenium and treatments for cancer?', 'answer': 'CONTAINS(MARIE)ANDCONTAINS(CURIE)', 'help': 'Marie Curie from Poland and France discovered these'},
                  {'question':'Who discovered synthetic fibers?', 'answer': 'CONTAINS(STEPHANIE)ANDCONTAINS(KWOLEK)', 'help': 'Stephanie Louise Kwolek discovered synthetic fibers'},
                  {'question':'In this Oxygen symbol, what does the number 8 represent?', 'answer': 'CONTAINS(ATOMIC)ANDCONTAINS(NUMBER)', 'help': 'This is the atomic number', 'img': 'resources/images/games/school/chemistry/oxygen.png'},
-                 {'question':'In this Oxygen symbol, what does the number 15.999 represent?', 'answer': 'CONTAINS(MASS)', 'help': 'This is the mass number', 'img': 'resources/images/games/school/chemistry/oxygen.png'}];
+                 {'question':'In this Oxygen symbol, what does the number 15.999 represent?', 'answer': 'CONTAINS(MASS)', 'help': 'This is the mass number', 'img': 'resources/images/games/school/chemistry/oxygen.png'},
+                 {'question':"Give two features of Mendeleev's periodic table", 'answer': 'TWOOF(INCREASING ATOMIC MASS_NO NOBLE GASES_GAPS_SEPARATE BLOCK)', 'help': '1. Increasing atomic mass, 2. No noble gases not discovered, 3. Gaps for undiscovered, 4. Separate block transition metals'},
+                 {'question':"Give two features of the modern periodic table", 'answer': 'TWOOF(INCREASING ATOMIC NUMBER_NOBLE GASES_NO GAPS_GROUP)', 'help': '1. Increasing atomic number, 2. Noble gases present, 3. No gaps, 4. Separate block transition metals group II and group III'},
+                 {'question':"Is a mixture hard or easy to separate?", 'answer': 'CONTAINS(EASY)', 'help': 'A mixture is easy to separate by filtering and evaporation'},
+                 {'question':'Identify this hazard symbol?', 'answer': 'CONTAINS(EXPLOSIVE)', 'help': 'This is an explosive hazard symbol', 'img': 'resources/images/games/school/chemistry/explosive.jpg'},
+                 {'question':'What is this hazard symbol?', 'answer': 'CONTAINS(FLAMMABLE)', 'help': 'This is a flammable hazard symbol', 'img': 'resources/images/games/school/chemistry/flammable.jpg'},
+                 {'question':'Name this hazard symbol', 'answer': 'CONTAINS(CAUTION)', 'help': 'This is a caution hazard symbol', 'img': 'resources/images/games/school/chemistry/caution.jpg'},
+                 {'question':'Name this apparatus to find the temperature of a liquid', 'answer': 'CONTAINS(THERMOMETER)', 'help': 'This is a thermometer', 'img': 'resources/images/games/school/chemistry/thermometer.jpg'},
+                 {'question':'You would use this to find the mass of an object', 'answer': 'CONTAINS(TOP PAN BALANCE)', 'help': 'This is a top pan balance', 'img': 'resources/images/games/school/chemistry/toppanbalance.jpg'},
+                 {'question':'What is this apparatus?', 'answer': 'CONTAINS(TEST TUBE HOLDER)', 'help': 'This is a test tube holder', 'img': 'resources/images/games/school/chemistry/testtubeholder.jpg'},
+                 {'question':'Name this apparatus?', 'answer': 'CONTAINS(TRIPOD)', 'help': 'This is a tripod', 'img': 'resources/images/games/school/chemistry/tripod.jpg'}];
 
 var biologyfull = [{'question':'What is the nucleus?', 'answer': 'CONTAINS(CONTROL)', 'help': 'The nucleus controls all activities in the cell'},
                    {'question':'What are the 5 senses?', 'answer': 'CONTAINS(SIGHT)ANDCONTAINS(SMELL)ANDCONTAINSTHREE(HEAR)ANDCONTAINSFOUR(TASTE)ANDCONTAINSFIVE(TOUCH)', 'help': 'The 5 senses are Sight, Smell, Hearing, Taste and Touch'},
@@ -119,6 +140,11 @@ var biology = [{'question':'What is the nucleus?', 'answer': 'CONTAINS(CONTROL)'
                                  {'question':'Name these three areas of the cell from top to bottom', 'answer': 'ORDER(CHLOROPLAST,VACUOLE,CELL WALL)', 'help': 'The labels in order are Chloroplast, Vacuole and Cell Wall', 'img': 'resources/images/games/school/biology/plantlabel.png', 'multi':'2_3'},
                                  {'question':'Name these three common areas of the cells from top to bottom', 'answer': 'ORDER(NUCLEUS,CYTOPLASM,CELL MEMBRANE)', 'help': 'The labels in order are Nucleus, Cytoplasm and Cell Membrane', 'img': 'resources/images/games/school/biology/animalandplant3common.png', 'multi':'2_3'}];
 
+
+
+var spanishfull = [{'question':'Hola ¿Cómo te llamas?', 'answer': 'SOMETHING()', 'help': 'Hello, what is your name?'}];
+
+var spanish = [{'question':'Hola ¿Cómo te llamas?', 'answer': 'SOMETHING()', 'help': 'Hello, what is your name?'}];
 
 //input     animal cell
 
@@ -361,6 +387,21 @@ function checkAnswer(answerkey, answerselected, nextmethod) {
       correct = doesItContain;
     }
 
+    //TWOOF(INCREASING ATOMIC MASS_NO NOBLE GASES_GAPS_SEPARATE BLOCK)
+    var twoof = answerkey.indexOf('TWOOF(');
+        if (twoof != -1){
+          var clause = answerkey.substring(twoof+6, answerkey.indexOf(')', twoof)).split('_');
+          console.log(clause);
+          var doesItContain = 0;
+          for(var i=0; i<clause.length; i++){
+            if(studentAnswer.indexOf(clause[i]) != -1) {
+              doesItContain = doesItContain + 1;
+            }
+          }
+          console.log(doesItContain);
+          correct = (doesItContain > 1);
+        }
+
     //ORDER(CHLOROPLAST,VACUOLE,CELL WALL)
     var order = answerkey.indexOf('ORDER(');
         if (order != -1){
@@ -383,6 +424,13 @@ function checkAnswer(answerkey, answerselected, nextmethod) {
           correct = doesItContain && conditionsMet;
         }
 
+    var requiresAnyText = answerkey.indexOf('SOMETHING()');
+    if (requiresAnyText != -1){
+      if (studentAnswer.length > 0) {
+        correct = true;
+      }
+    }
+
     var andContainsOR = answerkey.indexOf('ANDCONTAINSOR(');
     if (andContainsOR != -1){
         var clause = answerkey.substring(andContainsOR+14, answerkey.indexOf(')', andContainsOR)).split('_');
@@ -395,6 +443,8 @@ function checkAnswer(answerkey, answerselected, nextmethod) {
         console.log(doesItContainOr);
         correct = correct && doesItContainOr;
     }
+
+
   answerkey = true;//this is true as question truth
   answerselected = correct;
 
@@ -679,6 +729,60 @@ function biologyGame() {
       //repopulate array
       biologyfull.forEach(question => {
         biology.push(question);
+      });
+    }
+
+    showHelp();
+}
+
+function spanishGame() {
+  clearGameSpace();
+  loadedGame = 'School_spanish';
+
+  var gamemain = document.getElementById('gamemain');
+  var gameanswers = document.getElementById('gameanswers');
+
+    //need a random 0-23 rel length 24
+    //var randomQ = Math.floor(Math.random() * biology.length);
+
+    var schoolQuestion = document.createElement("div");
+    schoolQuestion.textContent = spanish[0]['question'];
+
+    gamemain.appendChild(schoolQuestion);
+
+    //optional image
+    if(spanish[0]['img'] != undefined) {
+        var img = document.createElement('img');
+        img.src = spanish[0]['img'];
+        img.className = 'notationimages';
+        gamemain.appendChild(img);
+    }
+
+
+    schoolText = document.createElement("input");
+    schoolText.type = 'text';
+    schoolText.id = 'schoolText';
+    gamemain.appendChild(schoolText);
+
+    var schoolAnswer = document.getElementById('schoolText').value;
+
+    //for (var i=0; i<1; i++) {
+      var qbutton = document.createElement("button");
+      qbutton.className = 'answerbuttons';
+      //qbutton.id = 'relatives
+      qbutton.type = 'button';
+      qbutton.textContent = 'Check Answer';
+      var ansmethod = 'javascript:checkAnswer("' + spanish[0]['answer'] + '", "' + loadedGame + '","javascript:spanishGame()");';
+      qbutton.setAttribute('onclick',ansmethod);
+      gameanswers.appendChild(qbutton);
+    //}
+
+    //remove item
+    spanish.splice(randomQ, 1);
+    if(spanish.length == 0) {
+      //repopulate array
+      spanishfull.forEach(question => {
+        spanish.push(question);
       });
     }
 
