@@ -15,7 +15,8 @@ var nextSelectionArr = [
                                             [
                                             {'gameid1':'chemistry', 'gametext1':'Chemistry', 'gamemethod1':'chemistryGame();'},
                                             {'gameid2':'biology', 'gametext2':'Biology', 'gamemethod2':'biologyGame();'},
-                                            {'gameid3':'spanish', 'gametext3':'Spanish', 'gamemethod3':'spanishGame();'}
+                                            {'gameid3':'spanish', 'gametext3':'Spanish', 'gamemethod3':'spanishGame();'},
+                                            {'gameid4':'technology', 'gametext4':'Technology', 'gamemethod4':'technologyGame();'}
                                             ]
                         }
                         ];
@@ -146,6 +147,36 @@ var spanishfull = [{'question':'Hola ¿Cómo te llamas?', 'answer': 'SOMETHING()
 
 var spanish = [{'question':'Hola ¿Cómo te llamas?', 'answer': 'SOMETHING()', 'help': 'Hello, what is your name?'}];
 
+
+var technologyfull = [{'question':'What colour and shape is a mandatory sign?', 'answer': 'CONTAINS(BLUE)ANDCONTAINS(CIRCLE)', 'help': 'A mandatory sign identifies a particular course of action that must be taken. They are represented in white on a solid blue circle.'},
+                                       {'question':'What is a mandatory sign?', 'answer': 'CONTAINS(ACTION)', 'help': 'A mandatory sign is represented in white on a solid blue circle.'},
+                                       {'question':'What does this mandatory sign mean?', 'answer': 'CONTAINS(HEAD)', 'help': 'Head protection must be worn', 'img': 'resources/images/games/school/technology/head.png'},
+                                       {'question':'What does this must do sign mean?', 'answer': 'CONTAINS(HEAD)ANDCONTAINS(EYE)', 'help': 'Head and eye protection must be worn', 'img': 'resources/images/games/school/technology/headandeye.png'},
+                                       {'question':'What does this prohibition sign mean?', 'answer': 'CONTAINS(NO)ANDCONTAINS(SMOKING)', 'help': 'No smoking', 'img': 'resources/images/games/school/technology/nosmoking.png'},
+                                       {'question':'What colour and shape is a prohibition sign?', 'answer': 'CONTAINS(RED)ANDCONTAINS(CIRCLE)', 'help': 'A prohibited activity is represented in black on white with a red circle and diagonal stripe superimposed.'},
+                                       {'question':'What is a prohibition sign?', 'answer': 'CONTAINS(FORBIDDEN)', 'help': 'A prohibition sign indicates behaviour that is forbidden.'},
+                                       {'question':'What does this safe condition sign mean?', 'answer': 'CONTAINS(FIRST)ANDCONTAINS(AID)', 'help': 'First Aid', 'img': 'resources/images/games/school/technology/firstaid.png'},
+                                       {'question':'What is a safe condition sign?', 'answer': 'CONTAINS(SAFETY)', 'help': 'A safe condition sign indicates the presence of a safety facility'},
+                                       {'question':'What colour is a safe condition sign?', 'answer': 'CONTAINS(GREEN)ANDCONTAINS(SQUARE)', 'help': 'A safe condition sign is represented in white on a solid green square'},
+                                       {'question':'What is a hazard sign?', 'answer': 'CONTAINS(HARM)', 'help': 'A hazard sign indicates a specific source of potential harm'},
+                                       {'question':'What colour and shape is a safe condition sign?', 'answer': 'CONTAINS(YELLOW)ANDCONTAINS(TRIANGLE)', 'help': 'Hazard signs are printed in black on a yellow background and are triangle shape'}
+                                                         ];
+var technology = [{'question':'What colour and shape is a mandatory sign?', 'answer': 'CONTAINS(BLUE)ANDCONTAINS(CIRCLE)', 'help': 'A mandatory sign identifies a particular course of action that must be taken. They are represented in white on a solid blue circle.'},
+                  {'question':'What is a mandatory sign?', 'answer': 'CONTAINS(ACTION)', 'help': 'A mandatory sign is represented in white on a solid blue circle.'},
+                  {'question':'What does this mandatory sign mean?', 'answer': 'CONTAINS(HEAD)', 'help': 'Head protection must be worn', 'img': 'resources/images/games/school/technology/head.png'},
+                  {'question':'What does this must do sign mean?', 'answer': 'CONTAINS(HEAD)ANDCONTAINS(EYE)', 'help': 'Head and eye protection must be worn', 'img': 'resources/images/games/school/technology/headandeye.png'},
+                  {'question':'What does this prohibition sign mean?', 'answer': 'CONTAINS(NO)ANDCONTAINS(SMOKING)', 'help': 'No smoking', 'img': 'resources/images/games/school/technology/nosmoking.png'},
+                  {'question':'What colour and shape is a prohibition sign?', 'answer': 'CONTAINS(RED)ANDCONTAINS(CIRCLE)', 'help': 'A prohibited activity is represented in black on white with a red circle and diagonal stripe superimposed.'},
+                  {'question':'What is a prohibition sign?', 'answer': 'CONTAINS(FORBIDDEN)', 'help': 'A prohibition sign indicates behaviour that is forbidden.'},
+                  {'question':'What does this safe condition sign mean?', 'answer': 'CONTAINS(FIRST)ANDCONTAINS(AID)', 'help': 'First Aid', 'img': 'resources/images/games/school/technology/firstaid.png'},
+                  {'question':'What is a safe condition sign?', 'answer': 'CONTAINS(SAFETY)', 'help': 'A safe condition sign indicates the presence of a safety facility'},
+                  {'question':'What colour is a safe condition sign?', 'answer': 'CONTAINS(GREEN)ANDCONTAINS(SQUARE)', 'help': 'A safe condition sign is represented in white on a solid green square'},
+                  {'question':'What is a hazard sign?', 'answer': 'CONTAINS(HARM)', 'help': 'A hazard sign indicates a specific source of potential harm'},
+                  {'question':'What colour and shape is a safe condition sign?', 'answer': 'CONTAINS(YELLOW)ANDCONTAINS(TRIANGLE)', 'help': 'Hazard signs are printed in black on a yellow background and are triangle shape'}
+                                    ];
+
+
+
 //input     animal cell
 
 //which of these is not a characteristic of life
@@ -158,7 +189,7 @@ var spanish = [{'question':'Hola ¿Cómo te llamas?', 'answer': 'SOMETHING()', '
 //               {'question':'What is a tissue?', 'answer': 'CONTAINS(SIMILAR)ANDCONTAINS(CELLS)ANDCONTAINSTHREE(JOB)', 'help': 'A tissue is similar cells working together to do a job. eg nerve cells nerve tissue, eg xylem cells xylem tissue'}];
 var schoolText;
 
-var schoollist = {'chemistry': chemistryfull, 'biology': biologyfull};
+var schoollist = {'chemistry': chemistryfull, 'biology': biologyfull, 'spanish': spanishfull, 'technology': technologyfull};
 
 
 //var circleSigns = ['no sharps or flats', '1 flat', '1 sharp', '2 sharps', '3 sharps', '4 sharps'];
@@ -729,6 +760,60 @@ function biologyGame() {
       //repopulate array
       biologyfull.forEach(question => {
         biology.push(question);
+      });
+    }
+
+    showHelp();
+}
+
+function technologyGame() {
+  clearGameSpace();
+  loadedGame = 'School_technology';
+
+  var gamemain = document.getElementById('gamemain');
+  var gameanswers = document.getElementById('gameanswers');
+
+    //need a random 0-23 rel length 24
+    var randomQ = Math.floor(Math.random() * technology.length);
+
+    var schoolQuestion = document.createElement("div");
+    schoolQuestion.textContent = technology[randomQ]['question'];
+
+    gamemain.appendChild(schoolQuestion);
+
+    //optional image
+    if(technology[randomQ]['img'] != undefined) {
+        var img = document.createElement('img');
+        img.src = technology[randomQ]['img'];
+        img.className = 'notationimages';
+        gamemain.appendChild(img);
+    }
+
+
+    schoolText = document.createElement("input");
+    schoolText.type = 'text';
+    schoolText.id = 'schoolText';
+    gamemain.appendChild(schoolText);
+
+    var schoolAnswer = document.getElementById('schoolText').value;
+
+    //for (var i=0; i<1; i++) {
+      var qbutton = document.createElement("button");
+      qbutton.className = 'answerbuttons';
+      //qbutton.id = 'relatives
+      qbutton.type = 'button';
+      qbutton.textContent = 'Check Answer';
+      var ansmethod = 'javascript:checkAnswer("' + technology[randomQ]['answer'] + '", "' + loadedGame + '","javascript:technologyGame()");';
+      qbutton.setAttribute('onclick',ansmethod);
+      gameanswers.appendChild(qbutton);
+    //}
+
+    //remove item
+    technology.splice(randomQ, 1);
+    if(technology.length == 0) {
+      //repopulate array
+      technologyfull.forEach(question => {
+        technology.push(question);
       });
     }
 
