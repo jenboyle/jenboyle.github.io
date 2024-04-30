@@ -170,7 +170,7 @@ var technologyfull = [{'question':'What colour and shape is a mandatory sign?', 
                                        {'question':'What is mandatory?', 'answer': 'CONTAINS(WEAR)ANDCONTAINS(GOGGLES)', 'help': 'Wear protective goggles', 'img': 'resources/images/games/school/technology/weargoggles.png'},
                                        {'question':'What is the harm?', 'answer': 'CONTAINS(TOXIC)', 'help': 'This hazard sign means toxic', 'img': 'resources/images/games/school/technology/toxic.png'},
                                        {'question':'What is the hazard?', 'answer': 'CONTAINS(CORROSIVE)', 'help': 'This hazard sign means corrosive', 'img': 'resources/images/games/school/technology/corrosive.png'},
-                                       {'question':'What is this sign?', 'answer': 'ONEOF(HAZARD WARNING_CAUTION', 'help': 'This is a hazard warning sign', 'img': 'resources/images/games/school/technology/hazard.png'}];
+                                       {'question':'What is this sign?', 'answer': 'ONEOF(HAZARD WARNING_CAUTION)', 'help': 'This is a hazard warning sign', 'img': 'resources/images/games/school/technology/hazard.png'}];
 
 
 var technology = [{'question':'What colour and shape is a mandatory sign?', 'answer': 'CONTAINS(BLUE)ANDCONTAINS(CIRCLE)', 'help': 'A mandatory sign is represented in white on a solid blue circle.'},
@@ -195,7 +195,7 @@ var technology = [{'question':'What colour and shape is a mandatory sign?', 'ans
                   {'question':'What is mandatory?', 'answer': 'CONTAINS(WEAR)ANDCONTAINS(GOGGLES)', 'help': 'Wear protective goggles', 'img': 'resources/images/games/school/technology/weargoggles.png'},
                   {'question':'What is the harm?', 'answer': 'CONTAINS(TOXIC)', 'help': 'This hazard sign means toxic', 'img': 'resources/images/games/school/technology/toxic.png'},
                   {'question':'What is the hazard?', 'answer': 'CONTAINS(CORROSIVE)', 'help': 'This hazard sign means corrosive', 'img': 'resources/images/games/school/technology/corrosive.png'},
-                  {'question':'What is this sign?', 'answer': 'ONEOF(HAZARD WARNING_CAUTION', 'help': 'This is a hazard warning sign', 'img': 'resources/images/games/school/technology/hazard.png'}];
+                  {'question':'What is this sign?', 'answer': 'ONEOF(HAZARD WARNING_CAUTION)', 'help': 'This is a hazard warning sign', 'img': 'resources/images/games/school/technology/hazard.png'}];
 
 
 
