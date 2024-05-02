@@ -13,7 +13,7 @@ var nextSelectionArr = [
                         },
                         {'id':'school','games':
                                             [
-                                            {'gameid1':'chemistry', 'gametext1':'Chemistry', 'gamemethod1':'chemistryGame();'},
+                                            {'gameid1':'chemistry', 'gametext1':'Chemistry', 'gamemethod1':'chemistryGame("chemistry");'},
                                             {'gameid2':'biology', 'gametext2':'Biology', 'gamemethod2':'biologyGame();'},
                                             {'gameid3':'spanish', 'gametext3':'Spanish', 'gamemethod3':'spanishGame();'},
                                             {'gameid4':'technology', 'gametext4':'Technology', 'gamemethod4':'technologyGame();'}
@@ -170,7 +170,19 @@ var technologyfull = [{'question':'What colour and shape is a mandatory sign?', 
                                        {'question':'What is mandatory?', 'answer': 'CONTAINS(WEAR)ANDCONTAINS(GOGGLES)', 'help': 'Wear protective goggles', 'img': 'resources/images/games/school/technology/weargoggles.png'},
                                        {'question':'What is the harm?', 'answer': 'CONTAINS(TOXIC)', 'help': 'This hazard sign means toxic', 'img': 'resources/images/games/school/technology/toxic.png'},
                                        {'question':'What is the hazard?', 'answer': 'CONTAINS(CORROSIVE)', 'help': 'This hazard sign means corrosive', 'img': 'resources/images/games/school/technology/corrosive.png'},
-                                       {'question':'What is this sign?', 'answer': 'ONEOF(HAZARD WARNING_CAUTION)', 'help': 'This is a hazard warning sign', 'img': 'resources/images/games/school/technology/hazard.png'}];
+                                       {'question':'What is this sign?', 'answer': 'ONEOF(HAZARD WARNING_CAUTION)', 'help': 'This is a hazard warning sign', 'img': 'resources/images/games/school/technology/hazard.png'},
+                                       {'question':'What is a Ferrous metal?', 'answer': 'CONTAINS(IRON)', 'help': "A Ferrous metal contains iron as it's largest alloying element"},
+                                       {'question':'What is a Non-Ferrous metal?', 'answer': 'CONTAINS(IRON)ANDCONTAINS(NOT)', 'help': "A Non-Ferrous metal does not contains iron"},
+                                       {'question':'What is an alloy metal?', 'answer': 'CONTAINS(IRON)ANDCONTAINS(NOT)', 'help': "An Alloy metal is combined with other substances (alloying agents). An Alloy metal is strong, hard, durable and tough."},
+                                       {'question':'Why does an alloy metal have superior properties?', 'answer': 'CONTAINS(COMBINED)ANDCONTAINS(ALLOYING)', 'help': "An Alloy metal has superior properties because it is combined with other substances (alloying agents)."},
+                                       {'question':'What is a linear motion?', 'answer': 'CONTAINS(STRAIGHT)ANDCONTAINS(LINE)', 'help': "A linear motion is motion in a straight line in any direction."},
+                                       {'question':'What are 4 types of motion?', 'answer': 'CONTAINS(LINEAR)ANDCONTAINS(ROTARY)ANDCONTAINSTHREE(OSCILLATING)ANDCONTAINSFOUR(RECIPROCATING)', 'help': "Four types of motion are Linear, Reciprocating, Rotary, Oscillating."},
+                                       {'question':'What is a rotary motion?', 'answer': 'CONTAINS(ROUND)', 'help': "A rotary motion is motion round and round in either direction."},
+                                       {'question':'What is a reciprocating motion?', 'answer': 'CONTAINS(BACKWARDS)ANDCONTAINS(FORWARDS)ANDCONTAINSTHREE(STRAIGHT)ANDCONTAINSFOUR(LINE)', 'help': "A reciprocating motion is motion backwards and forwards in a straight line."},
+                                       {'question':'What is a oscillating motion?', 'answer': 'CONTAINS(SWING)ANDCONTAINS(BACK)ANDCONTAINSTHREE(FOR)ANDCONTAINSFOUR(ARC)', 'help': "An oscillating motion is motion back and forth in an arc."},
+                                       {'question':'How is rotary speed measured?', 'answer': 'CONTAINS(REVOLUTIONS)ANDCONTAINS(PER)ANDCONTAINSTHREE(MINUTE)', 'help': "Rotary speed is measured in revolutions per minute rpm."},
+                                       {'question':'How is rotary speed measured?', 'answer': 'CONTAINS(REVOLUTIONS)ANDCONTAINS(PER)ANDCONTAINSTHREE(MINUTE)', 'help': "Rotary speed is measured in revolutions per minute rpm."}];
+
 
 
 var technology = [{'question':'What colour and shape is a mandatory sign?', 'answer': 'CONTAINS(BLUE)ANDCONTAINS(CIRCLE)', 'help': 'A mandatory sign is represented in white on a solid blue circle.'},
@@ -195,7 +207,18 @@ var technology = [{'question':'What colour and shape is a mandatory sign?', 'ans
                   {'question':'What is mandatory?', 'answer': 'CONTAINS(WEAR)ANDCONTAINS(GOGGLES)', 'help': 'Wear protective goggles', 'img': 'resources/images/games/school/technology/weargoggles.png'},
                   {'question':'What is the harm?', 'answer': 'CONTAINS(TOXIC)', 'help': 'This hazard sign means toxic', 'img': 'resources/images/games/school/technology/toxic.png'},
                   {'question':'What is the hazard?', 'answer': 'CONTAINS(CORROSIVE)', 'help': 'This hazard sign means corrosive', 'img': 'resources/images/games/school/technology/corrosive.png'},
-                  {'question':'What is this sign?', 'answer': 'ONEOF(HAZARD WARNING_CAUTION)', 'help': 'This is a hazard warning sign', 'img': 'resources/images/games/school/technology/hazard.png'}];
+                  {'question':'What is this sign?', 'answer': 'ONEOF(HAZARD WARNING_CAUTION)', 'help': 'This is a hazard warning sign', 'img': 'resources/images/games/school/technology/hazard.png'},
+                  {'question':'What is a Ferrous metal?', 'answer': 'CONTAINS(IRON)', 'help': "A Ferrous metal contains iron as it's largest alloying element"},
+                                                         {'question':'What is a Non-Ferrous metal?', 'answer': 'CONTAINS(IRON)ANDCONTAINS(NOT)', 'help': "A Non-Ferrous metal does not contains iron"},
+                                                         {'question':'What is an alloy metal?', 'answer': 'CONTAINS(IRON)ANDCONTAINS(NOT)', 'help': "An Alloy metal is combined with other substances (alloying agents). An Alloy metal is strong, hard, durable and tough."},
+                                                         {'question':'Why does an alloy metal have superior properties?', 'answer': 'CONTAINS(COMBINED)ANDCONTAINS(ALLOYING)', 'help': "An Alloy metal has superior properties because it is combined with other substances (alloying agents)."},
+                                                         {'question':'What is a linear motion?', 'answer': 'CONTAINS(STRAIGHT)ANDCONTAINS(LINE)', 'help': "A linear motion is motion in a straight line in any direction."},
+                                                         {'question':'What are 4 types of motion?', 'answer': 'CONTAINS(LINEAR)ANDCONTAINS(ROTARY)ANDCONTAINSTHREE(OSCILLATING)ANDCONTAINSFOUR(RECIPROCATING)', 'help': "Four types of motion are Linear, Reciprocating, Rotary, Oscillating."},
+                                                         {'question':'What is a rotary motion?', 'answer': 'CONTAINS(ROUND)', 'help': "A rotary motion is motion round and round in either direction."},
+                                                         {'question':'What is a reciprocating motion?', 'answer': 'CONTAINS(BACKWARDS)ANDCONTAINS(FORWARDS)ANDCONTAINSTHREE(STRAIGHT)ANDCONTAINSFOUR(LINE)', 'help': "A reciprocating motion is motion backwards and forwards in a straight line."},
+                                                         {'question':'What is a oscillating motion?', 'answer': 'CONTAINS(SWING)ANDCONTAINS(BACK)ANDCONTAINSTHREE(FOR)ANDCONTAINSFOUR(ARC)', 'help': "An oscillating motion is motion back and forth in an arc."},
+                                                         {'question':'How is rotary speed measured?', 'answer': 'CONTAINS(REVOLUTIONS)ANDCONTAINS(PER)ANDCONTAINSTHREE(MINUTE)', 'help': "Rotary speed is measured in revolutions per minute rpm."},
+                                                         {'question':'How is rotary speed measured?', 'answer': 'CONTAINS(REVOLUTIONS)ANDCONTAINS(PER)ANDCONTAINSTHREE(MINUTE)', 'help': "Rotary speed is measured in revolutions per minute rpm."}];
 
 
 
@@ -211,6 +234,7 @@ var technology = [{'question':'What colour and shape is a mandatory sign?', 'ans
 //               {'question':'What is a tissue?', 'answer': 'CONTAINS(SIMILAR)ANDCONTAINS(CELLS)ANDCONTAINSTHREE(JOB)', 'help': 'A tissue is similar cells working together to do a job. eg nerve cells nerve tissue, eg xylem cells xylem tissue'}];
 var schoolText;
 
+var subjectlist = {'chemistry': chemistry, 'biology': biology, 'spanish': spanish, 'technology': technology};
 var schoollist = {'chemistry': chemistryfull, 'biology': biologyfull, 'spanish': spanishfull, 'technology': technologyfull};
 
 
@@ -895,3 +919,65 @@ function spanishGame() {
 
     showHelp();
 }
+
+
+
+
+//
+//function schoolGame(subject) {
+//  clearGameSpace();
+//  loadedGame = 'School_' + subject;
+//
+//  var gamemain = document.getElementById('gamemain');
+//  var gameanswers = document.getElementById('gameanswers');
+//
+//    //need a random 0-23 rel length 24
+//    //var randomQ = Math.floor(Math.random() * biology.length);
+//    var index = 0;
+//    if (subject.indexOf('spanish') == -1){
+//      index = Math.floor(Math.random() * subjectlist[subject].length);
+//    }
+//
+//    var schoolQuestion = document.createElement("div");
+//    schoolQuestion.textContent = subjectlist[subject][index]['question'];
+//
+//    gamemain.appendChild(schoolQuestion);
+//
+//    //optional image
+//    if(subjectlist[subject][index]['img'] != undefined) {
+//        var img = document.createElement('img');
+//        img.src = subjectlist[subject][index]['img'];
+//        img.className = 'notationimages';
+//        gamemain.appendChild(img);
+//    }
+//
+//
+//    schoolText = document.createElement("input");
+//    schoolText.type = 'text';
+//    schoolText.id = 'schoolText';
+//    gamemain.appendChild(schoolText);
+//
+//    var schoolAnswer = document.getElementById('schoolText').value;
+//
+//    //for (var i=0; i<1; i++) {
+//      var qbutton = document.createElement("button");
+//      qbutton.className = 'answerbuttons';
+//      //qbutton.id = 'relatives
+//      qbutton.type = 'button';
+//      qbutton.textContent = 'Check Answer';
+//      var ansmethod = 'javascript:checkAnswer("' + subjectlist[subject][index]['answer'] + '", "' + loadedGame + '","javascript:schoolGame(' + subject + ')");';
+//      qbutton.setAttribute('onclick',ansmethod);
+//      gameanswers.appendChild(qbutton);
+//    //}
+//
+//    //remove item
+//    subjectlist[subject].splice(index, 1);
+//    if(subjectlist[subject].length == 0) {
+//      //repopulate array
+//      schoollist[subject].forEach(question => {
+//        subjectlist[subject].push(question);
+//      });
+//    }
+//
+//    showHelp();
+//}
