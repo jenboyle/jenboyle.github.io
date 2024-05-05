@@ -83,6 +83,7 @@ var chemistryfull = [{'question':'What is meant by the term element?', 'answer':
                  {'question':'Identify this hazard symbol?', 'answer': 'CONTAINS(EXPLOSIVE)', 'help': 'This is an explosive hazard symbol', 'img': 'resources/images/games/school/chemistry/explosive.jpg'},
                  {'question':'What is this hazard symbol?', 'answer': 'CONTAINS(FLAMMABLE)', 'help': 'This is a flammable hazard symbol', 'img': 'resources/images/games/school/chemistry/flammable.jpg'},
                  {'question':'Name this hazard symbol', 'answer': 'CONTAINS(CAUTION)', 'help': 'This is a caution hazard symbol', 'img': 'resources/images/games/school/chemistry/caution.jpg'},
+                 {'question':'Name two reasons why we use hazard symbols?', 'answer': 'TWOOF(DANGER_UNDERST_EYE_INTERNAT)', 'help': '1. They warn us of danger, 2. They can be understood even if you cannot read, 3. They are internationally recognised, 4. They are eye-catching', 'img': 'resources/images/games/school/chemistry/caution.jpg'},
                  {'question':'Name this apparatus to find the temperature of a liquid', 'answer': 'CONTAINS(THERMOMETER)', 'help': 'This is a thermometer', 'img': 'resources/images/games/school/chemistry/thermometer.jpg'},
                  {'question':'You would use this to find the mass of an object', 'answer': 'CONTAINS(TOP PAN BALANCE)', 'help': 'This is a top pan balance', 'img': 'resources/images/games/school/chemistry/toppanbalance.jpg'},
                  {'question':'What is this apparatus?', 'answer': 'CONTAINS(TEST TUBE HOLDER)', 'help': 'This is a test tube holder', 'img': 'resources/images/games/school/chemistry/testtubeholder.jpg'},
@@ -99,10 +100,16 @@ var chemistryfull = [{'question':'What is meant by the term element?', 'answer':
                  {'question':"What is group I on the periodic table called?", 'answer': 'CONTAINS(ALKALI)ANDCONTAINS(METALS)', 'help': 'Group I Alkali metals (very reactive metals)'},
                  {'question':"What is group VII on the periodic table called for the label in pink on the yellow group?", 'answer': 'CONTAINS(HALOGEN)', 'help': 'Group VII Halogens (reactive non metals)', 'img': 'resources/images/games/school/chemistry/periodic_full_sections_halogens.png'},
                  {'question':"What is group 0 on the periodic table called for the label in pink on the last group?", 'answer': 'CONTAINS(NOBLE)', 'help': 'Group 0 Noble gases (unreactive gases)', 'img': 'resources/images/games/school/chemistry/periodic_noble.png'},
-                                  ];
+                 {'question':"Who invented the bunsen burner and the zinc-carbon battery?", 'answer': 'CONTAINS(ROBERT)ANDCONTAINS(BUNSEN)', 'help': 'Robert Bunsen', 'img': 'resources/images/games/school/chemistry/bunsen.png'},
+                 {'question':"PSTART1To stop it falling over, the Bunsen burner has a heavy INSERTANSWER1PSTART2Gas comes into the Bunsen burner through a INSERTANSWER2PSTART3To help the gas to burn, some air can enter through the INSERTANSWER3PSTART4You can change the amount of air you let in by turning the INSERTANSWER4PSTART5The mixture of gas and air rises up the INSERTANSWER5",
+                             'answer': 'INSERTANSWER1(BASE)INSERTANSWER2(RUBBER TUBE)INSERTANSWER3(AIR HOLE)INSERTANSWER4(COLLAR)INSERTANSWER4(BARREL)', 'help': 'Fill in the missing words from this word list: rubber tube, base, barrel, collar, air hole', 'img': 'resources/images/games/school/chemistry/bunsen.png', 'multiquestion': 5},
+
+                                 ];
 
 //test
-//chemistryfull = [{'question':"What is group 0 on the periodic table called for the label in pink on the last group?", 'answer': 'CONTAINS(NOBLE)', 'help': 'Group 0 Noble gases (unreactive gases)', 'img': 'resources/images/games/school/chemistry/periodic_noble.png'},
+//chemistryfull = [{'question':"PSTART1To stop it falling over, the Bunsen burner has a heavy INSERTANSWER1PSTART2Gas comes into the Bunsen burner through a INSERTANSWER2PSTART3To help the gas to burn, some air can enter through the INSERTANSWER3PSTART4You can change the amount of air you let in by turning the INSERTANSWER4PSTART5The mixture of gas and air rises up the INSERTANSWER5",
+//                                              'answer': 'INSERTANSWER1(BASE)INSERTANSWER2(RUBBER TUBE)INSERTANSWER3(AIR HOLE)INSERTANSWER4(COLLAR)INSERTANSWER4(BARREL)', 'help': 'Fill in the missing words from this word list: rubber tube, base, barrel, collar, air hole', 'img': 'resources/images/games/school/chemistry/bunsen.png', 'multiquestion': 5},
+//
 //];
 
 var chemistry = [];
@@ -142,7 +149,22 @@ var biologyfull = [{'question':'What is the nucleus?', 'answer': 'CONTAINS(CONTR
                    {'question':'What does a plant stem do?', 'answer': 'CONTAINS(HOLDS)ANDCONTAINS(LEAVES)', 'help': 'The stem holds up leaves'},
                    {'question':'What does a plant flower do?', 'answer': 'CONTAINS(REPRODUCTION)', 'help': 'The flowers job is reproduction'},
                    {'question':'What do plant roots do?', 'answer': 'CONTAINS(WATER)', 'help': 'The roots take in water'},
-                   {'question':'What does a plant leaf do?', 'answer': 'CONTAINS(FOOD)', 'help': 'The leaf makes food for the plant'}];
+                   {'question':'What does a plant leaf do?', 'answer': 'CONTAINS(FOOD)', 'help': 'The leaf makes food for the plant'},
+                   {'question':"In this picture of the brain, what is coloured in green and what is it's purpose?", 'answer': 'CONTAINS(BRAIN)ANDCONTAINS(STEM)', 'help': 'This is the brain stem: In charge of all functions to stay alive eg breathing, circulating blood', 'img': 'resources/images/games/school/biology/brain.jpg'},
+                   {'question':"In this picture of the brain, what is coloured in yellow? and what is it's purpose?", 'answer': 'ONEOF(CEREBRUM_CEREBRAL CORTEX)', 'help': 'This is the cerebrum OR cerebral cortex, thinking part of brain, controls voluntary muscles', 'img': 'resources/images/games/school/biology/brain.jpg'},
+                   {'question':"In this picture of the brain, what is coloured in blue and what is it's purpose?", 'answer': 'CONTAINS(PITUITARY)ANDCONTAINS(HORMONES)', 'help': 'This is the pituitary gland it controls hormones', 'img': 'resources/images/games/school/biology/brain.jpg'},
+                   {'question':"In this picture of the brain, what is coloured in orange and what is it's purpose?", 'answer': 'CONTAINS(THALAMUS)ANDCONTAINS(TEMPERATURE)', 'help': 'This is the thalamus or hypothalamus: it controls the temperature of your body', 'img': 'resources/images/games/school/biology/brain.jpg'},
+                   {'question':"In this picture of the brain, what is coloured in red  and what is it's purpose?", 'answer': 'CONTAINS(CEREBELLUM)ANDCONTAINS(BALANCE)', 'help': 'This is the cerebellum: controls balance, movement, coordination, muscles', 'img': 'resources/images/games/school/biology/brain.jpg'},
+                   ];
+
+
+//test
+//biologyfull = [{'question':"In this picture of the brain, what is coloured in green and what is it's purpose?", 'answer': 'CONTAINS(BRAIN)ANDCONTAINS(STEM)', 'help': 'This is the brain stem: In charge of all functions to stay alive eg breathing, circulating blood', 'img': 'resources/images/games/school/biology/brain.jpg'},
+//               {'question':"In this picture of the brain, what is coloured in yellow? and what is it's purpose?", 'answer': 'ONEOF(CEREBRUM_CEREBRAL CORTEX)', 'help': 'This is the cerebrum OR cerebral cortex, thinking part of brain, controls voluntary muscles', 'img': 'resources/images/games/school/biology/brain.jpg'},
+//               {'question':"In this picture of the brain, what is coloured in blue and what is it's purpose?", 'answer': 'CONTAINS(PITUITARY)ANDCONTAINS(HORMONES)', 'help': 'This is the pituitary gland it controls hormones', 'img': 'resources/images/games/school/biology/brain.jpg'},
+//               {'question':"In this picture of the brain, what is coloured in orange and what is it's purpose?", 'answer': 'CONTAINS(THALAMUS)ANDCONTAINS(TEMPERATURE)', 'help': 'This is the thalamus or hypothalamus: it controls the temperature of your body', 'img': 'resources/images/games/school/biology/brain.jpg'},
+//               {'question':"In this picture of the brain, what is coloured in red  and what is it's purpose?", 'answer': 'CONTAINS(CEREBELLUM)ANDCONTAINS(BALANCE)', 'help': 'This is the cerebellum: controls balance, movement, coordination, muscles', 'img': 'resources/images/games/school/biology/brain.jpg'},
+//];
 
 var biology = [];
 populateArray(biology, biologyfull);
@@ -408,8 +430,39 @@ function checkAnswer(answerkey, answerselected, nextmethod) {
   var gameanswer = document.getElementById('gameanswer');
 
   if(answerselected.startsWith('School')) {
+    //{'question':"NSERTANSWER2", 'answer': 'INSERTANSWER1(BASE)INSERTANSWER2(RUBBER TUBE)', 'help': 'Fill in the missing words from this word list: above, rubber tube, base, barrel, collar, air hole', 'img': 'resources/images/games/school/chemistry/bunsen.png', 'multiquestion': 2},
+
+  var correct = false;
+
+    if(answerkey.indexOf('INSERTANSWER1') != -1) {
+      //multi question
+
+      for (var mq=1; mq<=5; mq++) {
+        var studentAnswerId = 'schoolText' + mq;
+        var studentAnswer = document.getElementById(studentAnswerId);
+
+        if(studentAnswer != undefined) {
+            studentAnswer = studentAnswer.value.toUpperCase();
+            var containsId = 'INSERTANSWER' + mq;
+            var contains = answerkey.indexOf(containsId);
+            if (contains != -1){
+                var checkForContains = answerkey.substring(contains+14, answerkey.indexOf(')', contains));
+                console.log(checkForContains);
+                var doesItContain = studentAnswer.indexOf(checkForContains) != -1;
+                console.log(doesItContain);
+                if(mq == 1) {
+                  correct = doesItContain;
+                } else {
+                  correct = correct && doesItContain;
+                }
+            }
+        }
+
+      }
+
+    } else {
     var studentAnswer = document.getElementById('schoolText').value.toUpperCase();
-    var correct = false;
+
     //'CONTAINS(atom)ANDCONTAINSOR(one_1)'}];
     var contains = answerkey.indexOf('CONTAINS(');
     if (contains != -1){
@@ -550,6 +603,7 @@ function checkAnswer(answerkey, answerselected, nextmethod) {
         console.log(doesItContainOr);
         correct = correct && doesItContainOr;
     }
+  }
 
 
   answerkey = true;//this is true as question truth
@@ -697,6 +751,8 @@ function help(){
                 schoolfulllist.forEach(question => {
                   if(document.getElementById('gamemain').innerHTML.indexOf(question.question) !=-1 ) {
                     helpdetail.textContent = question.help;
+                  } else if ((document.getElementById('gamemain').innerHTML.indexOf('To stop it falling over') !=-1 ) && (question.question.indexOf('PSTART1To stop it falling over') !=-1)) {
+                    helpdetail.textContent = question.help;
                   }
                 });
               } else {
@@ -744,7 +800,30 @@ function chemistryGame() {
     var randomchemQ = Math.floor(Math.random() * chemistry.length);
 
     var chemistryQuestion = document.createElement("div");
-    chemistryQuestion.textContent = chemistry[randomchemQ]['question'];
+    if(chemistry[randomchemQ]['multiquestion'] == undefined) {
+      chemistryQuestion.textContent = chemistry[randomchemQ]['question'];
+
+    } else {
+      // {'question':"PSTART1To stop it falling over, the Bunsen burner has a heavy INSERTANSWER1PSTART2. Gas comes into the Bunsen burner through a INSERTANSWER2", 'answer': 'INSERTANSWER1(BASE)INSERTANSWER2(RUBBER TUBE)', 'help': 'Fill in the missing words', 'img': 'resources/images/games/school/chemistry/bunsen.png', 'multiquestion': 2},
+      var qtext = chemistry[randomchemQ]['question'];
+      for(var t=1; t<= chemistry[randomchemQ]['multiquestion']; t++) {
+        var p = document.createElement("p");
+
+        var tagStart = 'PSTART' + t;
+        var indexTagStart = qtext.indexOf(tagStart) + 7;
+
+        var tagEnd = 'INSERTANSWER' + t;
+        var indexTagEnd = qtext.indexOf(tagEnd);
+
+        p.textContent = qtext.substring(indexTagStart, indexTagEnd);
+        chemistryQuestion.appendChild(p);
+
+        var schoolText = document.createElement("input");
+        schoolText.type = 'text';
+        schoolText.id = 'schoolText' + t;
+        chemistryQuestion.appendChild(schoolText);
+      }
+    }
 
     gamemain.appendChild(chemistryQuestion);
 
@@ -756,12 +835,15 @@ function chemistryGame() {
             gamemain.appendChild(img);
         }
 
+if(chemistry[randomchemQ]['multiquestion'] == undefined) {
     schoolText = document.createElement("input");
     schoolText.type = 'text';
     schoolText.id = 'schoolText';
     gamemain.appendChild(schoolText);
 
+
     var chemanswer = document.getElementById('schoolText').value;
+    }
 
 
     //for (var i=0; i<1; i++) {
