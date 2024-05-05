@@ -155,16 +155,19 @@ var biologyfull = [{'question':'What is the nucleus?', 'answer': 'CONTAINS(CONTR
                    {'question':"In this picture of the brain, what is coloured in blue and what is it's purpose?", 'answer': 'CONTAINS(PITUITARY)ANDCONTAINS(HORMONES)', 'help': 'This is the pituitary gland it controls hormones', 'img': 'resources/images/games/school/biology/brain.jpg'},
                    {'question':"In this picture of the brain, what is coloured in orange and what is it's purpose?", 'answer': 'CONTAINS(THALAMUS)ANDCONTAINS(TEMPERATURE)', 'help': 'This is the thalamus or hypothalamus: it controls the temperature of your body', 'img': 'resources/images/games/school/biology/brain.jpg'},
                    {'question':"In this picture of the brain, what is coloured in red  and what is it's purpose?", 'answer': 'CONTAINS(CEREBELLUM)ANDCONTAINS(BALANCE)', 'help': 'This is the cerebellum: controls balance, movement, coordination, muscles', 'img': 'resources/images/games/school/biology/brain.jpg'},
-                   ];
+                   {'question':"What is the other name for the skull?", 'answer': 'CONTAINS(CRANIUM)', 'help': 'The cranium'},
+                   {'question':"What is the longest bone in the body?", 'answer': 'CONTAINS(FEMUR)', 'help': 'The femur'},
+                   {'question':"What are the finger bones called?", 'answer': 'CONTAINS(CARPAL)', 'help': 'The metacarpals'},
+                   {'question':"How many bones are in the human body?", 'answer': 'CONTAINS(206)', 'help': '206'},
+                                      ];
 
 
 //test
-//biologyfull = [{'question':"In this picture of the brain, what is coloured in green and what is it's purpose?", 'answer': 'CONTAINS(BRAIN)ANDCONTAINS(STEM)', 'help': 'This is the brain stem: In charge of all functions to stay alive eg breathing, circulating blood', 'img': 'resources/images/games/school/biology/brain.jpg'},
-//               {'question':"In this picture of the brain, what is coloured in yellow? and what is it's purpose?", 'answer': 'ONEOF(CEREBRUM_CEREBRAL CORTEX)', 'help': 'This is the cerebrum OR cerebral cortex, thinking part of brain, controls voluntary muscles', 'img': 'resources/images/games/school/biology/brain.jpg'},
-//               {'question':"In this picture of the brain, what is coloured in blue and what is it's purpose?", 'answer': 'CONTAINS(PITUITARY)ANDCONTAINS(HORMONES)', 'help': 'This is the pituitary gland it controls hormones', 'img': 'resources/images/games/school/biology/brain.jpg'},
-//               {'question':"In this picture of the brain, what is coloured in orange and what is it's purpose?", 'answer': 'CONTAINS(THALAMUS)ANDCONTAINS(TEMPERATURE)', 'help': 'This is the thalamus or hypothalamus: it controls the temperature of your body', 'img': 'resources/images/games/school/biology/brain.jpg'},
-//               {'question':"In this picture of the brain, what is coloured in red  and what is it's purpose?", 'answer': 'CONTAINS(CEREBELLUM)ANDCONTAINS(BALANCE)', 'help': 'This is the cerebellum: controls balance, movement, coordination, muscles', 'img': 'resources/images/games/school/biology/brain.jpg'},
-//];
+biologyfull = [{'question':"What is the other name for the skull?", 'answer': 'CONTAINS(CRANIUM)', 'help': 'The cranium'},
+                                  {'question':"What is the longest bone in the body?", 'answer': 'CONTAINS(FEMUR)', 'help': 'The femur'},
+                                  {'question':"What are the finger bones called?", 'answer': 'CONTAINS(CARPAL)', 'help': 'The metacarpals'},
+                                  {'question':"How many bones are in the human body?", 'answer': 'CONTAINS(206)', 'help': '206'},
+];
 
 var biology = [];
 populateArray(biology, biologyfull);
