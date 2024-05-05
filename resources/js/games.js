@@ -163,11 +163,11 @@ var biologyfull = [{'question':'What is the nucleus?', 'answer': 'CONTAINS(CONTR
 
 
 //test
-biologyfull = [{'question':"What is the other name for the skull?", 'answer': 'CONTAINS(CRANIUM)', 'help': 'The cranium'},
-                                  {'question':"What is the longest bone in the body?", 'answer': 'CONTAINS(FEMUR)', 'help': 'The femur'},
-                                  {'question':"What are the finger bones called?", 'answer': 'CONTAINS(CARPAL)', 'help': 'The metacarpals'},
-                                  {'question':"How many bones are in the human body?", 'answer': 'CONTAINS(206)', 'help': '206'},
-];
+//biologyfull = [{'question':"What is the other name for the skull?", 'answer': 'CONTAINS(CRANIUM)', 'help': 'The cranium'},
+//                                  {'question':"What is the longest bone in the body?", 'answer': 'CONTAINS(FEMUR)', 'help': 'The femur'},
+//                                  {'question':"What are the finger bones called?", 'answer': 'CONTAINS(CARPAL)', 'help': 'The metacarpals'},
+//                                  {'question':"How many bones are in the human body?", 'answer': 'CONTAINS(206)', 'help': '206'},
+//];
 
 var biology = [];
 populateArray(biology, biologyfull);
