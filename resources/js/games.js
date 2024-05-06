@@ -16,7 +16,8 @@ var nextSelectionArr = [
                                             {'gameid1':'chemistry', 'gametext1':'Chemistry', 'gamemethod1':'chemistryGame("chemistry");'},
                                             {'gameid2':'biology', 'gametext2':'Biology', 'gamemethod2':'biologyGame();'},
                                             {'gameid3':'spanish', 'gametext3':'Spanish', 'gamemethod3':'spanishGame();'},
-                                            {'gameid4':'technology', 'gametext4':'Technology', 'gamemethod4':'technologyGame();'}
+                                            {'gameid4':'technology', 'gametext4':'Technology', 'gamemethod4':'technologyGame();'},
+                                            {'gameid5':'history', 'gametext5':'History', 'gamemethod5':"schoolGame('schistory', schistory);"}
                                             ]
                         }
                         ];
@@ -26,6 +27,27 @@ function populateArray(arrayToPopulate, arrayFull) {
     arrayToPopulate.push(item);
   });
 }
+
+var schistoryfull = [{'question':'What is a Greek word to enquire about something?', 'answer': 'CONTAINS(HISTOREO)', 'help': 'Historeo'},
+                   {'question':'What is organisation of time in order early to late?', 'answer': 'CONTAINS(CHRONOLOGY)', 'help': 'Chronology'},
+                   {'question':'What is a reason why something happens?', 'answer': 'CONTAINS(CAUSE)', 'help': 'Cause'},
+                   {'question':'What is staying the same over time?', 'answer': 'CONTAINS(CONTINUITY)', 'help': 'Continuity'},
+                   {'question':'What is a primary source?', 'answer': 'CONTAINS(TIME OF THE EVENT)', 'help': "A Primary Source is a source that comes from the time of the event you are studying eg today's newspaper"},
+                   {'question':'What is a secondary source?', 'answer': 'CONTAINS(AFTER)', 'help': "A Secondary Source is a source made after the time of the event you are studying eg Roman coins"},
+                    {'question':'What century is 87?', 'answer': 'IS(1ST)', 'help': "1st"},
+                    {'question':'What century is 1215?', 'answer': 'IS(13TH)', 'help': "13th"},
+                    {'question':'What century is 333BC?', 'answer': 'IS(4TH)', 'help': "4th"},
+                    {'question':'What type of evidence is a diary?', 'answer': 'IS(WRITTEN)', 'help': "Written"},
+                    {'question':'What type of evidence is the Mona Lisa painting?', 'answer': 'IS(VISUAL)', 'help': "Visual"},
+                    {'question':'What type of evidence is the Eiffel Tower?', 'answer': 'IS(PHYSICAL)', 'help': "Physical"},
+                    {'question':'How can a biased source be useful to an Historian?', 'answer': 'CONTAINS(POINT OF VIEW)', 'help': "Biased source gives another person's point of view and perspective"},
+                    {'question':'In which year was the Great Fire of London?', 'answer': 'IS(1666)', 'help': "1666"},
+                    {'question':'What is an anachronism?', 'answer': 'ONEOF(OUT OF PLACE_WRONG PLACE_WRONG TIME PERIOD)', 'help': "An anachronism is something that is out of place (wrong place or wrong time period)"},
+
+];
+
+var schistory = [];
+populateArray(schistory, schistoryfull);
 
 var relativesfull = [{'key':'Ab Major', 'rel': 'F Minor'}, {'key':'A Major', 'rel':'F# Minor'}, {'key':'Bb Major', 'rel': 'G Minor'}, {'key':'B Major', 'rel':'G# Minor'},
                  {'key':'C Major', 'rel': 'A Minor'}, {'key':'Db Major', 'rel': 'Bb Minor'}, {'key':'D Major', 'rel':'B Minor'}, {'key':'Eb Major', 'rel':'C Minor'},
@@ -174,6 +196,10 @@ populateArray(biology, biologyfull);
 
 
 
+
+
+
+
 var spanishfull = [{'question':'Hola ¿Cómo te llamas?', 'answer': 'SOMETHING()', 'help': 'Hello, what is your name?'}];
 
 var spanish = [{'question':'Hola ¿Cómo te llamas?', 'answer': 'SOMETHING()', 'help': 'Hello, what is your name?'}];
@@ -265,8 +291,8 @@ var technology = [{'question':'What colour and shape is a mandatory sign?', 'ans
 //               {'question':'What is a tissue?', 'answer': 'CONTAINS(SIMILAR)ANDCONTAINS(CELLS)ANDCONTAINSTHREE(JOB)', 'help': 'A tissue is similar cells working together to do a job. eg nerve cells nerve tissue, eg xylem cells xylem tissue'}];
 var schoolText;
 
-var subjectlist = {'chemistry': chemistry, 'biology': biology, 'spanish': spanish, 'technology': technology};
-var schoollist = {'chemistry': chemistryfull, 'biology': biologyfull, 'spanish': spanishfull, 'technology': technologyfull};
+var subjectlist = {'chemistry': chemistry, 'biology': biology, 'spanish': spanish, 'technology': technology, 'schistory': schistory};
+var schoollist = {'chemistry': chemistryfull, 'biology': biologyfull, 'spanish': spanishfull, 'technology': technologyfull, 'schistory': schistoryfull};
 
 
 //var circleSigns = ['no sharps or flats', '1 flat', '1 sharp', '2 sharps', '3 sharps', '4 sharps'];
@@ -436,6 +462,7 @@ function checkAnswer(answerkey, answerselected, nextmethod) {
     //{'question':"NSERTANSWER2", 'answer': 'INSERTANSWER1(BASE)INSERTANSWER2(RUBBER TUBE)', 'help': 'Fill in the missing words from this word list: above, rubber tube, base, barrel, collar, air hole', 'img': 'resources/images/games/school/chemistry/bunsen.png', 'multiquestion': 2},
 
   var correct = false;
+  answerkey = answerkey.toUpperCase();
 
     if(answerkey.indexOf('INSERTANSWER1') != -1) {
       //multi question
@@ -465,6 +492,15 @@ function checkAnswer(answerkey, answerselected, nextmethod) {
 
     } else {
     var studentAnswer = document.getElementById('schoolText').value.toUpperCase();
+
+    var is = answerkey.indexOf('IS(');
+        if (is != -1){
+          var checkForIs = answerkey.substring(is+3, answerkey.indexOf(')'));
+          console.log(checkForIs);
+          var doesItContain = studentAnswer == checkForIs;
+          console.log(doesItContain);
+          correct = doesItContain;
+        }
 
     //'CONTAINS(atom)ANDCONTAINSOR(one_1)'}];
     var contains = answerkey.indexOf('CONTAINS(');
@@ -1039,61 +1075,76 @@ function spanishGame() {
 
 
 
-//
-//function schoolGame(subject) {
-//  clearGameSpace();
-//  loadedGame = 'School_' + subject;
-//
-//  var gamemain = document.getElementById('gamemain');
-//  var gameanswers = document.getElementById('gameanswers');
-//
-//    //need a random 0-23 rel length 24
-//    //var randomQ = Math.floor(Math.random() * biology.length);
-//    var index = 0;
-//    if (subject.indexOf('spanish') == -1){
-//      index = Math.floor(Math.random() * subjectlist[subject].length);
-//    }
-//
-//    var schoolQuestion = document.createElement("div");
-//    schoolQuestion.textContent = subjectlist[subject][index]['question'];
-//
-//    gamemain.appendChild(schoolQuestion);
-//
-//    //optional image
-//    if(subjectlist[subject][index]['img'] != undefined) {
-//        var img = document.createElement('img');
-//        img.src = subjectlist[subject][index]['img'];
-//        img.className = 'notationimages';
-//        gamemain.appendChild(img);
-//    }
-//
-//
-//    schoolText = document.createElement("input");
-//    schoolText.type = 'text';
-//    schoolText.id = 'schoolText';
-//    gamemain.appendChild(schoolText);
-//
-//    var schoolAnswer = document.getElementById('schoolText').value;
-//
-//    //for (var i=0; i<1; i++) {
-//      var qbutton = document.createElement("button");
-//      qbutton.className = 'answerbuttons';
-//      //qbutton.id = 'relatives
-//      qbutton.type = 'button';
-//      qbutton.textContent = 'Check Answer';
-//      var ansmethod = 'javascript:checkAnswer("' + subjectlist[subject][index]['answer'] + '", "' + loadedGame + '","javascript:schoolGame(' + subject + ')");';
-//      qbutton.setAttribute('onclick',ansmethod);
-//      gameanswers.appendChild(qbutton);
-//    //}
-//
-//    //remove item
-//    subjectlist[subject].splice(index, 1);
-//    if(subjectlist[subject].length == 0) {
-//      //repopulate array
-//      schoollist[subject].forEach(question => {
-//        subjectlist[subject].push(question);
-//      });
-//    }
-//
-//    showHelp();
-//}
+
+function schoolGame(subject, qlist) {
+  //subject, qlist
+  clearGameSpace();
+  loadedGame = 'School_' + subject;
+
+  var gamemain = document.getElementById('gamemain');
+  var gameanswers = document.getElementById('gameanswers');
+
+    //need a random 0-23 rel length 24
+    //var randomQ = Math.floor(Math.random() * biology.length);
+    var index = 0;
+    if (subject.indexOf('spanish') == -1){
+      index = Math.floor(Math.random() * subjectlist[subject].length);
+    }
+
+    var schoolQuestion = document.createElement("div");
+    schoolQuestion.textContent = subjectlist[subject][index]['question'];
+
+    gamemain.appendChild(schoolQuestion);
+
+    //optional image
+    if(subjectlist[subject][index]['img'] != undefined) {
+        var img = document.createElement('img');
+        img.src = subjectlist[subject][index]['img'];
+        img.className = 'notationimages';
+        gamemain.appendChild(img);
+    }
+
+
+    schoolText = document.createElement("input");
+    schoolText.type = 'text';
+    schoolText.id = 'schoolText';
+    gamemain.appendChild(schoolText);
+
+    var schoolAnswer = document.getElementById('schoolText').value;
+
+    var checkStuAnswer = subjectlist[subject][index]['answer'] ;
+
+    var reentry = "javascript:schoolGame('" + subject + "','" + qlist + "')";
+    //reentry = 'javascript:test()';
+
+    //"javascript:checkAnswer();"
+
+    //"javascript:checkAnswer(\"CONTAINS(CONTINUITY)\", \"School_schistory\",\"javascript:schoolGame(\"schistory\",[object Object],[object Object],[object Object],[object Object])\");"
+
+    //for (var i=0; i<1; i++) {
+      var qbutton = document.createElement("button");
+      qbutton.className = 'answerbuttons';
+      //qbutton.id = 'relatives
+      qbutton.type = 'button';
+      qbutton.textContent = 'Check Answer';
+      //var ansmethod = 'javascript:checkAnswer("' + checkStuAnswer + '", "' + loadedGame + '",' + reentry + ');';
+      var ansmethod = 'javascript:checkAnswer("' + checkStuAnswer + '", "' + loadedGame + '","' + reentry + '");';
+      qbutton.setAttribute('onclick',ansmethod);
+      gameanswers.appendChild(qbutton);
+    //}
+
+    //remove item
+    subjectlist[subject].splice(index, 1);
+    if(subjectlist[subject].length == 0) {
+      //repopulate array
+      schoollist[subject].forEach(question => {
+        subjectlist[subject].push(question);
+      });
+    }
+
+    showHelp();
+}
+
+function test() {
+  console.log("test");
+}
