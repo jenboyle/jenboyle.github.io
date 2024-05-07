@@ -17,7 +17,8 @@ var nextSelectionArr = [
                                             {'gameid2':'biology', 'gametext2':'Biology', 'gamemethod2':"schoolGame('biology', biology);"},
                                             {'gameid3':'spanish', 'gametext3':'Spanish', 'gamemethod3':"schoolGame('spanish', spanish);"},
                                             {'gameid4':'technology', 'gametext4':'Technology', 'gamemethod4':"schoolGame('technology', technology);"},
-                                            {'gameid5':'history', 'gametext5':'History', 'gamemethod5':"schoolGame('schistory', schistory);"}
+                                            {'gameid5':'history', 'gametext5':'History', 'gamemethod5':"schoolGame('schistory', schistory);"},
+                                            {'gameid6':'geography', 'gametext6':'Geography', 'gamemethod6':"schoolGame('geography', geography);"},
                                             ]
                         }
                         ];
@@ -196,7 +197,14 @@ populateArray(biology, biologyfull);
 
 
 
+var geographyfull = [{'question':'What is physical geography', 'answer': 'CONTAINS(NATURAL WORLD)', 'help': 'The study of the natural world'},
+                     {'question':'What is human geography', 'answer': 'CONTAINS(PEOPLE LIVE)', 'help': 'The study of how and where people live'},
+                     {'question':'What is environmental geography', 'answer': 'CONTAINS(AFFECT)', 'help': 'The study of how humans interact with and affect the environment'},
+                     {'question':'What measuring instrument is used to measure precipitation', 'answer': 'CONTAINS(RAIN GAUGE)', 'help': 'Rain gauge'},
+];
 
+var geography = [];
+populateArray(geography, geographyfull);
 
 
 
@@ -291,8 +299,8 @@ var technology = [{'question':'What colour and shape is a mandatory sign?', 'ans
 //               {'question':'What is a tissue?', 'answer': 'CONTAINS(SIMILAR)ANDCONTAINS(CELLS)ANDCONTAINSTHREE(JOB)', 'help': 'A tissue is similar cells working together to do a job. eg nerve cells nerve tissue, eg xylem cells xylem tissue'}];
 var schoolText;
 
-var subjectlist = {'chemistry': chemistry, 'biology': biology, 'spanish': spanish, 'technology': technology, 'schistory': schistory};
-var schoollist = {'chemistry': chemistryfull, 'biology': biologyfull, 'spanish': spanishfull, 'technology': technologyfull, 'schistory': schistoryfull};
+var subjectlist = {'chemistry': chemistry, 'biology': biology, 'spanish': spanish, 'technology': technology, 'schistory': schistory, 'geography': geography};
+var schoollist = {'chemistry': chemistryfull, 'biology': biologyfull, 'spanish': spanishfull, 'technology': technologyfull, 'schistory': schistoryfull, 'geography': geographyfull};
 
 
 //var circleSigns = ['no sharps or flats', '1 flat', '1 sharp', '2 sharps', '3 sharps', '4 sharps'];
