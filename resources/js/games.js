@@ -13,10 +13,10 @@ var nextSelectionArr = [
                         },
                         {'id':'school','games':
                                             [
-                                            {'gameid1':'chemistry', 'gametext1':'Chemistry', 'gamemethod1':'chemistryGame("chemistry");'},
-                                            {'gameid2':'biology', 'gametext2':'Biology', 'gamemethod2':'biologyGame();'},
-                                            {'gameid3':'spanish', 'gametext3':'Spanish', 'gamemethod3':'spanishGame();'},
-                                            {'gameid4':'technology', 'gametext4':'Technology', 'gamemethod4':'technologyGame();'},
+                                            {'gameid1':'chemistry', 'gametext1':'Chemistry', 'gamemethod1':"schoolGame('chemistry', chemistry);"},
+                                            {'gameid2':'biology', 'gametext2':'Biology', 'gamemethod2':"schoolGame('biology', biology);"},
+                                            {'gameid3':'spanish', 'gametext3':'Spanish', 'gamemethod3':"schoolGame('spanish', spanish);"},
+                                            {'gameid4':'technology', 'gametext4':'Technology', 'gamemethod4':"schoolGame('technology', technology);"},
                                             {'gameid5':'history', 'gametext5':'History', 'gamemethod5':"schoolGame('schistory', schistory);"}
                                             ]
                         }
@@ -826,258 +826,7 @@ function clearGameSpace() {
 
 }
 
-function chemistryGame() {
-  clearGameSpace();
-  loadedGame = 'School_chemistry';
-
-  var gamemain = document.getElementById('gamemain');
-  var gameanswers = document.getElementById('gameanswers');
-
-  console.log('chemistry' + chemistry.length);
-
-    //need a random 0-23 rel length 24
-    var randomchemQ = Math.floor(Math.random() * chemistry.length);
-
-    var chemistryQuestion = document.createElement("div");
-    if(chemistry[randomchemQ]['multiquestion'] == undefined) {
-      chemistryQuestion.textContent = chemistry[randomchemQ]['question'];
-
-    } else {
-      // {'question':"PSTART1To stop it falling over, the Bunsen burner has a heavy INSERTANSWER1PSTART2. Gas comes into the Bunsen burner through a INSERTANSWER2", 'answer': 'INSERTANSWER1(BASE)INSERTANSWER2(RUBBER TUBE)', 'help': 'Fill in the missing words', 'img': 'resources/images/games/school/chemistry/bunsen.png', 'multiquestion': 2},
-      var qtext = chemistry[randomchemQ]['question'];
-      for(var t=1; t<= chemistry[randomchemQ]['multiquestion']; t++) {
-        var p = document.createElement("p");
-
-        var tagStart = 'PSTART' + t;
-        var indexTagStart = qtext.indexOf(tagStart) + 7;
-
-        var tagEnd = 'INSERTANSWER' + t;
-        var indexTagEnd = qtext.indexOf(tagEnd);
-
-        p.textContent = qtext.substring(indexTagStart, indexTagEnd);
-        chemistryQuestion.appendChild(p);
-
-        var schoolText = document.createElement("input");
-        schoolText.type = 'text';
-        schoolText.id = 'schoolText' + t;
-        chemistryQuestion.appendChild(schoolText);
-      }
-    }
-
-    gamemain.appendChild(chemistryQuestion);
-
-    //optional image
-        if(chemistry[randomchemQ]['img'] != undefined) {
-            var img = document.createElement('img');
-            img.src = chemistry[randomchemQ]['img'];
-            img.className = 'notationimages';
-            gamemain.appendChild(img);
-        }
-
-if(chemistry[randomchemQ]['multiquestion'] == undefined) {
-    schoolText = document.createElement("input");
-    schoolText.type = 'text';
-    schoolText.id = 'schoolText';
-    gamemain.appendChild(schoolText);
-
-
-    var chemanswer = document.getElementById('schoolText').value;
-    }
-
-
-    //for (var i=0; i<1; i++) {
-      var qbutton = document.createElement("button");
-      qbutton.className = 'answerbuttons';
-      //qbutton.id = 'relatives
-      qbutton.type = 'button';
-      qbutton.textContent = 'Check Answer';
-      var ansmethod = 'javascript:checkAnswer("' + chemistry[randomchemQ]['answer'] + '", "' + loadedGame + '","javascript:chemistryGame()");';
-      qbutton.setAttribute('onclick',ansmethod);
-      gameanswers.appendChild(qbutton);
-    //}
-
-    //remove item
-    chemistry.splice(randomchemQ, 1);
-    if(chemistry.length == 0) {
-      //repopulate array
-      chemistryfull.forEach(question => {
-        chemistry.push(question);
-      });
-    }
-
-    showHelp();
-
-
-}
-
-function biologyGame() {
-  clearGameSpace();
-  loadedGame = 'School_biology';
-
-  var gamemain = document.getElementById('gamemain');
-  var gameanswers = document.getElementById('gameanswers');
-
-    //need a random 0-23 rel length 24
-    var randomQ = Math.floor(Math.random() * biology.length);
-
-    var schoolQuestion = document.createElement("div");
-    schoolQuestion.textContent = biology[randomQ]['question'];
-
-    gamemain.appendChild(schoolQuestion);
-
-    //optional image
-    if(biology[randomQ]['img'] != undefined) {
-        var img = document.createElement('img');
-        img.src = biology[randomQ]['img'];
-        img.className = 'notationimages';
-        gamemain.appendChild(img);
-    }
-
-
-    schoolText = document.createElement("input");
-    schoolText.type = 'text';
-    schoolText.id = 'schoolText';
-    gamemain.appendChild(schoolText);
-
-    var schoolAnswer = document.getElementById('schoolText').value;
-
-    //for (var i=0; i<1; i++) {
-      var qbutton = document.createElement("button");
-      qbutton.className = 'answerbuttons';
-      //qbutton.id = 'relatives
-      qbutton.type = 'button';
-      qbutton.textContent = 'Check Answer';
-      var ansmethod = 'javascript:checkAnswer("' + biology[randomQ]['answer'] + '", "' + loadedGame + '","javascript:biologyGame()");';
-      qbutton.setAttribute('onclick',ansmethod);
-      gameanswers.appendChild(qbutton);
-    //}
-
-    //remove item
-    biology.splice(randomQ, 1);
-    if(biology.length == 0) {
-      //repopulate array
-      biologyfull.forEach(question => {
-        biology.push(question);
-      });
-    }
-
-    showHelp();
-}
-
-function technologyGame() {
-  clearGameSpace();
-  loadedGame = 'School_technology';
-
-  var gamemain = document.getElementById('gamemain');
-  var gameanswers = document.getElementById('gameanswers');
-
-    //need a random 0-23 rel length 24
-    var randomQ = Math.floor(Math.random() * technology.length);
-
-    var schoolQuestion = document.createElement("div");
-    schoolQuestion.textContent = technology[randomQ]['question'];
-
-    gamemain.appendChild(schoolQuestion);
-
-    //optional image
-    if(technology[randomQ]['img'] != undefined) {
-        var img = document.createElement('img');
-        img.src = technology[randomQ]['img'];
-        img.className = 'notationimages';
-        gamemain.appendChild(img);
-    }
-
-
-    schoolText = document.createElement("input");
-    schoolText.type = 'text';
-    schoolText.id = 'schoolText';
-    gamemain.appendChild(schoolText);
-
-    var schoolAnswer = document.getElementById('schoolText').value;
-
-    //for (var i=0; i<1; i++) {
-      var qbutton = document.createElement("button");
-      qbutton.className = 'answerbuttons';
-      //qbutton.id = 'relatives
-      qbutton.type = 'button';
-      qbutton.textContent = 'Check Answer';
-      var ansmethod = 'javascript:checkAnswer("' + technology[randomQ]['answer'] + '", "' + loadedGame + '","javascript:technologyGame()");';
-      qbutton.setAttribute('onclick',ansmethod);
-      gameanswers.appendChild(qbutton);
-    //}
-
-    //remove item
-    technology.splice(randomQ, 1);
-    if(technology.length == 0) {
-      //repopulate array
-      technologyfull.forEach(question => {
-        technology.push(question);
-      });
-    }
-
-    showHelp();
-}
-
-function spanishGame() {
-  clearGameSpace();
-  loadedGame = 'School_spanish';
-
-  var gamemain = document.getElementById('gamemain');
-  var gameanswers = document.getElementById('gameanswers');
-
-    //need a random 0-23 rel length 24
-    //var randomQ = Math.floor(Math.random() * biology.length);
-
-    var schoolQuestion = document.createElement("div");
-    schoolQuestion.textContent = spanish[0]['question'];
-
-    gamemain.appendChild(schoolQuestion);
-
-    //optional image
-    if(spanish[0]['img'] != undefined) {
-        var img = document.createElement('img');
-        img.src = spanish[0]['img'];
-        img.className = 'notationimages';
-        gamemain.appendChild(img);
-    }
-
-
-    schoolText = document.createElement("input");
-    schoolText.type = 'text';
-    schoolText.id = 'schoolText';
-    gamemain.appendChild(schoolText);
-
-    var schoolAnswer = document.getElementById('schoolText').value;
-
-    //for (var i=0; i<1; i++) {
-      var qbutton = document.createElement("button");
-      qbutton.className = 'answerbuttons';
-      //qbutton.id = 'relatives
-      qbutton.type = 'button';
-      qbutton.textContent = 'Check Answer';
-      var ansmethod = 'javascript:checkAnswer("' + spanish[0]['answer'] + '", "' + loadedGame + '","javascript:spanishGame()");';
-      qbutton.setAttribute('onclick',ansmethod);
-      gameanswers.appendChild(qbutton);
-    //}
-
-    //remove item
-    spanish.splice(randomQ, 1);
-    if(spanish.length == 0) {
-      //repopulate array
-      spanishfull.forEach(question => {
-        spanish.push(question);
-      });
-    }
-
-    showHelp();
-}
-
-
-
-
-
 function schoolGame(subject, qlist) {
-  //subject, qlist
   clearGameSpace();
   loadedGame = 'School_' + subject;
 
@@ -1092,7 +841,31 @@ function schoolGame(subject, qlist) {
     }
 
     var schoolQuestion = document.createElement("div");
-    schoolQuestion.textContent = subjectlist[subject][index]['question'];
+
+        if(subjectlist[subject][index]['multiquestion'] == undefined) {
+          schoolQuestion.textContent = subjectlist[subject][index]['question'];
+
+        } else {
+          // {'question':"PSTART1To stop it falling over, the Bunsen burner has a heavy INSERTANSWER1PSTART2. Gas comes into the Bunsen burner through a INSERTANSWER2", 'answer': 'INSERTANSWER1(BASE)INSERTANSWER2(RUBBER TUBE)', 'help': 'Fill in the missing words', 'img': 'resources/images/games/school/chemistry/bunsen.png', 'multiquestion': 2},
+          var qtext = subjectlist[subject][index]['question'];
+          for(var t=1; t<= subjectlist[subject][index]['multiquestion']; t++) {
+            var p = document.createElement("p");
+
+            var tagStart = 'PSTART' + t;
+            var indexTagStart = qtext.indexOf(tagStart) + 7;
+
+            var tagEnd = 'INSERTANSWER' + t;
+            var indexTagEnd = qtext.indexOf(tagEnd);
+
+            p.textContent = qtext.substring(indexTagStart, indexTagEnd);
+            schoolQuestion.appendChild(p);
+
+            var schoolText = document.createElement("input");
+            schoolText.type = 'text';
+            schoolText.id = 'schoolText' + t;
+            schoolQuestion.appendChild(schoolText);
+          }
+        }
 
     gamemain.appendChild(schoolQuestion);
 
@@ -1105,12 +878,14 @@ function schoolGame(subject, qlist) {
     }
 
 
-    schoolText = document.createElement("input");
-    schoolText.type = 'text';
-    schoolText.id = 'schoolText';
-    gamemain.appendChild(schoolText);
+    if(subjectlist[subject][index]['multiquestion'] == undefined) {
+        schoolText = document.createElement("input");
+        schoolText.type = 'text';
+        schoolText.id = 'schoolText';
+        gamemain.appendChild(schoolText);
 
-    var schoolAnswer = document.getElementById('schoolText').value;
+        var schoolAnswer = document.getElementById('schoolText').value;
+    }
 
     var checkStuAnswer = subjectlist[subject][index]['answer'] ;
 
@@ -1143,8 +918,4 @@ function schoolGame(subject, qlist) {
     }
 
     showHelp();
-}
-
-function test() {
-  console.log("test");
 }
