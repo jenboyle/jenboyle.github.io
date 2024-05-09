@@ -201,6 +201,14 @@ var geographyfull = [{'question':'What is physical geography', 'answer': 'CONTAI
                      {'question':'What is human geography', 'answer': 'CONTAINS(PEOPLE LIVE)', 'help': 'The study of how and where people live'},
                      {'question':'What is environmental geography', 'answer': 'CONTAINS(AFFECT)', 'help': 'The study of how humans interact with and affect the environment'},
                      {'question':'What measuring instrument is used to measure precipitation', 'answer': 'CONTAINS(RAIN GAUGE)', 'help': 'Rain gauge'},
+                     {'question':'What layer of atmosphere does our weather occur in?', 'answer': 'CONTAINS(TROPOSPHERE)', 'help': 'Troposphere'},
+                     {'question':'What is an ecosystem?', 'answer': 'CONTAINS(LIVING)ANDCONTAINS(COMMUNITY)ANDCONTAINSTHREE(PLANTS)ANDCONTAINSFOUR(ANIMALS)', 'help': 'An ecosystem is a living community of plants and animals and the environment in which they live'},
+                     {'question':'An ecosystem is made up of 2 parts, 1. Living elements - plant, animals, humans and bacteria and 2. ?', 'answer': 'CONTAINS(NON)', 'help': '2. Non living elements - sunlight, air, water, rocks and soil'},
+                     {'question':'An ecosystem is made up of 2 parts, 1. Non living elements - sunlight, air, water, rocks and soil and 2. ?', 'answer': 'CONTAINS(LIVING)', 'help': '2. Living elements - plant, animals, humans and bacteria'},
+                     {'question':'What are the 6 biomes of the world?', 'answer': 'CONTAINS(TUNDRA)ANDCONTAINS(TAIGA)ANDCONTAINSTHREE(GRASSLAND)ANDCONTAINSFOUR(DESERT)ANDCONTAINSFIVE(TROPICAL)ANDCONTAINSSIX(DECIDUOUS)', 'help': 'Tundra, Taiga, Grassland, Desert, Tropical rain forest, Deciduous forest'},
+
+
+
 ];
 
 var geography = [];
@@ -312,11 +320,22 @@ var loadedGame = '';
 
 var notationeasycounter = 0;
 
+var score = 0;
+var scoreMsg = '';
+var skips = 0;
 
+
+function resetScore() {
+  score = 0;
+  scoreMsg = '';
+  skips = 0;
+}
 
 // or do you want to know the answer, answers right out of
 
 function showNextGameSelection(game) {
+  //reset score
+  resetScore();
 
   //hide first set buttons
   //document.getElementById('eartraining').style.display = "none";
@@ -505,7 +524,7 @@ function checkAnswer(answerkey, answerselected, nextmethod) {
         if (is != -1){
           var checkForIs = answerkey.substring(is+3, answerkey.indexOf(')'));
           console.log(checkForIs);
-          var doesItContain = studentAnswer == checkForIs;
+          var doesItContain = studentAnswer.trim() == checkForIs;
           console.log(doesItContain);
           correct = doesItContain;
         }
@@ -659,7 +678,8 @@ function checkAnswer(answerkey, answerselected, nextmethod) {
   }
 
   if(answerkey == answerselected) {
-    gameanswer.textContent = 'Well Done ';
+    score++;
+    gameanswer.textContent = 'Well Done. ' + scoreMsg;
     gameanswer.style.background = 'green';
 
     var nextq = document.createElement("a");
@@ -832,6 +852,10 @@ function clearGameSpace() {
   //gamehelp.href = 'javascript:help();';
   helpdetail.textContent = '';
 
+  if(scoreMsg.length != 0) {
+    resetScore();
+  }
+
 }
 
 function schoolGame(subject, qlist) {
@@ -916,6 +940,16 @@ function schoolGame(subject, qlist) {
       gameanswers.appendChild(qbutton);
     //}
 
+    var skipbutton = document.createElement("button");
+    skipbutton.className = 'answerbuttons';
+    //skipbutton.id = 'relatives
+    skipbutton.type = 'button';
+    skipbutton.textContent = 'Skip';
+    //var ansmethod = 'javascript:checkAnswer("' + checkStuAnswer + '", "' + loadedGame + '",' + reentry + ');';
+    var skipmethod = 'javascript:skip("' + reentry + '");';
+    skipbutton.setAttribute('onclick',skipmethod);
+    gameanswers.appendChild(skipbutton);
+
     //remove item
     subjectlist[subject].splice(index, 1);
     if(subjectlist[subject].length == 0) {
@@ -923,7 +957,23 @@ function schoolGame(subject, qlist) {
       schoollist[subject].forEach(question => {
         subjectlist[subject].push(question);
       });
+
+      scoreMsg = 'You have scored ' + (score + 1) + ' out of ' + schoollist[subject].length + ' questions ';
     }
 
     showHelp();
+}
+
+
+function skip(reentry) {
+  var maxSkips = 3;
+  if (skips < maxSkips) {
+    skips++;
+    window.location = reentry;
+  } else {
+    var gameanswer = document.getElementById('gameanswer');
+    gameanswer.textContent = 'You can only skip ' + maxSkips + ' questions';
+
+  }
+
 }
