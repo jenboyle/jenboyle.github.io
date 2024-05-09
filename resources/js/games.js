@@ -973,7 +973,7 @@ function addSkipButton(skipMethod, areaElement) {
 
 
 function skip(reentry) {
-  var maxSkips = 23;
+  var maxSkips = 3;
   if (skips < maxSkips) {
     skips++;
     window.location = reentry;
