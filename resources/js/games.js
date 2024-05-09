@@ -13,12 +13,14 @@ var nextSelectionArr = [
                         },
                         {'id':'school','games':
                                             [
-                                            {'gameid1':'chemistry', 'gametext1':'Chemistry', 'gamemethod1':"schoolGame('chemistry', chemistry);"},
-                                            {'gameid2':'biology', 'gametext2':'Biology', 'gamemethod2':"schoolGame('biology', biology);"},
-                                            {'gameid3':'spanish', 'gametext3':'Spanish', 'gamemethod3':"schoolGame('spanish', spanish);"},
-                                            {'gameid4':'technology', 'gametext4':'Technology', 'gamemethod4':"schoolGame('technology', technology);"},
-                                            {'gameid5':'history', 'gametext5':'History', 'gamemethod5':"schoolGame('schistory', schistory);"},
-                                            {'gameid6':'geography', 'gametext6':'Geography', 'gamemethod6':"schoolGame('geography', geography);"},
+                                            {'gameid1':'biology', 'gametext1':'Biology', 'gamemethod1':"schoolGame('biology', biology);"},
+                                            {'gameid2':'chemistry', 'gametext2':'Chemistry', 'gamemethod2':"schoolGame('chemistry', chemistry);"},
+                                            {'gameid3':'geography', 'gametext3':'Geography', 'gamemethod3':"schoolGame('geography', geography);"},
+                                            {'gameid4':'history', 'gametext4':'History', 'gamemethod4':"schoolGame('schistory', schistory);"},
+                                            {'gameid5':'spanish', 'gametext5':'Spanish', 'gamemethod5':"schoolGame('spanish', spanish);"},
+                                            {'gameid6':'technology', 'gametext6':'Technology', 'gamemethod6':"schoolGame('technology', technology);"},
+
+
                                             ]
                         }
                         ];
@@ -57,12 +59,8 @@ var relativesfull = [{'key':'Ab Major', 'rel': 'F Minor'}, {'key':'A Major', 're
                  {'key':'A Minor', 'rel': 'C Major'}, {'key':'Bb Minor', 'rel': 'Db Major'}, {'key':'B Minor', 'rel':'D Major'}, {'key':'C Minor', 'rel':'Eb Major'},
                  {'key':'C# Minor', 'rel': 'E Major'}, {'key':'D Minor', 'rel': 'F Major'}, {'key':'Eb Minor', 'rel': 'Gb Major'}, {'key':'E Minor', 'rel': 'G Major'}];
 
-var relatives = [{'key':'Ab Major', 'rel': 'F Minor'}, {'key':'A Major', 'rel':'F# Minor'}, {'key':'Bb Major', 'rel': 'G Minor'}, {'key':'B Major', 'rel':'G# Minor'},
-                 {'key':'C Major', 'rel': 'A Minor'}, {'key':'Db Major', 'rel': 'Bb Minor'}, {'key':'D Major', 'rel':'B Minor'}, {'key':'Eb Major', 'rel':'C Minor'},
-                 {'key':'E Major', 'rel': 'C# Minor'}, {'key':'F Major', 'rel': 'D Minor'}, {'key':'Gb Major', 'rel': 'Eb Minor'}, {'key':'G Major', 'rel': 'E Minor'},
-                 {'key':'F Minor', 'rel': 'Ab Major'}, {'key':'F# Minor', 'rel':'A Major'}, {'key':'G Minor', 'rel': 'Bb Major'}, {'key':'G# Minor', 'rel':'B Major'},
-                 {'key':'A Minor', 'rel': 'C Major'}, {'key':'Bb Minor', 'rel': 'Db Major'}, {'key':'B Minor', 'rel':'D Major'}, {'key':'C Minor', 'rel':'Eb Major'},
-                 {'key':'C# Minor', 'rel': 'E Major'}, {'key':'D Minor', 'rel': 'F Major'}, {'key':'Eb Minor', 'rel': 'Gb Major'}, {'key':'E Minor', 'rel': 'G Major'}];
+var relatives = [];
+populateArray(relatives, relativesfull);
 
 var circle = [{'key':'C', 'sign': 'no sharps or flats', 'twowrong': '1 sharp,1 flat'},
               {'key':'F', 'sign': '1 flat', 'twowrong': '1 sharp,3 flats'},
@@ -422,16 +420,19 @@ function relativesGame() {
     gameanswers.appendChild(qbutton);
   }
 
+  var reentry = "javascript:relativesGame()";
+  var skipmethod = 'javascript:skip("' + reentry + '");';
+  addSkipButton(skipmethod, gameanswers);
+
   //remove item
   relatives.splice(randomscale, 1);
   if(relatives.length == 0) {
     //repopulate array
-    relatives = [{'key':'Ab Major', 'rel': 'F Minor'}, {'key':'A Major', 'rel':'F# Minor'}, {'key':'Bb Major', 'rel': 'G Minor'}, {'key':'B Major', 'rel':'G# Minor'},
-                 {'key':'C Major', 'rel': 'A Minor'}, {'key':'Db Major', 'rel': 'Bb Minor'}, {'key':'D Major', 'rel':'B Minor'}, {'key':'Eb Major', 'rel':'C Minor'},
-                 {'key':'E Major', 'rel': 'C# Minor'}, {'key':'F Major', 'rel': 'D Minor'}, {'key':'Gb Major', 'rel': 'Eb Minor'}, {'key':'G Major', 'rel': 'E Minor'},
-                 {'key':'F Minor', 'rel': 'Ab Major'}, {'key':'F# Minor', 'rel':'A Major'}, {'key':'G Minor', 'rel': 'Bb Major'}, {'key':'G# Minor', 'rel':'B Major'},
-                 {'key':'A Minor', 'rel': 'C Major'}, {'key':'Bb Minor', 'rel': 'Db Major'}, {'key':'B Minor', 'rel':'D Major'}, {'key':'C Minor', 'rel':'Eb Major'},
-                 {'key':'C# Minor', 'rel': 'E Major'}, {'key':'D Minor', 'rel': 'F Major'}, {'key':'Eb Minor', 'rel': 'Gb Major'}, {'key':'E Minor', 'rel': 'G Major'}];
+    relativesfull.forEach(rel => {
+      relatives.push(rel);
+    });
+
+    scoreMsg = 'You have scored ' + (score + 1) + ' out of ' + relativesfull.length + ' questions ';
   }
 
   showHelp();
@@ -745,6 +746,10 @@ function circleOfFifthsGame() {
         gameanswers.appendChild(cbutton);
       }
 
+      var reentry = "javascript:circleOfFifthsGame()";
+        var skipmethod = 'javascript:skip("' + reentry + '");';
+        addSkipButton(skipmethod, gameanswers);
+
   showHelp();
 
 
@@ -865,8 +870,7 @@ function schoolGame(subject, qlist) {
   var gamemain = document.getElementById('gamemain');
   var gameanswers = document.getElementById('gameanswers');
 
-    //need a random 0-23 rel length 24
-    //var randomQ = Math.floor(Math.random() * biology.length);
+    // random or ordered
     var index = 0;
     if (subject.indexOf('spanish') == -1){
       index = Math.floor(Math.random() * subjectlist[subject].length);
@@ -940,15 +944,8 @@ function schoolGame(subject, qlist) {
       gameanswers.appendChild(qbutton);
     //}
 
-    var skipbutton = document.createElement("button");
-    skipbutton.className = 'answerbuttons';
-    //skipbutton.id = 'relatives
-    skipbutton.type = 'button';
-    skipbutton.textContent = 'Skip';
-    //var ansmethod = 'javascript:checkAnswer("' + checkStuAnswer + '", "' + loadedGame + '",' + reentry + ');';
     var skipmethod = 'javascript:skip("' + reentry + '");';
-    skipbutton.setAttribute('onclick',skipmethod);
-    gameanswers.appendChild(skipbutton);
+    addSkipButton(skipmethod, gameanswers);
 
     //remove item
     subjectlist[subject].splice(index, 1);
@@ -964,16 +961,24 @@ function schoolGame(subject, qlist) {
     showHelp();
 }
 
+function addSkipButton(skipMethod, areaElement) {
+  var skipButton = document.createElement("button");
+  skipButton.className = 'answerbuttons';
+  //skipButton.id = 'relatives
+  skipButton.type = 'button';
+  skipButton.textContent = 'Skip';
+  skipButton.setAttribute('onclick', skipMethod);
+  areaElement.appendChild(skipButton);
+}
+
 
 function skip(reentry) {
-  var maxSkips = 3;
+  var maxSkips = 23;
   if (skips < maxSkips) {
     skips++;
     window.location = reentry;
   } else {
     var gameanswer = document.getElementById('gameanswer');
     gameanswer.textContent = 'You can only skip ' + maxSkips + ' questions';
-
   }
-
 }
