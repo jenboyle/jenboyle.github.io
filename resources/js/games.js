@@ -56,7 +56,6 @@ var schistoryfull = [{'question':'What is a Greek word to enquire about somethin
                     {'question':"When Henry closed down the monasteries, it was known as the _______ of the monasteries?", 'answer': 'CONTAINS(DISSOLUTION)', 'help': "'Dissolution' of the monasteries. Dissolution is another word for breaking up"},
                     {'question':"What happened in 1527?", 'answer': 'CONTAINS(OLD)ANDCONTAINS(ANNE)', 'help': "Henry thought Catherine was too old to have any more children. He had met and fell in love with Anne Boleyn and wanted to divorce Catherine"},
                     {'question':"What happened in 1513?", 'answer': 'CONTAINS(FRANCE)', 'help': "Henry was in France, Catherine ran the country for him. Her army beat a Scottish army Battle of Flodden. She gave Henry the dead King of Scotland's blood coat"},
-                    {'question':"What happened in 1513?", 'answer': 'CONTAINS(FRANCE)', 'help': "Henry was in France, Catherine ran the country for him. Her army beat a Scottish army Battle of Flodden. She gave Henry the dead King of Scotland's blood coat"},
 ];
 
 var schistory = [];
