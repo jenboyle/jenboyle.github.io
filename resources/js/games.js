@@ -46,7 +46,17 @@ var schistoryfull = [{'question':'What is a Greek word to enquire about somethin
                     {'question':'How can a biased source be useful to an Historian?', 'answer': 'CONTAINS(POINT OF VIEW)', 'help': "Biased source gives another person's point of view and perspective"},
                     {'question':'In which year was the Great Fire of London?', 'answer': 'IS(1666)', 'help': "1666"},
                     {'question':'What is an anachronism?', 'answer': 'ONEOF(OUT OF PLACE_WRONG PLACE_WRONG TIME PERIOD)', 'help': "An anachronism is something that is out of place (wrong place or wrong time period)"},
-
+                    {'question':"Who was Henry VIII's first wife in 1509?", 'answer': 'CONTAINS(CATHERINE OF ARAGON)', 'help': "Catherine of Aragon"},
+                    {'question':"Why did Henry marry Catherine of Aragon?", 'answer': 'ONEOF(ARRANGED_VII _ARTHUR)', 'help': "Arthur died and to avoid sending Catherine home to Spain upsetting her father, Henry VII arranged for his second son Henry to marry her"},
+                    {'question':"Who was Henry VIII's first wife?", 'answer': 'CONTAINS(CATHERINE OF ARAGON)', 'help': "Catherine of Aragon"},
+                    {'question':"What happened in 1501?", 'answer': 'CONTAINS(MET)', 'help': "Henry VIII first met Catherine of Aragon when she came to England to marry his big brother Arthur"},
+                    {'question':"What happened in 1533?", 'answer': 'CONTAINS(DIVORCE)', 'help': "In early 1533 Henry gave himself a divorce. He also married pregnant Anne Boleyn. A baby girl was born."},
+                    {'question':"What two things happened in 1509?", 'answer': 'CONTAINS(CATHERINE)ANDCONTAINSOR(FATHER_VII )', 'help': "In 1509 Henry VIII married Catherine of Aragon, the same year his father died."},
+                    {'question':"What are Henry's changes to the Church known as?", 'answer': 'CONTAINS(REFORMATION)', 'help': "English 'Reformation' (Reforming changing the English Church)"},
+                    {'question':"When Henry closed down the monasteries, it was known as the _______ of the monasteries?", 'answer': 'CONTAINS(DISSOLUTION)', 'help': "'Dissolution' of the monasteries. Dissolution is another word for breaking up"},
+                    {'question':"What happened in 1527?", 'answer': 'CONTAINS(OLD)ANDCONTAINS(ANNE)', 'help': "Henry thought Catherine was too old to have any more children. He had met and fell in love with Anne Boleyn and wanted to divorce Catherine"},
+                    {'question':"What happened in 1513?", 'answer': 'CONTAINS(FRANCE)', 'help': "Henry was in France, Catherine ran the country for him. Her army beat a Scottish army Battle of Flodden. She gave Henry the dead King of Scotland's blood coat"},
+                    {'question':"What happened in 1513?", 'answer': 'CONTAINS(FRANCE)', 'help': "Henry was in France, Catherine ran the country for him. Her army beat a Scottish army Battle of Flodden. She gave Henry the dead King of Scotland's blood coat"},
 ];
 
 var schistory = [];
