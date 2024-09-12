@@ -1,4 +1,4 @@
-import { blogs } from "../../../public/blogs/blogs";
+import { blogs } from "./blogs";
 import GroovyArticle from "../general/GroovyArticle";
 import styles from "./PreviewBlogs.module.css";
 
