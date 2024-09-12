@@ -1,0 +1,120 @@
+{
+  "song": "Phrygian",
+  "when": "Third mode of major scale.  It can be played with minor chords.",
+  "fretboard": "true",
+
+  "formula": "1,b2,b3,4,5,b6,b7",
+  "idkey": "phr1",
+  "fret_displays": [
+    {
+      "fret_name": "C Phrygian 1",
+      "fret_locs": "A3,A4,A6,D3,D5,D6,G3,G5",
+      "fret_id": "cphr1"
+    },
+    {
+      "fret_name": "C Phrygian 2",
+      "fret_locs": "E8,E9,E11,A8,A10,A11,D8,D10",
+      "fret_id": "cphr2"
+    },
+    {
+      "fret_name": "C# Phrygian 1",
+      "fret_locs": "A4,A5,A7,D4,D6,D7,G4,G6",
+      "fret_id": "c#phr1"
+    },
+    {
+      "fret_name": "D Phrygian 1",
+      "fret_locs": "A5,A6,A8,D5,D7,D8,G5,G7",
+      "fret_id": "dphr1"
+    },
+    {
+      "fret_name": "D Phrygian 2",
+      "fret_locs": "D0,D1,D3,G0,G2,G3,G5,G7",
+      "fret_id": "dphr2"
+    },
+    {
+      "fret_name": "D# Phrygian 1",
+      "fret_locs": "A6,A7,A9,D6,D8,D9,G6,G8",
+      "fret_id": "d#phr1"
+    },
+    {
+      "fret_name": "E Phrygian 1",
+      "fret_locs": "E0,E1,E3,A0,A2,A3,D0,D2",
+      "fret_id": "ephr1"
+    },
+    {
+      "fret_name": "E Phrygian 2",
+      "fret_locs": "D2,D3,D5,G2,G4,G5,G7,G9",
+      "fret_id": "ephr2"
+    },
+    {
+      "fret_name": "E Phrygian 3",
+      "fret_locs": "A7,A8,A10,D7,D9,D10,G7,G9",
+      "fret_id": "ephr3"
+    },
+    {
+      "fret_name": "F Phrygian 1",
+      "fret_locs": "E1,E2,E4,A1,A3,A4,D1,D3",
+      "fret_id": "fphr1"
+    },
+    {
+      "fret_name": "F Phrygian 2",
+      "fret_locs": "D3,D4,D6,G3,G5,G6,G8,G10",
+      "fret_id": "fphr2"
+    },
+    {
+      "fret_name": "F Phrygian 3",
+      "fret_locs": "A8,A9,A11,D8,D10,D11,G8,G10",
+      "fret_id": "fphr3"
+    },
+    {
+      "fret_name": "F# Phrygian 1",
+      "fret_locs": "E2,E3,E5,A2,A4,A5,D2,D4",
+      "fret_id": "f#phr1"
+    },
+    {
+      "fret_name": "G Phrygian 1",
+      "fret_locs": "E3,E4,E6,A3,A5,A6,D3,D5",
+      "fret_id": "gphr1"
+    },
+    {
+      "fret_name": "G Phrygian 2",
+      "fret_locs": "G0,G1,G3,G5,G7,G8,G10,G12",
+      "fret_id": "gphr2"
+    },
+    {
+      "fret_name": "G Phrygian 3",
+      "fret_locs": "D5,D6,D8,G5,G7,G8,G10,G12",
+      "fret_id": "gphr3"
+    },
+    {
+      "fret_name": "G# Phrygian 1",
+      "fret_locs": "E4,E5,E7,A4,A6,A7,D4,D6",
+      "fret_id": "g#phr1"
+    },
+    {
+      "fret_name": "A Phrygian 1",
+      "fret_locs": "A0,A1,A3,D0,D2,D3,G0,G2",
+      "fret_id": "aphr1"
+    },
+    {
+      "fret_name": "A Phrygian 2",
+      "fret_locs": "E5,E6,E8,A5,A7,A8,D5,D7",
+      "fret_id": "aphr2"
+    },
+    {
+      "fret_name": "Bb Phrygian 1",
+      "fret_locs": "E6,E7,E9,A6,A8,A9,D6,D8",
+      "fret_id": "bbphr1"
+    },
+    {
+      "fret_name": "B Phrygian 1",
+      "fret_locs": "E7,E8,E10,A7,A9,A10,D7,D9",
+      "fret_id": "bphr1"
+    },
+    {
+      "fret_name": "B Phrygian 2",
+      "fret_locs": "A2,A3,D0,D2,D4,G0,G2,G4",
+      "fret_id": "bphr2"
+    }
+  ]
+}
