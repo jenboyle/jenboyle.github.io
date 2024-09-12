@@ -1,0 +1,13 @@
+.image {
+  padding: 20px;
+  height: 240px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  display: block;
+  padding-bottom: 20px;
+}

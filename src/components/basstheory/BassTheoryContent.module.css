@@ -1,0 +1,65 @@
+.p {
+  text-align: left;
+  margin-left: 15px;
+}
+.p:first-letter {
+  font-size: 1.5em;
+  color: rgb(93, 47, 93);
+}
+
+.p a {
+  text-decoration: none;
+  color: darkslateblue;
+}
+
+.p a:hover {
+  background-color: whitesmoke;
+}
+
+.chord {
+  border-collapse: collapse;
+  border: 3px darkolivegreen solid;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+.chord th,
+.chord td {
+  border: 3px darkolivegreen solid;
+  border-bottom: 0px;
+}
+
+.chord td {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.chord td a {
+  text-decoration: none;
+  color: darkslateblue;
+}
+
+.chord td a:hover {
+  background-color: whitesmoke;
+}
+
+.fifthstable {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.fifthstable th,
+.fifthstable td {
+  border: 3px darkolivegreen solid;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.fifthstablecenttd {
+  text-align: center;
+}
+
+.fifthstablelefttd {
+  text-align: left;
+}

@@ -1,0 +1,19 @@
+.blogtitle {
+  font-size: 1.5em;
+  font-weight: normal;
+  text-align: left;
+}
+
+.date {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 0.8em;
+  font-weight: normal;
+  line-height: 2px;
+  text-align: left;
+}
+
+.overridegeneralarticle {
+  text-align: left;
+  border-bottom: none;
+}

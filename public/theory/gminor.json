@@ -1,0 +1,83 @@
+{
+  "song": "G Minor",
+  "by": "",
+  "key": "Gm",
+  "tuning": "EADG",
+  "notes": "G, A, Bb, C, D, Eb, F (2 flats) - Relative major: ",
+  "relativelink": "bflatmajor",
+  "relativelinktext": "Bb",
+  "chords": "Gm,Adim,Bb,Cm,Dm,Eb,F",
+  "chordtones": "G|Bb|D, A|C|Eb, Bb|D|F, C|Eb|G, D|F|A, Eb|G|Bb, F|A|C",
+  "textb4tab1": "Gm on one string:",
+  "g1": "----------------",
+  "d1": "----------------",
+  "a1": "----------------",
+  "e1": "-3--5--6--8-10--",
+
+  "g2": "----------------",
+  "d2": "----------------",
+  "a2": "----------------",
+  "e2": "-11--13---------",
+  "textb4tab2": "Gm moveable pattern:",
+  "g5": "----------------",
+  "d5": "-------------3-5",
+  "a5": "-------3-5-6----",
+  "e5": "-3-5-6----------",
+
+
+  "chord1": "Gm",
+  "chord1e": "3",
+  "chord1a": "1",
+  "chord1d": "0",
+  "chord1g": "0",
+
+  "chord2": "ADim",
+  "chord2e": "x",
+  "chord2a": "3",
+  "chord2d": "1",
+  "chord2g": "2",
+
+  "chord3":"Bb",
+  "chord3e": "x",
+  "chord3a": "1",
+  "chord3d": "0",
+  "chord3g": "3",
+
+
+
+  "chord4": "Cm",
+  "chord4e": "3",
+  "chord4a": "3",
+  "chord4d": "1",
+  "chord4g": "0",
+
+  "chord5": "Dm",
+  "chord5e": "1",
+  "chord5a": "0",
+  "chord5d": "0",
+  "chord5g": "2",
+
+  "chord6": "Eb",
+  "chord6e": "x",
+  "chord6a": "1",
+  "chord6d": "1",
+  "chord6g": "0",
+
+  "chord7": "F",
+  "chord7e": "2",
+  "chord7a": "4",
+  "chord7d": "4",
+  "chord7g": "3",
+
+  "chord8": "F7",
+  "chord8e": "1",
+  "chord8a": "0",
+  "chord8d": "1",
+  "chord8g": "2"
+
+
+
+
+
+  
+}

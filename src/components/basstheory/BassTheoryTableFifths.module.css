@@ -1,0 +1,54 @@
+.p {
+  text-align: left;
+  margin-left: 15px;
+}
+.p:first-letter {
+  font-size: 1.5em;
+  color: rgb(93, 47, 93);
+}
+
+.p a {
+  text-decoration: none;
+  color: darkslateblue;
+}
+
+.p a:hover {
+  background-color: whitesmoke;
+}
+
+.img {
+  background-color: rgb(195 167 215 / 50%);
+}
+
+.fifthstable {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+.thkey {
+  width: 80px;
+}
+
+.thamount {
+  width: 160px;
+}
+
+.thlist {
+  width: 240px;
+}
+
+.fifthstable th,
+.fifthstable td {
+  border: 3px darkolivegreen solid;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.fifthstablecenttd {
+  text-align: center;
+}
+
+.fifthstablelefttd {
+  text-align: left;
+}

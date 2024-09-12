@@ -1,0 +1,39 @@
+.nav {
+  background-color: rgb(194, 167, 215);
+  color: black;
+  margin: 0;
+}
+
+.nav a {
+  background-color: rgb(194, 167, 215);
+  color: rgb(39, 35, 35);
+  display: block;
+  padding: 0 10px;
+  font-size: 1em;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background-color: rgb(93, 47, 93);
+  color: white;
+}
+
+.nav ul {
+  background-color: rgb(194, 167, 215);
+  color: black;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  float: none;
+}
+
+.nav ul li {
+  display: inline-block;
+  background-color: rgb(194, 167, 215);
+}
+
+.nav {
+  clear: both;
+}

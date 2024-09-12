@@ -1,0 +1,119 @@
+{
+  "song": "Aeolian",
+  "when": "Sixth mode of major scale. AKA Natural Minor Scale. It can be played with minor chords.",
+  "fretboard": "true",
+  "formula": "1,2,b3,4,5,b6,b7",
+  "idkey": "aeo1",
+  "fret_displays": [
+    {
+      "fret_name": "C Aeolian 1",
+      "fret_locs": "E8,E10,E11,A8,A10,A11,D8,D10",
+      "fret_id": "caeo1"
+    },
+    {
+      "fret_name": "C Aeolian 2",
+      "fret_locs": "A3,D0,D1,D3,G0,G1,G3,G5",
+      "fret_id": "caeo2"
+    },
+    {
+      "fret_name": "C# Aeolian 1",
+      "fret_locs": "A4,D1,D2,D4,G1,G2,G4,G6",
+      "fret_id": "c#aeo2"
+    },
+    {
+      "fret_name": "D Aeolian 1",
+      "fret_locs": "D0,D2,D3,G0,G2,G3,G5,G7",
+      "fret_id": "daeo1"
+    },
+    {
+      "fret_name": "D Aeolian 2",
+      "fret_locs": "A5,A7,A8,D5,D7,D8,G5,G7",
+      "fret_id": "daeo2"
+    },
+    {
+      "fret_name": "Eb Aeolian 1",
+      "fret_locs": "A6,A8,A9,D6,D8,D9,G6,G8",
+      "fret_id": "ebaeo1"
+    },
+    {
+      "fret_name": "E Aeolian 1",
+      "fret_locs": "A7,A9,A10,D7,D9,D10,G7,G9",
+      "fret_id": "eaeo1"
+    },
+    {
+      "fret_name": "E Aeolian 2",
+      "fret_locs": "D2,D4,D5,G2,G4,G5,G7,G9",
+      "fret_id": "eaeo2"
+    },
+    {
+      "fret_name": "E Aeolian 3",
+      "fret_locs": "E0,E2,E3,A0,A2,A3,D0,D2",
+      "fret_id": "eaeo3"
+    },
+    {
+      "fret_name": "F Aeolian 1",
+      "fret_locs": "E1,E3,E4,A1,A3,A4,D1,D3",
+      "fret_id": "faeo1"
+    },
+    {
+      "fret_name": "F Aeolian 2",
+      "fret_locs": "D3,D5,D6,G3,G5,G6,G8,G10",
+      "fret_id": "faeo2"
+    },
+    {
+      "fret_name": "F Aeolian 3",
+      "fret_locs": "A8,A10,A11,D8,D10,D11,G8,G10",
+      "fret_id": "faeo3"
+    },
+    {
+      "fret_name": "F# Aeolian 1",
+      "fret_locs": "E2,E4,E5,A2,A4,A5,D2,D4",
+      "fret_id": "f#aeo1"
+    },
+    {
+      "fret_name": "G Aeolian 1",
+      "fret_locs": "E3,E5,E6,A3,A5,A6,D3,D5",
+      "fret_id": "gaeo1"
+    },
+    {
+      "fret_name": "G Aeolian 2",
+      "fret_locs": "G0,G2,G3,G5,G7,G8,G10,G12",
+      "fret_id": "gaeo2"
+    },
+    {
+      "fret_name": "G Aeolian 3",
+      "fret_locs": "D5,D7,D8,G5,G7,G8,G10,G12",
+      "fret_id": "gaeo3"
+    },
+    {
+      "fret_name": "G# Aeolian 1",
+      "fret_locs": "E4,E6,E7,A4,A6,A7,D4,D6",
+      "fret_id": "g#aeo1"
+    },
+    {
+      "fret_name": "A Aeolian 1",
+      "fret_locs": "A0,A2,A3,D0,D2,D3,G0,G2",
+      "fret_id": "aaeo1"
+    },
+    {
+      "fret_name": "A Aeolian 2",
+      "fret_locs": "E5,E7,E8,A5,A7,A8,D5,D7",
+      "fret_id": "aaeo2"
+    },
+    {
+      "fret_name": "Bb Aeolian 1",
+      "fret_locs": "E6,E8,E9,A6,A8,A9,D6,D8",
+      "fret_id": "bbaeo1"
+    },
+    {
+      "fret_name": "B Aeolian 1",
+      "fret_locs": "E7,E9,E10,A7,A9,A10,D7,D9",
+      "fret_id": "baeo1"
+    },
+    {
+      "fret_name": "B Aeolian 2",
+      "fret_locs": "A2,A4,D0,D2,D4,G0,G2,G4",
+      "fret_id": "baeo2"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+.pad {
+  padding: 10px;
+  margin: 10px;
+}
+
+.question {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: rgb(65, 48, 63);
+}

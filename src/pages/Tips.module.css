@@ -1,0 +1,5 @@
+.overridegeneralarticle p,
+.overridegeneralarticle div,
+.overridegeneralarticle li {
+  text-align: left;
+}

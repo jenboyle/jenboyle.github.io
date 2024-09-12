@@ -1,0 +1,29 @@
+.header {
+  background-color: rgb(189, 189, 243);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  color: #053e5d8e;
+  z-index: 999;
+}
+
+.header h1 {
+  font-size: 1.5em;
+  color: rgb(56, 33, 65);
+  text-align: center;
+  text-shadow: 0 0 3px #516c51, 0 0 5px #c36eb5, 0 0 2px #787aa2;
+}
+
+.header h2 {
+  color: rgb(56, 33, 65);
+  text-shadow: 0 0 1.5px #516c51, 0 0 2.5px #c36eb5, 0 0 1px #787aa2;
+  font-size: 1em;
+  padding: 0.5px;
+  margin-bottom: 20px;
+}
+.logo {
+  padding: 12px;
+  float: left;
+}

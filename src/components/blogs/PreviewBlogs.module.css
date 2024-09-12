@@ -1,0 +1,38 @@
+.date {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 0.8em;
+  font-weight: normal;
+  line-height: 2px;
+  text-align: left;
+}
+
+.blogpreview {
+  font-size: 1.2em;
+  font-weight: normal;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.a {
+  text-decoration: underline;
+  color: darkslateblue;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.a:hover {
+  background-color: whitesmoke;
+}
+
+.article {
+  padding: 10px;
+  font-size: 1.2em;
+  border-bottom: 1px solid black;
+  overflow: hidden;
+}
+
+.overridegeneralarticle {
+  text-align: left;
+  border-bottom: none;
+}

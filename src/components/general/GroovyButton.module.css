@@ -1,0 +1,26 @@
+.jambuttons:hover {
+  background-color: whitesmoke;
+}
+
+.jambuttons {
+  color: black;
+  display: block;
+  padding: 16px;
+  background-color: #ddd3a5;
+  font-size: 20px;
+  border-radius: 15px;
+  border: 2px solid rgb(134, 133, 124);
+  box-shadow: 0 4px #999;
+  margin: 0 auto;
+}
+
+.jambuttons:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+.div {
+  color: black;
+  padding-top: 10px;
+  font-size: 20px;
+}

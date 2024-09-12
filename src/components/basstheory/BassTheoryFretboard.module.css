@@ -1,0 +1,367 @@
+.p {
+  text-align: left;
+  margin-left: 15px;
+}
+.p:first-letter {
+  font-size: 1.5em;
+  color: rgb(93, 47, 93);
+}
+
+.dropdowntheory {
+  position: relative;
+  display: block;
+  padding-bottom: 30px;
+  text-align: left;
+}
+
+.dropbtntheory {
+  background-color: #72a08f;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.dropbtntheory:hover,
+.dropbtntheory:focus {
+  background-color: #5c7c70;
+}
+
+.dropdowncontenttheory {
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  height: 250px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdowncontenttheory ul {
+  list-style-type: none;
+  padding: 10;
+  margin: 10;
+}
+
+.hide {
+  display: none;
+}
+
+.dropdowncontenttheory a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdowncontenttheory a:hover {
+  background-color: #ddd;
+}
+
+.myInputtheory {
+  box-sizing: border-box;
+  background-image: url("/images/icons/search.png");
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 16px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background-color: lavenderblush;
+}
+
+.myInputtheory:focus {
+  outline: 3px solid #ddd;
+}
+
+.fretboard {
+  position: relative;
+  left: 15px;
+}
+
+.alllocs {
+  position: relative;
+}
+
+.E0,
+.E1,
+.E2,
+.E3,
+.E4,
+.E5,
+.E6,
+.E7,
+.E8,
+.E9,
+.E10,
+.E11,
+.E12,
+.E13,
+.E14,
+.E15,
+.E16,
+.E17,
+.E18 {
+  top: -50px;
+}
+
+.A0,
+.A1,
+.A2,
+.A3,
+.A4,
+.A5,
+.A6,
+.A7,
+.A8,
+.A9,
+.A10,
+.A11,
+.A12,
+.A13,
+.A14,
+.A15,
+.A16,
+.A17,
+.A18 {
+  top: -70px;
+}
+
+.D0,
+.D1,
+.D2,
+.D3,
+.D4,
+.D5,
+.D6,
+.D7,
+.D8,
+.D9,
+.D10,
+.D11,
+.D12,
+.D13,
+.D14,
+.D15,
+.D16,
+.D17,
+.D18 {
+  top: -90px;
+}
+
+.G0,
+.G1,
+.G2,
+.G3,
+.G4,
+.G5,
+.G6,
+.G7,
+.G8,
+.G9,
+.G10,
+.G11,
+.G12,
+.G13,
+.G14,
+.G15,
+.G16,
+.G17,
+.G18 {
+  top: -108px;
+}
+
+.E0,
+.A0,
+.D0,
+.G0 {
+  --initleft: -295px;
+}
+
+.E1,
+.A1,
+.D1,
+.G1 {
+  --initleft: -250px;
+}
+
+.E2,
+.A2,
+.D2,
+.G2 {
+  --initleft: -175px;
+}
+
+.E3,
+.A3,
+.D3,
+.G3 {
+  --initleft: -105px;
+}
+
+.E4,
+.A4,
+.D4,
+.G4 {
+  --initleft: -39px;
+}
+
+.E5,
+.A5,
+.D5,
+.G5 {
+  --initleft: 20px;
+}
+
+.E6,
+.A6,
+.D6,
+.G6 {
+  --initleft: 74px;
+}
+
+.E7,
+.A7,
+.D7,
+.G7 {
+  --initleft: 124px;
+}
+
+.E8,
+.A8,
+.D8,
+.G8 {
+  --initleft: 170px;
+}
+
+.E9,
+.A9,
+.D9,
+.G9 {
+  --initleft: 213px;
+}
+
+.E10,
+.A10,
+.D10,
+.G10 {
+  --initleft: 252px;
+}
+
+.E11,
+.A11,
+.D11,
+.G11 {
+  --initleft: 290px;
+}
+
+.E12,
+.A12,
+.D12,
+.G12 {
+  --initleft: 325px;
+}
+
+.E13,
+.A13,
+.D13,
+.G13 {
+  --initleft: 358px;
+}
+
+.E14,
+.A14,
+.D14,
+.G14 {
+  --initleft: 390px;
+}
+
+.E15,
+.A15,
+.D15,
+.G15 {
+  --initleft: 420px;
+}
+
+.E16,
+.A16,
+.D16,
+.G16 {
+  --initleft: 446px;
+}
+
+.E17,
+.A17,
+.D17,
+.G17 {
+  --initleft: 472px;
+}
+
+.E18,
+.A18,
+.D18,
+.G18 {
+  --initleft: 497px;
+}
+
+.leftOffset {
+  left: var(--initleft);
+}
+
+.leftOffsetOne {
+  left: calc(var(--initleft) - 25px);
+}
+
+.leftOffsetTwo {
+  left: calc(var(--initleft) - 50px);
+}
+
+.leftOffsetThree {
+  left: calc(var(--initleft) - 75px);
+}
+
+.leftOffsetFour {
+  left: calc(var(--initleft) - 100px);
+}
+
+.leftOffsetFive {
+  left: calc(var(--initleft) - 125px);
+}
+
+.leftOffsetSix {
+  left: calc(var(--initleft) - 150px);
+}
+
+.leftOffsetSeven {
+  left: calc(var(--initleft) - 175px);
+}
+
+.leftOffsetHalfOne {
+  left: calc(var(--initleft) - 12.5px);
+}
+
+.leftOffsetHalfTwo {
+  left: calc(var(--initleft) - 37.5px);
+}
+
+.leftOffsetHalfThree {
+  left: calc(var(--initleft) - 62.5px);
+}
+
+.leftOffsetHalfFour {
+  left: calc(var(--initleft) - 87.5px);
+}
+
+.leftOffsetHalfFive {
+  left: calc(var(--initleft) - 112.5px);
+}
+
+.leftOffsetHalfSix {
+  left: calc(var(--initleft) - 137.5px);
+}
+
+.leftOffsetHalfSeven {
+  left: calc(var(--initleft) - 162.5px);
+}

@@ -1,0 +1,13 @@
+.boximg {
+  float: left;
+  padding: 10px;
+  max-width: 96%;
+  border: 10px white solid;
+  margin: 2%;
+}
+
+.overridegeneralarticle p,
+.overridegeneralarticle div,
+.overridegeneralarticle li {
+  text-align: left;
+}
