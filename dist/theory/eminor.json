@@ -1,0 +1,92 @@
+{
+  "song": "E Minor",
+  "by": "",
+  "key": "Em",
+  "tuning": "EADG",
+  "notes": "E, F#, G, A, B, C, D (1 sharp) - Relative major: ",
+  "relativelink": "gmajor",
+  "relativelinktext": "G",
+  "chords": "Em,F#dim,G,Am,Bm,C,D",
+  "chordtones": "E|G|B, F#|A|C, G|B|D, A|C|E, B|D|F#, C|E|G, D|F#|A",
+  "chordtones7": "E|G|B|D, F#|A|C|E, G|B|D|F#, A|C|E|G, B|D|F#|A, C|E|G|B, D|F#|A|C",
+  "textb4tab1": "Em on one string:",
+  "g1": "----------------",
+  "d1": "----------------",
+  "a1": "----------------",
+  "e1": "-0-2-3-5-7------",
+
+  "g2": "----------------",
+  "d2": "----------------",
+  "a2": "----------------",
+  "e2": "-8-10-12--------",
+  "textb4tab2": "Em moveable pattern:",
+  "g5": "----------------",
+  "d5": "--------7-9-10--",
+  "a5": "-7-9-10---------",
+  "e5": "----------------",
+
+  "g6": "-7-9------------",
+  "d6": "----------------",
+  "a6": "----------------",
+  "e6": "----------------",
+
+
+  "chord1": "Em",
+  "chord1e": "0",
+  "chord1a": "2",
+  "chord1d": "2",
+  "chord1g": "0",
+
+  "chord2": "F#Dim",
+  "chord2e": "2",
+  "chord2a": "3",
+  "chord2d": "x",
+  "chord2g": "2",
+
+  "chord3": "G",
+  "chord3e": "3",
+  "chord3a": "2",
+  "chord3d": "0",
+  "chord3g": "0",
+
+  "chord4": "Am",
+  "chord4e": "0",
+  "chord4a": "3",
+  "chord4d": "2",
+  "chord4g": "2",
+
+  "chord5": "Bm",
+  "chord5out":"4",
+  "chord5e": "4",
+  "chord5a": "2",
+  "chord5d": "1",
+  "chord5g": "x",
+
+
+  "chord6":"C",
+  "chord6e": "x",
+  "chord6a": "3",
+  "chord6d": "2",
+  "chord6g": "0",
+
+  "chord7":"D",
+  "chord7e": "2",
+  "chord7a": "0",
+  "chord7d": "0",
+  "chord7g": "2",
+
+
+
+  "chord8": "D7",
+  "chord8out":"4",
+  "chord8e": "x",
+  "chord8a": "2",
+  "chord8d": "1",
+  "chord8g": "2"
+
+
+
+
+
+  
+}

@@ -1,0 +1,86 @@
+{
+  "song": "G# Minor",
+  "by": "",
+  "key": "G#m/Abm",
+  "tuning": "EADG",
+  "notes": "G#, A#, B, C#, D#, E, F# (5 sharps) - Relative major: ",
+  "relativelink": "bmajor",
+  "relativelinktext": "B",
+  "chords": "G#m,A#dim,B,C#m,D#m,E,F#",
+  "chordtones": "G#|B|D#, A#|C#|E, B|D#|F#, C#|E|G#, D#|F#|A#, E|G#|B, F#|A#|C#",
+  "textb4tab1": "G#m on one string:",
+  "g1": "----------------",
+  "d1": "----------------",
+  "a1": "----------------",
+  "e1": "-4--6--7--9--11-",
+
+  "g2": "----------------",
+  "d2": "----------------",
+  "a2": "----------------",
+  "e2": "-12--14--16-----",
+  "textb4tab2": "G#m moveable pattern:",
+  "g5": "----------------",
+  "d5": "-------------4-6",
+  "a5": "-------4-6-7----",
+  "e5": "-4-6-7----------",
+
+
+  "chord1": "G#m",
+  "chord1out":"4",
+  "chord1e": "1",
+  "chord1a": "3",
+  "chord1d": "3",
+  "chord1g": "1",
+
+  "chord2": "A#Dim",
+  "chord2e": "x",
+  "chord2a": "4",
+  "chord2d": "2",
+  "chord2g": "3",
+
+  "chord3":"B",
+  "chord3e": "2",
+  "chord3a": "2",
+  "chord3d": "1",
+  "chord3g": "x",
+
+
+
+  "chord4": "C#m",
+  "chord4out":"6",
+  "chord4e": "4",
+  "chord4a": "2",
+  "chord4d": "1",
+  "chord4g": "x",
+
+  "chord5": "D#m",
+  "chord5out":"3",
+  "chord5e": "x",
+  "chord5a": "4",
+  "chord5d": "2",
+  "chord5g": "1",
+
+  "chord6": "E",
+  "chord6e": "0",
+  "chord6a": "2",
+  "chord6d": "2",
+  "chord6g": "1",
+
+  "chord7": "F#",
+  "chord7e": "2",
+  "chord7a": "4",
+  "chord7d": "4",
+  "chord7g": "3",
+
+  "chord8": "F#7",
+  "chord8e": "2",
+  "chord8a": "1",
+  "chord8d": "2",
+  "chord8g": "x"
+
+
+
+
+
+  
+}
