@@ -32,10 +32,14 @@ function PageNav() {
           <Link to="/percussion">Percussion</Link>
         </li>
         <li>
-          <Link to="/games">Games</Link>
+          <Link reloadDocument to="/games">
+            Games
+          </Link>
         </li>
         <li>
-          <Link to="/blogs">Blogs</Link>
+          <Link reloadDocument to="/blogs">
+            Blogs
+          </Link>
         </li>
         <li>
           <Link to="/tips">Tips</Link>

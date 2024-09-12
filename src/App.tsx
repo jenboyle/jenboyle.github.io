@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 //import Cubase from "./pages/Cubase";
 //import Homepage from "./pages/Homepage";
 //import PageNotFound from "./pages/PageNotFound";
@@ -35,7 +35,7 @@ const Header = lazy(() => import("./components/Header"));
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <main>
           <Suspense fallback={<LoadingSpinner />}>
@@ -55,7 +55,7 @@ function App() {
             </Routes>
           </Suspense>
         </main>
-      </BrowserRouter>
+      </HashRouter>
 
       <Socials />
     </>
