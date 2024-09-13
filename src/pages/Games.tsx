@@ -35,6 +35,12 @@ function Games() {
     setSelectedGame((e.target as HTMLButtonElement).id);
     console.log((e.target as HTMLButtonElement).id);
   }
+
+  function handleAllGames() {
+    setSelectedGame("");
+    setSelectedSchoolTopic(false);
+    setSelectedGameTopic("");
+  }
   return (
     <>
       <GroovyHeader>Games</GroovyHeader>
@@ -121,6 +127,15 @@ function Games() {
           </button>
         ))
       )}
+
+      {selectedGameTopic ? (
+        <button
+          className={`${styles.allgames} ${styles.buttonpad}`}
+          onClick={handleAllGames}
+        >
+          All Games
+        </button>
+      ) : null}
     </>
   );
 }

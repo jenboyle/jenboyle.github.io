@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./PageNav.module.css";
 
 function PageNav() {
@@ -6,43 +6,43 @@ function PageNav() {
     <nav className={styles.nav}>
       <ul>
         <li>
-          <Link reloadDocument to="/">
+          <NavLink reloadDocument to="/">
             My Transcriptions
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/about_me">About Me</Link>
+          <NavLink to="/about_me">About Me</NavLink>
         </li>
         <li>
-          <Link to="/improvisation">Improvisation</Link>
+          <NavLink to="/improvisation">Improvisation</NavLink>
         </li>
         <li>
-          <Link to="/my_gear">My Gear</Link>
+          <NavLink to="/my_gear">My Gear</NavLink>
         </li>
         <li>
-          <Link to="/bass_theory">Bass Theory</Link>
+          <NavLink to="/bass_theory">Bass Theory</NavLink>
         </li>
         <li>
-          <Link to="/jam_time">Jam Time</Link>
+          <NavLink to="/jam_time">Jam Time</NavLink>
         </li>
         <li>
-          <Link to="/cubase">Cubase</Link>
+          <NavLink to="/cubase">Cubase</NavLink>
         </li>
         <li>
-          <Link to="/percussion">Percussion</Link>
+          <NavLink to="/percussion">Percussion</NavLink>
         </li>
         <li>
-          <Link reloadDocument to="/games">
+          <NavLink reloadDocument to="/games">
             Games
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link reloadDocument to="/blogs">
+          <NavLink reloadDocument to="/blogs">
             Blogs
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/tips">Tips</Link>
+          <NavLink to="/tips">Tips</NavLink>
         </li>
       </ul>
     </nav>

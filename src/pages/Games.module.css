@@ -2,3 +2,9 @@
   padding: 10px;
   margin: 10px;
 }
+
+.allgames {
+  display: block;
+  background-color: #b7b7dc;
+  margin-top: 100px;
+}

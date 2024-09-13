@@ -145,8 +145,6 @@ function Song({ jsonfile }: SongProps) {
     [jsonfile]
   );
 
-  console.log(songJson);
-
   // const song = fetch(`./songs/${jsonfile}.json`)
   //   .then((res) => res.json())
   //   .then((data) => console.log(data));

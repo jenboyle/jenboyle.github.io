@@ -61,10 +61,10 @@ function BassTheoryFretboard({
   function handleSelection(e: React.MouseEvent<HTMLLIElement>) {
     setShowOption(false);
     //alert(e);
-    console.log("in handle selection:::");
-    console.log((e.target as HTMLLIElement).textContent);
-    console.log((e.target as HTMLLIElement).id);
-    console.log((e.target as HTMLLIElement).getAttribute("value"));
+    //console.log("in handle selection:::");
+    //console.log((e.target as HTMLLIElement).textContent);
+    //console.log((e.target as HTMLLIElement).id);
+    //console.log((e.target as HTMLLIElement).getAttribute("value"));
     setButtonText((e.target as HTMLLIElement).textContent!);
     setFretLocs((e.target as HTMLLIElement).getAttribute("value")!);
   }

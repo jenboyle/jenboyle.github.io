@@ -29,6 +29,11 @@
   float: none;
 }
 
+.nav :global(.active) {
+  background-color: rgb(138 112 158);
+  color: white;
+}
+
 .nav ul li {
   display: inline-block;
   background-color: rgb(194, 167, 215);

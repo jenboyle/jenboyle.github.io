@@ -5,25 +5,33 @@ import { allgear } from "./allgear";
 
 function Gear() {
   return allgear[0].gear.map((gearItem, index) => (
-    <div key={index}>
-      <GroovyHeader>{gearItem.title}</GroovyHeader>
+    <div key={`${gearItem.title}${index}`}>
+      <GroovyHeader key={`gh${index}`}>{gearItem.title}</GroovyHeader>
       {gearItem.articles.map((articleItem, articleidx) => (
-        <>
-          <GroovyArticle
-            customStyles={styles.overridegeneralarticle}
-            key={articleidx}
-          >
-            <p key={articleidx}>{articleItem.article}</p>
-            {articleItem.image1 ? (
-              <img src={articleItem.image1} className={styles.boximg}></img>
-            ) : null}
-            {articleItem.image2 ? (
-              <img src={articleItem.image2} className={styles.boximg}></img>
-            ) : null}
+        <GroovyArticle
+          customStyles={styles.overridegeneralarticle}
+          key={`ga${articleidx}`}
+        >
+          <p key={`p${articleidx}`}>{articleItem.article}</p>
+          {articleItem.image1 ? (
+            <img
+              key={`img1${articleidx}`}
+              src={articleItem.image1}
+              className={styles.boximg}
+            ></img>
+          ) : null}
+          {articleItem.image2 ? (
+            <img
+              key={`img2${articleidx}`}
+              src={articleItem.image2}
+              className={styles.boximg}
+            ></img>
+          ) : null}
 
-            <div className={styles.div}>{articleItem.description}</div>
-          </GroovyArticle>
-        </>
+          <div key={`desc${articleidx}`} className={styles.div}>
+            {articleItem.description}
+          </div>
+        </GroovyArticle>
       ))}
     </div>
   ));
