@@ -43,7 +43,7 @@
     {
       "fret_name": "C Major Pentatonic 6",
       "fret_locs": "E5,E8,A5,A7,D5,D7,G5,G7",
-      "fret_id": "cmajorpent5",
+      "fret_id": "cmajorpent6",
       "fret_rootszeroindex": "1,6",
       "fret_notes": "C,D,E,G,A"
     },
