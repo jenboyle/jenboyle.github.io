@@ -3,8 +3,8 @@ import BassTheorySideNav from "./BassTheorySideNav";
 import styles from "./BassTheoryContainer.module.css";
 import { useState } from "react";
 
-function BassTheory() {
-  const [selectedKey, setSelectedKey] = useState("");
+function BassTheory({ initialKey = "aflatmajor" }) {
+  const [selectedKey, setSelectedKey] = useState(initialKey);
   const [context, setContext] = useState("");
 
   function handleTheorySelection(e: React.MouseEvent<HTMLLIElement>) {

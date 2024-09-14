@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./BassTheoryFretboard.module.css";
 import { TheoryType } from "./BassTheoryContent";
 
@@ -26,28 +26,60 @@ function BassTheoryFretboard({
   //     `Jen in component fretname: ${theoryJson.fret_name1} buttontext: ${buttonText} fretlocs: ${theoryJson.fret_locs1} fretlocsvar: ${fretLocs} `
   //   );
 
-  let key = "";
-  if (context == "") {
-    key = `c${theoryJson.idkey}`;
-  } else {
-    key = `${context}${theoryJson.idkey}`;
-  }
+  // console.log(`context ${context}`);
+  // console.log(`idkey ${theoryJson.idkey}`);
+  // console.log(`together ${context}${theoryJson.idkey}`);
 
-  console.log(`finalcontext ${key}`);
-
-  console.log(`context ${context}`);
-  console.log(`idkey ${theoryJson.idkey}`);
-  console.log(`together ${context}${theoryJson.idkey}`);
+  // theoryJson.fret_displays!.map((fd) => (
+  //   fd.fret_id === `${context}${theoryJson.idkey}` ?
+  //   {setButtonText({fd.fret_name});
+  //   setFretLocs({fd.fret_locs});
+  //    } : null
+  // ));
 
   //if fretLocs.length == -1 ? setFretLocs(theoryJson.fret_locs1) : <div></div>}
 
-  //   useEffect(
-  //     function () {
-  //       console.log(`Jen in effect ${buttonText}`);
-  //       setButtonText(buttonText);
-  //     },
-  //     [buttonText]
-  //   );
+  useEffect(
+    function () {
+      let initial = "";
+      if (context == "") {
+        initial = `c${theoryJson.idkey}`;
+      } else {
+        initial = `${context}${theoryJson.idkey}`;
+      }
+
+      console.log(`Jen in effect ${initial}`);
+      console.log(`Jen in effect ${context}`);
+      console.log(`Jen in effect ${theoryJson}`);
+
+      console.log(`finalcontext ${initial}`);
+
+      for (let i = 0; i < theoryJson.fret_displays!.length; i++) {
+        if (initial === theoryJson.fret_displays![i].fret_id) {
+          console.log("matched");
+          setButtonText(theoryJson.fret_displays![i].fret_name);
+          setFretLocs(theoryJson.fret_displays![i].fret_locs);
+        }
+      }
+
+      //theoryJson.fret_displays![0].fret_locs
+      //setButtonText(buttonText);
+      //set the initial context
+      //   initial === fret_display.fret_id
+      //     ? fret_display.fret_locs
+
+      //theoryJson.fret_displays!.
+
+      // theoryJson.fret_displays!.map((fd) => (
+      //   fd.fret_id === initial ? {
+      //   setButtonText(fd.fret_name);
+      //   setFretLocs(fd.fret_locs);
+      //   }
+      // ));
+    },
+    [context, theoryJson]
+  );
+
   //[theoryJson.fret_name1, buttonText]
   function handleClick() {
     setShowOption(!showOption);
@@ -69,6 +101,19 @@ function BassTheoryFretboard({
     setFretLocs((e.target as HTMLLIElement).getAttribute("value")!);
   }
   //{buttonText === "" ? theoryJson.fret_name1 : buttonText}
+
+  // defaultValue={
+  //   initial === fret_display.fret_id
+  //     ? fret_display.fret_locs
+  //     : undefined
+  // }
+
+  // {
+  //   <div>
+  //     {fretLocs} {fretLocs!.length} {fretLocs!.match(/,/g)!.length}
+  //   </div>
+  // }
+
   return (
     <>
       {theoryJson.when ? <p className={styles.p}>{theoryJson.when}</p> : null}
@@ -118,12 +163,6 @@ function BassTheoryFretboard({
         src="/images/theory/fretboarddos.jpg"
         className={styles.fretboard}
       ></img>
-
-      {
-        <div>
-          {fretLocs} {fretLocs!.length} {fretLocs!.match(/,/g)!.length}
-        </div>
-      }
 
       {fretLocs!.split(",").map((fretLoc, index) => (
         <img

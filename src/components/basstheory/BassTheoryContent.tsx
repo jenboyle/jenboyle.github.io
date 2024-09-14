@@ -3,7 +3,7 @@ import styles from "./BassTheoryContent.module.css";
 //import TheoryTab from "./TheoryTab";
 
 import BassTheoryTableFifths from "./BassTheoryTableFifths";
-import { useLocation } from "react-router-dom";
+//import { useLocation } from "react-router-dom";
 import BassTheoryFretboard from "./BassTheoryFretboard";
 import GroovyTab from "../general/GroovyTab";
 
@@ -209,15 +209,16 @@ function BassTheoryContent({
   const [theoryJson, setTheoryJson] = useState<TheoryType>();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const location = useLocation();
-  const sentState = location.state;
-  console.log(`sentState ${sentState}`);
-  if (sentState != null) {
-    if (sentState.selkey != undefined) {
-      handleNavTheory(sentState.selkey, "C");
-      location.state = null;
-    }
-  }
+  // const location = useLocation();
+  // const sentState = location.state;
+  // console.log(`sentState ${sentState}`);
+  // if (sentState != null) {
+  //   if (sentState.selkey != undefined) {
+  //     handleNavTheory(sentState.selkey, "C");
+  //     location.state = null;
+  //     //console.log(`sentState2 ${sentState}`);
+  //   }
+  // }
 
   useEffect(
     function () {
@@ -246,13 +247,19 @@ function BassTheoryContent({
     }
   }
 
-  console.log("Is there an error %s", error);
-
   //   function optionOne(jsong, chord) {
 
   //   }
   //if (error) return <div>Error loading, refresh {error}</div>;
-  if (error) return null;
+  if (isLoading) {
+    console.log("Loading...");
+    return null;
+  }
+
+  if (error) {
+    console.log("There is an error %s", error);
+    return null;
+  }
 
   return (
     <div>
