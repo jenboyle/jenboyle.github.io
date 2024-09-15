@@ -1,0 +1,1 @@
+import{j as t}from"./index-izoAfUW9.js";const a="_article_ngufm_1",i={article:a};function o({children:e,customStyles:r}){return t.jsx("article",{className:`${i.article} ${r||""}`,children:e})}const c="_overridegeneralarticle_1j7ej_1",l={overridegeneralarticle:c};function n({children:e}){return t.jsx(o,{customStyles:l.overridegeneralarticle,children:e})}export{n as G,o as a};

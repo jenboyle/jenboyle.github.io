@@ -1,1 +1,0 @@
-import{j as s}from"./index-CzTp8c8K.js";const i="_jambuttons_1cyiw_1",a="_div_1cyiw_22",u={jambuttons:i,div:a};function j({children:o,handleClick:n,customStyles:t}){return s.jsx("button",{className:`${u.jambuttons} ${t||""}`,onClick:n,children:o})}export{j as G};
