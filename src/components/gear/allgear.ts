@@ -97,7 +97,9 @@ export const allgear = [
             image1: "./gear/pedals/sy1.jpg",
             image2: "./gear/pedals/plumes.jpg",
             description:
-              "Thanks to all the pedal pushers this list is ever growing... Starting to think I should maybe just learn how to build my own... 😂 Watch this space!",
+              "Thanks to all the pedal pushers this list is ever growing... Starting to think I should maybe just learn how to build my own... 😂 ",
+            link: "/pedal_creation",
+            linktext: "Watch this space!",
           },
         ],
       },
