@@ -1,11 +1,21 @@
 import BassTheoryContent from "./BassTheoryContent";
 import BassTheorySideNav from "./BassTheorySideNav";
 import styles from "./BassTheoryContainer.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 function BassTheory({ initialKey = "aflatmajor" }) {
   const [selectedKey, setSelectedKey] = useState(initialKey);
   const [context, setContext] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const jamkey = searchParams.get("jamkey");
+  useEffect(() => {
+    if (jamkey) {
+      setSelectedKey(jamkey);
+      searchParams.delete("jamkey");
+      setSearchParams(searchParams);
+    }
+  }, [jamkey, searchParams, setSearchParams]);
 
   function handleTheorySelection(e: React.MouseEvent<HTMLLIElement>) {
     setSelectedKey((e.target as HTMLLIElement).id);

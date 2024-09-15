@@ -31,7 +31,7 @@ function JamKey() {
         {randomKey > -1 ? (
           allKeys[0].keys[randomKey].link ? (
             <Link
-              to="/bass_theory"
+              to={`/bass_theory?jamkey=${allKeys[0].keys[randomKey].link}`}
               state={{ selkey: allKeys[0].keys[randomKey].link }}
             >
               {allKeys[0].keys[randomKey].key}
