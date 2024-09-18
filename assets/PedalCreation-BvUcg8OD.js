@@ -1,1 +1,0 @@
-import{j as e}from"./index-izoAfUW9.js";import{G as r,a as s}from"./GroovyHeader-BrqlaWyg.js";const o="_boximg_1jj6e_1",a={boximg:o};function t(){return e.jsxs(e.Fragment,{children:[e.jsx(r,{children:"Pedal Creation"}),e.jsx(s,{children:"First Pedal - Holes are drilled"}),e.jsx("img",{className:a.boximg,src:"./images/pedals/pedaldrilled.png"})]})}export{t as default};
