@@ -1,15 +1,11 @@
-import GroovyArticle from "../components/general/GroovyArticle";
 import GroovyHeader from "../components/general/GroovyHeader";
-import styles from "./PedalCreation.module.css";
+import PedalCreationPreview from "../components/pedalcreation/PedalCreationPreview";
 function PedalCreation() {
   return (
     <>
-      <GroovyHeader>Pedal Creation</GroovyHeader>
-      <GroovyArticle>First Pedal - Holes are drilled</GroovyArticle>
-      <img
-        className={styles.boximg}
-        src="./images/pedals/pedaldrilled.png"
-      ></img>
+      <GroovyHeader>Pedal Creations</GroovyHeader>
+
+      <PedalCreationPreview />
     </>
   );
 }
