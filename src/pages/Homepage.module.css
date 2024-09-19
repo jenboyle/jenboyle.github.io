@@ -5,7 +5,7 @@
 .a {
   border: 1px solid #ddd;
   margin-top: -1px;
-  background-color: lightgoldenrodyellow;
+  background-color: lavenderblush;
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
@@ -24,4 +24,11 @@
 .li {
   justify-content: space-between;
   display: flex;
+  background-color: lavenderblush;
+}
+
+.div {
+  background-color: lavenderblush;
+  align-self: center;
+  margin-right: 15px;
 }

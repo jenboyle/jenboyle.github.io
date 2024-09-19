@@ -65,7 +65,7 @@ function Homepage() {
               <a className={styles.a} onClick={() => setSelectedSong(index)}>
                 {song.songname}
               </a>
-              <div>{song.key}</div>
+              <div className={styles.div}>{song.key}</div>
             </li>
           ))}
         </ul>

@@ -1,10 +1,23 @@
+.buttonpad:hover {
+  background-color: whitesmoke;
+}
 .buttonpad {
-  padding: 10px;
+  color: black;
   margin: 10px;
+  padding: 16px;
+  background-color: #dda5c5;
+  font-size: 20px;
+  border-radius: 15px;
+  border: 2px solid rgb(134, 133, 124);
+  box-shadow: 0 4px #999;
+}
+
+.buttonpad:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
 }
 
 .allgames {
   display: block;
-  background-color: #b7b7dc;
   margin-top: 100px;
 }
