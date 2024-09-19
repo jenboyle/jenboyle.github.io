@@ -37,7 +37,7 @@ a:hover {
 }
 
 body {
-  margin: var(--top-spacing);
+  margin-top: var(--top-spacing);
 
   min-width: 320px;
   min-height: 100vh;
