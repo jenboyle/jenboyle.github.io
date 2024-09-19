@@ -19,8 +19,8 @@ function PedalCreationPreview() {
           <GroovyHeader>{pedalcreations[creationSelected!].title}</GroovyHeader>
           {pedalcreations[creationSelected!].articles.map(
             (article, articleid) => (
-              <>
-                <GroovyArticle key={articleid}>{article.text}</GroovyArticle>
+              <GroovyArticle key={articleid}>
+                <GroovyHeader>{article.text}</GroovyHeader>
                 {article.images.map((image, imageid) => (
                   <img
                     className={styles.boximg}
@@ -28,10 +28,13 @@ function PedalCreationPreview() {
                     src={image.image}
                   ></img>
                 ))}
-              </>
+                {pedalcreations[creationSelected!].articles.length ==
+                articleid + 1 ? (
+                  <GroovyButton handleClick={handleBack}>Back</GroovyButton>
+                ) : null}
+              </GroovyArticle>
             )
           )}
-          <GroovyButton handleClick={handleBack}>Back</GroovyButton>
         </>
       ) : (
         <>
@@ -45,13 +48,14 @@ function PedalCreationPreview() {
               ></img>
               <GroovyArticle key={`art${pedalid}`}>
                 {pedal.previewtext}
+
+                <GroovyButton
+                  key={`but${pedalid}`}
+                  handleClick={() => setCreationSelected(pedal.pedalid)}
+                >
+                  See More
+                </GroovyButton>
               </GroovyArticle>
-              <GroovyButton
-                key={`but${pedalid}`}
-                handleClick={() => setCreationSelected(pedal.pedalid)}
-              >
-                See More
-              </GroovyButton>
             </>
           ))}
         </>
