@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 function Header() {
   const whereami = useLocation();
   console.log(whereami.pathname);
-  let currentPage = "My Transcriptions";
+  let currentPage = "Bass Theory";
   if (whereami.pathname !== "/") {
     currentPage = whereami.pathname.substring(1);
     currentPage = currentPage.charAt(0).toUpperCase() + currentPage.slice(1);
