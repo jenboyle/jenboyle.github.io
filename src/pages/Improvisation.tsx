@@ -40,10 +40,9 @@ function Improvisation() {
         Improvising by youself or with a band are also two different scenarios.
         I do find myself for my own projects using my{" "}
         <Link to="/jam_time">jam</Link> page. I usually select a key, then a
-        progression, and go to that theory page in my{" "}
-        <Link to="/bass_theory">theory</Link>. I then select a drum beat that
-        suits what I have in mind on BeatBuddy or use my sdrum pedal and play a
-        riff into it.
+        progression, and go to that theory page in my <Link to="/">theory</Link>
+        . I then select a drum beat that suits what I have in mind on BeatBuddy
+        or use my sdrum pedal and play a riff into it.
       </GroovyArticle>
       <GroovyArticle>
         I use <Link to="/percussion">percussion</Link> and sometimes keys or

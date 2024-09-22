@@ -1,7 +1,7 @@
 {
   "song": "Eb Minor",
   "by": "",
-  "key": "Gb",
+  "key": "Ebm",
   "tuning": "EADG",
   "notes": "Eb, F, Gb, Ab, Bb, Cb, Db (6 flats) - Relative major: ",
   "relativelink": "gflatmajor",
@@ -30,15 +30,12 @@
   "a6": "----------------",
   "e6": "----------------",
 
-
   "chord1": "Ebm",
-  "chord1out":"3",
+  "chord1out": "3",
   "chord1e": "x",
   "chord1a": "4",
   "chord1d": "2",
   "chord1g": "1",
-
-
 
   "chord2": "FDim7",
   "chord2e": "1",
@@ -52,21 +49,19 @@
   "chord3d": "4",
   "chord3g": "3",
 
-  "chord4":"Abm",
-  "chord4out":"4",
+  "chord4": "Abm",
+  "chord4out": "4",
   "chord4e": "1",
   "chord4a": "3",
   "chord4d": "3",
   "chord4g": "1",
 
-
   "chord5": "Bbm",
-  "chord5out":"3",
+  "chord5out": "3",
   "chord5e": "4",
   "chord5a": "2",
   "chord5d": "1",
   "chord5g": "x",
-
 
   "chord6": "Cb",
   "chord6e": "2",
@@ -74,25 +69,15 @@
   "chord6d": "1",
   "chord6g": "x",
 
-
-  "chord7":"Db",
+  "chord7": "Db",
   "chord7e": "4",
   "chord7a": "4",
   "chord7d": "3",
   "chord7g": "x",
-
-
-
 
   "chord8": "Db7",
   "chord8e": "x",
   "chord8a": "4",
   "chord8d": "3",
   "chord8g": "4"
-
-
-
-
-
-  
 }

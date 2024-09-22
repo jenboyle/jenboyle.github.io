@@ -39,6 +39,10 @@
   background-color: rgb(194, 167, 215);
 }
 
+.excessnav {
+  display: inline-grid;
+}
+
 .nav {
   clear: both;
 }

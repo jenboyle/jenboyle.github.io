@@ -6,7 +6,7 @@ import BassTheoryTableFifths from "./BassTheoryTableFifths";
 //import { useLocation } from "react-router-dom";
 import BassTheoryFretboard from "./BassTheoryFretboard";
 import GroovyTab from "../general/GroovyTab";
-
+//import {useNavigate } from "react-router-dom";
 interface TheoryProps {
   jsonfile: string;
   handleNavTheory: (key: string, context: string) => void;
@@ -209,6 +209,8 @@ function BassTheoryContent({
   const [theoryJson, setTheoryJson] = useState<TheoryType>();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  //const [showBack, setShowBack] = useState(false);
+  // const navigate = useNavigate();
   // const location = useLocation();
   // const sentState = location.state;
   // console.log(`sentState ${sentState}`);
@@ -247,6 +249,10 @@ function BassTheoryContent({
     }
   }
 
+  // function handleBack() {
+  //   navigate(-1);
+  // }
+
   //   function optionOne(jsong, chord) {
 
   //   }
@@ -260,6 +266,8 @@ function BassTheoryContent({
     console.log("There is an error %s", error);
     return null;
   }
+
+  //<button onClick={handleBack}>back</button>
 
   return (
     <div>

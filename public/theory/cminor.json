@@ -1,7 +1,7 @@
 {
   "song": "C Minor",
   "by": "",
-  "key": "C Minor",
+  "key": "Cm",
   "tuning": "EADG",
   "notes": "C, D, Eb, F, G, Ab, Bb (3 flats) - Relative major: ",
   "relativelink": "eflatmajor",
@@ -30,7 +30,6 @@
   "a6": "----------------",
   "e6": "----------------",
 
-
   "chord1": "Cm",
   "chord1e": "3",
   "chord1a": "3",
@@ -43,19 +42,17 @@
   "chord2d": "0",
   "chord2g": "1",
 
-  "chord3":"Eb",
+  "chord3": "Eb",
   "chord3e": "x",
   "chord3a": "1",
   "chord3d": "1",
   "chord3g": "0",
-
 
   "chord4": "Fm",
   "chord4e": "1",
   "chord4a": "3",
   "chord4d": "3",
   "chord4g": "1",
-
 
   "chord5": "Gm",
   "chord5e": "3",
@@ -64,7 +61,7 @@
   "chord5g": "0",
 
   "chord6": "Ab",
-  "chord6out":"4",
+  "chord6out": "4",
   "chord6e": "1",
   "chord6a": "3",
   "chord6d": "3",
@@ -81,10 +78,4 @@
   "chord8a": "1",
   "chord8d": "3",
   "chord8g": "0"
-
-
-
-
-
-  
 }

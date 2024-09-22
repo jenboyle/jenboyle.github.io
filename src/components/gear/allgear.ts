@@ -2,14 +2,22 @@ export const allgear = [
   {
     gear: [
       {
-        title: "Pedals",
+        title: "Gear Wants",
         articles: [
           {
-            article: "Tuner",
-            image1: "./gear/pedals/tuner.jpg",
+            article: "Pedal Wants",
+            image1: "./gear/pedals/sy1.jpg",
+            image2: "./gear/pedals/plumes.jpg",
             description:
-              "This tuner is really compact so it leaves space for more pedals and it is always on.",
+              "Thanks to all the pedal pushers this list is ever growing... Starting to think I should maybe just learn how to build my own... 😂 ",
+            link: "/pedal_creation",
+            linktext: "Watch this space!",
           },
+        ],
+      },
+      {
+        title: "Pedals",
+        articles: [
           {
             article: "Drum pedals BeatBuddy and SDRUM",
             image1: "./gear/pedals/beatbuddy.jpg",
@@ -76,6 +84,12 @@ export const allgear = [
             description:
               "I have this pedal on frequently lately as the overdrive for the envelope filter.",
           },
+          {
+            article: "Tuner",
+            image1: "./gear/pedals/tuner.jpg",
+            description:
+              "This tuner is really compact so it leaves space for more pedals and it is always on.",
+          },
         ],
       },
       {
@@ -86,20 +100,6 @@ export const allgear = [
             image1: "./gear/basstrap.jpg",
             description:
               "I think I noticed a difference when I first got this for the garage. Some people use acoustic foam panels, but I had done some reading and decided to get a bass trap. I have 2 as I ordered one and it went missing so I ordered another and the first showed up a good time later and the company allowed to keep it for free!",
-          },
-        ],
-      },
-      {
-        title: "Gear Wants",
-        articles: [
-          {
-            article: "Pedal Wants",
-            image1: "./gear/pedals/sy1.jpg",
-            image2: "./gear/pedals/plumes.jpg",
-            description:
-              "Thanks to all the pedal pushers this list is ever growing... Starting to think I should maybe just learn how to build my own... 😂 ",
-            link: "/pedal_creation",
-            linktext: "Watch this space!",
           },
         ],
       },

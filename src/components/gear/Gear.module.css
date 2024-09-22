@@ -2,8 +2,9 @@
   float: left;
   padding: 10px;
   max-width: 96%;
-  border: 10px white solid;
+  border: 5px #9984a9 solid;
   margin: 2%;
+  background-color: lavenderblush;
 }
 
 .div {

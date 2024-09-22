@@ -17,7 +17,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import LoadingSpinner from "./components/LoadingSpinner";
 
-const Homepage = lazy(() => import("./pages/Homepage"));
+const Transcriptions = lazy(() => import("./pages/Transcriptions"));
 const Cubase = lazy(() => import("./pages/Cubase"));
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
 const AboutMe = lazy(() => import("./pages/AboutMe"));
@@ -41,12 +41,12 @@ function App() {
         <main>
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
-              <Route path="/" element={<Homepage />}></Route>
+              <Route path="/" element={<BassTheory />}></Route>
               <Route path="about_me" element={<AboutMe />}></Route>
               <Route path="improvisation" element={<Improvisation />}></Route>
               <Route path="my_gear" element={<MyGear />}></Route>
               <Route path="pedal_creation" element={<PedalCreation />}></Route>
-              <Route path="bass_theory" element={<BassTheory />}></Route>
+              <Route path="transcriptions" element={<Transcriptions />}></Route>
               <Route path="jam_time" element={<JamTime />}></Route>
               <Route path="cubase" element={<Cubase />}></Route>
               <Route path="percussion" element={<Percussion />}></Route>

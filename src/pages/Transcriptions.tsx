@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { songs } from "../components/songs/songs";
-import styles from "./Homepage.module.css";
+import styles from "./Transcriptions.module.css";
 import Song from "../components/songs/Song";
 import SongSearch from "../components/songs/SongSearch";
 import GroovyHeader from "../components/general/GroovyHeader";
-function Homepage() {
+function Transcriptions() {
   const [selectedSong, setSelectedSong] = useState(-1);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -73,4 +73,4 @@ function Homepage() {
     </>
   );
 }
-export default Homepage;
+export default Transcriptions;

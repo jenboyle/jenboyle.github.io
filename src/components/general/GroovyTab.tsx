@@ -1,3 +1,4 @@
+import { useMediaQuery } from "@mui/material";
 import styles from "./GroovyTab.module.css";
 import { GroovyTabType } from "./GroovyTabType";
 //import { TheoryType } from "./BassTheoryContent";
@@ -8,6 +9,8 @@ type GroovyTabProps = {
 };
 
 function GroovyTab({ json, rowBeginning }: GroovyTabProps) {
+  const mobile = useMediaQuery("min-width:600px");
+  console.log(mobile);
   return (
     <table className={styles.table}>
       <tbody>
