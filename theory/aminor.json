@@ -1,7 +1,7 @@
 {
   "song": "A Minor",
   "by": "",
-  "key": "A Minor",
+  "key": "Am",
   "tuning": "EADG",
   "notes": "A, B, C, D, E, F, G (0 sharps) - Relative major: ",
   "relativelink": "cmajor",
@@ -41,7 +41,6 @@
   "a10": "----------------",
   "e10": "----------------",
 
-
   "chord1": "Am",
   "chord1e": "0",
   "chord1a": "3",
@@ -54,19 +53,17 @@
   "chord2d": "0",
   "chord2g": "x",
 
-  "chord3":"C",
+  "chord3": "C",
   "chord3e": "x",
   "chord3a": "3",
   "chord3d": "2",
   "chord3g": "0",
-
 
   "chord4": "Dm",
   "chord4e": "1",
   "chord4a": "0",
   "chord4d": "0",
   "chord4g": "2",
-
 
   "chord5": "Em",
   "chord5e": "0",
@@ -91,10 +88,4 @@
   "chord8a": "2",
   "chord8d": "3",
   "chord8g": "0"
-
-
-
-
-
-  
 }
