@@ -1,12 +1,12 @@
 export const pedalcreationpreviews = [
   {
-    title: "First Pedal",
-    previewimage: "./images/pedals/pedal1_booster/stencil2.png",
+    title: "Aversion Pedal",
+    previewimage: "./images/pedals/pedal1_booster/aversion.png",
     previewtext: "My first pedal creation - A Booster pedal",
     pedalid: 0,
   },
   {
-    title: "Second Pedal",
+    title: "Kappa Seven Pedal",
     previewimage: "./images/pedals/pedal2_killswitch/primed.png",
     previewtext: "My second pedal creation - A Kill Switch pedal",
     pedalid: 1,
@@ -15,7 +15,7 @@ export const pedalcreationpreviews = [
 
 export const pedalcreations = [
   {
-    title: "My first pedal creation - A Booster pedal",
+    title: "Aversion pedal - A Booster pedal",
     articles: [
       {
         text: "Holes are drilled",
@@ -38,11 +38,15 @@ export const pedalcreations = [
           { image: "./images/pedals/pedal1_booster/stencil2.png" },
         ],
       },
+      {
+        text: "Text and top coat",
+        images: [{ image: "./images/pedals/pedal1_booster/aversion.png" }],
+      },
     ],
   },
 
   {
-    title: "Second pedal creation - A Kill Switch pedal",
+    title: "Kappa Seven pedal - A Kill Switch pedal",
     articles: [
       {
         text: "Holes are drilled",

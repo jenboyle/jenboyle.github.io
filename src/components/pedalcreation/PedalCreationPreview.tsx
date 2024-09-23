@@ -38,6 +38,7 @@ function PedalCreationPreview() {
         </>
       ) : (
         <>
+          <GroovyHeader>Pedal Creations</GroovyHeader>
           {pedalcreationpreviews.map((pedal, pedalid) => (
             <>
               <GroovyHeader key={pedalid}>{pedal.title}</GroovyHeader>
