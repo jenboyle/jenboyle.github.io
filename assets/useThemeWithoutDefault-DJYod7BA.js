@@ -1,0 +1,1 @@
+import{r as n}from"./index-CYBJyjm7.js";import{T as o}from"./useEnhancedEffect-CsEdXbQS.js";function r(t){return Object.keys(t).length===0}function u(t=null){const e=n.useContext(o);return!e||r(e)?t:e}export{u};
