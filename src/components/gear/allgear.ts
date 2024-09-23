@@ -19,6 +19,12 @@ export const allgear = [
         title: "Pedals",
         articles: [
           {
+            article: "My favourite pedals lately",
+            image1: "./gear/pedals/discumbobulator.png",
+            image2: "./gear/pedals/space.png",
+            description: "These two pedals are my favourites lately!",
+          },
+          {
             article: "Drum pedals BeatBuddy and SDRUM",
             image1: "./gear/pedals/beatbuddy.jpg",
             image2: "./gear/pedals/sdrum.jpg",
@@ -36,6 +42,21 @@ export const allgear = [
             article: "Dirty Robot",
             image1: "./gear/pedals/dirtyrobot.jpg",
             description: "I love the noises of this.",
+          },
+          {
+            article: "Looper",
+            image1: "./gear/pedals/looper.png",
+            description: "I should use this more often.",
+          },
+          {
+            article: "Clone",
+            image1: "./gear/pedals/clone.png",
+            description: "Doubling bass what's not to like.",
+          },
+          {
+            article: "Delay",
+            image1: "./gear/pedals/delay.png",
+            description: "Delay pedal",
           },
           {
             article: "Distortion",
@@ -56,10 +77,22 @@ export const allgear = [
             description: "I only got this pedal this year and its a favourite!",
           },
           {
-            article: "Compressor",
-            image1: "./gear/pedals/compressor.jpg",
+            article: "Fuzz",
+            image1: "./gear/pedals/fuzz.png",
+            description: "This joined the collection about a year ago",
+          },
+          {
+            article: "Sidekick",
+            image1: "./gear/pedals/sidekick.png",
             description:
-              "I used to use this pedal a lot as I thought it was supposed to smooth the sound. I found it had a buzz and stopped using it. Apparently though compressors are important so I have started trying to use it again, it's hard to make room for it 😂",
+              "I used this in my bullet bill song, it sounded pretty good combined with the echo",
+          },
+          {
+            article: "Compressors",
+            image1: "./gear/pedals/cali.png",
+            image2: "./gear/pedals/compressor.jpg",
+            description:
+              "Cali is my new one, the boss one seems to buzz. I find the cali's recommended settings had wild bass tracking, still trying to get the best tone out of it",
           },
           {
             article: "JDI",

@@ -58,6 +58,13 @@ export const pedalcreations = [
         text: "Pedal Primed",
         images: [{ image: "./images/pedals/pedal2_killswitch/primed.png" }],
       },
+
+      {
+        text: "Pedal components, I need to resolder a couple connections, going to do it in place",
+        images: [
+          { image: "./images/pedals/pedal2_killswitch/ks_soldered.png" },
+        ],
+      },
     ],
   },
 ];
