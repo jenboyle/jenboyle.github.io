@@ -1,6 +1,5 @@
 import Blog from "../components/blogs/Blog";
 import { useState } from "react";
-import GroovyHeader from "../components/general/GroovyHeader";
 import PreviewBlogs from "../components/blogs/PreviewBlogs";
 
 function Blogs() {

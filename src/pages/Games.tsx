@@ -1,4 +1,3 @@
-import GroovyHeader from "../components/general/GroovyHeader";
 import { allgames } from "../components/games/allgames";
 import { allschoolgames } from "../components/games/allschoolgames";
 import { useState } from "react";

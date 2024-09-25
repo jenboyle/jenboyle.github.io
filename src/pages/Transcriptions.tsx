@@ -3,7 +3,7 @@ import { songs } from "../components/songs/songs";
 import styles from "./Transcriptions.module.css";
 import Song from "../components/songs/Song";
 import SongSearch from "../components/songs/SongSearch";
-import GroovyHeader from "../components/general/GroovyHeader";
+
 function Transcriptions() {
   const [selectedSong, setSelectedSong] = useState(-1);
   const [searchQuery, setSearchQuery] = useState("");
