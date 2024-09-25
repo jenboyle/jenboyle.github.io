@@ -12,6 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --top-spacing: 150px;
+  --bottom-spacing: 75px;
   scroll-padding-top: var(--top-spacing);
 }
 
@@ -38,6 +39,7 @@ a:hover {
 
 body {
   margin-top: var(--top-spacing);
+  margin-bottom: var(--bottom-spacing);
 
   min-width: 320px;
   min-height: 100vh;

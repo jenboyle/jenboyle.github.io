@@ -16,7 +16,9 @@ function PedalCreationPreview() {
     <>
       {creationSelected != -1 ? (
         <>
-          <GroovyHeader>{pedalcreations[creationSelected!].title}</GroovyHeader>
+          <GroovyArticle customStyles={styles.overridebigheader}>
+            {pedalcreations[creationSelected!].title}
+          </GroovyArticle>
           {pedalcreations[creationSelected!].articles.map(
             (article, articleid) => (
               <GroovyArticle key={articleid}>
@@ -30,7 +32,11 @@ function PedalCreationPreview() {
                 ))}
                 {pedalcreations[creationSelected!].articles.length ==
                 articleid + 1 ? (
-                  <GroovyButton handleClick={handleBack}>Back</GroovyButton>
+                  <div>
+                    <a className={styles.a} onClick={handleBack}>
+                      Back
+                    </a>
+                  </div>
                 ) : null}
               </GroovyArticle>
             )
@@ -38,10 +44,11 @@ function PedalCreationPreview() {
         </>
       ) : (
         <>
-          <GroovyHeader>Pedal Creations</GroovyHeader>
           {pedalcreationpreviews.map((pedal, pedalid) => (
             <>
-              <GroovyHeader key={pedalid}>{pedal.title}</GroovyHeader>
+              <GroovyHeader key={pedalid}>
+                Pedal Creation - {pedal.title}
+              </GroovyHeader>
               <img
                 className={styles.boximg}
                 key={`img${pedalid}`}
@@ -49,13 +56,15 @@ function PedalCreationPreview() {
               ></img>
               <GroovyArticle key={`art${pedalid}`}>
                 {pedal.previewtext}
-
-                <GroovyButton
-                  key={`but${pedalid}`}
-                  handleClick={() => setCreationSelected(pedal.pedalid)}
-                >
-                  See More
-                </GroovyButton>
+                <div>
+                  <a
+                    key={`but${pedalid}`}
+                    className={styles.a}
+                    onClick={() => setCreationSelected(pedal.pedalid)}
+                  >
+                    See More
+                  </a>
+                </div>
               </GroovyArticle>
             </>
           ))}

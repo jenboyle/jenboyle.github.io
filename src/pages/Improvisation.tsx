@@ -5,7 +5,6 @@ import { songs } from "../components/songs/improvisationsongs";
 import SongSearch from "../components/songs/SongSearch";
 import Song from "../components/songs/Song";
 import styles from "./Improvisation.module.css";
-import GroovyHeader from "../components/general/GroovyHeader";
 
 function Improvisation() {
   const [selectedSong, setSelectedSong] = useState(-1);
@@ -30,7 +29,6 @@ function Improvisation() {
 
   return (
     <>
-      <GroovyHeader>Improvisation</GroovyHeader>
       <GroovyArticle>
         Improvising on bass is hard. I find there are a lot of factors to think
         of, e.g drum 🥁, guitar chords 🎸, chord progressions <em>I VI V IV</em>

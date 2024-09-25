@@ -43,7 +43,6 @@ function Games() {
   }
   return (
     <>
-      <GroovyHeader>Games</GroovyHeader>
       {selectedGame ? (
         selectedGame === "relatives" ? (
           <Relatives />

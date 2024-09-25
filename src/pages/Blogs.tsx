@@ -17,7 +17,6 @@ function Blogs() {
 
   return (
     <>
-      <GroovyHeader>Blogs</GroovyHeader>
       {blogSelected === "" ? (
         <PreviewBlogs handleClick={handleClick} />
       ) : (

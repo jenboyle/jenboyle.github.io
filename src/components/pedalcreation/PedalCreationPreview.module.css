@@ -2,6 +2,22 @@
   padding: 10px;
   max-width: 96%;
   border: 5px #9984a9 solid;
-  margin: 2%;
+  margin: 1%;
   background-color: lavenderblush;
+}
+
+.overridebigheader {
+  border-bottom: none;
+  font-size: xx-large;
+}
+
+.a {
+  text-decoration: underline;
+  color: darkslateblue;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.a:hover {
+  background-color: whitesmoke;
 }

@@ -54,7 +54,6 @@ function Transcriptions() {
 
   return (
     <>
-      <GroovyHeader>My Transcriptions</GroovyHeader>
       <SongSearch onClick={handleSearchClick} onChange={setSearchQuery} />
       {selectedSong != -1 ? (
         <Song jsonfile={searchedSongs[selectedSong].jsonfile}></Song>
