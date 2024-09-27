@@ -113,7 +113,8 @@ export const songs = [
     jsonfile: "superstar",
     songtype: "transcribe",
     songname: "Superstar Intro - The Carpenters",
-    key: "Key Ab#",
+    key: "Key Ab",
+    link: "aflatmajor",
   },
   {
     jsonfile: "masterplan",
