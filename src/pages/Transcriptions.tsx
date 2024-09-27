@@ -3,6 +3,7 @@ import { songs } from "../components/songs/songs";
 import styles from "./Transcriptions.module.css";
 import Song from "../components/songs/Song";
 import SongSearch from "../components/songs/SongSearch";
+import { Link } from "react-router-dom";
 
 function Transcriptions() {
   const [selectedSong, setSelectedSong] = useState(-1);
@@ -64,7 +65,18 @@ function Transcriptions() {
               <a className={styles.a} onClick={() => setSelectedSong(index)}>
                 {song.songname}
               </a>
-              <div className={styles.div}>{song.key}</div>
+              <div className={styles.div}>
+                {song.link ? (
+                  <Link
+                    to={`/?jamkey=${song.link}`}
+                    state={{ selkey: song.link }}
+                  >
+                    {song.key}
+                  </Link>
+                ) : (
+                  song.key
+                )}
+              </div>
             </li>
           ))}
         </ul>

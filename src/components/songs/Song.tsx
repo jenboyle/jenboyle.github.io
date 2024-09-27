@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./Song.module.css";
 import GroovyTab from "../general/GroovyTab";
+import { Link } from "react-router-dom";
 
 // export type SongObject = {
 //   transcription: SongType;
@@ -190,7 +191,23 @@ function Song({ jsonfile }: SongProps) {
       {songJson ? (
         <article>
           <p>{`${songJson.song} - ${songJson.by}`}</p>
-          {songJson.key ? <p>{`Key: - ${songJson.key}`}</p> : null}
+          {songJson.key ? (
+            <>
+              <p>
+                Key -{" "}
+                {songJson.theorylink ? (
+                  <Link
+                    to={`/?jamkey=${songJson.theorylink}`}
+                    state={{ selkey: songJson.theorylink }}
+                  >
+                    {songJson.key}
+                  </Link>
+                ) : (
+                  songJson.key
+                )}
+              </p>
+            </>
+          ) : null}
           {songJson.tuning ? <p>{`Tuning: - ${songJson.tuning}`}</p> : null}
           {songJson.g1 ? (
             <>
