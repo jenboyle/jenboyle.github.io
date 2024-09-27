@@ -1,0 +1,1 @@
+import{j as a}from"./index-DrWscbkM.js";const r="_jambuttons_1wynr_1",u="_div_1wynr_22",i={jambuttons:r,div:u};function m({children:n,handleClick:o,customStyles:t,disabled:s=!1}){return a.jsx("button",{className:`${i.jambuttons} ${t||""}`,onClick:o,disabled:s,children:n})}export{m as G};
