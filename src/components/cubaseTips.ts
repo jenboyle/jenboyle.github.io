@@ -1,6 +1,6 @@
 export const cubaseTips = [
   {
-    topic: "Tools (1✅)",
+    topic: "Tools",
     tips: [
       { tip: "Numbers equate to the tools 1-9" },
       {
@@ -58,7 +58,7 @@ export const cubaseTips = [
     ],
   },
   {
-    topic: "Editing Audio (4✅)",
+    topic: "Editing Audio",
     tips: [
       {
         tip: "Volume handle - middle of event - top small box drag up or down",
@@ -122,7 +122,7 @@ export const cubaseTips = [
   },
 
   {
-    topic: "Mastering (8✅)",
+    topic: "Mastering",
     tips: [
       {
         tip: "Import an audio track. Click on the audio event - Select statistics from Audio menu - note Maximum RMS and average - Good value is between -10dB to -15db",

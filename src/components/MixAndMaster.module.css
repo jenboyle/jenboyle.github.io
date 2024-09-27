@@ -1,3 +1,12 @@
 .overridegeneralbtn {
   display: inline-block;
+  margin: 10px;
+}
+
+.active {
+  background-color: rgb(106, 40, 106);
+}
+
+.fixedHeight {
+  height: 100px;
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { cubaseTips } from "./cubaseTips";
 import GroovyButton from "./general/GroovyButton";
 import style from "./MixAndMaster.module.css";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 export interface TopicButtonProps {
   topicNum: number;
@@ -37,6 +38,7 @@ function MixAndMaster() {
       setTip(tip - 1);
     }
   }
+  //{tip > 0 ? <button onClick={() => handlePrevious()}>⬅️</button> : null}
 
   return (
     <>
@@ -53,10 +55,23 @@ function MixAndMaster() {
 
       <h4>{cubaseTips[activeTopic].topic}</h4>
 
-      <h5>{cubaseTips[activeTopic].tips[tip].tip}</h5>
+      <h5 className={style.fixedHeight}>
+        {cubaseTips[activeTopic].tips[tip].tip}
+      </h5>
 
-      {tip > 0 ? <button onClick={() => handlePrevious()}>⬅️</button> : null}
-      <button onClick={() => handleNext()}>➡️</button>
+      <GroovyButton
+        customStyles={style.overridegeneralbtn}
+        handleClick={() => handlePrevious()}
+        disabled={tip < 1}
+      >
+        <HiChevronLeft />
+      </GroovyButton>
+      <GroovyButton
+        customStyles={style.overridegeneralbtn}
+        handleClick={() => handleNext()}
+      >
+        <HiChevronRight />
+      </GroovyButton>
     </>
   );
 }
