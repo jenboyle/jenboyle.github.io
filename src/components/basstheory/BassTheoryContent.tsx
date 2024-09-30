@@ -6,6 +6,7 @@ import BassTheoryTableFifths from "./BassTheoryTableFifths";
 //import { useLocation } from "react-router-dom";
 import BassTheoryFretboard from "./BassTheoryFretboard";
 import GroovyTab from "../general/GroovyTab";
+import BassTheoryTableLink from "./BassTheoryTableLink";
 //import {useNavigate } from "react-router-dom";
 interface TheoryProps {
   jsonfile: string;
@@ -314,108 +315,104 @@ function BassTheoryContent({
                     <td key={`${index}${chord}`} id={`optionone${index + 1}`}>
                       {theoryJson.song.indexOf("Major") != -1 ? (
                         index == 0 ? (
-                          <a
-                            onClick={() =>
-                              handleNavTheory("fret_ionian", chord)
-                            }
+                          <BassTheoryTableLink
+                            handleNavTheory={handleNavTheory}
+                            chord={chord}
                           >
                             Ionian
-                          </a>
+                          </BassTheoryTableLink>
                         ) : index == 1 ? (
-                          <a
-                            onClick={() =>
-                              handleNavTheory("fret_dorian", chord)
-                            }
+                          <BassTheoryTableLink
+                            handleNavTheory={handleNavTheory}
+                            chord={chord}
                           >
                             Dorian
-                          </a>
+                          </BassTheoryTableLink>
                         ) : index == 2 ? (
-                          <a
-                            onClick={() =>
-                              handleNavTheory("fret_phrygian", chord)
-                            }
+                          <BassTheoryTableLink
+                            handleNavTheory={handleNavTheory}
+                            chord={chord}
                           >
                             Phrygian
-                          </a>
+                          </BassTheoryTableLink>
                         ) : index == 3 ? (
-                          <a
-                            onClick={() =>
-                              handleNavTheory("fret_lydian", chord)
-                            }
+                          <BassTheoryTableLink
+                            handleNavTheory={handleNavTheory}
+                            chord={chord}
                           >
                             Lydian
-                          </a>
+                          </BassTheoryTableLink>
                         ) : index == 4 ? (
-                          <a
-                            onClick={() =>
-                              handleNavTheory("fret_mixolydian", chord)
-                            }
+                          <BassTheoryTableLink
+                            handleNavTheory={handleNavTheory}
+                            chord={chord}
                           >
                             Mixolydian
-                          </a>
+                          </BassTheoryTableLink>
                         ) : index == 5 ? (
-                          <a
-                            onClick={() =>
-                              handleNavTheory("fret_aeolian", chord)
-                            }
+                          <BassTheoryTableLink
+                            handleNavTheory={handleNavTheory}
+                            chord={chord}
                           >
                             Aeolian
-                          </a>
+                          </BassTheoryTableLink>
                         ) : index == 6 ? (
-                          <a
-                            onClick={() =>
-                              handleNavTheory("fret_locrian", chord)
-                            }
+                          <BassTheoryTableLink
+                            handleNavTheory={handleNavTheory}
+                            chord={chord}
                           >
                             Locrian
-                          </a>
+                          </BassTheoryTableLink>
                         ) : null
                       ) : index == 0 ? (
-                        <a
-                          onClick={() => handleNavTheory("fret_aeolian", chord)}
+                        <BassTheoryTableLink
+                          handleNavTheory={handleNavTheory}
+                          chord={chord}
                         >
                           Aeolian
-                        </a>
+                        </BassTheoryTableLink>
                       ) : index == 1 ? (
-                        <a
-                          onClick={() => handleNavTheory("fret_locrian", chord)}
+                        <BassTheoryTableLink
+                          handleNavTheory={handleNavTheory}
+                          chord={chord}
                         >
                           Locrian
-                        </a>
+                        </BassTheoryTableLink>
                       ) : index == 2 ? (
-                        <a
-                          onClick={() => handleNavTheory("fret_ionian", chord)}
+                        <BassTheoryTableLink
+                          handleNavTheory={handleNavTheory}
+                          chord={chord}
                         >
                           Ionian
-                        </a>
+                        </BassTheoryTableLink>
                       ) : index == 3 ? (
-                        <a
-                          onClick={() => handleNavTheory("fret_dorian", chord)}
+                        <BassTheoryTableLink
+                          handleNavTheory={handleNavTheory}
+                          chord={chord}
                         >
                           Dorian
-                        </a>
+                        </BassTheoryTableLink>
                       ) : index == 4 ? (
-                        <a
-                          onClick={() =>
-                            handleNavTheory("fret_phrygian", chord)
-                          }
+                        <BassTheoryTableLink
+                          handleNavTheory={handleNavTheory}
+                          chord={chord}
                         >
                           Phrygian
-                        </a>
+                        </BassTheoryTableLink>
                       ) : index == 5 ? (
-                        <a
-                          onClick={() => handleNavTheory("fret_lydian", chord)}
+                        <BassTheoryTableLink
+                          handleNavTheory={handleNavTheory}
+                          chord={chord}
                         >
                           Lydian
-                        </a>
+                        </BassTheoryTableLink>
                       ) : index == 6 ? (
-                        <a
-                          onClick={() =>
-                            handleNavTheory("fret_mixolydian", chord)
-                          }
+                        <BassTheoryTableLink
+                          handleNavTheory={handleNavTheory}
+                          chord={chord}
                         >
                           Mixolydian
-                        </a>
+                        </BassTheoryTableLink>
                       ) : null}
                     </td>
                   ))}
