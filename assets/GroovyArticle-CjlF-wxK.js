@@ -1,1 +1,0 @@
-import{j as e}from"./index-CjbNNFbM.js";const a="_article_ngufm_1",c={article:a};function s({children:t,customStyles:r}){return e.jsx("article",{className:`${c.article} ${r||""}`,children:t})}export{s as G};
