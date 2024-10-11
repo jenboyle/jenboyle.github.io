@@ -57,22 +57,4 @@ export const allgames = [
       },
     ],
   },
-  {
-    id: "interview",
-    gametopic: "Interviews",
-    games: [
-      {
-        gameid: "interviewgeneral",
-        gametext: "General",
-      },
-      {
-        gameid: "interviewreact",
-        gametext: "React",
-      },
-      {
-        gameid: "interviewtechnical",
-        gametext: "Technical",
-      },
-    ],
-  },
 ];

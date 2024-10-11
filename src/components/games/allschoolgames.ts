@@ -33,4 +33,18 @@ export const allschoolgames = [
       },
     ],
   },
+  {
+    id: "year9",
+    gametopic: "Year 9",
+    games: [
+      {
+        gameid: "geography_year9",
+        gametext: "Geography",
+      },
+      {
+        gameid: "religion_year9",
+        gametext: "Religion",
+      },
+    ],
+  },
 ];
