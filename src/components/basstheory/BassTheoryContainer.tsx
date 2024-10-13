@@ -8,6 +8,7 @@ function BassTheory({ initialKey = "aflatmajor" }) {
   const [selectedKey, setSelectedKey] = useState(initialKey);
   const [context, setContext] = useState("");
   const [searchParams, setSearchParams] = useSearchParams();
+  const [previousKey, setPreviousKey] = useState("");
   const jamkey = searchParams.get("jamkey");
   useEffect(() => {
     if (jamkey) {
@@ -23,6 +24,7 @@ function BassTheory({ initialKey = "aflatmajor" }) {
   }
 
   function handleNavTheory(key: string, context: string) {
+    setPreviousKey(selectedKey);
     setSelectedKey(key);
     console.log(`handle called nt ${key}`);
 
@@ -43,6 +45,8 @@ function BassTheory({ initialKey = "aflatmajor" }) {
           jsonfile={selectedKey}
           handleNavTheory={handleNavTheory}
           context={context}
+          onSelectKey={setSelectedKey}
+          previousKey={previousKey}
         />
       </div>
       <div className={styles.theoryclear}></div>

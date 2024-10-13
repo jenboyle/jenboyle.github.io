@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./BassTheoryContent.module.css";
 //import TheoryTab from "./TheoryTab";
 
@@ -12,6 +12,8 @@ interface TheoryProps {
   jsonfile: string;
   handleNavTheory: (key: string, context: string) => void;
   context: string;
+  onSelectKey: React.Dispatch<React.SetStateAction<string>>;
+  previousKey: string;
 }
 
 export type FretType = {
@@ -206,10 +208,16 @@ function BassTheoryContent({
   jsonfile,
   handleNavTheory,
   context,
+  onSelectKey,
+  previousKey,
 }: TheoryProps) {
   const [theoryJson, setTheoryJson] = useState<TheoryType>();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+
+  //
+
+  //const [back, setBack] = useState("");
   //const [showBack, setShowBack] = useState(false);
   // const navigate = useNavigate();
   // const location = useLocation();
@@ -251,7 +259,8 @@ function BassTheoryContent({
   }
 
   // function handleBack() {
-  //   navigate(-1);
+  //   //navigate(-1);
+  //   setBack(jsonfile);
   // }
 
   //   function optionOne(jsong, chord) {
@@ -269,12 +278,20 @@ function BassTheoryContent({
   }
 
   //<button onClick={handleBack}>back</button>
+  //{back?.length > 0 ? <button onClick={handleBack}>back</button> : null}
 
   return (
     <div>
       {theoryJson && !isLoading ? (
         <div>
-          <p className={styles.p}>{theoryJson.song}</p>
+          <p className={styles.p}>
+            {theoryJson.song}{" "}
+            <span className={styles.back}>
+              {previousKey?.length > 0 ? (
+                <a onClick={() => onSelectKey(previousKey)}>back</a>
+              ) : null}
+            </span>
+          </p>
 
           {theoryJson.key ? (
             <>
@@ -421,32 +438,29 @@ function BassTheoryContent({
                   {theoryJson.chords.split(",").map((chord, index) => (
                     <td key={index} id={`optiontwo${index + 1}`}>
                       {chord.indexOf("dim") > -1 ? (
-                        <a
-                          onClick={() =>
-                            handleNavTheory(
-                              "fret_diminishedtriadarpeggios",
-                              chord
-                            )
-                          }
+                        <BassTheoryTableLink
+                          handleNavTheory={handleNavTheory}
+                          chord={chord}
+                          specifyfile="fret_diminishedtriadarpeggios"
                         >
                           Diminished Triad
-                        </a>
+                        </BassTheoryTableLink>
                       ) : chord.indexOf("m") > -1 ? (
-                        <a
-                          onClick={() =>
-                            handleNavTheory("fret_minortriadarpeggios", chord)
-                          }
+                        <BassTheoryTableLink
+                          handleNavTheory={handleNavTheory}
+                          chord={chord}
+                          specifyfile="fret_minortriadarpeggios"
                         >
                           Minor Triad
-                        </a>
+                        </BassTheoryTableLink>
                       ) : (
-                        <a
-                          onClick={() =>
-                            handleNavTheory("fret_majortriadarpeggios", chord)
-                          }
+                        <BassTheoryTableLink
+                          handleNavTheory={handleNavTheory}
+                          chord={chord}
+                          specifyfile="fret_majortriadarpeggios"
                         >
                           Major Triad
-                        </a>
+                        </BassTheoryTableLink>
                       )}
                     </td>
                   ))}

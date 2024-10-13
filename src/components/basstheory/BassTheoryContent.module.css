@@ -16,6 +16,10 @@
   background-color: whitesmoke;
 }
 
+.back {
+  float: right;
+}
+
 .chord {
   border-collapse: collapse;
   border: 3px darkolivegreen solid;
