@@ -10,7 +10,7 @@ export const religionyear9qs: QuestionType[] = shuffle([
   {
     question:
       "What Belgian priest came up with a theory how the universe began?",
-    answer: "ONEOF(Lemaitre_Lemaître)",
+    answer: "CONTAINS(GEORGE)ANDCONTAINSOR(LEMAITRE_LEMAÎTRE)",
     help: "Fr Georges Lemaître",
   },
   {
@@ -80,7 +80,7 @@ export const religionyear9qs: QuestionType[] = shuffle([
     help: "Rested",
   },
   {
-    question: "God blessed the seventh daay and made it ____?",
+    question: "God blessed the seventh day and made it ____?",
     answer: "CONTAINS(HOLY)",
     help: "Holy",
   },

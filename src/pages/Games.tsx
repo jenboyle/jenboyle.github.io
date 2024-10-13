@@ -13,6 +13,7 @@ import { religionyear8qs } from "../components/games/questions/ReligionYear8";
 import { religionyear9qs } from "../components/games/questions/ReligionYear9";
 import { biologyyear8qs } from "../components/games/questions/BiologyYear8";
 import { historyyear8qs } from "../components/games/questions/HistoryYear8";
+import { historyyear9qs } from "../components/games/questions/HistoryYear9";
 import { techyear8qs } from "../components/games/questions/TechnologyYear8";
 import { geographyyear8qs } from "../components/games/questions/GeographyYear8";
 import { geographyyear9qs } from "../components/games/questions/GeographyYear9";
@@ -67,6 +68,8 @@ function Games() {
           <StandardGame questions={geographyyear9qs}></StandardGame>
         ) : selectedGame === "history_year8" ? (
           <StandardGame questions={historyyear8qs}></StandardGame>
+        ) : selectedGame === "history_year9" ? (
+          <StandardGame questions={historyyear9qs}></StandardGame>
         ) : selectedGame === "religion_year8" ? (
           <StandardGame questions={religionyear8qs}></StandardGame>
         ) : selectedGame === "religion_year9" ? (
