@@ -1,5 +1,5 @@
 .image {
-  padding: 20px;
+  padding-bottom: 20px;
   height: 240px;
   width: 100%;
   display: flex;
@@ -8,6 +8,7 @@
 }
 
 .image img {
+  padding: 20px;
   display: block;
   padding-bottom: 20px;
 }
