@@ -18,6 +18,7 @@ export const progressions = [
       { progression: "I,III,IV,V", num: "1,3,4,5" },
       { progression: "I,V,VI,III,IV,I,IV,V", num: "1,5,6,3,4,1,4,5" },
       { progression: "I,IV,V,IV", num: "1,4,5,4" },
+      { progression: "VI,III,IV,I,II,V,I", num: "6,3,4,1,2,5,1" },
     ],
   },
 ];

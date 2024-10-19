@@ -11,7 +11,9 @@ function JamProgression() {
   };
 
   function handleClick() {
-    setRandomPattern(randomNumInRange(0, 13));
+    setRandomPattern(
+      randomNumInRange(0, progressions[0].progressions.length - 1)
+    );
   }
 
   return (
