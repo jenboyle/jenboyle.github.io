@@ -21,7 +21,9 @@ function PedalCreationPreview() {
           {pedalcreations[creationSelected!].articles.map(
             (article, articleid) => (
               <GroovyArticle key={articleid}>
-                <GroovyHeader>{article.text}</GroovyHeader>
+                <GroovyHeader key={`head${articleid}`}>
+                  {article.text}
+                </GroovyHeader>
                 {article.images.map((image, imageid) => (
                   <img
                     className={styles.boximg}
@@ -29,6 +31,11 @@ function PedalCreationPreview() {
                     src={image.image}
                   ></img>
                 ))}
+                {article.description ? (
+                  <div className={styles.description}>
+                    {article.description}
+                  </div>
+                ) : null}
                 {pedalcreations[creationSelected!].articles.length ==
                 articleid + 1 ? (
                   <div>

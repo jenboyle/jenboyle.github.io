@@ -66,6 +66,29 @@ export const pedalcreations = [
         text: "Text and top coat",
         images: [{ image: "./images/pedals/pedal2_booster/aversion.png" }],
       },
+      {
+        text: "Aligning Components",
+        images: [
+          { image: "./images/pedals/pedal2_booster/pcb1.png" },
+          { image: "./images/pedals/pedal2_booster/pcb2.png" },
+        ],
+      },
+      {
+        text: "Soldering and adding board wires",
+        images: [
+          { image: "./images/pedals/pedal2_booster/pcb3.png" },
+          { image: "./images/pedals/pedal2_booster/pcb4.png" },
+        ],
+      },
+      {
+        text: "Arranging the inside",
+        images: [
+          { image: "./images/pedals/pedal2_booster/inside1.png" },
+          { image: "./images/pedals/pedal2_booster/inside2.png" },
+        ],
+        description:
+          "Something is not right, pedal is dead💀. I tested the LED and resoldered some loose components but I might need to start again from scratch!",
+      },
     ],
   },
 ];
