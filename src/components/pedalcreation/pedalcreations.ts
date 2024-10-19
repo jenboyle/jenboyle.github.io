@@ -87,7 +87,7 @@ export const pedalcreations = [
           { image: "./images/pedals/pedal2_booster/inside2.png" },
         ],
         description:
-          "Something is not right, pedal is dead💀. I tested the LED and resoldered some loose components but I might need to start again from scratch!",
+          "Something is not right, pedal is dead💀. I tested the LED and resoldered some loose components but I might need to start again from scratch! Looks like I mixed up the direction of the components 🤦‍♀️",
       },
     ],
   },
