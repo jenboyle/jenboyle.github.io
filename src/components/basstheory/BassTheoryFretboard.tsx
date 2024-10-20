@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./BassTheoryFretboard.module.css";
 import { TheoryType } from "./BassTheoryContent";
+import BassTheoryTip from "./BassTheoryTip";
 
 interface BassTheoryFretboardProps {
   theoryJson: TheoryType;
@@ -38,6 +39,10 @@ function BassTheoryFretboard({
   // ));
 
   //if fretLocs.length == -1 ? setFretLocs(theoryJson.fret_locs1) : <div></div>}
+
+  // {theoryJson.song === "Ionian" && (
+  //   <BassTheoryTip tip="Continue the pattern on the Octave" />
+  // )}
 
   useEffect(
     function () {
@@ -168,7 +173,7 @@ function BassTheoryFretboard({
         <img
           key={index}
           src={
-            index == 0
+            index == 0 || index == fretLocs!.split(",").length - 1
               ? "/images/theory/diamond3.png"
               : "/images/theory/diamond1.png"
           }
@@ -235,6 +240,8 @@ function BassTheoryFretboard({
           }`}
         ></img>
       ))}
+
+      <BassTheoryTip tip="Continue the pattern on the Octave" />
     </>
   );
 }

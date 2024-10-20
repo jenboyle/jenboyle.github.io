@@ -21,9 +21,7 @@ function PedalCreationPreview() {
           {pedalcreations[creationSelected!].articles.map(
             (article, articleid) => (
               <GroovyArticle key={articleid}>
-                <GroovyHeader key={`head${articleid}`}>
-                  {article.text}
-                </GroovyHeader>
+                <GroovyHeader key={articleid}>{article.text}</GroovyHeader>
                 {article.images.map((image, imageid) => (
                   <img
                     className={styles.boximg}
