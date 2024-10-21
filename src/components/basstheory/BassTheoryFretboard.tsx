@@ -64,6 +64,10 @@ function BassTheoryFretboard({
           console.log("matched");
           setButtonText(theoryJson.fret_displays![i].fret_name);
           setFretLocs(theoryJson.fret_displays![i].fret_locs);
+          // if (theoryJson.fret_displays![i].fret_rootszeroindex != undefined) {
+          //   //fret_rootszeroindex
+          //   console.log(theoryJson.fret_displays![i].fret_rootszeroindex);
+          // }
         }
       }
 
@@ -173,8 +177,10 @@ function BassTheoryFretboard({
         <img
           key={index}
           src={
-            index == 0 || index == fretLocs!.split(",").length - 1
-              ? "/images/theory/diamond3.png"
+            theoryJson.song != "Major Pentatonic"
+              ? index == 0 || index == fretLocs!.split(",").length - 1
+                ? "/images/theory/diamond3.png"
+                : "/images/theory/diamond1.png"
               : "/images/theory/diamond1.png"
           }
           className={`${styles.alllocs} ${styles[fretLoc]} ${

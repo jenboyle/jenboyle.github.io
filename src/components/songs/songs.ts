@@ -110,6 +110,13 @@ export const songs = [
     link: "gmajor",
   },
   {
+    jsonfile: "spongebob",
+    songtype: "transcribe",
+    songname: "SpongeBob - Nickelodeon",
+    key: "Key G",
+    link: "gmajor",
+  },
+  {
     jsonfile: "superstar",
     songtype: "transcribe",
     songname: "Superstar Intro - The Carpenters",
