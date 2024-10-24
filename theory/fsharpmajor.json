@@ -6,6 +6,7 @@
   "notes": "F#, G#, A#, B, C#, D#, E# (6 sharps) - Relative minor: ",
   "relativelink": "dsharpminor",
   "relativelinktext": "D#m",
+  "drone": "./audio/drones/drone_fsharp.ogg",
   "chords": "F#,G#m,A#m,B,C#,D#m,E#dim",
   "chordtones": "F#|A#|C#, G#|B|D#, A#|C#|E#, B|D#|F#, C#|E#|G#, D#|F#|A#, E#|G#|B",
   "textb4tab1": "F# on one string:",
@@ -25,7 +26,6 @@
   "a5": "-----1-2-4------",
   "e5": "-2-4------------",
 
-
   "chord1": "F#",
   "chord1e": "2",
   "chord1a": "4",
@@ -38,7 +38,7 @@
   "chord2d": "1",
   "chord2g": "1",
 
-  "chord3":"A#m",
+  "chord3": "A#m",
   "chord3e": "1",
   "chord3a": "4",
   "chord3d": "3",
@@ -73,10 +73,4 @@
   "chord8a": "3",
   "chord8d": "1",
   "chord8g": "2"
-
-
-
-
-
-  
 }

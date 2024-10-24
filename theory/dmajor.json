@@ -6,6 +6,7 @@
   "notes": "D, E, F#, G, A, B, C# (2 sharps) - Relative minor: ",
   "relativelink": "bminor",
   "relativelinktext": "Bm",
+  "drone": "./audio/drones/drone_d.ogg",
   "chords": "D,Em,F#m,G,A,Bm,C#dim",
   "chordtones": "D|F#|A, E|G|B, F#|A|C#, G|B|D, A|C#|E, B|D|F#, C#|E|G",
   "textb4tab1": "D Major:",
@@ -44,19 +45,18 @@
   "chord4d": "0",
   "chord4g": "0",
 
-  "chord5":"A",
+  "chord5": "A",
   "chord5e": "0",
   "chord5a": "4",
   "chord5d": "2",
   "chord5g": "2",
 
   "chord6": "Bm",
-  "chord6out":"4",
+  "chord6out": "4",
   "chord6e": "4",
   "chord6a": "2",
   "chord6d": "1",
   "chord6g": "x",
-
 
   "chord7": "C#Dim",
   "chord7e": "3",
@@ -65,11 +65,9 @@
   "chord7g": "x",
 
   "chord8": "A7",
-  "chord8out":"4",
+  "chord8out": "4",
   "chord8e": "2",
   "chord8a": "1",
   "chord8d": "2",
   "chord8g": "x"
-
-  
 }

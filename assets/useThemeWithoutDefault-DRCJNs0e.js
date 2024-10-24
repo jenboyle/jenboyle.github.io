@@ -1,1 +1,0 @@
-import{r as n}from"./index-tyVf70s2.js";import{K as o}from"./createSvgIcon-jwH_8B8K.js";function r(t){return Object.keys(t).length===0}function u(t=null){const e=n.useContext(o);return!e||r(e)?t:e}export{u};

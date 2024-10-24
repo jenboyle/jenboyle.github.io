@@ -6,6 +6,7 @@
   "notes": "Db, Eb, F, Gb, Ab, Bb, C (5 flats/C# 7 sharps) - Relative minor: ",
   "relativelink": "bflatminor",
   "relativelinktext": "Bbm",
+  "drone": "./audio/drones/drone_csharp.ogg",
   "chords": "Db,Ebm,Fm,Gb,Ab,Bbm,Cdim",
   "chordtones": "Db|F|Ab, Eb|Gb|Bb, F|Ab|C, Gb|Bb|Db, Ab|C|Eb, Bb|Db|F, C|Eb|Gb",
   "textb4tab1": "Db on one string:",
@@ -30,22 +31,18 @@
   "a6": "----------------",
   "e6": "----------------",
 
-
-
-  "chord1":"Db",
+  "chord1": "Db",
   "chord1e": "4",
   "chord1a": "4",
   "chord1d": "3",
   "chord1g": "x",
 
-
   "chord2": "Ebm",
-  "chord2out":"3",
+  "chord2out": "3",
   "chord2e": "x",
   "chord2a": "4",
   "chord2d": "2",
   "chord2g": "1",
-
 
   "chord3": "Fm",
   "chord3e": "1",
@@ -60,14 +57,14 @@
   "chord4g": "3",
 
   "chord5": "Ab",
-  "chord5out":"4",
+  "chord5out": "4",
   "chord5e": "1",
   "chord5a": "3",
   "chord5d": "3",
   "chord5g": "2",
 
   "chord6": "Bbm",
-  "chord6out":"3",
+  "chord6out": "3",
   "chord6e": "4",
   "chord6a": "2",
   "chord6d": "1",
@@ -84,10 +81,4 @@
   "chord8a": "3",
   "chord8d": "4",
   "chord8g": "x"
-
-
-
-
-
-  
 }

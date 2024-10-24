@@ -9,6 +9,7 @@
   "chords": "Ab,Bbm,Cm,Db,Eb,Fm,Gdim",
   "chordtones": "Ab|C|Eb, Bb|Db|F, C|Eb|G, Db|F|Ab, Eb|G|Bb, F|Ab|C, G|Bb|Db",
   "textb4tab1": "Ab on one string:",
+  "drone": "./audio/drones/drone_gsharp.ogg",
   "g1": "-1--3--5--6--8--",
   "d1": "----------------",
   "a1": "----------------",
@@ -30,16 +31,15 @@
   "a6": "----------------",
   "e6": "----------------",
 
-
   "chord1": "Ab",
-  "chord1out":"4",
+  "chord1out": "4",
   "chord1e": "1",
   "chord1a": "3",
   "chord1d": "3",
   "chord1g": "2",
 
   "chord2": "Bbm",
-  "chord2out":"3",
+  "chord2out": "3",
   "chord2e": "4",
   "chord2a": "2",
   "chord2d": "1",
@@ -57,12 +57,11 @@
   "chord4d": "3",
   "chord4g": "x",
 
-  "chord5":"Eb",
+  "chord5": "Eb",
   "chord5e": "x",
   "chord5a": "1",
   "chord5d": "1",
   "chord5g": "0",
-
 
   "chord6": "Fm",
   "chord6e": "1",
@@ -70,24 +69,17 @@
   "chord6d": "3",
   "chord6g": "1",
 
-
   "chord7": "GDim",
-  "chord7out":"2",
+  "chord7out": "2",
   "chord7e": "2",
   "chord7a": "3",
   "chord7d": "x",
   "chord7g": "2",
 
   "chord8": "Eb7",
-  "chord8out":"5",
+  "chord8out": "5",
   "chord8e": "x",
   "chord8a": "2",
   "chord8d": "1",
   "chord8g": "2"
-
-
-
-
-
-  
 }

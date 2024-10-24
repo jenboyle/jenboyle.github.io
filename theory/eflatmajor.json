@@ -6,6 +6,7 @@
   "notes": "Eb, F, G, Ab, Bb, C, D (3 flats) - Relative minor: ",
   "relativelink": "cminor",
   "relativelinktext": "Cm",
+  "drone": "./audio/drones/drone_eb.ogg",
   "chords": "Eb,Fm,Gm,Ab,Bb,Cm,Ddim",
   "chordtones": "Eb|G|Bb, F|Ab|C, G|Bb|D, Ab|C|Eb, Bb|D|F, C|Eb|G, D|F|Ab",
   "textb4tab1": "Eb on one string:",
@@ -30,21 +31,17 @@
   "a6": "----------------",
   "e6": "----------------",
 
-
-
-  "chord1":"Eb",
+  "chord1": "Eb",
   "chord1e": "x",
   "chord1a": "1",
   "chord1d": "1",
   "chord1g": "0",
-
 
   "chord2": "Fm",
   "chord2e": "1",
   "chord2a": "3",
   "chord2d": "3",
   "chord2g": "1",
-
 
   "chord3": "Gm",
   "chord3e": "3",
@@ -53,7 +50,7 @@
   "chord3g": "0",
 
   "chord4": "Ab",
-  "chord4out":"4",
+  "chord4out": "4",
   "chord4e": "1",
   "chord4a": "3",
   "chord4d": "3",
@@ -82,10 +79,4 @@
   "chord8a": "1",
   "chord8d": "3",
   "chord8g": "0"
-
-
-
-
-
-  
 }
