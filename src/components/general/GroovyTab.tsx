@@ -1,4 +1,4 @@
-import { useMediaQuery } from "@mui/material";
+// import { useMediaQuery } from "@mui/material";
 import styles from "./GroovyTab.module.css";
 import { GroovyTabType } from "./GroovyTabType";
 //import { TheoryType } from "./BassTheoryContent";
