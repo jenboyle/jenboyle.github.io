@@ -16,6 +16,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 //import Header from "./components/Header";
 import { lazy, Suspense } from "react";
 import LoadingSpinner from "./components/LoadingSpinner";
+import { ToolProvider } from "./context/ToolContext";
 
 const Transcriptions = lazy(() => import("./pages/Transcriptions"));
 const Cubase = lazy(() => import("./pages/Cubase"));
@@ -34,29 +35,57 @@ const Socials = lazy(() => import("./components/Socials"));
 const Header = lazy(() => import("./components/Header"));
 
 function App() {
+  //const [dronePlaying, setDronePlaying] = useState(false);
+
+  // function toggleDronePlaying() {
+  //   console.log("toggle");
+  //   setDronePlaying(!dronePlaying);
+  // }
+
+  // function stopDronePlaying() {
+  //   console.log("stop");
+  //   setDronePlaying(false);
+  // }
+
+  //<Header stopDronePlay={stopDronePlaying} />
+
+  // <BassTheory
+  //                   dronePlaying={dronePlaying}
+  //                   toggleDronePlay={toggleDronePlaying}
+  //                   stopDronePlay={stopDronePlaying}
+  //                 />
+
   return (
     <>
       <HashRouter>
-        <Header />
-        <main>
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<BassTheory />}></Route>
-              <Route path="about_me" element={<AboutMe />}></Route>
-              <Route path="improvisation" element={<Improvisation />}></Route>
-              <Route path="my_gear" element={<MyGear />}></Route>
-              <Route path="pedal_creation" element={<PedalCreation />}></Route>
-              <Route path="transcriptions" element={<Transcriptions />}></Route>
-              <Route path="jam_time" element={<JamTime />}></Route>
-              <Route path="cubase" element={<Cubase />}></Route>
-              <Route path="percussion" element={<Percussion />}></Route>
-              <Route path="games" element={<Games />}></Route>
-              <Route path="blogs" element={<Blogs />}></Route>
-              <Route path="tips" element={<Tips />}></Route>
-              <Route path="*" element={<PageNotFound />}></Route>
-            </Routes>
-          </Suspense>
-        </main>
+        <ToolProvider>
+          <Header />
+          <main>
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<BassTheory />}></Route>
+                <Route path="about_me" element={<AboutMe />}></Route>
+                <Route path="improvisation" element={<Improvisation />}></Route>
+                <Route path="my_gear" element={<MyGear />}></Route>
+                <Route
+                  path="pedal_creation"
+                  element={<PedalCreation />}
+                ></Route>
+                <Route
+                  path="transcriptions"
+                  element={<Transcriptions />}
+                ></Route>
+                <Route path="jam_time" element={<JamTime />}></Route>
+                <Route path="cubase" element={<Cubase />}></Route>
+                <Route path="percussion" element={<Percussion />}></Route>
+                <Route path="games" element={<Games />}></Route>
+                <Route path="blogs" element={<Blogs />}></Route>
+                <Route path="tips" element={<Tips />}></Route>
+                <Route path="*" element={<PageNotFound />}></Route>
+              </Routes>
+            </Suspense>
+          </main>
+        </ToolProvider>
       </HashRouter>
 
       <Socials />

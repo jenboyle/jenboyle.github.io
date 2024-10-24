@@ -3,12 +3,22 @@ import BassTheorySideNav from "./BassTheorySideNav";
 import styles from "./BassTheoryContainer.module.css";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { useTool } from "../../context/ToolContext";
+
+// function BassTheory({
+//   dronePlaying,
+//   toggleDronePlay,
+//   stopDronePlay,
+//   initialKey = "aflatmajor",
+// }) {
 
 function BassTheory({ initialKey = "aflatmajor" }) {
   const [selectedKey, setSelectedKey] = useState(initialKey);
   const [context, setContext] = useState("");
   const [searchParams, setSearchParams] = useSearchParams();
   const [previousKey, setPreviousKey] = useState("");
+  const { dronePlaying, toggleDronePlaying } = useTool();
+  //const [dronePlaying, setDronePlaying] = useState(false);
   const jamkey = searchParams.get("jamkey");
   useEffect(() => {
     if (jamkey) {
@@ -18,14 +28,31 @@ function BassTheory({ initialKey = "aflatmajor" }) {
     }
   }, [jamkey, searchParams, setSearchParams]);
 
+  // useEffect(() => {
+  //   document.body.addEventListener("click", (e) => {
+  //     console.log("test e.target" + (e.target as HTMLSpanElement));
+  //     if (dronePlaying && (e.target as HTMLSpanElement) == undefined) {
+  //       //(e.target as HTMLSpanElement).id != "droneSpan")
+  //       setDronePlaying(false);
+  //     }
+  //   });
+  // }, [dronePlaying]);
+
   function handleTheorySelection(e: React.MouseEvent<HTMLLIElement>) {
     setSelectedKey((e.target as HTMLLIElement).id);
+    if (dronePlaying) {
+      toggleDronePlaying();
+    }
+    //stopDronePlay();
     console.log(`handle called sel ${(e.target as HTMLLIElement).id}`);
   }
 
   function handleNavTheory(key: string, context: string) {
     setPreviousKey(selectedKey);
     setSelectedKey(key);
+    if (dronePlaying) {
+      toggleDronePlaying();
+    }
     console.log(`handle called nt ${key}`);
 
     let fretscaleselected = context.toLowerCase();
@@ -34,6 +61,14 @@ function BassTheory({ initialKey = "aflatmajor" }) {
 
     setContext(fretscaleselected);
   }
+
+  // function handleDronePlaying() {
+  //   onDronePlay(!dronePlaying);
+  // }
+
+  // dronePlaying={dronePlaying}
+  // toggleDronePlay={toggleDronePlay}
+  // stopDronePlay={stopDronePlay}
 
   return (
     <div className={styles.theorycontainer}>

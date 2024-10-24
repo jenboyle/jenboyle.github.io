@@ -6,6 +6,7 @@
   "notes": "E, F#, G, A, B, C, D (1 sharp) - Relative major: ",
   "relativelink": "gmajor",
   "relativelinktext": "G",
+  "drone": "./audio/drones/drone_e.ogg",
   "chords": "Em,F#dim,G,Am,Bm,C,D",
   "chordtones": "E|G|B, F#|A|C, G|B|D, A|C|E, B|D|F#, C|E|G, D|F#|A",
   "chordtones7": "E|G|B|D, F#|A|C|E, G|B|D|F#, A|C|E|G, B|D|F#|A, C|E|G|B, D|F#|A|C",
@@ -29,7 +30,6 @@
   "d6": "----------------",
   "a6": "----------------",
   "e6": "----------------",
-
 
   "chord1": "Em",
   "chord1e": "0",
@@ -56,37 +56,28 @@
   "chord4g": "2",
 
   "chord5": "Bm",
-  "chord5out":"4",
+  "chord5out": "4",
   "chord5e": "4",
   "chord5a": "2",
   "chord5d": "1",
   "chord5g": "x",
 
-
-  "chord6":"C",
+  "chord6": "C",
   "chord6e": "x",
   "chord6a": "3",
   "chord6d": "2",
   "chord6g": "0",
 
-  "chord7":"D",
+  "chord7": "D",
   "chord7e": "2",
   "chord7a": "0",
   "chord7d": "0",
   "chord7g": "2",
 
-
-
   "chord8": "D7",
-  "chord8out":"4",
+  "chord8out": "4",
   "chord8e": "x",
   "chord8a": "2",
   "chord8d": "1",
   "chord8g": "2"
-
-
-
-
-
-  
 }

@@ -6,6 +6,7 @@
   "notes": "F, G, A, Bb, C, D, E (1 flat) - Relative minor: ",
   "relativelink": "dminor",
   "relativelinktext": "Dm",
+  "drone": "./audio/drones/drone_f.ogg",
   "chords": "F,Gm,Am,Bb,C,Dm,Edim",
   "chordtones": "F|A|C, G|Bb|D, A|C|E, Bb|D|F, C|E|G, D|F|A, E|G|Bb",
   "textb4tab1": "F Major on one string:",
@@ -28,7 +29,7 @@
   "a6": "----------------",
   "e6": "----------------",
 
-  "chord1":"F",
+  "chord1": "F",
   "chord1e": "1",
   "chord1a": "0",
   "chord1d": "3",
@@ -75,10 +76,4 @@
   "chord8a": "3",
   "chord8d": "2",
   "chord8g": "3"
-
-
-
-
-
-  
 }

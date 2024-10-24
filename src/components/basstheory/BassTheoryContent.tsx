@@ -7,6 +7,7 @@ import BassTheoryTableFifths from "./BassTheoryTableFifths";
 import BassTheoryFretboard from "./BassTheoryFretboard";
 import GroovyTab from "../general/GroovyTab";
 import BassTheoryTableLink from "./BassTheoryTableLink";
+import GroovyTools from "../groovytools/GroovyTools";
 //import {useNavigate } from "react-router-dom";
 interface TheoryProps {
   jsonfile: string;
@@ -35,6 +36,7 @@ export type TheoryType = {
   relativelinktext: string;
   chords: string;
   chordtones: string;
+  drone?: string;
   textb4tab1?: string;
   tablefifths?: string;
   fretboard?: string;
@@ -203,7 +205,9 @@ export type TheoryType = {
   a36?: string;
   e36?: string;
 };
-
+// dronePlaying,
+// toggleDronePlay,
+// stopDronePlay,
 function BassTheoryContent({
   jsonfile,
   handleNavTheory,
@@ -268,7 +272,7 @@ function BassTheoryContent({
   //   }
   //if (error) return <div>Error loading, refresh {error}</div>;
   if (isLoading) {
-    console.log("Loading...");
+    //console.log("Loading...");
     return null;
   }
 
@@ -279,6 +283,10 @@ function BassTheoryContent({
 
   //<button onClick={handleBack}>back</button>
   //{back?.length > 0 ? <button onClick={handleBack}>back</button> : null}
+
+  // dronePlaying={dronePlaying}
+  // toggleDronePlay={toggleDronePlay}
+  // stopDronePlay={stopDronePlay}
 
   return (
     <div>
@@ -297,6 +305,13 @@ function BassTheoryContent({
             <>
               <p className={styles.p}>{aka(theoryJson.song)}</p>
               <p className={styles.p}>Key:{theoryJson.key}</p>
+              <GroovyTools
+                drone={
+                  theoryJson.drone
+                    ? theoryJson.drone
+                    : "./audio/drones/drone_c.ogg"
+                }
+              />
             </>
           ) : theoryJson.tablefifths ? (
             <BassTheoryTableFifths />

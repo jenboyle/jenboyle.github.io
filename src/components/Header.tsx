@@ -1,10 +1,11 @@
 import styles from "./Header.module.css";
 import PageNav from "./PageNav";
 import { useLocation } from "react-router-dom";
-
+//function Header({ stopDronePlay }) {
+//<PageNav stopDronePlay={stopDronePlay} />
 function Header() {
   const whereami = useLocation();
-  console.log(whereami.pathname);
+  //console.log(whereami.pathname);
   let currentPage = "Bass Theory";
   if (whereami.pathname !== "/") {
     currentPage = whereami.pathname.substring(1);

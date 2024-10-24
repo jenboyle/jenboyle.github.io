@@ -6,6 +6,7 @@
   "notes": "F, G, Ab, Bb, C, Db, Eb (4 flats) - Relative major: ",
   "relativelink": "aflatmajor",
   "relativelinktext": "Ab",
+  "drone": "./audio/drones/drone_f.ogg",
   "chords": "Fm,Gdim,Ab,Bbm,Cm,Db,Eb",
   "chordtones": "F|Ab|C, G|Bb|Db, Ab|C|Eb, Bb|Db|F, C|Eb|G, Db|F|Ab, Eb|G|Bb",
   "textb4tab1": "Fm on one string:",
@@ -30,30 +31,28 @@
   "a6": "----------------",
   "e6": "----------------",
 
-
   "chord1": "Fm",
   "chord1e": "1",
   "chord1a": "3",
   "chord1d": "3",
   "chord1g": "1",
 
-
   "chord2": "GDim",
-  "chord2out":"2",
+  "chord2out": "2",
   "chord2e": "2",
   "chord2a": "3",
   "chord2d": "x",
   "chord2g": "2",
 
   "chord3": "Ab",
-  "chord3out":"4",
+  "chord3out": "4",
   "chord3e": "1",
   "chord3a": "3",
   "chord3d": "3",
   "chord3g": "2",
 
   "chord4": "Bbm",
-  "chord4out":"3",
+  "chord4out": "3",
   "chord4e": "4",
   "chord4a": "2",
   "chord4d": "1",
@@ -71,22 +70,16 @@
   "chord6d": "3",
   "chord6g": "x",
 
-  "chord7":"Eb",
+  "chord7": "Eb",
   "chord7e": "x",
   "chord7a": "1",
   "chord7d": "1",
   "chord7g": "0",
 
   "chord8": "Eb7",
-  "chord8out":"5",
+  "chord8out": "5",
   "chord8e": "x",
   "chord8a": "2",
   "chord8d": "1",
   "chord8g": "2"
-
-
-
-
-
-  
 }

@@ -6,6 +6,7 @@
   "notes": "Bb, C, D, Eb, F, G, A (2 flats) - Relative minor: ",
   "relativelink": "gminor",
   "relativelinktext": "Gm",
+  "drone": "./audio/drones/drone_bb.ogg",
   "chords": "Bb,Cm,Dm,Eb,F,Gm,Adim",
   "chordtones": "Bb|D|F, C|Eb|G, D|F|A, Eb|G|Bb, F|A|C, G|Bb|D, A|C|Eb",
   "textb4tab1": "Bb on one string:",
@@ -24,10 +25,7 @@
   "a5": "-----5-6-8------",
   "e5": "-6-8------------",
 
-
-
-
-  "chord1":"Bb",
+  "chord1": "Bb",
   "chord1e": "x",
   "chord1a": "1",
   "chord1d": "0",
@@ -74,10 +72,4 @@
   "chord8a": "0",
   "chord8d": "1",
   "chord8g": "2"
-
-
-
-
-
-  
 }

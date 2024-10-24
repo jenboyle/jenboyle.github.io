@@ -1,0 +1,9 @@
+.toolbar {
+  background-color: #302c34;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  border: 2px steelblue solid;
+}

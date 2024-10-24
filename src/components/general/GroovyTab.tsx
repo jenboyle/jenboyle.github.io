@@ -9,8 +9,8 @@ type GroovyTabProps = {
 };
 
 function GroovyTab({ json, rowBeginning }: GroovyTabProps) {
-  const mobile = useMediaQuery("min-width:600px");
-  console.log(mobile);
+  //const mobile = useMediaQuery("min-width:600px");
+  //console.log(mobile);
   return (
     <table className={styles.table}>
       <tbody>

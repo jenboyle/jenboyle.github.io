@@ -6,6 +6,7 @@
   "notes": "C, D, E, F, G, A, B (0 sharps) - Relative minor: ",
   "relativelink": "aminor",
   "relativelinktext": "Am",
+  "drone": "./audio/drones/drone_c.ogg",
   "chords": "C,Dm,Em,F,G,Am,Bdim",
   "chordtones": "C|E|G, D|F|A, E|G|B, F|A|C, G|B|D, A|C|E, B|D|F",
   "textb4tab1": "C Major on one string E:",
@@ -64,7 +65,6 @@
   "a22": "-7---2----------",
   "e22": "---3------------",
 
-
   "textb4tab7": "C Triad Arpeggios G(GBD), Am(ACE), Bdim(BDF):",
   "g25": "---------------",
   "d25": "-------------2--",
@@ -87,7 +87,6 @@
   "a30": "-7---2----------",
   "e30": "---3----------1-",
 
-
   "textb4tab9": "C Triad Arpeggios Add Octave G(GBDG), Am(ACEA), Bdim(BDFB):",
   "g33": "----------------",
   "d33": "------5------2-7",
@@ -99,21 +98,17 @@
   "a34": "---5------------",
   "e34": "-7---1----------",
 
-
-
-  "chord1":"C",
+  "chord1": "C",
   "chord1e": "x",
   "chord1a": "3",
   "chord1d": "2",
   "chord1g": "0",
-
 
   "chord2": "Dm",
   "chord2e": "1",
   "chord2a": "0",
   "chord2d": "0",
   "chord2g": "2",
-
 
   "chord3": "Em",
   "chord3e": "0",
@@ -150,10 +145,4 @@
   "chord8a": "2",
   "chord8d": "3",
   "chord8g": "0"
-
-
-
-
-
-  
 }
