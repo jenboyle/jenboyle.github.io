@@ -17,6 +17,7 @@ function GroovyToolDrone({
   drone = "./audio/drones/drone_c.ogg",
 }: GroovyToolsProps) {
   const [audio] = useState(new Audio(drone));
+  const [audiotwo] = useState(new Audio(drone));
   const droneRef = useRef<HTMLSpanElement>(null);
   const { dronePlaying, toggleDronePlaying } = useTool();
   //const { dronePlaying, toggleDronePlaying, setAudio } = useTool();
@@ -55,10 +56,16 @@ function GroovyToolDrone({
     if (dronePlaying) {
       audio.loop = true;
       audio.play();
+      audiotwo.loop = true;
+
+      setTimeout(() => {
+        audiotwo.play();
+      }, 500);
     } else {
       audio.pause();
+      audiotwo.pause();
     }
-  }, [dronePlaying, audio]);
+  }, [dronePlaying, audio, audiotwo]);
 
   //   function handleClickOutside(event) {
 
