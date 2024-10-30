@@ -55,8 +55,10 @@ function GroovyToolDrone({
   useEffect(() => {
     if (dronePlaying) {
       audio.loop = true;
+      audio.setAttribute("type", "audio/ogg");
       audio.play();
       audiotwo.loop = true;
+      audiotwo.setAttribute("type", "audio/ogg");
 
       setTimeout(() => {
         audiotwo.play();
