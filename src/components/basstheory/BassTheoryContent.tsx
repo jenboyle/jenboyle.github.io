@@ -8,6 +8,7 @@ import BassTheoryFretboard from "./BassTheoryFretboard";
 import GroovyTab from "../general/GroovyTab";
 import BassTheoryTableLink from "./BassTheoryTableLink";
 import GroovyTools from "../groovytools/GroovyTools";
+import BassChord from "./BassChord";
 //import {useNavigate } from "react-router-dom";
 interface TheoryProps {
   jsonfile: string;
@@ -204,6 +205,87 @@ export type TheoryType = {
   d36?: string;
   a36?: string;
   e36?: string;
+
+  g37?: string;
+  d37?: string;
+  a37?: string;
+  e37?: string;
+
+  g38?: string;
+  d38?: string;
+  a38?: string;
+  e38?: string;
+
+  g39?: string;
+  d39?: string;
+  a39?: string;
+  e39?: string;
+
+  g40?: string;
+  d40?: string;
+  a40?: string;
+  e40?: string;
+
+  g41?: string;
+  d41?: string;
+  a41?: string;
+  e41?: string;
+
+  chord1?: string;
+  chord1out?: string;
+  chord1e?: string;
+  chord1a?: string;
+  chord1d?: string;
+  chord1g?: string;
+
+  chord2?: string;
+  chord2out?: string;
+  chord2e?: string;
+  chord2a?: string;
+  chord2d?: string;
+  chord2g?: string;
+
+  chord3?: string;
+  chord3out?: string;
+  chord3e?: string;
+  chord3a?: string;
+  chord3d?: string;
+  chord3g?: string;
+
+  chord4?: string;
+  chord4out?: string;
+  chord4e?: string;
+  chord4a?: string;
+  chord4d?: string;
+  chord4g?: string;
+
+  chord5?: string;
+  chord5out?: string;
+  chord5e?: string;
+  chord5a?: string;
+  chord5d?: string;
+  chord5g?: string;
+
+  chord6?: string;
+  chord6out?: string;
+  chord6e?: string;
+  chord6a?: string;
+  chord6d?: string;
+  chord6g?: string;
+
+  chord7?: string;
+  chord7out?: string;
+  chord7e?: string;
+  chord7a?: string;
+  chord7d?: string;
+  chord7g?: string;
+
+  chord8?: string;
+  chord8out?: string;
+  chord8e?: string;
+  chord8a?: string;
+  chord8d?: string;
+  chord8g?: string;
 };
 // dronePlaying,
 // toggleDronePlay,
@@ -563,6 +645,113 @@ function BassTheoryContent({
 
           {theoryJson.e33 ? (
             <GroovyTab json={theoryJson} rowBeginning={33} />
+          ) : null}
+
+          {theoryJson.chord1 ? (
+            <>
+              <div className={styles.chorddiv}>
+                {theoryJson.chord1 ? (
+                  <BassChord
+                    chord={theoryJson.chord1}
+                    chordout={
+                      theoryJson.chord1out ? theoryJson.chord1out : "no"
+                    }
+                    chorde={theoryJson.chord1e!}
+                    chorda={theoryJson.chord1a!}
+                    chordd={theoryJson.chord1d!}
+                    chordg={theoryJson.chord1g!}
+                  />
+                ) : null}
+                {theoryJson.chord2 ? (
+                  <BassChord
+                    chord={theoryJson.chord2}
+                    chordout={
+                      theoryJson.chord2out ? theoryJson.chord2out : "no"
+                    }
+                    chorde={theoryJson.chord2e!}
+                    chorda={theoryJson.chord2a!}
+                    chordd={theoryJson.chord2d!}
+                    chordg={theoryJson.chord2g!}
+                  />
+                ) : null}
+                {theoryJson.chord3 ? (
+                  <BassChord
+                    chord={theoryJson.chord3}
+                    chordout={
+                      theoryJson.chord3out ? theoryJson.chord3out : "no"
+                    }
+                    chorde={theoryJson.chord3e!}
+                    chorda={theoryJson.chord3a!}
+                    chordd={theoryJson.chord3d!}
+                    chordg={theoryJson.chord3g!}
+                  />
+                ) : null}
+              </div>
+              <div className={styles.chorddiv}>
+                {theoryJson.chord4 ? (
+                  <BassChord
+                    chord={theoryJson.chord4}
+                    chordout={
+                      theoryJson.chord4out ? theoryJson.chord4out : "no"
+                    }
+                    chorde={theoryJson.chord4e!}
+                    chorda={theoryJson.chord4a!}
+                    chordd={theoryJson.chord4d!}
+                    chordg={theoryJson.chord4g!}
+                  />
+                ) : null}
+                {theoryJson.chord5 ? (
+                  <BassChord
+                    chord={theoryJson.chord5}
+                    chordout={
+                      theoryJson.chord5out ? theoryJson.chord5out : "no"
+                    }
+                    chorde={theoryJson.chord5e!}
+                    chorda={theoryJson.chord5a!}
+                    chordd={theoryJson.chord5d!}
+                    chordg={theoryJson.chord5g!}
+                  />
+                ) : null}
+                {theoryJson.chord6 ? (
+                  <BassChord
+                    chord={theoryJson.chord6}
+                    chordout={
+                      theoryJson.chord6out ? theoryJson.chord6out : "no"
+                    }
+                    chorde={theoryJson.chord6e!}
+                    chorda={theoryJson.chord6a!}
+                    chordd={theoryJson.chord6d!}
+                    chordg={theoryJson.chord6g!}
+                  />
+                ) : null}
+              </div>
+              <div className={styles.chorddiv}>
+                {theoryJson.chord7 ? (
+                  <BassChord
+                    chord={theoryJson.chord7}
+                    chordout={
+                      theoryJson.chord7out ? theoryJson.chord7out : "no"
+                    }
+                    chorde={theoryJson.chord7e!}
+                    chorda={theoryJson.chord7a!}
+                    chordd={theoryJson.chord7d!}
+                    chordg={theoryJson.chord7g!}
+                  />
+                ) : null}
+                {theoryJson.chord8 ? (
+                  <BassChord
+                    chord={theoryJson.chord8}
+                    chordout={
+                      theoryJson.chord8out ? theoryJson.chord8out : "no"
+                    }
+                    chorde={theoryJson.chord8e!}
+                    chorda={theoryJson.chord8a!}
+                    chordd={theoryJson.chord8d!}
+                    chordg={theoryJson.chord8g!}
+                  />
+                ) : null}
+              </div>
+            </>
           ) : null}
         </div>
       ) : null}

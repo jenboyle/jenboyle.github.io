@@ -67,3 +67,7 @@
 .fifthstablelefttd {
   text-align: left;
 }
+
+.chorddiv {
+  display: flex;
+}

@@ -1,0 +1,83 @@
+.div {
+  margin-left: 15px;
+  padding: 50px;
+}
+.chordtable {
+  border-collapse: collapse;
+  border: 3px solid black;
+}
+
+.chordtd {
+  border: 3px black solid;
+  border-top: 0px;
+  text-align: center;
+  width: 30px;
+  height: 60px;
+}
+
+.fret0 {
+  top: -250px;
+  position: relative;
+}
+
+.fret1 {
+  top: -220px;
+  position: relative;
+}
+
+.fret2 {
+  top: -160px;
+  position: relative;
+}
+
+.fret3 {
+  top: -100px;
+  position: relative;
+}
+
+.fret4 {
+  top: -40px;
+  position: relative;
+}
+
+.e {
+  --setupleft: -45px;
+}
+
+.a {
+  --setupleft: -15px;
+}
+
+.d {
+  --setupleft: 15px;
+}
+
+.g {
+  --setupleft: 45px;
+}
+
+.numfret {
+  --setupnumfret: -45px;
+  top: -220px;
+  position: relative;
+}
+
+.leftOffsetnumfret {
+  left: calc(var(--setupnumfret) + 15px);
+}
+
+.leftOffsete {
+  left: calc(var(--setupleft) + 16px);
+}
+
+.leftOffseta {
+  left: calc(var(--setupleft) - 3px);
+}
+
+.leftOffsetd {
+  left: calc(var(--setupleft) - 24px);
+}
+
+.leftOffsetg {
+  left: calc(var(--setupleft) - 44px);
+}
