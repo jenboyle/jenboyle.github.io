@@ -5,9 +5,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: rgb(234, 217, 234, 0.94);
+  background-color: rgb(234, 217, 234);
   background-image: url(/images/bg2.svg);
-  background-blend-mode: saturation;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
