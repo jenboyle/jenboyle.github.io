@@ -7,6 +7,7 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: rgb(234, 217, 234);
   background-image: url(/images/bg2.svg);
+  visibility: visible;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
