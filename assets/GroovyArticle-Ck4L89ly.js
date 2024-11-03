@@ -1,1 +1,0 @@
-import{j as e}from"./index-D4u7q7d2.js";const a="_article_ngufm_1",c={article:a};function s({children:t,customStyles:r}){return e.jsx("article",{className:`${c.article} ${r||""}`,children:t})}export{s as G};
