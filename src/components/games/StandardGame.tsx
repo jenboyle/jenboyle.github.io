@@ -10,12 +10,17 @@ import AnswerCorrect from "./common/AnswerCorrect";
 import QuestionImage from "./common/QuestionImage";
 import AnswerChecker from "./common/AnswerChecker";
 
+type Choice = {
+  choice: string;
+};
+
 export type QuestionType = {
   question: string;
   answer: string;
   help: string;
   img?: string;
   multi?: string;
+  choices?: Choice[];
 };
 
 interface StandardGameProps {
@@ -29,6 +34,7 @@ function StandardGame({ questions }: StandardGameProps) {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [showHelp, setShowHelp] = useState(false);
   const [score, setScore] = useState(0);
+  const [radio, setRadio] = useState(false);
 
   function handlePlayerAnswer(e: React.ChangeEvent<HTMLInputElement>) {
     setPlayerAnswer(e.target.value);
@@ -38,7 +44,13 @@ function StandardGame({ questions }: StandardGameProps) {
     setPlayerAnswerSubmitted(true);
     setShowHelp(false);
 
-    if (AnswerChecker(playerAnswer, questions[questionIndex].answer)) {
+    if (radio) {
+      if (playerAnswer === questions[questionIndex].answer) {
+        setScore(score + 1);
+        setCurrentResult(true);
+        return true;
+      }
+    } else if (AnswerChecker(playerAnswer, questions[questionIndex].answer)) {
       setScore(score + 1);
       setCurrentResult(true);
       return true;
@@ -74,11 +86,31 @@ function StandardGame({ questions }: StandardGameProps) {
           {questions[questionIndex].img ? (
             <QuestionImage src={questions[questionIndex].img} />
           ) : null}
-          <input
-            id="schoolText"
-            type="text"
-            onChange={handlePlayerAnswer}
-          ></input>
+          {questions[questionIndex].choices ? (
+            questions[questionIndex].choices.map((choice, index) => (
+              <div
+                key={choice.choice}
+                onClick={() => {
+                  setPlayerAnswer(`${index}`);
+                  setRadio(true);
+                }}
+              >
+                <input
+                  key={choice.choice}
+                  type="radio"
+                  name="answers"
+                  value={index}
+                ></input>
+                {choice.choice}
+              </div>
+            ))
+          ) : (
+            <input
+              id="schoolText"
+              type="text"
+              onChange={handlePlayerAnswer}
+            ></input>
+          )}
           <button className={styles.pad} onClick={handlePlayerAnswerSubmitted}>
             Check Answer
           </button>
