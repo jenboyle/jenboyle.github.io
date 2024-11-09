@@ -89,6 +89,7 @@ function StandardGame({ questions }: StandardGameProps) {
           {questions[questionIndex].choices ? (
             questions[questionIndex].choices.map((choice, index) => (
               <div
+                className={`${styles.radiondiv} ${styles.pad}`}
                 key={choice.choice}
                 onClick={() => {
                   setPlayerAnswer(`${index}`);
@@ -96,6 +97,7 @@ function StandardGame({ questions }: StandardGameProps) {
                 }}
               >
                 <input
+                  className={styles.pad}
                   key={choice.choice}
                   type="radio"
                   name="answers"

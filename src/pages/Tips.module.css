@@ -3,3 +3,60 @@
 .overridegeneralarticle li {
   text-align: left;
 }
+
+.frettr {
+  border: 1px black solid;
+}
+
+.frettd {
+  border: 1px black solid;
+  width: 50px;
+  height: 20px;
+}
+
+.frettable {
+  margin-top: 15px;
+  border-collapse: collapse;
+}
+
+.cloc {
+  position: relative;
+  top: -12px;
+  left: 115px;
+}
+
+.floc {
+  position: relative;
+  top: -33px;
+  left: 95px;
+}
+
+.gloc {
+  position: relative;
+  top: -62px;
+  left: 215px;
+}
+
+.aloc {
+  position: relative;
+  top: -12px;
+  left: 65px;
+}
+
+.dloc {
+  position: relative;
+  top: -33px;
+  left: 45px;
+}
+
+.eloc {
+  position: relative;
+  top: -62px;
+  left: 165px;
+}
+
+.clocblur {
+  position: relative;
+  top: -42px;
+  left: 200px;
+}

@@ -43,6 +43,93 @@ function Tips() {
           Octaves Tip: Some songs good for octave practice: Leonard Cohen -
           Everybody Knows and Blondie - Atomic
         </div>
+        <p>Pattern to find chords</p>
+        <div>Take C Major. </div>
+        <div>
+          Major Chords in C Major Pattern: C (on 8th fret), F, G (Root, 4, 5)
+          <table className={styles.frettable}>
+            <tbody>
+              <tr className={styles.frettr}>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+              </tr>
+              <tr className={styles.frettr}>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+              </tr>
+              <tr className={styles.frettr}>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+              </tr>
+            </tbody>
+            <img
+              src="./images/theory/chords/circleroot.png"
+              className={styles.cloc}
+            ></img>
+            <img
+              src="./images/theory/chords/circle.png"
+              className={styles.floc}
+            ></img>
+            <img
+              src="./images/theory/chords/circle.png"
+              className={styles.gloc}
+            ></img>
+          </table>
+        </div>
+        <div>
+          Minor Chords in C Major Pattern: Down 3 frets repeat pattern: Am, Dm,
+          Em (6, 2, 3)
+          <table className={styles.frettable}>
+            <tbody>
+              <tr className={styles.frettr}>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+              </tr>
+              <tr className={styles.frettr}>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+              </tr>
+              <tr className={styles.frettr}>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+                <td className={styles.frettd}></td>
+              </tr>
+            </tbody>
+            <img
+              src="./images/theory/chords/circle.png"
+              className={styles.aloc}
+            ></img>
+            <img
+              src="./images/theory/chords/circle.png"
+              className={styles.dloc}
+            ></img>
+            <img
+              src="./images/theory/chords/circle.png"
+              className={styles.eloc}
+            ></img>
+            <img
+              src="./images/theory/chords/circlerootblur.png"
+              className={styles.clocblur}
+            ></img>
+          </table>
+        </div>
       </GroovyArticle>
     </>
   );

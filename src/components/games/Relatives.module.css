@@ -3,6 +3,11 @@
   margin: 10px;
 }
 
+.radiondiv {
+  border: 1px solid black;
+  text-align: left;
+}
+
 .question {
   font-weight: bold;
   font-size: 1.2em;
