@@ -24,6 +24,7 @@ export type FretType = {
   fret_id: string;
   fret_notes?: string;
   fret_rootszeroindex?: string;
+  drone: string;
 };
 
 export type TheoryType = {

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./BassTheoryFretboard.module.css";
 import { TheoryType } from "./BassTheoryContent";
 import BassTheoryTip from "./BassTheoryTip";
+import GroovyTools from "../groovytools/GroovyTools";
 
 interface BassTheoryFretboardProps {
   theoryJson: TheoryType;
@@ -18,6 +19,9 @@ function BassTheoryFretboard({
   const [showOption, setShowOption] = useState(false);
   const [fretLocs, setFretLocs] = useState(
     theoryJson.fret_displays![0].fret_locs
+  );
+  const [fretDrone, setFretDrone] = useState(
+    theoryJson.fret_displays![0].drone
   );
 
   //type Allkeys = keyof typeof theoryJson;
@@ -64,6 +68,7 @@ function BassTheoryFretboard({
           console.log("matched");
           setButtonText(theoryJson.fret_displays![i].fret_name);
           setFretLocs(theoryJson.fret_displays![i].fret_locs);
+          setFretDrone(theoryJson.fret_displays![i].drone);
           // if (theoryJson.fret_displays![i].fret_rootszeroindex != undefined) {
           //   //fret_rootszeroindex
           //   console.log(theoryJson.fret_displays![i].fret_rootszeroindex);
@@ -101,13 +106,18 @@ function BassTheoryFretboard({
 
   function handleSelection(e: React.MouseEvent<HTMLLIElement>) {
     setShowOption(false);
+
+    const data = (e.target as HTMLLIElement).getAttribute("value")!.split("+");
+
     //alert(e);
     //console.log("in handle selection:::");
     //console.log((e.target as HTMLLIElement).textContent);
     //console.log((e.target as HTMLLIElement).id);
     //console.log((e.target as HTMLLIElement).getAttribute("value"));
     setButtonText((e.target as HTMLLIElement).textContent!);
-    setFretLocs((e.target as HTMLLIElement).getAttribute("value")!);
+    //setFretLocs((e.target as HTMLLIElement).getAttribute("value")!);
+    setFretLocs(data[0]);
+    setFretDrone(data[1]);
   }
   //{buttonText === "" ? theoryJson.fret_name1 : buttonText}
 
@@ -129,6 +139,7 @@ function BassTheoryFretboard({
       {theoryJson.formula ? (
         <p className={styles.p}>Formula: {theoryJson.formula}</p>
       ) : null}
+      <GroovyTools key={fretDrone} drone={fretDrone} />
       <div className={styles.dropdowntheory}>
         <button
           id="pentbutton"
@@ -157,7 +168,7 @@ function BassTheoryFretboard({
                 <li
                   key={fret_display.fret_id}
                   id={fret_display.fret_id}
-                  value={fret_display.fret_locs}
+                  value={`${fret_display.fret_locs}+${fret_display.drone}`}
                   onClick={handleSelection}
                 >
                   {fret_display.fret_name}

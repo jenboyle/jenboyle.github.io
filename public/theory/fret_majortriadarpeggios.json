@@ -10,85 +10,99 @@
       "fret_name": "C Major Triad Arpeggio",
       "fret_locs": "A3,D2,D5,G5",
       "fret_id": "cmajortriad",
-      "fret_notes": "C,E,G,C"
+      "fret_notes": "C,E,G,C",
+      "drone": "./audio/drones/drone_c.ogg"
     },
     {
       "fret_name": "Db Major Triad Arpeggio",
       "fret_locs": "A4,D3,D6,G6",
       "fret_id": "dbmajortriad",
-      "fret_notes": "Db,F,Ab,Db"
+      "fret_notes": "Db,F,Ab,Db",
+      "drone": "./audio/drones/drone_csharp.ogg"
     },
     {
       "fret_name": "D Major Triad Arpeggio",
       "fret_locs": "A5,D4,D7,G7",
       "fret_id": "dmajortriad",
-      "fret_notes": "D,F#,A,D"
+      "fret_notes": "D,F#,A,D",
+      "drone": "./audio/drones/drone_d.ogg"
     },
     {
       "fret_name": "Eb Major Triad Arpeggio",
       "fret_locs": "A6,D5,D8,G8",
       "fret_id": "ebmajortriad",
-      "fret_notes": "Eb,G,Bb,Eb"
+      "fret_notes": "Eb,G,Bb,Eb",
+      "drone": "./audio/drones/drone_eb.ogg"
     },
     {
       "fret_name": "E Major Triad Arpeggio",
       "fret_locs": "A7,D6,D9,G9",
       "fret_id": "emajortriad",
-      "fret_notes": "E,G#,B,E"
+      "fret_notes": "E,G#,B,E",
+      "drone": "./audio/drones/drone_e.ogg"
     },
     {
       "fret_name": "F Major Triad Arpeggio",
       "fret_locs": "A8,D7,D10,G10",
       "fret_id": "fmajortriad",
-      "fret_notes": "F,A,C,F"
+      "fret_notes": "F,A,C,F",
+      "drone": "./audio/drones/drone_f.ogg"
     },
     {
       "fret_name": "F# Major Triad Arpeggio",
       "fret_locs": "E2,A1,A4,D4",
       "fret_id": "f#majortriad",
-      "fret_notes": "F#,A#,C#,F#"
+      "fret_notes": "F#,A#,C#,F#",
+      "drone": "./audio/drones/drone_fsharp.ogg"
     },
     {
       "fret_name": "Gb Major Triad Arpeggio",
       "fret_locs": "E2,A1,A4,D4",
       "fret_id": "gbmajortriad",
-      "fret_notes": "Gb,Bb,Db,Gb"
+      "fret_notes": "Gb,Bb,Db,Gb",
+      "drone": "./audio/drones/drone_fsharp.ogg"
     },
     {
       "fret_name": "G Major Triad Arpeggio",
       "fret_locs": "E3,A2,A5,D5",
       "fret_id": "gmajortriad",
-      "fret_notes": "G,B,D,G"
+      "fret_notes": "G,B,D,G",
+      "drone": "./audio/drones/drone_g.ogg"
     },
     {
       "fret_name": "Ab Major Triad Arpeggio",
       "fret_locs": "E4,A3,A6,D6",
       "fret_id": "abmajortriad",
-      "fret_notes": "Ab,C,Eb,Ab"
+      "fret_notes": "Ab,C,Eb,Ab",
+      "drone": "./audio/drones/drone_gsharp.ogg"
     },
     {
       "fret_name": "A Major Triad Arpeggio",
       "fret_locs": "E5,A4,A7,D7",
       "fret_id": "amajortriad",
-      "fret_notes": "A,C#,E,A"
+      "fret_notes": "A,C#,E,A",
+      "drone": "./audio/drones/drone_a.ogg"
     },
     {
       "fret_name": "Bb Major Triad Arpeggio",
       "fret_locs": "E6,A5,A8,D8",
       "fret_id": "bbmajortriad",
-      "fret_notes": "Bb,D,F,Bb"
+      "fret_notes": "Bb,D,F,Bb",
+      "drone": "./audio/drones/drone_bb.ogg"
     },
     {
       "fret_name": "B Major Triad Arpeggio",
       "fret_locs": "E7,A6,A9,D9",
       "fret_id": "bmajortriad",
-      "fret_notes": "B,D#,F#,B"
+      "fret_notes": "B,D#,F#,B",
+      "drone": "./audio/drones/drone_b.ogg"
     },
     {
       "fret_name": "Cb Major Triad Arpeggio",
       "fret_locs": "E7,A6,A9,D9",
       "fret_id": "cbmajortriad",
-      "fret_notes": "Cb,Eb,Gb,Cb"
+      "fret_notes": "Cb,Eb,Gb,Cb",
+      "drone": "./audio/drones/drone_b.ogg"
     }
   ]
 }
