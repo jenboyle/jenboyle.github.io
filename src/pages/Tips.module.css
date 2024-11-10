@@ -58,5 +58,17 @@
 .clocblur {
   position: relative;
   top: -42px;
-  left: 200px;
+  left: 197px;
+}
+
+.clocblur2 {
+  position: relative;
+  top: -12px;
+  left: 197px;
+}
+
+.bloc {
+  position: relative;
+  top: -12px;
+  left: 165px;
 }
