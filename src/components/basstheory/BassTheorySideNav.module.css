@@ -26,6 +26,11 @@
   color: white;
 }
 
+.nav li.active {
+  background-color: rgb(138 112 158);
+  color: white;
+}
+
 .nav ul {
   color: black;
   list-style: none;
@@ -37,7 +42,7 @@
 
 .nav ul li {
   display: block;
-  background-color: rgb(211, 177, 211);
+  background-color: rgb(198, 190, 205);
 }
 
 .nav {

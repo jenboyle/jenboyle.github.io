@@ -73,7 +73,10 @@ function BassTheory({ initialKey = "aflatmajor" }) {
   return (
     <div className={styles.theorycontainer}>
       <div className={styles.theorysidenav}>
-        <BassTheorySideNav handleTheorySelection={handleTheorySelection} />
+        <BassTheorySideNav
+          handleTheorySelection={handleTheorySelection}
+          currentKey={selectedKey}
+        />
       </div>
       <div className={styles.theorycontent}>
         <BassTheoryContent

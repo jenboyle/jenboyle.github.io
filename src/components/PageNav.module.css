@@ -1,11 +1,11 @@
 .nav {
-  background-color: rgb(194, 167, 215);
+  background-color: rgb(187, 168, 201);
   color: black;
   margin: 0;
 }
 
 .nav a {
-  background-color: rgb(194, 167, 215);
+  background-color: rgb(198, 190, 205);
   color: rgb(39, 35, 35);
   display: block;
   padding: 0 10px;
@@ -20,7 +20,7 @@
 }
 
 .nav ul {
-  background-color: rgb(194, 167, 215);
+  background-color: rgb(198, 190, 205);
   color: black;
   list-style: none;
   padding: 0;
@@ -36,7 +36,7 @@
 
 .nav ul li {
   display: inline-block;
-  background-color: rgb(194, 167, 215);
+  background-color: rgb(198, 190, 205);
 }
 
 .excessnav {
