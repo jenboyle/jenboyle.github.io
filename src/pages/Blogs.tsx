@@ -1,6 +1,7 @@
 import Blog from "../components/blogs/Blog";
 import { useState } from "react";
 import PreviewBlogs from "../components/blogs/PreviewBlogs";
+import GroovyButton from "../components/general/GroovyButton";
 
 function Blogs() {
   const [blogSelected, setBlogSelected] = useState("");
@@ -21,7 +22,7 @@ function Blogs() {
       ) : (
         <>
           <Blog jsonfile={blogSelected}></Blog>
-          <button onClick={handleBack}>Back</button>
+          <GroovyButton handleClick={handleBack}>Back</GroovyButton>
         </>
       )}
     </>
