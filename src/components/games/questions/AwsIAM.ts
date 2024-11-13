@@ -99,7 +99,7 @@ export const iamqs = shuffle([
       },
     ],
     answer: "1",
-    help: "Don't use the root user account",
+    help: "JSON documents that define a set of permissions for making requests to AWS services, and can be used by IAM Users, User Groups, and IAM Roles",
   },
   {
     question: "Which principle should you apply regarding IAM Permissions?",
