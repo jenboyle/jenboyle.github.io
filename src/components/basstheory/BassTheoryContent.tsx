@@ -389,6 +389,7 @@ function BassTheoryContent({
               <p className={styles.p}>{aka(theoryJson.song)}</p>
               <p className={styles.p}>Key:{theoryJson.key}</p>
               <GroovyTools
+                key={theoryJson.drone}
                 drone={
                   theoryJson.drone
                     ? theoryJson.drone
