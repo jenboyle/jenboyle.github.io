@@ -154,4 +154,46 @@ export const iamqs = shuffle([
     answer: "1",
     help: "False",
   },
+
+  {
+    question:
+      "An IAM policy consists of one or more statments. A statement in an IAM Policy consists of the following, EXCEPT:",
+    choices: [
+      {
+        choice: "Effect",
+      },
+      {
+        choice: "Principal",
+      },
+      {
+        choice: "Version",
+      },
+      {
+        choice: "Action",
+      },
+    ],
+    answer: "2",
+    help: "Version",
+  },
+
+  {
+    question:
+      "According to the AWS Shared Responsibility Model, which of the following is AWS responsibility?",
+    choices: [
+      {
+        choice: "Rotate Access Key for IAM Users",
+      },
+      {
+        choice: "Enable MFA for the root account and all IAM Users",
+      },
+      {
+        choice: "IAM Users, User Groups, and IAM Policies",
+      },
+      {
+        choice: "AWS Infrastructure",
+      },
+    ],
+    answer: "3",
+    help: "AWS Infrastructure",
+  },
 ]);

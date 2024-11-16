@@ -16,6 +16,7 @@ function BassTheoryTip({ tip }: tipType) {
     <>
       <p
         className={`${styles.tip} ${!toggleTip ? styles.tipclosed : ""}`}
+        data-testid="bassTheoryTip"
         onClick={handleToggleTip}
       >
         {toggleTip ? (

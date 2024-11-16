@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { cubaseTips } from "./cubaseTips";
 import GroovyButton from "./general/GroovyButton";
 import style from "./MixAndMaster.module.css";
