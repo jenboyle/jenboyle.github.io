@@ -62,6 +62,7 @@ button {
   font-family: inherit;
   background-color: #32324c;
   cursor: pointer;
+  color: rgb(224, 217, 227);
 }
 button:hover {
   background-color: #a2a2ba;
