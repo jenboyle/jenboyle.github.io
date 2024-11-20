@@ -60,11 +60,11 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #828293;
+  background-color: #32324c;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
 button:hover {
+  background-color: #a2a2ba;
   border-color: #646cff;
 }
 button:focus,
