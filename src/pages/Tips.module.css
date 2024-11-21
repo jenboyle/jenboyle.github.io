@@ -21,20 +21,20 @@
 
 .cloc {
   position: relative;
-  top: -12px;
+  top: -13px;
+  left: 76px;
+}
+
+.gloc {
+  position: relative;
+  top: -33px;
   left: 115px;
 }
 
 .floc {
   position: relative;
   top: -33px;
-  left: 95px;
-}
-
-.gloc {
-  position: relative;
-  top: -62px;
-  left: 215px;
+  left: 195px;
 }
 
 .aloc {
@@ -51,24 +51,24 @@
 
 .eloc {
   position: relative;
-  top: -62px;
-  left: 165px;
+  top: -33px;
+  left: 125px;
 }
 
 .clocblur {
   position: relative;
-  top: -42px;
-  left: 197px;
+  top: -13px;
+  left: 155px;
 }
 
 .clocblur2 {
   position: relative;
-  top: -12px;
+  top: -13px;
   left: 197px;
 }
 
 .bloc {
   position: relative;
-  top: -12px;
+  top: -13px;
   left: 165px;
 }

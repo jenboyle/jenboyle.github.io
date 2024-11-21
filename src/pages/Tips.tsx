@@ -36,19 +36,19 @@ function Tips() {
                 <td className={styles.frettd}></td>
               </tr>
             </tbody>
-            <img
-              src="./images/theory/chords/circleroot.png"
-              className={styles.cloc}
-            ></img>
-            <img
-              src="./images/theory/chords/circle.png"
-              className={styles.floc}
-            ></img>
-            <img
-              src="./images/theory/chords/circle.png"
-              className={styles.gloc}
-            ></img>
           </table>
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.gloc}
+          ></img>
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.floc}
+          ></img>
+          <img
+            src="./images/theory/chords/circleroot.png"
+            className={styles.cloc}
+          ></img>
         </div>
         <div>
           Minor Chords in C Major Pattern: Down 3 frets repeat pattern: Am, Dm,
@@ -77,23 +77,23 @@ function Tips() {
                 <td className={styles.frettd}></td>
               </tr>
             </tbody>
-            <img
-              src="./images/theory/chords/circle.png"
-              className={styles.aloc}
-            ></img>
-            <img
-              src="./images/theory/chords/circle.png"
-              className={styles.dloc}
-            ></img>
-            <img
-              src="./images/theory/chords/circle.png"
-              className={styles.eloc}
-            ></img>
-            <img
-              src="./images/theory/chords/circlerootblur.png"
-              className={styles.clocblur}
-            ></img>
           </table>
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.aloc}
+          ></img>
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.dloc}
+          ></img>
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.eloc}
+          ></img>
+          <img
+            src="./images/theory/chords/circlerootblur.png"
+            className={styles.clocblur}
+          ></img>
         </div>
         <div>
           Diminished Chord in C Major Pattern: Down 1 fret from root: Bdim (7th)
@@ -121,17 +121,21 @@ function Tips() {
                 <td className={styles.frettd}></td>
               </tr>
             </tbody>
-
-            <img
-              src="./images/theory/chords/circle.png"
-              className={styles.bloc}
-            ></img>
-            <img
-              src="./images/theory/chords/circlerootblur.png"
-              className={styles.clocblur2}
-            ></img>
           </table>
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.bloc}
+          ></img>
+          <img
+            src="./images/theory/chords/circlerootblur.png"
+            className={styles.clocblur2}
+          ></img>
         </div>
+      </GroovyArticle>
+
+      <GroovyArticle customStyles={styles.overridegeneralarticle}>
+        <p>Solo</p>
+        <div>Think of telling a story. </div>
       </GroovyArticle>
 
       <GroovyArticle customStyles={styles.overridegeneralarticle}>
