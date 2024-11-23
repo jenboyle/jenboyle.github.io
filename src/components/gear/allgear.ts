@@ -126,6 +126,28 @@ export const allgear = [
         ],
       },
       {
+        title: "Audio Interface",
+        articles: [
+          {
+            article: "Focusrite Scarlett 4i4",
+            image1: "./gear/interfaces/focusrite.png",
+            description:
+              "This audio interface is awesome. I originally had a 2i2 and I upgraded to the 4i4 for the midi ports.",
+          },
+        ],
+      },
+      {
+        title: "Keys",
+        articles: [
+          {
+            article: "Compact Keys",
+            image1: "./gear/keys/keys1.png",
+            image2: "./gear/keys/keys2.png",
+            description: "My compact keyboards!",
+          },
+        ],
+      },
+      {
         title: "Sound Acoustics",
         articles: [
           {
