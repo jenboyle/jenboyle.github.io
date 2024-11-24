@@ -3,22 +3,19 @@ import styles from "./PageNav.module.css";
 import { IoEllipsisVertical } from "react-icons/io5";
 import { useState } from "react";
 import { useTool } from "../context/ToolContext";
-//function PageNav({ stopDronePlay }) {
+
 function PageNav() {
   const [showNavExcess, setShowNavExcess] = useState(false);
   const { dronePlaying, toggleDronePlaying } = useTool();
 
   function handleNavExcess() {
     setShowNavExcess(!showNavExcess);
-    //onDronePlay(false);
   }
 
   function handleNavChange() {
-    //console.log("yea");
     if (dronePlaying) {
       toggleDronePlaying();
     }
-    //stopDronePlay();
   }
 
   function hideExcess() {

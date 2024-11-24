@@ -11,7 +11,7 @@ function BassTheorySideNav({
   handleTheorySelection,
   currentKey,
 }: BassTheorySideNavProps) {
-  console.log(currentKey);
+  // console.log(currentKey);
   return (
     <nav className={styles.nav}>
       <ul className={styles.theoryList}>

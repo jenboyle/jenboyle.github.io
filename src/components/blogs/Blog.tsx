@@ -45,7 +45,7 @@ function Blog({ jsonfile }: BlogProps) {
     [jsonfile]
   );
 
-  console.log(blogJson);
+  // console.log(blogJson);
 
   return (
     <>

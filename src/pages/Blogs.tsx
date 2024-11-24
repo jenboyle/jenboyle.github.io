@@ -8,7 +8,7 @@ function Blogs() {
 
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
     setBlogSelected((e.target as HTMLAnchorElement).id);
-    console.log(blogSelected);
+    // console.log(blogSelected);
   }
 
   function handleBack() {

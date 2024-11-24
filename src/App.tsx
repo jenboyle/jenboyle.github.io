@@ -1,19 +1,5 @@
 import "./App.css";
 import { HashRouter, Route, Routes } from "react-router-dom";
-//import Cubase from "./pages/Cubase";
-//import Homepage from "./pages/Homepage";
-//import PageNotFound from "./pages/PageNotFound";
-//import AboutMe from "./pages/AboutMe";
-//import BassTheory from "./pages/BassTheory";
-//import JamTime from "./pages/JamTime";
-//import Games from "./pages/Games";
-//import Blogs from "./pages/Blogs";
-//import Percussion from "./pages/Percussion";
-//import Tips from "./pages/Tips";
-//import MyGear from "./pages/MyGear";
-//import Improvisation from "./pages/Improvisation";
-//import Socials from "./components/Socials";
-//import Header from "./components/Header";
 import { lazy, Suspense } from "react";
 import LoadingSpinner from "./components/LoadingSpinner";
 import { ToolProvider } from "./context/ToolContext";
@@ -35,26 +21,6 @@ const Socials = lazy(() => import("./components/Socials"));
 const Header = lazy(() => import("./components/Header"));
 
 function App() {
-  //const [dronePlaying, setDronePlaying] = useState(false);
-
-  // function toggleDronePlaying() {
-  //   console.log("toggle");
-  //   setDronePlaying(!dronePlaying);
-  // }
-
-  // function stopDronePlaying() {
-  //   console.log("stop");
-  //   setDronePlaying(false);
-  // }
-
-  //<Header stopDronePlay={stopDronePlaying} />
-
-  // <BassTheory
-  //                   dronePlaying={dronePlaying}
-  //                   toggleDronePlay={toggleDronePlaying}
-  //                   stopDronePlay={stopDronePlaying}
-  //                 />
-
   return (
     <>
       <HashRouter>

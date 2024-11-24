@@ -127,8 +127,8 @@ export default function AnswerChecker(answer: string, answerkey: string) {
         conditionsMet = false;
       }
     }
-    console.log("doesItContain" + doesItContain);
-    console.log("conditionsMet" + conditionsMet);
+    // console.log("doesItContain" + doesItContain);
+    // console.log("conditionsMet" + conditionsMet);
     correct = doesItContain && conditionsMet;
   }
 

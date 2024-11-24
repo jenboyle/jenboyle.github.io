@@ -5,20 +5,12 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useTool } from "../../context/ToolContext";
 
-// function BassTheory({
-//   dronePlaying,
-//   toggleDronePlay,
-//   stopDronePlay,
-//   initialKey = "aflatmajor",
-// }) {
-
 function BassTheory({ initialKey = "aflatmajor" }) {
   const [selectedKey, setSelectedKey] = useState(initialKey);
   const [context, setContext] = useState("");
   const [searchParams, setSearchParams] = useSearchParams();
   const [previousKey, setPreviousKey] = useState("");
   const { dronePlaying, toggleDronePlaying } = useTool();
-  //const [dronePlaying, setDronePlaying] = useState(false);
   const jamkey = searchParams.get("jamkey");
   useEffect(() => {
     if (jamkey) {
@@ -43,8 +35,7 @@ function BassTheory({ initialKey = "aflatmajor" }) {
     if (dronePlaying) {
       toggleDronePlaying();
     }
-    //stopDronePlay();
-    console.log(`handle called sel ${(e.target as HTMLLIElement).id}`);
+    //console.log(`handle called sel ${(e.target as HTMLLIElement).id}`);
   }
 
   function handleNavTheory(key: string, context: string) {
@@ -53,7 +44,7 @@ function BassTheory({ initialKey = "aflatmajor" }) {
     if (dronePlaying) {
       toggleDronePlaying();
     }
-    console.log(`handle called nt ${key}`);
+    //console.log(`handle called nt ${key}`);
 
     let fretscaleselected = context.toLowerCase();
     fretscaleselected = fretscaleselected.replace("dim", "").trim();
@@ -61,14 +52,6 @@ function BassTheory({ initialKey = "aflatmajor" }) {
 
     setContext(fretscaleselected);
   }
-
-  // function handleDronePlaying() {
-  //   onDronePlay(!dronePlaying);
-  // }
-
-  // dronePlaying={dronePlaying}
-  // toggleDronePlay={toggleDronePlay}
-  // stopDronePlay={stopDronePlay}
 
   return (
     <div className={styles.theorycontainer}>

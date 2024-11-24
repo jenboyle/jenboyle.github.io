@@ -57,15 +57,15 @@ function BassTheoryFretboard({
         initial = `${context}${theoryJson.idkey}`;
       }
 
-      console.log(`Jen in effect ${initial}`);
-      console.log(`Jen in effect ${context}`);
-      console.log(`Jen in effect ${theoryJson}`);
+      //console.log(`Jen in effect ${initial}`);
+      //console.log(`Jen in effect ${context}`);
+      //console.log(`Jen in effect ${theoryJson}`);
 
-      console.log(`finalcontext ${initial}`);
+      //console.log(`finalcontext ${initial}`);
 
       for (let i = 0; i < theoryJson.fret_displays!.length; i++) {
         if (initial === theoryJson.fret_displays![i].fret_id) {
-          console.log("matched");
+          // console.log("matched");
           setButtonText(theoryJson.fret_displays![i].fret_name);
           setFretLocs(theoryJson.fret_displays![i].fret_locs);
           setFretDrone(theoryJson.fret_displays![i].drone);

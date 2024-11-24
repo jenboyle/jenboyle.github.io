@@ -33,12 +33,12 @@ function Games() {
     }
     setSelectedGameTopic((e.target as HTMLButtonElement).id);
 
-    console.log((e.target as HTMLButtonElement).id);
+    // console.log((e.target as HTMLButtonElement).id);
   }
 
   function handleGameSelection(e: React.MouseEvent<HTMLButtonElement>) {
     setSelectedGame((e.target as HTMLButtonElement).id);
-    console.log((e.target as HTMLButtonElement).id);
+    // console.log((e.target as HTMLButtonElement).id);
   }
 
   function handleAllGames() {
