@@ -1,38 +1,3 @@
-.a:hover {
-  background-color: whitesmoke;
-}
-
-.a {
-  border: 1px solid #ddd;
-  margin-top: -1px;
-  background-color: lavenderblush;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: darkslateblue;
-  display: block;
-  width: 80%;
-}
-
-.div {
-  background-color: lavenderblush;
-  align-self: center;
-  margin-right: 15px;
-}
-
-.list {
-  overflow: auto;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.li {
-  justify-content: space-between;
-  display: flex;
-  background-color: lavenderblush;
-}
-
 .spacebelow {
   margin-bottom: 25px;
 }

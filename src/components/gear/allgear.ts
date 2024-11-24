@@ -143,7 +143,8 @@ export const allgear = [
             article: "Compact Keys",
             image1: "./gear/keys/keys1.png",
             image2: "./gear/keys/keys2.png",
-            description: "My compact keyboards!",
+            description:
+              "My compact keyboards! A Roland JX-08 and AKAI MPK mini play with built in speaker.",
           },
         ],
       },

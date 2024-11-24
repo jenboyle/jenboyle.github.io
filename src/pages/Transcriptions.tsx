@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { songs } from "../components/songs/songs";
-import styles from "./Transcriptions.module.css";
 import Song from "../components/songs/Song";
 import SongSearch from "../components/songs/SongSearch";
-import { Link } from "react-router-dom";
+import GroovySongList from "../components/general/GroovySongList";
 
 function Transcriptions() {
   const [selectedSong, setSelectedSong] = useState(-1);
@@ -59,27 +58,10 @@ function Transcriptions() {
       {selectedSong != -1 ? (
         <Song jsonfile={searchedSongs[selectedSong].jsonfile}></Song>
       ) : (
-        <ul className={styles.list}>
-          {searchedSongs.map((song, index) => (
-            <li className={styles.li} key={index}>
-              <a className={styles.a} onClick={() => setSelectedSong(index)}>
-                {song.songname}
-              </a>
-              <div className={styles.div}>
-                {song.link ? (
-                  <Link
-                    to={`/?jamkey=${song.link}`}
-                    state={{ selkey: song.link }}
-                  >
-                    {song.key}
-                  </Link>
-                ) : (
-                  song.key
-                )}
-              </div>
-            </li>
-          ))}
-        </ul>
+        <GroovySongList
+          searchedSongs={searchedSongs}
+          onSelectSong={setSelectedSong}
+        />
       )}
     </>
   );

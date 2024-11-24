@@ -5,6 +5,7 @@ import { songs } from "../components/songs/improvisationsongs";
 import SongSearch from "../components/songs/SongSearch";
 import Song from "../components/songs/Song";
 import styles from "./Improvisation.module.css";
+import GroovySongList from "../components/general/GroovySongList";
 
 function Improvisation() {
   const [selectedSong, setSelectedSong] = useState(-1);
@@ -59,27 +60,10 @@ function Improvisation() {
       {selectedSong != -1 ? (
         <Song jsonfile={searchedSongs[selectedSong].jsonfile}></Song>
       ) : (
-        <ul className={styles.list}>
-          {searchedSongs.map((song, index) => (
-            <li className={styles.li} key={index}>
-              <a className={styles.a} onClick={() => setSelectedSong(index)}>
-                {song.songname}
-              </a>
-              <div className={styles.div}>
-                {song.link ? (
-                  <Link
-                    to={`/?jamkey=${song.link}`}
-                    state={{ selkey: song.link }}
-                  >
-                    {song.key}
-                  </Link>
-                ) : (
-                  song.key
-                )}
-              </div>
-            </li>
-          ))}
-        </ul>
+        <GroovySongList
+          searchedSongs={searchedSongs}
+          onSelectSong={setSelectedSong}
+        />
       )}
     </>
   );
