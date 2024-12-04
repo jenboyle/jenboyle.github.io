@@ -14,7 +14,9 @@ function PreviewBlogs({ handleClick }: BlogProps) {
         {blog.blogtitle}
       </GroovyArticle>
 
-      {blog.blogimage ? <img src={blog.blogimage}></img> : null}
+      {blog.blogimages
+        ? blog.blogimages.map((image) => <img src={image.image}></img>)
+        : null}
 
       <p className={styles.blogpreview}>{blog.blogpreview}</p>
       <a className={styles.a} id={blog.jsonfile} onClick={handleClick}>
