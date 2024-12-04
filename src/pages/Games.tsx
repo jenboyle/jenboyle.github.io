@@ -19,9 +19,6 @@ import { geographyyear8qs } from "../components/games/questions/GeographyYear8";
 import { geographyyear9qs } from "../components/games/questions/GeographyYear9";
 import { chemistryyear8qs } from "../components/games/questions/ChemistryYear8";
 
-import { iamqs } from "../components/games/questions/AwsIAM";
-import { ec2qs } from "../components/games/questions/AwsEC2";
-
 function Games() {
   const [selectedGameTopic, setSelectedGameTopic] = useState("");
   const [selectedSchoolTopic, setSelectedSchoolTopic] = useState(false);
@@ -81,10 +78,6 @@ function Games() {
           <StandardGame questions={spanishyear8qs}></StandardGame>
         ) : selectedGame === "technology_year8" ? (
           <StandardGame questions={techyear8qs}></StandardGame>
-        ) : selectedGame === "iam" ? (
-          <StandardGame questions={iamqs}></StandardGame>
-        ) : selectedGame === "ec2" ? (
-          <StandardGame questions={ec2qs}></StandardGame>
         ) : (
           <div>{selectedGame}</div>
         )

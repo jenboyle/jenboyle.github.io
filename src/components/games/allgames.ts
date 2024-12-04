@@ -57,18 +57,4 @@ export const allgames = [
       },
     ],
   },
-  {
-    id: "aws",
-    gametopic: "AWS (personal temp)",
-    games: [
-      {
-        gameid: "iam",
-        gametext: "IAM",
-      },
-      {
-        gameid: "ec2",
-        gametext: "EC2",
-      },
-    ],
-  },
 ];
