@@ -1,5 +1,4 @@
 .nav {
-  background-color: rgb(187, 168, 201);
   color: black;
   margin: 0;
 }
@@ -41,6 +40,7 @@
 
 .excessnav {
   display: inline-grid;
+  background-color: rgb(198, 190, 205);
 }
 
 .nav {
