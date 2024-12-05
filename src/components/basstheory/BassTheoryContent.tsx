@@ -405,14 +405,15 @@ function BassTheoryContent({
 
           {theoryJson.chords ? (
             <table className={styles.chord}>
-              <caption>Chords</caption>
               <tbody>
                 <tr>
+                  <th />
                   {theoryJson.chords.split(",").map((chord, index) => (
                     <th key={`${index}${chord}`}>{index + 1}</th>
                   ))}
                 </tr>
                 <tr>
+                  <td>Chord</td>
                   {theoryJson.chords.split(",").map((chord, index) => (
                     <td key={index} id={`chord${index + 1}`}>
                       {chord}
@@ -420,13 +421,16 @@ function BassTheoryContent({
                   ))}
                 </tr>
                 <tr>
+                  <td>Tones</td>
                   {theoryJson.chordtones.split(",").map((chordtone, index) => (
                     <td key={index} id={`chordtone${index + 1}`}>
                       {chordtone}
                     </td>
                   ))}
                 </tr>
+
                 <tr>
+                  <td>Mode</td>
                   {theoryJson.chords.split(",").map((chord, index) => (
                     <td key={`${index}${chord}`} id={`optionone${index + 1}`}>
                       {theoryJson.song.indexOf("Major") != -1 ? (
@@ -533,7 +537,9 @@ function BassTheoryContent({
                     </td>
                   ))}
                 </tr>
+
                 <tr>
+                  <td>Triad</td>
                   {theoryJson.chords.split(",").map((chord, index) => (
                     <td key={index} id={`optiontwo${index + 1}`}>
                       {chord.indexOf("dim") > -1 ? (
@@ -542,7 +548,7 @@ function BassTheoryContent({
                           chord={chord}
                           specifyfile="fret_diminishedtriadarpeggios"
                         >
-                          Diminished Triad
+                          Diminished
                         </BassTheoryTableLink>
                       ) : chord.indexOf("m") > -1 ? (
                         <BassTheoryTableLink
@@ -550,7 +556,7 @@ function BassTheoryContent({
                           chord={chord}
                           specifyfile="fret_minortriadarpeggios"
                         >
-                          Minor Triad
+                          Minor
                         </BassTheoryTableLink>
                       ) : (
                         <BassTheoryTableLink
@@ -558,7 +564,7 @@ function BassTheoryContent({
                           chord={chord}
                           specifyfile="fret_majortriadarpeggios"
                         >
-                          Major Triad
+                          Major
                         </BassTheoryTableLink>
                       )}
                     </td>
