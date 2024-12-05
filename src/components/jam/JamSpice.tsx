@@ -11,9 +11,9 @@ function JamSpice() {
   };
 
   function handleClick() {
-    let nextRand = randomNumInRange(0, 23);
+    let nextRand = randomNumInRange(0, spices[0].spices.length - 1);
     while (random === nextRand) {
-      nextRand = randomNumInRange(0, 23);
+      nextRand = randomNumInRange(0, spices[0].spices.length - 1);
     }
     setRandom(nextRand);
   }

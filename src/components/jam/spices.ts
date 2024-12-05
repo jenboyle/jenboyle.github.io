@@ -23,6 +23,7 @@ export const spices = [
       { spice: "Play short note eg at end of phrase" },
       { spice: "Add a silence or break 🤫" },
       { spice: "Try a pick and experiment with thin vs thick" },
+      { spice: "Experiment with pick angled or straight" },
       { spice: "Add a chromatic note" },
       { spice: "Add a dissonant note" },
     ],
