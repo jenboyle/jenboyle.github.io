@@ -18,7 +18,7 @@ interface GroovyToolsProps {
 // stopDronePlay={stopDronePlay}
 
 function GroovyTools({
-  drone = "./audio/drones/drone_c.ogg",
+  drone = "./audio/drones/drone_c.mp3",
 }: GroovyToolsProps) {
   return (
     <div className={styles.toolbar}>

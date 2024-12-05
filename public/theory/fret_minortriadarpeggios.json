@@ -11,98 +11,98 @@
       "fret_locs": "A3,A6,D5,G5",
       "fret_id": "cminortriad",
       "fret_notes": "C,Eb,G,C",
-      "drone": "./audio/drones/drone_c.ogg"
+      "drone": "./audio/drones/drone_c.mp3"
     },
     {
       "fret_name": "C# Minor Triad Arpeggio",
       "fret_locs": "A4,A7,D6,G6",
       "fret_id": "c#minortriad",
       "fret_notes": "C#,E,G#,C#",
-      "drone": "./audio/drones/drone_csharp.ogg"
+      "drone": "./audio/drones/drone_csharp.mp3"
     },
     {
       "fret_name": "D Minor Triad Arpeggio",
       "fret_locs": "A5,A8,D7,G7",
       "fret_id": "dminortriad",
       "fret_notes": "D,F,A,D",
-      "drone": "./audio/drones/drone_d.ogg"
+      "drone": "./audio/drones/drone_d.mp3"
     },
     {
       "fret_name": "D# Minor Triad Arpeggio",
       "fret_locs": "A6,A9,D8,G8",
       "fret_id": "d#minortriad",
       "fret_notes": "D#,F#,A#,D#",
-      "drone": "./audio/drones/drone_eb.ogg"
+      "drone": "./audio/drones/drone_eb.mp3"
     },
     {
       "fret_name": "Eb Minor Triad Arpeggio",
       "fret_locs": "A6,A9,D8,G8",
       "fret_id": "ebminortriad",
       "fret_notes": "Eb,Gb,Bb,Eb",
-      "drone": "./audio/drones/drone_eb.ogg"
+      "drone": "./audio/drones/drone_eb.mp3"
     },
     {
       "fret_name": "E Minor Triad Arpeggio",
       "fret_locs": "A7,A10,D9,G9",
       "fret_id": "eminortriad",
       "fret_notes": "E,G,B,E",
-      "drone": "./audio/drones/drone_e.ogg"
+      "drone": "./audio/drones/drone_e.mp3"
     },
     {
       "fret_name": "F Minor Triad Arpeggio",
       "fret_locs": "A8,A11,D10,G10",
       "fret_id": "fminortriad",
       "fret_notes": "F,Ab,C,F",
-      "drone": "./audio/drones/drone_f.ogg"
+      "drone": "./audio/drones/drone_f.mp3"
     },
     {
       "fret_name": "F# Minor Triad Arpeggio",
       "fret_locs": "E2,E5,A4,D4",
       "fret_id": "f#minortriad",
       "fret_notes": "F#,A,C#,F#",
-      "drone": "./audio/drones/drone_fsharp.ogg"
+      "drone": "./audio/drones/drone_fsharp.mp3"
     },
     {
       "fret_name": "G Minor Triad Arpeggio",
       "fret_locs": "E3,E6,A5,D5",
       "fret_id": "gminortriad",
       "fret_notes": "G,Bb,D,G",
-      "drone": "./audio/drones/drone_g.ogg"
+      "drone": "./audio/drones/drone_g.mp3"
     },
     {
       "fret_name": "G# Minor Triad Arpeggio",
       "fret_locs": "E4,E7,A6,D6",
       "fret_id": "g#minortriad",
       "fret_notes": "G#,B,D#,G#",
-      "drone": "./audio/drones/drone_gsharp.ogg"
+      "drone": "./audio/drones/drone_gsharp.mp3"
     },
     {
       "fret_name": "Ab Minor Triad Arpeggio",
       "fret_locs": "E4,E7,A6,D6",
       "fret_id": "abminortriad",
       "fret_notes": "Ab,Cb,Eb,Ab",
-      "drone": "./audio/drones/drone_gsharp.ogg"
+      "drone": "./audio/drones/drone_gsharp.mp3"
     },
     {
       "fret_name": "A Minor Triad Arpeggio",
       "fret_locs": "E5,E8,A7,D7",
       "fret_id": "aminortriad",
       "fret_notes": "A,C,E,A",
-      "drone": "./audio/drones/drone_a.ogg"
+      "drone": "./audio/drones/drone_a.mp3"
     },
     {
       "fret_name": "Bb Minor Triad Arpeggio",
       "fret_locs": "E6,E9,A8,D8",
       "fret_id": "bbminortriad",
       "fret_notes": "Bb,Db,F,Bb",
-      "drone": "./audio/drones/drone_bb.ogg"
+      "drone": "./audio/drones/drone_bb.mp3"
     },
     {
       "fret_name": "B Minor Triad Arpeggio",
       "fret_locs": "E7,E10,A9,D9",
       "fret_id": "bminortriad",
       "fret_notes": "B,D,F#,B",
-      "drone": "./audio/drones/drone_b.ogg"
+      "drone": "./audio/drones/drone_b.mp3"
     }
   ]
 }

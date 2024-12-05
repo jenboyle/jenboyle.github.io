@@ -393,7 +393,7 @@ function BassTheoryContent({
                 drone={
                   theoryJson.drone
                     ? theoryJson.drone
-                    : "./audio/drones/drone_c.ogg"
+                    : "./audio/drones/drone_c.mp3"
                 }
               />
             </>

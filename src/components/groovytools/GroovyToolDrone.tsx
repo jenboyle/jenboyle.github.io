@@ -14,7 +14,7 @@ interface GroovyToolsProps {
 // toggleDronePlay,
 // stopDronePlay,
 function GroovyToolDrone({
-  drone = "./audio/drones/drone_c.ogg",
+  drone = "./audio/drones/drone_c.mp3",
 }: GroovyToolsProps) {
   const [audio] = useState(new Audio(drone));
   const [audiotwo] = useState(new Audio(drone));
@@ -74,7 +74,7 @@ function GroovyToolDrone({
   //   }
 
   //const [audio] = useState(new Audio("./audio/drones/E.wav"));
-  //const [audio] = useState(new Audio("./audio/drones/drone_g.ogg"));
+  //const [audio] = useState(new Audio("./audio/drones/drone_g.mp3"));
 
   //   function handleDrone() {
   //     toggleDronePlay();

@@ -6,7 +6,7 @@
   "notes": "C, D, E, F, G, A, B (0 sharps) - Relative minor: ",
   "relativelink": "aminor",
   "relativelinktext": "Am",
-  "drone": "./audio/drones/drone_c.ogg",
+  "drone": "./audio/drones/drone_c.mp3",
   "chords": "C,Dm,Em,F,G,Am,Bdim",
   "chordtones": "C|E|G, D|F|A, E|G|B, F|A|C, G|B|D, A|C|E, B|D|F",
   "textb4tab1": "C Major on one string E:",

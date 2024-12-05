@@ -6,7 +6,7 @@
   "notes": "C, D, Eb, F, G, Ab, Bb (3 flats) - Relative major: ",
   "relativelink": "eflatmajor",
   "relativelinktext": "Eb",
-  "drone": "./audio/drones/drone_c.ogg",
+  "drone": "./audio/drones/drone_c.mp3",
   "chords": "Cm,Ddim,Eb,Fm,Gm,Ab,Bb",
   "chordtones": "C|Eb|G, D|F|Ab, Eb|G|Bb, F|Ab|C, G|Bb|D, Ab|C|Eb, Bb|D|F",
   "textb4tab1": "C Minor on one string:",

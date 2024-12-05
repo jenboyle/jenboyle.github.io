@@ -6,7 +6,7 @@
   "notes": "G, A, B, C, D, E, F# (1 sharp) - Relative minor: ",
   "relativelink": "eminor",
   "relativelinktext": "Em",
-  "drone": "./audio/drones/drone_g.ogg",
+  "drone": "./audio/drones/drone_g.mp3",
   "chords": "G,Am,Bm,C,D,Em,F#dim",
   "chordtones": "G|B|D, A|C|E, B|D|F#, C|E|G, D|F#|A, E|G|B, F#|A|C",
   "chordtones7": "G|B|D|F#, A|C|E|G, B|D|F#|A, C|E|G|B, D|F#|A|C, E|G|B|D, F#|A|C|E",
