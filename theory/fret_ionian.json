@@ -10,73 +10,73 @@
       "fret_name": "C Ionian",
       "fret_locs": "A3,A5,D2,D3,D5,G2,G4,G5",
       "fret_id": "cion1",
-      "drone": "./audio/drones/drone_c.ogg"
+      "drone": "./audio/drones/drone_c.mp3"
     },
     {
       "fret_name": "Db Ionian",
       "fret_locs": "A4,A6,D3,D4,D6,G3,G5,G6",
       "fret_id": "dbion1",
-      "drone": "./audio/drones/drone_csharp.ogg"
+      "drone": "./audio/drones/drone_csharp.mp3"
     },
     {
       "fret_name": "D Ionian",
       "fret_locs": "A5,A7,D4,D5,D7,G4,G6,G7",
       "fret_id": "dion1",
-      "drone": "./audio/drones/drone_d.ogg"
+      "drone": "./audio/drones/drone_d.mp3"
     },
     {
       "fret_name": "Eb Ionian",
       "fret_locs": "A6,A8,D5,D6,D8,G5,G7,G8",
       "fret_id": "ebion1",
-      "drone": "./audio/drones/drone_eb.ogg"
+      "drone": "./audio/drones/drone_eb.mp3"
     },
     {
       "fret_name": "E Ionian",
       "fret_locs": "A7,A9,D6,D7,D9,G6,G8,G9",
       "fret_id": "eion1",
-      "drone": "./audio/drones/drone_e.ogg"
+      "drone": "./audio/drones/drone_e.mp3"
     },
     {
       "fret_name": "F Ionian",
       "fret_locs": "A8,A10,D7,D8,D10,G7,G9,G10",
       "fret_id": "fion1",
-      "drone": "./audio/drones/drone_f.ogg"
+      "drone": "./audio/drones/drone_f.mp3"
     },
     {
       "fret_name": "Gb Ionian",
       "fret_locs": "A9,A11,D8,D9,D11,G8,G10,G11",
       "fret_id": "gbion1",
-      "drone": "./audio/drones/drone_fsharp.ogg"
+      "drone": "./audio/drones/drone_fsharp.mp3"
     },
     {
       "fret_name": "G Ionian",
       "fret_locs": "E3,E5,A2,A3,A5,D2,D4,D5",
       "fret_id": "gion1",
-      "drone": "./audio/drones/drone_g.ogg"
+      "drone": "./audio/drones/drone_g.mp3"
     },
     {
       "fret_name": "Ab Ionian",
       "fret_locs": "E4,E6,A3,A4,A6,D3,D5,D6",
       "fret_id": "abion1",
-      "drone": "./audio/drones/drone_gsharp.ogg"
+      "drone": "./audio/drones/drone_gsharp.mp3"
     },
     {
       "fret_name": "A Ionian",
       "fret_locs": "E5,E7,A4,A5,A7,D4,D6,D7",
       "fret_id": "aion1",
-      "drone": "./audio/drones/drone_a.ogg"
+      "drone": "./audio/drones/drone_a.mp3"
     },
     {
       "fret_name": "Bb Ionian",
       "fret_locs": "E6,E8,A5,A6,A8,D5,D7,D8",
       "fret_id": "bbion1",
-      "drone": "./audio/drones/drone_bb.ogg"
+      "drone": "./audio/drones/drone_bb.mp3"
     },
     {
       "fret_name": "B Ionian",
       "fret_locs": "E7,E9,A6,A7,A9,D6,D8,D9",
       "fret_id": "bion1",
-      "drone": "./audio/drones/drone_b.ogg"
+      "drone": "./audio/drones/drone_b.mp3"
     }
   ],
 

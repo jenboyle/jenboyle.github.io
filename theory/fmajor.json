@@ -6,7 +6,7 @@
   "notes": "F, G, A, Bb, C, D, E (1 flat) - Relative minor: ",
   "relativelink": "dminor",
   "relativelinktext": "Dm",
-  "drone": "./audio/drones/drone_f.ogg",
+  "drone": "./audio/drones/drone_f.mp3",
   "chords": "F,Gm,Am,Bb,C,Dm,Edim",
   "chordtones": "F|A|C, G|Bb|D, A|C|E, Bb|D|F, C|E|G, D|F|A, E|G|Bb",
   "textb4tab1": "F Major on one string:",

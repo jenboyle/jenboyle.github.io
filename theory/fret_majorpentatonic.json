@@ -12,14 +12,14 @@
       "fret_id": "cmajorpent1",
       "fret_rootszeroindex": "0,5",
       "fret_notes": "C,D,E,G,A",
-      "drone": "./audio/drones/drone_c.ogg"
+      "drone": "./audio/drones/drone_c.mp3"
     },
     {
       "fret_name": "C Major Pentatonic 2",
       "fret_locs": "A3,D0,D2,G0,G2,G5",
       "fret_id": "cmajorpent2",
       "fret_notes": "C,D,E,G,A",
-      "drone": "./audio/drones/drone_c.ogg"
+      "drone": "./audio/drones/drone_c.mp3"
     },
     {
       "fret_name": "C Major Pentatonic 3",
@@ -27,7 +27,7 @@
       "fret_id": "cmajorpent3",
       "fret_rootszeroindex": "4",
       "fret_notes": "C,D,E,G,A",
-      "drone": "./audio/drones/drone_c.ogg"
+      "drone": "./audio/drones/drone_c.mp3"
     },
     {
       "fret_name": "C Major Pentatonic 4",
@@ -35,7 +35,7 @@
       "fret_id": "cmajorpent4",
       "fret_rootszeroindex": "3",
       "fret_notes": "C,D,E,G,A",
-      "drone": "./audio/drones/drone_c.ogg"
+      "drone": "./audio/drones/drone_c.mp3"
     },
     {
       "fret_name": "C Major Pentatonic 5",
@@ -43,7 +43,7 @@
       "fret_id": "cmajorpent5",
       "fret_rootszeroindex": "2,7",
       "fret_notes": "C,D,E,G,A",
-      "drone": "./audio/drones/drone_c.ogg"
+      "drone": "./audio/drones/drone_c.mp3"
     },
     {
       "fret_name": "C Major Pentatonic 6",
@@ -51,21 +51,21 @@
       "fret_id": "cmajorpent6",
       "fret_rootszeroindex": "1,6",
       "fret_notes": "C,D,E,G,A",
-      "drone": "./audio/drones/drone_c.ogg"
+      "drone": "./audio/drones/drone_c.mp3"
     },
     {
       "fret_name": "D Major Pentatonic 1",
       "fret_locs": "D0,D2,D4,G2,G4,G7",
       "fret_id": "dmajorpent1",
       "fret_notes": "D,E,F#,A,B",
-      "drone": "./audio/drones/drone_d.ogg"
+      "drone": "./audio/drones/drone_d.mp3"
     },
     {
       "fret_name": "D Major Pentatonic 2",
       "fret_locs": "A5,A7,D4,D7,G4,G7",
       "fret_id": "dmajorpent2",
       "fret_notes": "D,E,F#,A,B",
-      "drone": "./audio/drones/drone_d.ogg"
+      "drone": "./audio/drones/drone_d.mp3"
     },
     {
       "fret_name": "D Major Pentatonic 3",
@@ -73,7 +73,7 @@
       "fret_id": "dmajorpent3",
       "fret_rootszeroindex": "0,5",
       "fret_notes": "D,E,F#,A,B",
-      "drone": "./audio/drones/drone_d.ogg"
+      "drone": "./audio/drones/drone_d.mp3"
     },
     {
       "fret_name": "D Major Pentatonic 4",
@@ -81,7 +81,7 @@
       "fret_id": "dmajorpent4",
       "fret_rootszeroindex": "4",
       "fret_notes": "D,E,F#,A,B",
-      "drone": "./audio/drones/drone_d.ogg"
+      "drone": "./audio/drones/drone_d.mp3"
     },
     {
       "fret_name": "D Major Pentatonic 5",
@@ -89,7 +89,7 @@
       "fret_id": "dmajorpent5",
       "fret_rootszeroindex": "3",
       "fret_notes": "D,E,F#,A,B",
-      "drone": "./audio/drones/drone_d.ogg"
+      "drone": "./audio/drones/drone_d.mp3"
     },
     {
       "fret_name": "D Major Pentatonic 6",
@@ -97,7 +97,7 @@
       "fret_id": "dmajorpent6",
       "fret_rootszeroindex": "2,7",
       "fret_notes": "D,E,F#,A,B",
-      "drone": "./audio/drones/drone_d.ogg"
+      "drone": "./audio/drones/drone_d.mp3"
     },
     {
       "fret_name": "D Major Pentatonic 7",
@@ -105,28 +105,28 @@
       "fret_id": "dmajorpent7",
       "fret_rootszeroindex": "1,6",
       "fret_notes": "D,E,F#,A,B",
-      "drone": "./audio/drones/drone_d.ogg"
+      "drone": "./audio/drones/drone_d.mp3"
     },
     {
       "fret_name": "E Major Pentatonic 1",
       "fret_locs": "E0,E2,E4,A2,A4,D2",
       "fret_id": "emajorpent1",
       "fret_notes": "E,F#,G#,B,C#",
-      "drone": "./audio/drones/drone_e.ogg"
+      "drone": "./audio/drones/drone_e.mp3"
     },
     {
       "fret_name": "E Major Pentatonic 2",
       "fret_locs": "D2,D4,D6,G4,G6,G9",
       "fret_id": "emajorpent2",
       "fret_notes": "E,F#,G#,B,C#",
-      "drone": "./audio/drones/drone_e.ogg"
+      "drone": "./audio/drones/drone_e.mp3"
     },
     {
       "fret_name": "E Major Pentatonic 3",
       "fret_locs": "A7,A9,D6,D9,G6,G9",
       "fret_id": "emajorpent3",
       "fret_notes": "E,F#,G#,B,C#",
-      "drone": "./audio/drones/drone_e.ogg"
+      "drone": "./audio/drones/drone_e.mp3"
     },
     {
       "fret_name": "E Major Pentatonic 4",
@@ -134,7 +134,7 @@
       "fret_id": "emajorpent4",
       "fret_rootszeroindex": "0,5",
       "fret_notes": "E,F#,G#,B,C#",
-      "drone": "./audio/drones/drone_e.ogg"
+      "drone": "./audio/drones/drone_e.mp3"
     },
     {
       "fret_name": "E Major Pentatonic 5",
@@ -142,7 +142,7 @@
       "fret_id": "emajorpent5",
       "fret_rootszeroindex": "4",
       "fret_notes": "E,F#,G#,B,C#",
-      "drone": "./audio/drones/drone_e.ogg"
+      "drone": "./audio/drones/drone_e.mp3"
     },
     {
       "fret_name": "E Major Pentatonic 6",
@@ -150,7 +150,7 @@
       "fret_id": "emajorpent6",
       "fret_rootszeroindex": "3",
       "fret_notes": "E,F#,G#,B,C#",
-      "drone": "./audio/drones/drone_e.ogg"
+      "drone": "./audio/drones/drone_e.mp3"
     },
     {
       "fret_name": "E Major Pentatonic 7",
@@ -158,7 +158,7 @@
       "fret_id": "emajorpent7",
       "fret_rootszeroindex": "2,7",
       "fret_notes": "E,F#,G#,B,C#",
-      "drone": "./audio/drones/drone_e.ogg"
+      "drone": "./audio/drones/drone_e.mp3"
     },
     {
       "fret_name": "E Major Pentatonic 8",
@@ -166,7 +166,7 @@
       "fret_id": "emajorpent8",
       "fret_rootszeroindex": "1,6",
       "fret_notes": "E,F#,G#,B,C#",
-      "drone": "./audio/drones/drone_e.ogg"
+      "drone": "./audio/drones/drone_e.mp3"
     },
     {
       "fret_name": "F Major Pentatonic 1",
@@ -174,21 +174,21 @@
       "fret_id": "fmajorpent1",
       "fret_rootszeroindex": "0,5",
       "fret_notes": "F,G,A,C,D",
-      "drone": "./audio/drones/drone_f.ogg"
+      "drone": "./audio/drones/drone_f.mp3"
     },
     {
       "fret_name": "F Major Pentatonic 2",
       "fret_locs": "D3,D5,G2,G5,G7,G10",
       "fret_id": "fmajorpent2",
       "fret_notes": "F,G,A,C,D",
-      "drone": "./audio/drones/drone_f.ogg"
+      "drone": "./audio/drones/drone_f.mp3"
     },
     {
       "fret_name": "F Major Pentatonic 3",
       "fret_locs": "A8,A10,D7,D10,G7,G10",
       "fret_id": "fmajorpent3",
       "fret_notes": "F,G,A,C,D",
-      "drone": "./audio/drones/drone_f.ogg"
+      "drone": "./audio/drones/drone_f.mp3"
     },
     {
       "fret_name": "F Major Pentatonic 4",
@@ -196,7 +196,7 @@
       "fret_id": "fmajorpent4",
       "fret_rootszeroindex": "0,5",
       "fret_notes": "F,G,A,C,D",
-      "drone": "./audio/drones/drone_f.ogg"
+      "drone": "./audio/drones/drone_f.mp3"
     },
     {
       "fret_name": "F Major Pentatonic 5",
@@ -204,7 +204,7 @@
       "fret_id": "fmajorpent5",
       "fret_rootszeroindex": "4",
       "fret_notes": "F,G,A,C,D",
-      "drone": "./audio/drones/drone_f.ogg"
+      "drone": "./audio/drones/drone_f.mp3"
     },
     {
       "fret_name": "F Major Pentatonic 6",
@@ -212,7 +212,7 @@
       "fret_id": "fmajorpent6",
       "fret_rootszeroindex": "3",
       "fret_notes": "F,G,A,C,D",
-      "drone": "./audio/drones/drone_f.ogg"
+      "drone": "./audio/drones/drone_f.mp3"
     },
     {
       "fret_name": "F Major Pentatonic 7",
@@ -220,7 +220,7 @@
       "fret_id": "fmajorpent7",
       "fret_rootszeroindex": "2,7",
       "fret_notes": "F,G,A,C,D",
-      "drone": "./audio/drones/drone_f.ogg"
+      "drone": "./audio/drones/drone_f.mp3"
     },
     {
       "fret_name": "F Major Pentatonic 8",
@@ -228,7 +228,7 @@
       "fret_id": "fmajorpent8",
       "fret_rootszeroindex": "1,6",
       "fret_notes": "F,G,A,C,D",
-      "drone": "./audio/drones/drone_f.ogg"
+      "drone": "./audio/drones/drone_f.mp3"
     },
     {
       "fret_name": "G Major Pentatonic 1",
@@ -236,7 +236,7 @@
       "fret_id": "gmajorpent1",
       "fret_rootszeroindex": "0,5",
       "fret_notes": "G,A,B,D,E",
-      "drone": "./audio/drones/drone_g.ogg"
+      "drone": "./audio/drones/drone_g.mp3"
     },
     {
       "fret_name": "G Major Pentatonic 2",
@@ -244,28 +244,28 @@
       "fret_id": "gmajorpent2",
       "fret_rootszeroindex": "4",
       "fret_notes": "G,A,B,D,E",
-      "drone": "./audio/drones/drone_g.ogg"
+      "drone": "./audio/drones/drone_g.mp3"
     },
     {
       "fret_name": "G Major Pentatonic 3",
       "fret_locs": "G0,G2,G4,G7,G9,G12",
       "fret_id": "gmajorpent3",
       "fret_notes": "G,A,B,D,E",
-      "drone": "./audio/drones/drone_g.ogg"
+      "drone": "./audio/drones/drone_g.mp3"
     },
     {
       "fret_name": "G Major Pentatonic 4",
       "fret_locs": "D5,D7,G4,G7,G9,G12",
       "fret_id": "gmajorpent4",
       "fret_notes": "G,A,B,D,E",
-      "drone": "./audio/drones/drone_g.ogg"
+      "drone": "./audio/drones/drone_g.mp3"
     },
     {
       "fret_name": "G Major Pentatonic 5",
       "fret_locs": "A10,A12,D9,D12,G9,G12",
       "fret_id": "gmajorpent5",
       "fret_notes": "G,A,B,D,E",
-      "drone": "./audio/drones/drone_g.ogg"
+      "drone": "./audio/drones/drone_g.mp3"
     },
     {
       "fret_name": "G Major Pentatonic 6",
@@ -273,7 +273,7 @@
       "fret_id": "gmajorpent6",
       "fret_rootszeroindex": "3",
       "fret_notes": "G,A,B,D,E",
-      "drone": "./audio/drones/drone_g.ogg"
+      "drone": "./audio/drones/drone_g.mp3"
     },
     {
       "fret_name": "G Major Pentatonic 7",
@@ -281,7 +281,7 @@
       "fret_id": "gmajorpent7",
       "fret_rootszeroindex": "2,7",
       "fret_notes": "G,A,B,D,E",
-      "drone": "./audio/drones/drone_g.ogg"
+      "drone": "./audio/drones/drone_g.mp3"
     },
     {
       "fret_name": "G Major Pentatonic 8",
@@ -289,14 +289,14 @@
       "fret_id": "gmajorpent8",
       "fret_rootszeroindex": "1,6",
       "fret_notes": "G,A,B,D,E",
-      "drone": "./audio/drones/drone_g.ogg"
+      "drone": "./audio/drones/drone_g.mp3"
     },
     {
       "fret_name": "A Major Pentatonic 1",
       "fret_locs": "A0,A2,A4,D2,D4,G2",
       "fret_id": "amajorpent1",
       "fret_notes": "A,B,C#,E,F#",
-      "drone": "./audio/drones/drone_a.ogg"
+      "drone": "./audio/drones/drone_a.mp3"
     },
     {
       "fret_name": "A Major Pentatonic 2",
@@ -304,7 +304,7 @@
       "fret_id": "amajorpent2",
       "fret_notes": "A,B,C#,E,F#",
       "fret_rootszeroindex": "0,5",
-      "drone": "./audio/drones/drone_a.ogg"
+      "drone": "./audio/drones/drone_a.mp3"
     },
     {
       "fret_name": "A Major Pentatonic 3",
@@ -312,7 +312,7 @@
       "fret_id": "amajorpent3",
       "fret_rootszeroindex": "4",
       "fret_notes": "A,B,C#,E,F#",
-      "drone": "./audio/drones/drone_a.ogg"
+      "drone": "./audio/drones/drone_a.mp3"
     },
     {
       "fret_name": "A Major Pentatonic 4",
@@ -320,7 +320,7 @@
       "fret_id": "amajorpent4",
       "fret_rootszeroindex": "3",
       "fret_notes": "A,B,C#,E,F#",
-      "drone": "./audio/drones/drone_a.ogg"
+      "drone": "./audio/drones/drone_a.mp3"
     },
     {
       "fret_name": "A Major Pentatonic 5",
@@ -328,7 +328,7 @@
       "fret_id": "amajorpent5",
       "fret_rootszeroindex": "2,7",
       "fret_notes": "A,B,C#,E,F#",
-      "drone": "./audio/drones/drone_a.ogg"
+      "drone": "./audio/drones/drone_a.mp3"
     },
     {
       "fret_name": "A Major Pentatonic 6",
@@ -336,14 +336,14 @@
       "fret_id": "amajorpent6",
       "fret_rootszeroindex": "1,6",
       "fret_notes": "A,B,C#,E,F#",
-      "drone": "./audio/drones/drone_a.ogg"
+      "drone": "./audio/drones/drone_a.mp3"
     },
     {
       "fret_name": "B Major Pentatonic 1",
       "fret_locs": "A2,A4,D1,D4,G1,G4",
       "fret_id": "bmajorpent1",
       "fret_notes": "B,C#,D#,F#,G#",
-      "drone": "./audio/drones/drone_b.ogg"
+      "drone": "./audio/drones/drone_b.mp3"
     },
     {
       "fret_name": "B Major Pentatonic 2",
@@ -351,7 +351,7 @@
       "fret_id": "bmajorpent2",
       "fret_rootszeroindex": "0,5",
       "fret_notes": "B,C#,D#,F#,G#",
-      "drone": "./audio/drones/drone_b.ogg"
+      "drone": "./audio/drones/drone_b.mp3"
     },
     {
       "fret_name": "B Major Pentatonic 3",
@@ -359,7 +359,7 @@
       "fret_id": "bmajorpent3",
       "fret_rootszeroindex": "4",
       "fret_notes": "B,C#,D#,F#,G#",
-      "drone": "./audio/drones/drone_b.ogg"
+      "drone": "./audio/drones/drone_b.mp3"
     },
     {
       "fret_name": "B Major Pentatonic 4",
@@ -367,7 +367,7 @@
       "fret_id": "bmajorpent4",
       "fret_rootszeroindex": "3",
       "fret_notes": "B,C#,D#,F#,G#",
-      "drone": "./audio/drones/drone_b.ogg"
+      "drone": "./audio/drones/drone_b.mp3"
     },
     {
       "fret_name": "B Major Pentatonic 5",
@@ -375,7 +375,7 @@
       "fret_id": "bmajorpent5",
       "fret_rootszeroindex": "2,7",
       "fret_notes": "B,C#,D#,F#,G#",
-      "drone": "./audio/drones/drone_b.ogg"
+      "drone": "./audio/drones/drone_b.mp3"
     },
     {
       "fret_name": "B Major Pentatonic 6",
@@ -383,7 +383,7 @@
       "fret_id": "bmajorpent6",
       "fret_rootszeroindex": "1,6",
       "fret_notes": "B,C#,D#,F#,G#",
-      "drone": "./audio/drones/drone_b.ogg"
+      "drone": "./audio/drones/drone_b.mp3"
     }
   ],
 

@@ -6,7 +6,7 @@
   "notes": "B, C#, D, E, F#, G, A (2 sharps) - Relative major: ",
   "relativelink": "dmajor",
   "relativelinktext": "D",
-  "drone": "./audio/drones/drone_b.ogg",
+  "drone": "./audio/drones/drone_b.mp3",
   "chords": "Bm,C#dim,D,Em,F#m,G,A",
   "chordtones": "B|D|F#, C#|E|G, D|F#|A, E|G|B, F#|A|C#, G|B|D, A|C#|E",
   "textb4tab1": "Bm:",

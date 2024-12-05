@@ -10,145 +10,145 @@
       "fret_name": "C Dorian 1",
       "fret_locs": "A3,A5,A6,D3,D5,G2,G3,G5",
       "fret_id": "cdor1",
-      "drone": "./audio/drones/drone_c.ogg"
+      "drone": "./audio/drones/drone_c.mp3"
     },
     {
       "fret_name": "C Dorian 2",
       "fret_locs": "A3,D0,D1,D3,G0,G2,G3,G5",
       "fret_id": "cdor2",
-      "drone": "./audio/drones/drone_c.ogg"
+      "drone": "./audio/drones/drone_c.mp3"
     },
     {
       "fret_name": "C Dorian 3",
       "fret_locs": "E8,E10,E11,A8,A10,D7,D8,D10",
       "fret_id": "cdor3",
-      "drone": "./audio/drones/drone_c.ogg"
+      "drone": "./audio/drones/drone_c.mp3"
     },
     {
       "fret_name": "C# Dorian 1",
       "fret_locs": "A4,A6,A7,D4,D6,G3,G4,G6",
       "fret_id": "c#dor1",
-      "drone": "./audio/drones/drone_csharp.ogg"
+      "drone": "./audio/drones/drone_csharp.mp3"
     },
     {
       "fret_name": "D Dorian 1",
       "fret_locs": "A5,A7,A8,D5,D7,G4,G5,G7",
       "fret_id": "ddor1",
-      "drone": "./audio/drones/drone_d.ogg"
+      "drone": "./audio/drones/drone_d.mp3"
     },
     {
       "fret_name": "D Dorian 2",
       "fret_locs": "D0,D2,D3,G0,G2,G4,G5,G7",
       "fret_id": "ddor2",
-      "drone": "./audio/drones/drone_d.ogg"
+      "drone": "./audio/drones/drone_d.mp3"
     },
     {
       "fret_name": "D Dorian 3",
       "fret_locs": "E10,E12,E13,A10,A12,D9,D10,D12",
       "fret_id": "ddor3",
-      "drone": "./audio/drones/drone_d.ogg"
+      "drone": "./audio/drones/drone_d.mp3"
     },
     {
       "fret_name": "Eb Dorian 1",
       "fret_locs": "A6,A8,A9,D6,D8,G5,G6,G8",
       "fret_id": "ebdor1",
-      "drone": "./audio/drones/drone_eb.ogg"
+      "drone": "./audio/drones/drone_eb.mp3"
     },
     {
       "fret_name": "E Dorian 1",
       "fret_locs": "A7,A9,A10,D7,D9,G6,G7,G9",
       "fret_id": "edor1",
-      "drone": "./audio/drones/drone_e.ogg"
+      "drone": "./audio/drones/drone_e.mp3"
     },
     {
       "fret_name": "E Dorian 2",
       "fret_locs": "D2,D4,D5,G2,G4,G6,G7,G9",
       "fret_id": "edor2",
-      "drone": "./audio/drones/drone_e.ogg"
+      "drone": "./audio/drones/drone_e.mp3"
     },
     {
       "fret_name": "E Dorian 3",
       "fret_locs": "E0,E2,E3,A0,A2,A4,D0,D2",
       "fret_id": "edor3",
-      "drone": "./audio/drones/drone_e.ogg"
+      "drone": "./audio/drones/drone_e.mp3"
     },
     {
       "fret_name": "F Dorian 1",
       "fret_locs": "A8,A10,A11,D8,D10,G7,G8,G10",
       "fret_id": "fdor1",
-      "drone": "./audio/drones/drone_f.ogg"
+      "drone": "./audio/drones/drone_f.mp3"
     },
     {
       "fret_name": "F Dorian 2",
       "fret_locs": "D3,D5,D6,G3,G5,G7,G8,G10",
       "fret_id": "fdor2",
-      "drone": "./audio/drones/drone_f.ogg"
+      "drone": "./audio/drones/drone_f.mp3"
     },
     {
       "fret_name": "F Dorian 3",
       "fret_locs": "E1,E3,E4,A1,A3,D0,D1,D3",
       "fret_id": "fdor3",
-      "drone": "./audio/drones/drone_f.ogg"
+      "drone": "./audio/drones/drone_f.mp3"
     },
     {
       "fret_name": "F# Dorian 1",
       "fret_locs": "A9,A11,A12,D9,D11,G8,G9,G11",
       "fret_id": "f#dor1",
-      "drone": "./audio/drones/drone_fsharp.ogg"
+      "drone": "./audio/drones/drone_fsharp.mp3"
     },
     {
       "fret_name": "G Dorian 1",
       "fret_locs": "E3,E5,E6,A3,A5,D2,D3,D5",
       "fret_id": "gdor1",
-      "drone": "./audio/drones/drone_g.ogg"
+      "drone": "./audio/drones/drone_g.mp3"
     },
     {
       "fret_name": "G Dorian 2",
       "fret_locs": "G0,G2,G3,G5,G7,G9,G10,G12",
       "fret_id": "gdor2",
-      "drone": "./audio/drones/drone_g.ogg"
+      "drone": "./audio/drones/drone_g.mp3"
     },
     {
       "fret_name": "G Dorian 3",
       "fret_locs": "D5,D7,D8,G5,G7,G9,G10,G12",
       "fret_id": "gdor3",
-      "drone": "./audio/drones/drone_g.ogg"
+      "drone": "./audio/drones/drone_g.mp3"
     },
     {
       "fret_name": "Ab Dorian 1",
       "fret_locs": "E4,E6,E7,A4,A6,D3,D4,D6",
       "fret_id": "abdor1",
-      "drone": "./audio/drones/drone_gsharp.ogg"
+      "drone": "./audio/drones/drone_gsharp.mp3"
     },
     {
       "fret_name": "A Dorian 1",
       "fret_locs": "E5,E7,E8,A5,A7,D4,D5,D7",
       "fret_id": "ador1",
-      "drone": "./audio/drones/drone_a.ogg"
+      "drone": "./audio/drones/drone_a.mp3"
     },
     {
       "fret_name": "A Dorian 2",
       "fret_locs": "A0,A2,A3,D0,D2,D4,G0,G2",
       "fret_id": "ador2",
-      "drone": "./audio/drones/drone_a.ogg"
+      "drone": "./audio/drones/drone_a.mp3"
     },
     {
       "fret_name": "Bb Dorian 1",
       "fret_locs": "E6,E8,E9,A6,A8,D5,D6,D8",
       "fret_id": "bbdor1",
-      "drone": "./audio/drones/drone_bb.ogg"
+      "drone": "./audio/drones/drone_bb.mp3"
     },
     {
       "fret_name": "B Dorian 1",
       "fret_locs": "E7,E9,E10,A7,A9,D6,D7,D9",
       "fret_id": "bdor1",
-      "drone": "./audio/drones/drone_b.ogg"
+      "drone": "./audio/drones/drone_b.mp3"
     },
     {
       "fret_name": "B Dorian 2",
       "fret_locs": "A2,A4,D0,D2,D4,G1,G2,G4",
       "fret_id": "bdor2",
-      "drone": "./audio/drones/drone_b.ogg"
+      "drone": "./audio/drones/drone_b.mp3"
     }
   ]
 }

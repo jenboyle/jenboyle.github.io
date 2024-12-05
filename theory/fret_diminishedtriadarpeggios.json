@@ -9,85 +9,85 @@
       "fret_name": "C Diminished Triad Arpeggio",
       "fret_locs": "A3,A6,D4,G5",
       "fret_id": "cdimtriad",
-      "drone": "./audio/drones/drone_c.ogg"
+      "drone": "./audio/drones/drone_c.mp3"
     },
     {
       "fret_name": "C# Diminished Triad Arpeggio",
       "fret_locs": "A4,A7,D5,G6",
       "fret_id": "c#dimtriad",
-      "drone": "./audio/drones/drone_csharp.ogg"
+      "drone": "./audio/drones/drone_csharp.mp3"
     },
     {
       "fret_name": "D Diminished Triad Arpeggio",
       "fret_locs": "A5,A8,D6,G7",
       "fret_id": "ddimtriad",
-      "drone": "./audio/drones/drone_d.ogg"
+      "drone": "./audio/drones/drone_d.mp3"
     },
     {
       "fret_name": "D# Diminished Triad Arpeggio",
       "fret_locs": "A6,A9,D7,G8",
       "fret_id": "d#dimtriad",
-      "drone": "./audio/drones/drone_eb.ogg"
+      "drone": "./audio/drones/drone_eb.mp3"
     },
     {
       "fret_name": "Eb Diminished Triad Arpeggio",
       "fret_locs": "A6,A9,D7,G8",
       "fret_id": "ebdimtriad",
-      "drone": "./audio/drones/drone_eb.ogg"
+      "drone": "./audio/drones/drone_eb.mp3"
     },
     {
       "fret_name": "E Diminished Triad Arpeggio",
       "fret_locs": "A7,A10,D8,G9",
       "fret_id": "edimtriad",
-      "drone": "./audio/drones/drone_e.ogg"
+      "drone": "./audio/drones/drone_e.mp3"
     },
     {
       "fret_name": "F Diminished Triad Arpeggio",
       "fret_locs": "A8,A11,D9,G10",
       "fret_id": "fdimtriad",
-      "drone": "./audio/drones/drone_f.ogg"
+      "drone": "./audio/drones/drone_f.mp3"
     },
     {
       "fret_name": "F# Diminished Triad Arpeggio",
       "fret_locs": "E2,E5,A3,D4",
       "fret_id": "f#dimtriad",
-      "drone": "./audio/drones/drone_fsharp.ogg"
+      "drone": "./audio/drones/drone_fsharp.mp3"
     },
     {
       "fret_name": "G Diminished Triad Arpeggio",
       "fret_locs": "E3,E6,A4,D5",
       "fret_id": "gdimtriad",
-      "drone": "./audio/drones/drone_g.ogg"
+      "drone": "./audio/drones/drone_g.mp3"
     },
     {
       "fret_name": "G# Diminished Triad Arpeggio",
       "fret_locs": "E4,E7,A5,D6",
       "fret_id": "g#dimtriad",
-      "drone": "./audio/drones/drone_gsharp.ogg"
+      "drone": "./audio/drones/drone_gsharp.mp3"
     },
     {
       "fret_name": "Ab Diminished Triad Arpeggio",
       "fret_locs": "E4,E7,A5,D6",
       "fret_id": "abdimtriad",
-      "drone": "./audio/drones/drone_gsharp.ogg"
+      "drone": "./audio/drones/drone_gsharp.mp3"
     },
     {
       "fret_name": "A Diminished Triad Arpeggio",
       "fret_locs": "E5,E8,A6,D7",
       "fret_id": "adimtriad",
-      "drone": "./audio/drones/drone_a.ogg"
+      "drone": "./audio/drones/drone_a.mp3"
     },
     {
       "fret_name": "Bb Diminished Triad Arpeggio",
       "fret_locs": "E6,E9,A7,D8",
       "fret_id": "bbdimtriad",
-      "drone": "./audio/drones/drone_bb.ogg"
+      "drone": "./audio/drones/drone_bb.mp3"
     },
     {
       "fret_name": "B Diminished Triad Arpeggio",
       "fret_locs": "E7,E10,A8,D9",
       "fret_id": "bdimtriad",
-      "drone": "./audio/drones/drone_b.ogg"
+      "drone": "./audio/drones/drone_b.mp3"
     }
   ]
 }

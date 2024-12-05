@@ -6,7 +6,7 @@
   "notes": "Bb, C, D, Eb, F, G, A (2 flats) - Relative minor: ",
   "relativelink": "gminor",
   "relativelinktext": "Gm",
-  "drone": "./audio/drones/drone_bb.ogg",
+  "drone": "./audio/drones/drone_bb.mp3",
   "chords": "Bb,Cm,Dm,Eb,F,Gm,Adim",
   "chordtones": "Bb|D|F, C|Eb|G, D|F|A, Eb|G|Bb, F|A|C, G|Bb|D, A|C|Eb",
   "textb4tab1": "Bb on one string:",
