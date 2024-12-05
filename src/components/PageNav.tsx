@@ -25,7 +25,7 @@ function PageNav() {
   }
   return (
     <nav className={styles.nav}>
-      <ul onClick={handleNavChange}>
+      <ul className={styles.navmain} onClick={handleNavChange}>
         <li>
           <NavLink reloadDocument to="/" onClick={hideExcess}>
             Bass Theory
@@ -38,37 +38,11 @@ function PageNav() {
         </li>
 
         <li>
-          <NavLink to="/improvisation" onClick={hideExcess}>
-            Improvisation
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/my_gear" onClick={hideExcess}>
-            Gear
-          </NavLink>
-        </li>
-
-        <li>
           <NavLink to="/jam_time" onClick={hideExcess}>
             Jam Time
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/cubase" onClick={hideExcess}>
-            Cubase
-          </NavLink>
-        </li>
 
-        <li>
-          <NavLink reloadDocument to="/games" onClick={hideExcess}>
-            Games
-          </NavLink>
-        </li>
-        <li>
-          <NavLink reloadDocument to="/blogs" onClick={hideExcess}>
-            Blogs
-          </NavLink>
-        </li>
         <li>
           {showNavExcess ? (
             <CgClose onClick={handleNavExcess} />
@@ -81,6 +55,25 @@ function PageNav() {
         <ul onClick={handleNavChange} className={styles.excessnav}>
           <li onClick={hideExcess}>
             <NavLink to="/about_me">About Me</NavLink>
+          </li>
+          <li onClick={hideExcess}>
+            <NavLink reloadDocument to="/blogs">
+              Blogs
+            </NavLink>
+          </li>
+          <li onClick={hideExcess}>
+            <NavLink to="/cubase">Cubase</NavLink>
+          </li>
+          <li onClick={hideExcess}>
+            <NavLink reloadDocument to="/games">
+              Games
+            </NavLink>
+          </li>
+          <li onClick={hideExcess}>
+            <NavLink to="/my_gear">Gear</NavLink>
+          </li>
+          <li onClick={hideExcess}>
+            <NavLink to="/improvisation">Improvisation</NavLink>
           </li>
           <li onClick={hideExcess}>
             <NavLink to="/percussion">Percussion</NavLink>
