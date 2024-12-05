@@ -1,6 +1,9 @@
 .nav {
   color: black;
   margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgb(198, 190, 205);
 }
 
 .nav a {

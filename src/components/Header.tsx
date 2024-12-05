@@ -23,8 +23,8 @@ function Header() {
         <img
           className={styles.logo}
           src="./me/gig1.png"
-          width="125px"
-          height="94px"
+          width="100px"
+          height="75px"
         />
 
         <h1>Groovy Jen Bass</h1>

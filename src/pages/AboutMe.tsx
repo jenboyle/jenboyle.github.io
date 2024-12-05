@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import GroovyArticle from "../components/general/GroovyArticle";
-import GroovyHeader from "../components/general/GroovyHeader";
 
 function AboutMe() {
   return (
     <>
-      <GroovyHeader>About Me</GroovyHeader>
       <GroovyArticle>
         Join me in my bass journey. I have been playing bass in my spare time
         for a decade. I am a programmer and I always wanted to create a music

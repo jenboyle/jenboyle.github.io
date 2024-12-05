@@ -1,11 +1,9 @@
 import GroovyArticle from "../components/general/GroovyArticle";
-import GroovyHeader from "../components/general/GroovyHeader";
 import styles from "./Tips.module.css";
 
 function Tips() {
   return (
     <>
-      <GroovyHeader>Bass Tips</GroovyHeader>
       <GroovyArticle customStyles={styles.overridegeneralarticle}>
         <p>Pattern to find chords</p>
         <div>Take C Major. </div>

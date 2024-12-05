@@ -10,7 +10,7 @@
 }
 
 .header h1 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: rgb(56, 33, 65);
   text-align: center;
   text-shadow: 0 0 3px #516c51, 0 0 5px #c36eb5, 0 0 2px #787aa2;
@@ -24,6 +24,6 @@
   margin-bottom: 20px;
 }
 .logo {
-  padding: 12px;
+  padding: 6px;
   float: left;
 }

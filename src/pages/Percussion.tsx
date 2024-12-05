@@ -1,11 +1,9 @@
 import GroovyArticle from "../components/general/GroovyArticle";
-import GroovyHeader from "../components/general/GroovyHeader";
 import styles from "./Percussion.module.css";
 
 function Percussion() {
   return (
     <div>
-      <GroovyHeader>My percussion</GroovyHeader>
       <GroovyArticle customStyles={styles.overridegeneralarticle}>
         <p>Cabasa</p>
         <img src="./percussion/cabasa.jpg" className={styles.boximg}></img>
