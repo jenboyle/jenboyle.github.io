@@ -6,4 +6,5 @@
   display: flex;
   justify-content: space-between;
   border: 2px steelblue solid;
+  width: 384px;
 }
