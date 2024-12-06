@@ -6,14 +6,14 @@ export type BlogObject = {
   blog: BlogType;
 };
 
+type Blogpara = {
+  para: string;
+};
+
 export type BlogType = {
   date: string;
   h1: string;
-  para1: string;
-  para2: string;
-  para3: string;
-  para4?: string;
-  para5?: string;
+  paras: Blogpara[];
   img?: string;
 };
 
@@ -63,11 +63,10 @@ function Blog({ jsonfile }: BlogProps) {
           <p>
             {blogJson.blog.img ? <img src={blogJson.blog.img}></img> : null}
           </p>
-          <p>{blogJson.blog.para1}</p>
-          <p>{blogJson.blog.para2}</p>
-          <p>{blogJson.blog.para3}</p>
-          {blogJson.blog.para4 ? <p>{blogJson.blog.para4}</p> : null}
-          {blogJson.blog.para5 ? <p>{blogJson.blog.para5}</p> : null}
+
+          {blogJson.blog.paras.map((blog) => (
+            <p>{blog.para}</p>
+          ))}
         </article>
       ) : null}
     </>
