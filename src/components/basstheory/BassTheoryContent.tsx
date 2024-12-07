@@ -407,31 +407,20 @@ function BassTheoryContent({
             <table className={styles.chord}>
               <tbody>
                 <tr>
-                  <th />
-                  {theoryJson.chords.split(",").map((chord, index) => (
-                    <th key={`${index}${chord}`}>{index + 1}</th>
-                  ))}
-                </tr>
-                <tr>
-                  <td>Chord</td>
-                  {theoryJson.chords.split(",").map((chord, index) => (
-                    <td key={index} id={`chord${index + 1}`}>
-                      {chord}
-                    </td>
-                  ))}
-                </tr>
-                <tr>
-                  <td>Tones</td>
-                  {theoryJson.chordtones.split(",").map((chordtone, index) => (
-                    <td key={index} id={`chordtone${index + 1}`}>
-                      {chordtone}
-                    </td>
-                  ))}
+                  <th></th>
+                  <th>Chord</th>
+                  <th>Tones</th>
+                  <th>Mode</th>
+                  <th>Triad</th>
                 </tr>
 
-                <tr>
-                  <td>Mode</td>
-                  {theoryJson.chords.split(",").map((chord, index) => (
+                {theoryJson.chords.split(",").map((chord, index) => (
+                  <tr key={index}>
+                    <td>{index + 1}</td>
+                    <td id={`chord${index + 1}`}>{chord}</td>
+
+                    <td>{theoryJson.chordtones.split(",")[index]}</td>
+
                     <td key={`${index}${chord}`} id={`optionone${index + 1}`}>
                       {theoryJson.song.indexOf("Major") != -1 ? (
                         index == 0 ? (
@@ -535,12 +524,7 @@ function BassTheoryContent({
                         </BassTheoryTableLink>
                       ) : null}
                     </td>
-                  ))}
-                </tr>
 
-                <tr>
-                  <td>Triad</td>
-                  {theoryJson.chords.split(",").map((chord, index) => (
                     <td key={index} id={`optiontwo${index + 1}`}>
                       {chord.indexOf("dim") > -1 ? (
                         <BassTheoryTableLink
@@ -568,8 +552,8 @@ function BassTheoryContent({
                         </BassTheoryTableLink>
                       )}
                     </td>
-                  ))}
-                </tr>
+                  </tr>
+                ))}
               </tbody>
             </table>
           ) : null}
