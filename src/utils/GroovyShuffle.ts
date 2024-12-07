@@ -1,4 +1,3 @@
-//import { TheoryType } from "../components/basstheory/BassTheoryContent";
 import { circleType } from "../components/games/questions/Circle";
 import { RelativeType } from "../components/games/Relatives";
 import { QuestionType } from "../components/games/StandardGame";
@@ -26,13 +25,3 @@ export function shuffleRel(array: RelativeType[]) {
   }
   return array;
 }
-
-// let curr = array.length;
-// while(curr != 0) {
-//     let ran = Math.floor(Math.random() * curr);
-//     curr--;
-
-//     [array[curr], array[ran]] = [array[ran], array[curr]];
-
-// }
-//}
