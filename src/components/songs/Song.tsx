@@ -1,11 +1,38 @@
 import { useEffect, useState } from "react";
-import styles from "./Song.module.css";
-import GroovyTab from "../general/GroovyTab";
 import { Link } from "react-router-dom";
+import GroovyTabV2 from "../general/GroovyTabV2";
 
 // export type SongObject = {
 //   transcription: SongType;
 // };
+
+export type EType = {
+  e: string;
+};
+
+export type AType = {
+  a: string;
+};
+
+export type DType = {
+  d: string;
+};
+
+export type GType = {
+  g: string;
+};
+
+export type GroovyTabV2Type = {
+  g: GType[];
+  d: DType[];
+  a: AType[];
+  e: EType[];
+  text?: string;
+};
+
+export type GroovyTabTableType = {
+  table: GroovyTabV2Type[];
+};
 
 export type SongType = {
   song: string;
@@ -13,107 +40,7 @@ export type SongType = {
   key: string;
   theorylink: string;
   tuning: string;
-  textb4tab1?: string;
-  g1: string;
-  d1: string;
-  a1: string;
-  e1: string;
-  g2?: string;
-  d2?: string;
-  a2?: string;
-  e2?: string;
-  g3?: string;
-  d3?: string;
-  a3?: string;
-  e3?: string;
-  g4?: string;
-  d4?: string;
-  a4?: string;
-  e4?: string;
-
-  textb4tab2?: string;
-  g5?: string;
-  d5?: string;
-  a5?: string;
-  e5?: string;
-
-  g6?: string;
-  d6?: string;
-  a6?: string;
-  e6?: string;
-
-  g7?: string;
-  d7?: string;
-  a7?: string;
-  e7?: string;
-
-  g8?: string;
-  d8?: string;
-  a8?: string;
-  e8?: string;
-
-  textb4tab3?: string;
-  g9?: string;
-  d9?: string;
-  a9?: string;
-  e9?: string;
-
-  g10?: string;
-  d10?: string;
-  a10?: string;
-  e10?: string;
-
-  g11?: string;
-  d11?: string;
-  a11?: string;
-  e11?: string;
-
-  g12?: string;
-  d12?: string;
-  a12?: string;
-  e12?: string;
-
-  textb4tab4?: string;
-  g13?: string;
-  d13?: string;
-  a13?: string;
-  e13?: string;
-
-  g14?: string;
-  d14?: string;
-  a14?: string;
-  e14?: string;
-
-  g15?: string;
-  d15?: string;
-  a15?: string;
-  e15?: string;
-
-  g16?: string;
-  d16?: string;
-  a16?: string;
-  e16?: string;
-
-  textb4tab5?: string;
-  g17?: string;
-  d17?: string;
-  a17?: string;
-  e17?: string;
-
-  g18?: string;
-  d18?: string;
-  a18?: string;
-  e18?: string;
-
-  g19?: string;
-  d19?: string;
-  a19?: string;
-  e19?: string;
-
-  g20?: string;
-  d20?: string;
-  a20?: string;
-  e20?: string;
+  tab?: GroovyTabTableType[];
 };
 
 interface SongProps {
@@ -209,30 +136,8 @@ function Song({ jsonfile }: SongProps) {
             </>
           ) : null}
           {songJson.tuning ? <p>{`Tuning: - ${songJson.tuning}`}</p> : null}
-          {songJson.g1 ? (
-            <>
-              {songJson.textb4tab1 ? (
-                <div className={styles.leftdiv}>{songJson.textb4tab1}</div>
-              ) : null}
-              <GroovyTab json={songJson} rowBeginning={1} />
-              {songJson.textb4tab2 ? (
-                <div className={styles.leftdiv}>{songJson.textb4tab2}</div>
-              ) : null}
-              <GroovyTab json={songJson} rowBeginning={5} />
-              {songJson.textb4tab3 ? (
-                <div className={styles.leftdiv}>{songJson.textb4tab3}</div>
-              ) : null}
-              <GroovyTab json={songJson} rowBeginning={9} />
-              {songJson.textb4tab4 ? (
-                <div className={styles.leftdiv}>{songJson.textb4tab4}</div>
-              ) : null}
-              <GroovyTab json={songJson} rowBeginning={13} />
-              {songJson.textb4tab5 ? (
-                <div className={styles.leftdiv}>{songJson.textb4tab5}</div>
-              ) : null}
-              <GroovyTab json={songJson} rowBeginning={17} />
-            </>
-          ) : null}
+
+          {songJson.tab ? <GroovyTabV2 tab={songJson.tab} /> : null}
         </article>
       ) : null}
     </>
