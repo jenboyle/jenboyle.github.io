@@ -62,7 +62,7 @@ function BassTheory({ initialKey = "aflatmajor" }) {
   }
 
   return (
-    <div className={styles.theorycontainer}>
+    <>
       <GroovyButton handleClick={showDD}>
         {theoryNavList.map((tnl) =>
           tnl.jsonfile === selectedKey ? tnl.displaykey : null
@@ -74,17 +74,20 @@ function BassTheory({ initialKey = "aflatmajor" }) {
           currentKey={selectedKey}
         />
       )}
-      <div className={styles.theorycontent}>
-        <BassTheoryContent
-          jsonfile={selectedKey}
-          handleNavTheory={handleNavTheory}
-          context={context}
-          onSelectKey={setSelectedKey}
-          previousKey={previousKey}
-        />
+
+      <div className={styles.theorycontainer}>
+        <div className={styles.theorycontent}>
+          <BassTheoryContent
+            jsonfile={selectedKey}
+            handleNavTheory={handleNavTheory}
+            context={context}
+            onSelectKey={setSelectedKey}
+            previousKey={previousKey}
+          />
+        </div>
+        <div className={styles.theoryclear}></div>
       </div>
-      <div className={styles.theoryclear}></div>
-    </div>
+    </>
   );
 }
 
