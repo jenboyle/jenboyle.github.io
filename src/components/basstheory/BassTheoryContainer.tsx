@@ -1,9 +1,11 @@
 import BassTheoryContent from "./BassTheoryContent";
-import BassTheorySideNav from "./BassTheorySideNav";
 import styles from "./BassTheoryContainer.module.css";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useTool } from "../../context/ToolContext";
+import BassTheoryKeyChoice from "./BassTheoryKeyChoice";
+import GroovyButton from "../general/GroovyButton";
+import { theoryNavList } from "./theoryNavList";
 
 function BassTheory({ initialKey = "aflatmajor" }) {
   const [selectedKey, setSelectedKey] = useState(initialKey);
@@ -11,6 +13,7 @@ function BassTheory({ initialKey = "aflatmajor" }) {
   const [searchParams, setSearchParams] = useSearchParams();
   const [previousKey, setPreviousKey] = useState("");
   const { dronePlaying, toggleDronePlaying } = useTool();
+  const [ddVis, setDdVis] = useState(false);
   const jamkey = searchParams.get("jamkey");
   useEffect(() => {
     if (jamkey) {
@@ -35,6 +38,7 @@ function BassTheory({ initialKey = "aflatmajor" }) {
     if (dronePlaying) {
       toggleDronePlaying();
     }
+    setDdVis(false);
     //console.log(`handle called sel ${(e.target as HTMLLIElement).id}`);
   }
 
@@ -53,14 +57,23 @@ function BassTheory({ initialKey = "aflatmajor" }) {
     setContext(fretscaleselected);
   }
 
+  function showDD() {
+    setDdVis(!ddVis);
+  }
+
   return (
     <div className={styles.theorycontainer}>
-      <div className={styles.theorysidenav}>
-        <BassTheorySideNav
+      <GroovyButton handleClick={showDD}>
+        {theoryNavList.map((tnl) =>
+          tnl.jsonfile === selectedKey ? tnl.displaykey : null
+        )}
+      </GroovyButton>
+      {ddVis && (
+        <BassTheoryKeyChoice
           handleTheorySelection={handleTheorySelection}
           currentKey={selectedKey}
         />
-      </div>
+      )}
       <div className={styles.theorycontent}>
         <BassTheoryContent
           jsonfile={selectedKey}

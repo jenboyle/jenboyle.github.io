@@ -1,20 +1,9 @@
 .theorycontainer {
-  width: 1000px;
+  width: 800px;
   margin: auto;
-}
-
-.theorysidenav {
-  width: 200px;
-  display: inline-block;
-  float: left;
 }
 
 .theorycontent {
   width: 800px;
   display: inline-block;
-  float: right;
-}
-
-.theoryclear {
-  clear: both;
 }
