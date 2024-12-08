@@ -12,62 +12,118 @@ function GroovyTabV2({ tab }: GroovyTabProps) {
   //console.log(mobile);
   return (
     <>
-      {tab.map((table) => (
-        <table className={styles.table}>
-          {table.table.map((rowy) => (
+      {tab.map((table, tindex) => (
+        <table key={`table_${tindex}`} className={styles.table}>
+          {table.table.map((row, index) => (
             <>
-              {rowy.text && (
-                <caption className={styles.leftdiv}>{rowy.text}</caption>
+              {row.text && (
+                <caption
+                  key={`caption_${tindex}_${index}`}
+                  className={styles.leftdiv}
+                >
+                  {row.text}
+                </caption>
               )}
-              <tbody>
-                <tr>
-                  <td className={styles.sep}>|</td>
-                  {rowy.g.map((gthing) => (
+              <tbody key={`tbod_${tindex}_${index}`}>
+                <tr key={`tr_g_${tindex}_${index}`}>
+                  <td key={`td_g_sep${tindex}_${index}`} className={styles.sep}>
+                    |
+                  </td>
+                  {row.g.map((gthing, gindex) => (
                     <>
-                      <td className={styles.tab}>
-                        <div>{gthing.g}</div>
+                      <td
+                        key={`td_g_${tindex}_${index}_${gindex}`}
+                        className={styles.tab}
+                      >
+                        <div key={`div_g_${tindex}_${index}_${gindex}`}>
+                          {gthing.g}
+                        </div>
                       </td>
-                      <td className={styles.sep}>|</td>
+                      <td
+                        key={`td_gsep_${tindex}_${index}_${gindex}`}
+                        className={styles.sep}
+                      >
+                        |
+                      </td>
                     </>
                   ))}
                 </tr>
 
-                <tr>
-                  <td className={styles.sep}>|</td>
-                  {rowy.d.map((dthing) => (
+                <tr key={`tr_d_${tindex}_${index}`}>
+                  <td key={`td_d_sep${tindex}_${index}`} className={styles.sep}>
+                    |
+                  </td>
+                  {row.d.map((dthing, dindex) => (
                     <>
-                      <td className={styles.tab}>
-                        <div>{dthing.d}</div>
+                      <td
+                        key={`td_d_${tindex}_${index}_${dindex}`}
+                        className={styles.tab}
+                      >
+                        <div key={`div_d_${tindex}_${index}_${dindex}`}>
+                          {dthing.d}
+                        </div>
                       </td>
-                      <td className={styles.sep}>|</td>
+                      <td
+                        key={`td_dsep_${tindex}_${index}_${dindex}`}
+                        className={styles.sep}
+                      >
+                        |
+                      </td>
                     </>
                   ))}
                 </tr>
 
-                <tr>
-                  <td className={styles.sep}>|</td>
-                  {rowy.a.map((athing) => (
+                <tr key={`tr_a_${tindex}_${index}`}>
+                  <td key={`td_a_sep${tindex}_${index}`} className={styles.sep}>
+                    |
+                  </td>
+                  {row.a.map((athing, aindex) => (
                     <>
-                      <td className={styles.tab}>
-                        <div>{athing.a}</div>
+                      <td
+                        key={`td_a_${tindex}_${index}_${aindex}`}
+                        className={styles.tab}
+                      >
+                        <div key={`div_a_${tindex}_${index}_${aindex}`}>
+                          {athing.a}
+                        </div>
                       </td>
-                      <td className={styles.sep}>|</td>
+                      <td
+                        key={`td_asep_${tindex}_${index}_${aindex}`}
+                        className={styles.sep}
+                      >
+                        |
+                      </td>
                     </>
                   ))}
                 </tr>
 
-                <tr>
-                  <td className={styles.sep}>|</td>
-                  {rowy.e.map((ething) => (
+                <tr key={`tr_e_${tindex}_${index}`}>
+                  <td key={`td_e_sep${tindex}_${index}`} className={styles.sep}>
+                    |
+                  </td>
+                  {row.e.map((ething, eindex) => (
                     <>
-                      <td className={styles.tab}>
-                        <div>{ething.e}</div>
+                      <td
+                        key={`td_e_${tindex}_${index}_${eindex}`}
+                        className={styles.tab}
+                      >
+                        <div key={`div_e_${tindex}_${index}_${eindex}`}>
+                          {ething.e}
+                        </div>
                       </td>
-                      <td className={styles.sep}>|</td>
+                      <td
+                        key={`td_esep_${tindex}_${index}_${eindex}`}
+                        className={styles.sep}
+                      >
+                        |
+                      </td>
                     </>
                   ))}
                 </tr>
-                <tr className={styles.spacer} />
+                <tr
+                  key={`tr_space_${tindex}_${index}`}
+                  className={styles.spacer}
+                />
               </tbody>
             </>
           ))}
