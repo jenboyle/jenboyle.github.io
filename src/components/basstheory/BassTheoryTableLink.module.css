@@ -1,0 +1,11 @@
+.quicklook {
+  display: none;
+}
+
+.item:hover .quicklook {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 100;
+  left: 10;
+}

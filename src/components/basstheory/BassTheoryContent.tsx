@@ -427,6 +427,7 @@ function BassTheoryContent({
                           <BassTheoryTableLink
                             handleNavTheory={handleNavTheory}
                             chord={chord}
+                            hoverimg="./theory/shapes/ionian.png"
                           >
                             Ionian
                           </BassTheoryTableLink>
@@ -434,6 +435,7 @@ function BassTheoryContent({
                           <BassTheoryTableLink
                             handleNavTheory={handleNavTheory}
                             chord={chord}
+                            hoverimg="./theory/shapes/dorian.png"
                           >
                             Dorian
                           </BassTheoryTableLink>
@@ -441,6 +443,7 @@ function BassTheoryContent({
                           <BassTheoryTableLink
                             handleNavTheory={handleNavTheory}
                             chord={chord}
+                            hoverimg="./theory/shapes/phr.png"
                           >
                             Phrygian
                           </BassTheoryTableLink>
@@ -448,6 +451,7 @@ function BassTheoryContent({
                           <BassTheoryTableLink
                             handleNavTheory={handleNavTheory}
                             chord={chord}
+                            hoverimg="./theory/shapes/lydian.png"
                           >
                             Lydian
                           </BassTheoryTableLink>
@@ -455,6 +459,7 @@ function BassTheoryContent({
                           <BassTheoryTableLink
                             handleNavTheory={handleNavTheory}
                             chord={chord}
+                            hoverimg="./theory/shapes/mixolydian.png"
                           >
                             Mixolydian
                           </BassTheoryTableLink>
@@ -462,6 +467,7 @@ function BassTheoryContent({
                           <BassTheoryTableLink
                             handleNavTheory={handleNavTheory}
                             chord={chord}
+                            hoverimg="./theory/shapes/aeolian.png"
                           >
                             Aeolian
                           </BassTheoryTableLink>
@@ -469,6 +475,7 @@ function BassTheoryContent({
                           <BassTheoryTableLink
                             handleNavTheory={handleNavTheory}
                             chord={chord}
+                            hoverimg="./theory/shapes/locrian.png"
                           >
                             Locrian
                           </BassTheoryTableLink>
@@ -477,6 +484,7 @@ function BassTheoryContent({
                         <BassTheoryTableLink
                           handleNavTheory={handleNavTheory}
                           chord={chord}
+                          hoverimg="./theory/shapes/aeolian.png"
                         >
                           Aeolian
                         </BassTheoryTableLink>
@@ -484,6 +492,7 @@ function BassTheoryContent({
                         <BassTheoryTableLink
                           handleNavTheory={handleNavTheory}
                           chord={chord}
+                          hoverimg="./theory/shapes/locrian.png"
                         >
                           Locrian
                         </BassTheoryTableLink>
@@ -491,6 +500,7 @@ function BassTheoryContent({
                         <BassTheoryTableLink
                           handleNavTheory={handleNavTheory}
                           chord={chord}
+                          hoverimg="./theory/shapes/ionian.png"
                         >
                           Ionian
                         </BassTheoryTableLink>
@@ -498,6 +508,7 @@ function BassTheoryContent({
                         <BassTheoryTableLink
                           handleNavTheory={handleNavTheory}
                           chord={chord}
+                          hoverimg="./theory/shapes/dorian.png"
                         >
                           Dorian
                         </BassTheoryTableLink>
@@ -505,6 +516,7 @@ function BassTheoryContent({
                         <BassTheoryTableLink
                           handleNavTheory={handleNavTheory}
                           chord={chord}
+                          hoverimg="./theory/shapes/phr.png"
                         >
                           Phrygian
                         </BassTheoryTableLink>
@@ -512,6 +524,7 @@ function BassTheoryContent({
                         <BassTheoryTableLink
                           handleNavTheory={handleNavTheory}
                           chord={chord}
+                          hoverimg="./theory/shapes/lydian.png"
                         >
                           Lydian
                         </BassTheoryTableLink>
@@ -519,6 +532,7 @@ function BassTheoryContent({
                         <BassTheoryTableLink
                           handleNavTheory={handleNavTheory}
                           chord={chord}
+                          hoverimg="./theory/shapes/mixolydian.png"
                         >
                           Mixolydian
                         </BassTheoryTableLink>
@@ -531,6 +545,7 @@ function BassTheoryContent({
                           handleNavTheory={handleNavTheory}
                           chord={chord}
                           specifyfile="fret_diminishedtriadarpeggios"
+                          hoverimg="./theory/shapes/dim.png"
                         >
                           Diminished
                         </BassTheoryTableLink>
@@ -539,6 +554,7 @@ function BassTheoryContent({
                           handleNavTheory={handleNavTheory}
                           chord={chord}
                           specifyfile="fret_minortriadarpeggios"
+                          hoverimg="./theory/shapes/minortriad.png"
                         >
                           Minor
                         </BassTheoryTableLink>
@@ -547,6 +563,7 @@ function BassTheoryContent({
                           handleNavTheory={handleNavTheory}
                           chord={chord}
                           specifyfile="fret_majortriadarpeggios"
+                          hoverimg="./theory/shapes/majortriad.png"
                         >
                           Major
                         </BassTheoryTableLink>

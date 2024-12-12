@@ -4,21 +4,6 @@
   text-align: left;
 }
 
-.frettr {
-  border: 1px black solid;
-}
-
-.frettd {
-  border: 1px black solid;
-  width: 50px;
-  height: 20px;
-}
-
-.frettable {
-  margin-top: 15px;
-  border-collapse: collapse;
-}
-
 .cloc {
   position: relative;
   top: -13px;
@@ -71,4 +56,55 @@
   position: relative;
   top: -13px;
   left: 165px;
+}
+
+.hovers {
+  background-color: lavenderblush;
+}
+
+.eloctop {
+  position: relative;
+  top: -73px;
+  left: 106px;
+}
+
+.thirdloc {
+  position: relative;
+  top: -13px;
+  left: 195px;
+}
+
+.sixloc {
+  position: relative;
+  top: -53px;
+  left: -12px;
+}
+.sevenloc {
+  position: relative;
+  top: -33px;
+  left: -32px;
+}
+
+.octaveloc {
+  position: relative;
+  top: -53px;
+  left: 105px;
+}
+
+.fifthloc {
+  position: relative;
+  top: -33px;
+  left: 125px;
+}
+
+.forthloc {
+  position: relative;
+  top: -33px;
+  left: 166px;
+}
+
+.cnewloc {
+  position: relative;
+  top: -13px;
+  left: 68px;
 }

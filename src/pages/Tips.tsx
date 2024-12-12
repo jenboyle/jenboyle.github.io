@@ -1,40 +1,18 @@
 import GroovyArticle from "../components/general/GroovyArticle";
+import GroovyTipFretboard from "../components/general/GroovyTipFretboard";
 import styles from "./Tips.module.css";
 
 function Tips() {
   return (
     <>
       <GroovyArticle customStyles={styles.overridegeneralarticle}>
-        <p>Pattern to find chords</p>
+        <p>Chords - Pattern</p>
+        <div>A pattern to find chords</div>
         <div>Take C Major. </div>
         <div>
           Major Chords in C Major Pattern: C (on 8th fret), F, G (Root, 4th,
           5th)
-          <table className={styles.frettable}>
-            <tbody>
-              <tr className={styles.frettr}>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-              </tr>
-              <tr className={styles.frettr}>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-              </tr>
-              <tr className={styles.frettr}>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-              </tr>
-            </tbody>
-          </table>
+          <GroovyTipFretboard />
           <img
             src="./images/theory/chords/circle.png"
             className={styles.gloc}
@@ -51,31 +29,7 @@ function Tips() {
         <div>
           Minor Chords in C Major Pattern: Down 3 frets repeat pattern: Am, Dm,
           Em (6th, 2nd, 3rd)
-          <table className={styles.frettable}>
-            <tbody>
-              <tr className={styles.frettr}>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-              </tr>
-              <tr className={styles.frettr}>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-              </tr>
-              <tr className={styles.frettr}>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-              </tr>
-            </tbody>
-          </table>
+          <GroovyTipFretboard />
           <img
             src="./images/theory/chords/circle.png"
             className={styles.aloc}
@@ -95,31 +49,7 @@ function Tips() {
         </div>
         <div>
           Diminished Chord in C Major Pattern: Down 1 fret from root: Bdim (7th)
-          <table className={styles.frettable}>
-            <tbody>
-              <tr className={styles.frettr}>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-              </tr>
-              <tr className={styles.frettr}>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-              </tr>
-              <tr className={styles.frettr}>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-                <td className={styles.frettd}></td>
-              </tr>
-            </tbody>
-          </table>
+          <GroovyTipFretboard />
           <img
             src="./images/theory/chords/circle.png"
             className={styles.bloc}
@@ -132,12 +62,12 @@ function Tips() {
       </GroovyArticle>
 
       <GroovyArticle customStyles={styles.overridegeneralarticle}>
-        <p>Solo</p>
-        <div>Think of telling a story. </div>
+        <p>Drones</p>
+        <div>Play over a drone when you practice scales. </div>
       </GroovyArticle>
 
       <GroovyArticle customStyles={styles.overridegeneralarticle}>
-        <p>Beginner</p>
+        <p>Practice Plan - Beginner</p>
         <div>Make a practice plan of goals and log progress. </div>
         <div>Practice Ideas:</div>
         <ul>
@@ -162,7 +92,7 @@ function Tips() {
       </GroovyArticle>
 
       <GroovyArticle customStyles={styles.overridegeneralarticle}>
-        <p>Intermediate</p>
+        <p>Practice Plan - Intermediate</p>
         <div>
           Let's return to learning big time and learn more theory and good
           techniques
@@ -173,7 +103,65 @@ function Tips() {
           Everybody Knows and Blondie - Atomic
         </div>
       </GroovyArticle>
+
+      <GroovyArticle customStyles={styles.overridegeneralarticle}>
+        <p>Solo</p>
+        <div>Think of telling a story. </div>
+      </GroovyArticle>
     </>
   );
 }
 export default Tips;
+
+{
+  /* 
+  
+  <GroovyArticle customStyles={styles.overridegeneralarticle}>
+        <div className={styles.hovers}>
+          <GroovyTipFretboard />
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.cnewloc}
+          ></img>
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.thirdloc}
+          ></img>
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.fifthloc}
+          ></img>
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.octaveloc}
+          ></img>
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.sixloc}
+          ></img>
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.sevenloc}
+          ></img>
+        </div>
+      </GroovyArticle>
+  
+  <img
+            src="./images/theory/chords/circle.png"
+            className={styles.thirdloc}
+          ></img> 
+          //<img
+// src="./images/theory/chords/circle.png"
+// className={styles.sixloc}
+// ></img>
+// <img
+// src="./images/theory/chords/circle.png"
+// className={styles.sevenloc}
+// ></img>
+// <img
+// src="./images/theory/chords/circle.png"
+// className={styles.octaveloc}
+// ></img>
+          
+          */
+}
