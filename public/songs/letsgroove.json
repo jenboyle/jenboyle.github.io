@@ -7,6 +7,7 @@
 
   "tab": [
     {
+      "tableid": "letsgroove1",
       "table": [
         {
           "text": "Main Riff",
@@ -18,6 +19,7 @@
       ]
     },
     {
+      "tableid": "letsgroove2",
       "table": [
         {
           "text": "Improvising with some variations mostly on the BAB",
@@ -29,6 +31,7 @@
       ]
     },
     {
+      "tableid": "letsgroove3",
       "table": [
         {
           "g": [{ "g": "-------|-4-2-4--" }],
@@ -39,6 +42,7 @@
       ]
     },
     {
+      "tableid": "letsgroove4",
       "table": [
         {
           "text": "Lead into higher register",
@@ -50,6 +54,7 @@
       ]
     },
     {
+      "tableid": "letsgroove5",
       "table": [
         {
           "g": [{ "g": "----------------" }, { "g": "16-14-16|16-14-16" }],

@@ -7,6 +7,7 @@
 
   "tab": [
     {
+      "tableid": "hererain1",
       "table": [
         {
           "text": "Main Riff 1:",
@@ -18,6 +19,7 @@
       ]
     },
     {
+      "tableid": "hererain2",
       "table": [
         {
           "g": [{ "g": "----------------" }, { "g": "----------------" }],
@@ -28,6 +30,7 @@
       ]
     },
     {
+      "tableid": "hererain3",
       "table": [
         {
           "text": "Main Riff 2",
@@ -39,6 +42,7 @@
       ]
     },
     {
+      "tableid": "hererain4",
       "table": [
         {
           "text": "Middle Riff",
@@ -50,6 +54,7 @@
       ]
     },
     {
+      "tableid": "hererain5",
       "table": [
         {
           "text": "My variations on the Am plus octaves on the G etc:",
@@ -61,6 +66,7 @@
       ]
     },
     {
+      "tableid": "hererain6",
       "table": [
         {
           "g": [{ "g": "------------14--" }],

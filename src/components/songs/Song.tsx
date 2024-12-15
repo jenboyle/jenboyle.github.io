@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import GroovyTabV2 from "../general/GroovyTabV2";
+import styles from "./Song.module.css";
 
 // export type SongObject = {
 //   transcription: SongType;
@@ -31,6 +32,7 @@ export type GroovyTabV2Type = {
 };
 
 export type GroovyTabTableType = {
+  tableid: string;
   table: GroovyTabV2Type[];
 };
 
@@ -41,6 +43,8 @@ export type SongType = {
   theorylink: string;
   tuning: string;
   tab?: GroovyTabTableType[];
+  drum?: string;
+  video?: string;
 };
 
 interface SongProps {
@@ -135,9 +139,20 @@ function Song({ jsonfile }: SongProps) {
               </p>
             </>
           ) : null}
-          {songJson.tuning ? <p>{`Tuning: - ${songJson.tuning}`}</p> : null}
+          {songJson.tuning ? <p>{`Tuning - ${songJson.tuning}`}</p> : null}
+
+          {songJson.drum ? <p>{`Drum - ${songJson.drum}`}</p> : null}
 
           {songJson.tab ? <GroovyTabV2 tab={songJson.tab} /> : null}
+
+          {songJson.video ? (
+            <div className={styles.icont}>
+              <iframe
+                src={`https://www.tiktok.com/embed/${songJson.video}`}
+                className={styles.iframe}
+              ></iframe>
+            </div>
+          ) : null}
         </article>
       ) : null}
     </>

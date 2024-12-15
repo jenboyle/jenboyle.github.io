@@ -13,7 +13,7 @@ function GroovyTabV2({ tab }: GroovyTabProps) {
   return (
     <>
       {tab.map((table, tindex) => (
-        <table key={`table_${tindex}`} className={styles.table}>
+        <table key={`table_${table.tableid}`} className={styles.table}>
           {table.table.map((row, index) => (
             <>
               {row.text && (
