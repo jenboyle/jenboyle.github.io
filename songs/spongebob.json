@@ -7,6 +7,7 @@
 
   "tab": [
     {
+      "tableid": "spongebob1",
       "table": [
         {
           "text": "Repeat Twice",
@@ -24,6 +25,7 @@
       ]
     },
     {
+      "tableid": "spongebob2",
       "table": [
         {
           "text": "Repeat 3 times",
@@ -35,6 +37,7 @@
       ]
     },
     {
+      "tableid": "spongebob3",
       "table": [
         {
           "text": "Ending",

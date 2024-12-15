@@ -7,6 +7,7 @@
 
   "tab": [
     {
+      "tableid": "oceanc1",
       "table": [
         {
           "text": "Play Twice:",
@@ -18,6 +19,7 @@
       ]
     },
     {
+      "tableid": "oceanc2",
       "table": [
         {
           "text": "Play Twice:",
@@ -29,6 +31,7 @@
       ]
     },
     {
+      "tableid": "oceanc3",
       "table": [
         {
           "text": "Play Twice:",
