@@ -68,23 +68,32 @@ function MyPracticePlan() {
         </Tooltip>
       </div>
       <div className={styles.additem}>
-        <input type="text" onChange={handleItemChange} maxLength={25}></input>
+        <input
+          type="text"
+          onChange={handleItemChange}
+          maxLength={25}
+          placeholder="Enter goal here..."
+        ></input>
       </div>
-      <Tooltip title="Add up to 10 Goals">
-        <div>
-          <button
-            className={
-              valArr.length == 10
-                ? `${styles.buttondisabled}`
-                : `${styles.button}`
-            }
-            disabled={valArr.length == 10 ? true : false}
-            onClick={handleAddItem}
-          >
-            Add Goal
-          </button>
-        </div>
-      </Tooltip>
+
+      <div>
+        <Tooltip title="Add up to 10 Goals">
+          <span>
+            <button
+              className={
+                valArr.length == 10
+                  ? `${styles.buttondisabled}`
+                  : `${styles.button}`
+              }
+              disabled={valArr.length == 10 ? true : false}
+              onClick={handleAddItem}
+            >
+              Add Goal
+            </button>
+          </span>
+        </Tooltip>
+      </div>
+
       <div>
         {valArr.length > 0
           ? valArr.map((item: string, index: number) => (
@@ -110,18 +119,21 @@ function MyPracticePlan() {
           : null}
       </div>
 
-      <Tooltip title="Bass Practice Ideas">
-        <div>
-          <Help handleHelp={handleHelp}>
-            <FaBucket color="#f4f44f" />
-          </Help>
-          {showHelp ? (
+      <div>
+        <Help handleHelp={handleHelp}>
+          <Tooltip placement="left" title="Bass Practice Ideas">
             <span>
-              <HelpContent>{helpRand}</HelpContent>
+              <FaBucket color="#f4f44f" />
             </span>
-          ) : null}
-        </div>
-      </Tooltip>
+          </Tooltip>
+        </Help>
+
+        {showHelp ? (
+          <span>
+            <HelpContent>{helpRand}</HelpContent>
+          </span>
+        ) : null}
+      </div>
     </>
   );
 }
