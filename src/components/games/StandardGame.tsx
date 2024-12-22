@@ -116,7 +116,7 @@ function StandardGame({ questions }: StandardGameProps) {
           <button className={styles.pad} onClick={handlePlayerAnswerSubmitted}>
             Check Answer
           </button>
-          <Help handleHelp={handleHelp} />
+          <Help handleHelp={handleHelp}>🤔</Help>
         </>
       ) : currentResult ? (
         <>

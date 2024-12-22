@@ -62,7 +62,7 @@ function Relatives() {
               {relative.key}
             </button>
           ))}
-          <Help handleHelp={handleHelp} />
+          <Help handleHelp={handleHelp}>🤔</Help>
         </>
       ) : relatives[questionIndex].rel === playerAnswer ? (
         <>

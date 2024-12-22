@@ -69,7 +69,7 @@ function Circleoffifths() {
                 {option}
               </button>
             ))}
-          <Help handleHelp={handleHelp} />
+          <Help handleHelp={handleHelp}>🤔</Help>
         </>
       ) : (!circle[questionIndex].toggle &&
           circle[questionIndex].sign === playerAnswer) ||

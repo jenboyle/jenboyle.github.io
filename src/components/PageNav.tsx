@@ -82,6 +82,9 @@ function PageNav() {
             <NavLink to="/percussion">Percussion</NavLink>
           </li>
           <li onClick={hideExcess}>
+            <NavLink to="/practice_plan">Practice Plan</NavLink>
+          </li>
+          <li onClick={hideExcess}>
             <NavLink to="/tips">Tips</NavLink>
           </li>
         </ul>

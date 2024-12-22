@@ -17,6 +17,7 @@ const Tips = lazy(() => import("./pages/Tips"));
 const MyContent = lazy(() => import("./pages/MyContent"));
 const MyGear = lazy(() => import("./pages/MyGear"));
 const PedalCreation = lazy(() => import("./pages/PedalCreation"));
+const PracticePlan = lazy(() => import("./pages/PracticePlan"));
 const Improvisation = lazy(() => import("./pages/Improvisation"));
 const Socials = lazy(() => import("./components/Socials"));
 const Header = lazy(() => import("./components/Header"));
@@ -46,6 +47,7 @@ function App() {
                 <Route path="jam_time" element={<JamTime />}></Route>
                 <Route path="cubase" element={<Cubase />}></Route>
                 <Route path="percussion" element={<Percussion />}></Route>
+                <Route path="practice_plan" element={<PracticePlan />}></Route>
                 <Route path="games" element={<Games />}></Route>
                 <Route path="blogs" element={<Blogs />}></Route>
                 <Route path="tips" element={<Tips />}></Route>
