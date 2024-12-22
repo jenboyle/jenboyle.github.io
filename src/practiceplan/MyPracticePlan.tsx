@@ -46,13 +46,14 @@ function MyPracticePlan() {
     if (valArr.length < 10) {
       if (itemText !== "") {
         valArr.push(itemText);
+        setValue(JSON.stringify(valArr));
+        setItemText("");
       }
     }
     // else {
     // }
 
     //console.log(valArr);
-    setValue(JSON.stringify(valArr));
   }
 
   //{value}
@@ -61,7 +62,7 @@ function MyPracticePlan() {
     <>
       <GroovyHeader>My Practice Plan</GroovyHeader>
       <div>
-        <Tooltip title="Fresh Practice Plan">
+        <Tooltip placement="left" title="Fresh Practice Plan">
           <span>
             <LuListMusic onClick={handleFreshPlan} />
           </span>
@@ -73,6 +74,7 @@ function MyPracticePlan() {
           onChange={handleItemChange}
           maxLength={25}
           placeholder="Enter goal here..."
+          value={itemText}
         ></input>
       </div>
 
