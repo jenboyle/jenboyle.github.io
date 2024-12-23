@@ -38,14 +38,19 @@ function MyPracticePlan() {
     }
   }
 
+  function santise(item: string) {
+    return item.replace(/[^a-z0-9 #]/gi, "");
+  }
+
   function handleItemChange(e: ChangeEvent<HTMLInputElement>) {
-    setItemText(e.target.value);
+    setItemText(santise(e.target.value));
   }
 
   function handleAddItem() {
     if (valArr.length < 10) {
-      if (itemText !== "") {
-        valArr.push(itemText);
+      const santisedText = santise(itemText);
+      if (santisedText !== "") {
+        valArr.push(santisedText);
         setValue(JSON.stringify(valArr));
         setItemText("");
       }
