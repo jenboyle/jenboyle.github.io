@@ -105,6 +105,17 @@ function Tips() {
       </GroovyArticle>
 
       <GroovyArticle customStyles={styles.overridegeneralarticle}>
+        <p>Social Media</p>
+        <div>Aim to provide value to followers. </div>
+        <div>
+          Shorter videos = more likely people watch at least half, longer they
+          will lose attention.
+        </div>
+        <div>Encourage user interaction for shares and comments💬. </div>
+        <div>Ring light recommended to provide better lighting💡. </div>
+      </GroovyArticle>
+
+      <GroovyArticle customStyles={styles.overridegeneralarticle}>
         <p>Solo</p>
         <div>Think of telling a story. </div>
       </GroovyArticle>
