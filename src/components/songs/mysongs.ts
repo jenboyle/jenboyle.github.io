@@ -4,5 +4,6 @@ export const songs = [
     songtype: "mine",
     songname: "Community Sucks",
     key: "Key Am",
+    link: "aminor",
   },
 ];

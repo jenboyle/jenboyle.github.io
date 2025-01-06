@@ -4,6 +4,7 @@ export const songs = [
     songtype: "transcribe",
     songname: "All Eyez On Me - 2Pac",
     key: "Key C#",
+    link: "csharpmajor",
   },
   {
     jsonfile: "brokendreams",
@@ -73,6 +74,7 @@ export const songs = [
     songtype: "transcribe",
     songname: "Let Me Ride - Dr Dre",
     key: "Key C#",
+    link: "csharpmajor",
   },
   {
     jsonfile: "oceancruiser",

@@ -15,7 +15,7 @@ export const allKeys = [
       { key: "E Major", link: "emajor" },
       { key: "B Major", link: "bmajor" },
       { key: "F# Major", link: "fsharpmajor" },
-      { key: "C# Major" },
+      { key: "C# Major", link: "csharpmajor" },
       { key: "Ab Minor" },
       { key: "Eb Minor", link: "eflatminor" },
       { key: "Bb Minor", link: "bflatminor" },
@@ -30,7 +30,7 @@ export const allKeys = [
       { key: "C#m", link: "csharpminor" },
       { key: "G#m", link: "gsharpminor" },
       { key: "D#m", link: "dsharpminor" },
-      { key: "A#m" },
+      { key: "A#m", link: "asharpminor" },
     ],
   },
 ];

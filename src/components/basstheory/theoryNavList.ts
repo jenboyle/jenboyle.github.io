@@ -20,6 +20,10 @@ export const theoryNavList = [
     displaykey: "C Major",
   },
   {
+    jsonfile: "csharpmajor",
+    displaykey: "C# Major",
+  },
+  {
     jsonfile: "dflatmajor",
     displaykey: "Db Major",
   },
@@ -118,6 +122,10 @@ export const theoryNavList = [
   {
     jsonfile: "aminor",
     displaykey: "A Minor",
+  },
+  {
+    jsonfile: "asharpminor",
+    displaykey: "A# Minor",
   },
   {
     jsonfile: "bflatminor",

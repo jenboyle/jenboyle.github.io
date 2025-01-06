@@ -41,6 +41,7 @@
   "key14link": "fsharpmajor",
 
   "key15": "C# Major",
+  "key15link": "csharpmajor",
 
   "key16": "Ab Minor",
 
@@ -83,17 +84,6 @@
   "key29": "D#m",
   "key29link": "dsharpminor",
 
-  "key30": "A#m"
-
-
-
-
-
-
-
-
-
-
-
-
+  "key30": "A#m",
+  "key30link": "asharpminor"
 }
