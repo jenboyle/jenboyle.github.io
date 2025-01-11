@@ -1,0 +1,1 @@
+import{j as r}from"./index-l49KVYZr.js";import{G as e}from"./GroovyArticle-D53EQFFk.js";function i(){return r.jsxs(r.Fragment,{children:[r.jsx(e,{children:r.jsx("p",{children:"Keyboard Intervals for 25 keys keyboard"})}),r.jsx("div",{children:"Key of C"}),r.jsx("div",{children:r.jsx("img",{src:"./images/theory/keys/keyboard_c.png"})})]})}export{i as default};
