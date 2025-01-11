@@ -11,6 +11,7 @@ const AboutMe = lazy(() => import("./pages/AboutMe"));
 const BassTheory = lazy(() => import("./pages/BassTheory"));
 const JamTime = lazy(() => import("./pages/JamTime"));
 const Games = lazy(() => import("./pages/Games"));
+const Keys = lazy(() => import("./pages/Keys"));
 const Blogs = lazy(() => import("./pages/Blogs"));
 const Percussion = lazy(() => import("./pages/Percussion"));
 const Tips = lazy(() => import("./pages/Tips"));
@@ -49,6 +50,7 @@ function App() {
                 <Route path="percussion" element={<Percussion />}></Route>
                 <Route path="practice_plan" element={<PracticePlan />}></Route>
                 <Route path="games" element={<Games />}></Route>
+                <Route path="keys" element={<Keys />}></Route>
                 <Route path="blogs" element={<Blogs />}></Route>
                 <Route path="tips" element={<Tips />}></Route>
                 <Route path="*" element={<PageNotFound />}></Route>

@@ -76,6 +76,9 @@ function PageNav() {
             <NavLink to="/improvisation">Improvisation</NavLink>
           </li>
           <li onClick={hideExcess}>
+            <NavLink to="/keys">Keys</NavLink>
+          </li>
+          <li onClick={hideExcess}>
             <NavLink to="/my_content">My Content</NavLink>
           </li>
           <li onClick={hideExcess}>
