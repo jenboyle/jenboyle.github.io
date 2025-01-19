@@ -5,6 +5,8 @@ import IconButton from "@mui/material/IconButton";
 import EmailIcon from "@mui/icons-material/Email";
 import styles from "./Socials.module.css";
 
+const EtsyIcon = () => <img src="./images/icons/etsy.png"></img>;
+
 function Socials() {
   return (
     <footer className={styles.footer}>
@@ -49,6 +51,13 @@ function Socials() {
         rel="noopener noreferrer"
       >
         <YouTubeIcon />
+      </IconButton>
+      <IconButton
+        href="https://www.etsy.com/shop/GroovyJenCreations"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <EtsyIcon />
       </IconButton>
     </footer>
   );
