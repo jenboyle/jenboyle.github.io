@@ -1,0 +1,14 @@
+.boximg {
+  float: left;
+  padding: 10px;
+  max-width: 96%;
+  border: 5px #9984a9 solid;
+  margin: 2%;
+  background-color: lavenderblush;
+}
+
+.overridegeneralarticle p,
+.overridegeneralarticle div,
+.overridegeneralarticle li {
+  text-align: left;
+}

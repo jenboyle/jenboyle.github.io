@@ -73,11 +73,15 @@ function PageNav() {
             <NavLink to="/my_gear">Gear</NavLink>
           </li>
           <li onClick={hideExcess}>
+            <NavLink to="/groovy_designs">Groovy Designs</NavLink>
+          </li>
+          <li onClick={hideExcess}>
             <NavLink to="/improvisation">Improvisation</NavLink>
           </li>
           <li onClick={hideExcess}>
             <NavLink to="/keys">Keys</NavLink>
           </li>
+
           <li onClick={hideExcess}>
             <NavLink to="/my_content">My Content</NavLink>
           </li>
