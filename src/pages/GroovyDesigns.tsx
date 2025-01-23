@@ -5,7 +5,7 @@ function GroovyDesigns() {
   return (
     <>
       <GroovyArticle customStyles={styles.overridegeneralarticle}>
-        <p>Bass Embellishment cube</p>
+        <p>Bass Embellishment Cube</p>
         <img src="./designs/basscube1_1.png" className={styles.boximg}></img>
         <img src="./designs/basscube1_2.png" className={styles.boximg}></img>
       </GroovyArticle>
@@ -26,8 +26,9 @@ function GroovyDesigns() {
 
       <GroovyArticle customStyles={styles.overridegeneralarticle}>
         <p>Percussion Design 2</p>
-        <img src="./designs/percussion2_2.png" className={styles.boximg}></img>
+        
         <img src="./designs/percussion2_1.png" className={styles.boximg}></img>
+        <img src="./designs/percussion2_2.png" className={styles.boximg}></img>
       </GroovyArticle>
     </>
   );

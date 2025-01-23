@@ -20,6 +20,10 @@ function AboutMe() {
         learn more <Link to="/">theory</Link>. A practice{" "}
         <Link to="/jam_time">jam</Link> area.
       </GroovyArticle>
+      <GroovyArticle>
+        Qualifications
+        <p>Bass Grade 1 (RSL) - Distinction 🎸</p>
+      </GroovyArticle>
     </>
   );
 }
