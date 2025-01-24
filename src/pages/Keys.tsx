@@ -1,16 +1,6 @@
-import GroovyArticle from "../components/general/GroovyArticle";
+import GroovyKeyboard from "../components/keyboard/GroovyKeyboard";
 
 function Keys() {
-  return (
-    <>
-      <GroovyArticle>
-        <p>Keyboard Intervals for 25 keys keyboard</p>
-      </GroovyArticle>
-      <div>Key of C</div>
-      <div>
-        <img src="./images/theory/keys/keyboard_c.png"></img>
-      </div>
-    </>
-  );
+  return <GroovyKeyboard />;
 }
 export default Keys;
