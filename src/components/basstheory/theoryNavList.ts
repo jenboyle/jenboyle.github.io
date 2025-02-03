@@ -68,6 +68,10 @@ export const theoryNavList = [
     displaykey: "Diminished Triad",
   },
   {
+    jsonfile: "fret_dominant7arpeggios",
+    displaykey: "Dominant 7",
+  },
+  {
     jsonfile: "intervals",
     displaykey: "Intervals",
   },

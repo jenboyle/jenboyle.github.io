@@ -223,6 +223,18 @@ function BassTheoryFretboard({
                 : index == 3
                 ? styles.leftOffsetFive
                 : ""
+              : fretLocs!.match(/,/g)!.length == 4
+              ? index == 0
+                ? styles.leftOffsetHalfTwo
+                : index == 1
+                ? styles.leftOffsetHalfThree
+                : index == 2
+                ? styles.leftOffsetHalfFour
+                : index == 3
+                ? styles.leftOffsetHalfFive
+                : index == 4
+                ? styles.leftOffsetHalfSix
+                : ""
               : fretLocs!.match(/,/g)!.length == 5
               ? index == 0
                 ? styles.leftOffsetOne
