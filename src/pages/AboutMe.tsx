@@ -22,7 +22,8 @@ function AboutMe() {
       </GroovyArticle>
       <GroovyArticle>
         Qualifications
-        <p>Bass Grade 1 (RSL) - Distinction 🎸</p>
+        <p>Bass Grade 1 (RSL) - Distinction 🎸 - Jan 2025</p>
+        <p>Bass Grade 2 (RSL) - Distinction 🎸 - Feb 2025</p>
       </GroovyArticle>
     </>
   );
