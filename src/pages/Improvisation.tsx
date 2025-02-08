@@ -36,7 +36,7 @@ function Improvisation() {
         , rhythm 🎶, groove, key 🔑, the list goes on...
       </GroovyArticle>
       <GroovyArticle>
-        Improvising by youself or with a band are also two different scenarios.
+        Improvising by yourself or with a band are also two different scenarios.
         I do find myself for my own projects using my{" "}
         <Link to="/jam_time">jam</Link> page. I usually select a key, then a
         progression, and go to that theory page in my <Link to="/">theory</Link>
