@@ -50,7 +50,7 @@ function GroovyKeyboard() {
       <GroovyArticle customStyles={styles.overridegeneralarticle}>
         Key of {selKeyboard}
         <div>
-          <img src={`./images/theory/keys/${selKeyImage}`}></img>
+          <img src={`./images/theory/keys/${selKeyImage}`} width="95%"></img>
         </div>
       </GroovyArticle>
     </>
