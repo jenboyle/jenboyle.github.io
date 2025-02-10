@@ -1,4 +1,5 @@
 // import { useMediaQuery } from "@mui/material";
+import React from "react";
 import { GroovyTabTableType } from "../songs/Song";
 import styles from "./GroovyTabV2.module.css";
 //import { TheoryType } from "./BassTheoryContent";
@@ -12,120 +13,72 @@ function GroovyTabV2({ tab }: GroovyTabProps) {
   //console.log(mobile);
   return (
     <>
-      {tab.map((table, tindex) => (
+      {tab.map((table) => (
         <table key={`table_${table.tableid}`} className={styles.table}>
           {table.table.map((row, index) => (
-            <>
+            <React.Fragment key={`test_${table.tableid}_${index}`}>
               {row.text && (
-                <caption
-                  key={`caption_${tindex}_${index}`}
-                  className={styles.leftdiv}
-                >
-                  {row.text}
-                </caption>
+                <caption className={styles.leftdiv}>{row.text}</caption>
               )}
-              <tbody key={`tbod_${tindex}_${index}`}>
-                <tr key={`tr_g_${tindex}_${index}`}>
-                  <td key={`td_g_sep${tindex}_${index}`} className={styles.sep}>
-                    |
-                  </td>
+              <tbody>
+                <tr>
+                  <td className={styles.sep}>|</td>
                   {row.g.map((gthing, gindex) => (
-                    <>
-                      <td
-                        key={`td_g_${tindex}_${index}_${gindex}`}
-                        className={styles.tab}
-                      >
-                        <div key={`div_g_${tindex}_${index}_${gindex}`}>
-                          {gthing.g}
-                        </div>
+                    <React.Fragment
+                      key={`testg_${table.tableid}_${index}_${gindex}`}
+                    >
+                      <td className={styles.tab}>
+                        <div>{gthing.g}</div>
                       </td>
-                      <td
-                        key={`td_gsep_${tindex}_${index}_${gindex}`}
-                        className={styles.sep}
-                      >
-                        |
-                      </td>
-                    </>
+                      <td className={styles.sep}>|</td>
+                    </React.Fragment>
                   ))}
                 </tr>
 
-                <tr key={`tr_d_${tindex}_${index}`}>
-                  <td key={`td_d_sep${tindex}_${index}`} className={styles.sep}>
-                    |
-                  </td>
+                <tr>
+                  <td className={styles.sep}>|</td>
                   {row.d.map((dthing, dindex) => (
-                    <>
-                      <td
-                        key={`td_d_${tindex}_${index}_${dindex}`}
-                        className={styles.tab}
-                      >
-                        <div key={`div_d_${tindex}_${index}_${dindex}`}>
-                          {dthing.d}
-                        </div>
+                    <React.Fragment
+                      key={`testd_${table.tableid}_${index}_${dindex}`}
+                    >
+                      <td className={styles.tab}>
+                        <div>{dthing.d}</div>
                       </td>
-                      <td
-                        key={`td_dsep_${tindex}_${index}_${dindex}`}
-                        className={styles.sep}
-                      >
-                        |
-                      </td>
-                    </>
+                      <td className={styles.sep}>|</td>
+                    </React.Fragment>
                   ))}
                 </tr>
 
-                <tr key={`tr_a_${tindex}_${index}`}>
-                  <td key={`td_a_sep${tindex}_${index}`} className={styles.sep}>
-                    |
-                  </td>
+                <tr>
+                  <td className={styles.sep}>|</td>
                   {row.a.map((athing, aindex) => (
-                    <>
-                      <td
-                        key={`td_a_${tindex}_${index}_${aindex}`}
-                        className={styles.tab}
-                      >
-                        <div key={`div_a_${tindex}_${index}_${aindex}`}>
-                          {athing.a}
-                        </div>
+                    <React.Fragment
+                      key={`testa_${table.tableid}_${index}_${aindex}`}
+                    >
+                      <td className={styles.tab}>
+                        <div>{athing.a}</div>
                       </td>
-                      <td
-                        key={`td_asep_${tindex}_${index}_${aindex}`}
-                        className={styles.sep}
-                      >
-                        |
-                      </td>
-                    </>
+                      <td className={styles.sep}>|</td>
+                    </React.Fragment>
                   ))}
                 </tr>
 
-                <tr key={`tr_e_${tindex}_${index}`}>
-                  <td key={`td_e_sep${tindex}_${index}`} className={styles.sep}>
-                    |
-                  </td>
+                <tr>
+                  <td className={styles.sep}>|</td>
                   {row.e.map((ething, eindex) => (
-                    <>
-                      <td
-                        key={`td_e_${tindex}_${index}_${eindex}`}
-                        className={styles.tab}
-                      >
-                        <div key={`div_e_${tindex}_${index}_${eindex}`}>
-                          {ething.e}
-                        </div>
+                    <React.Fragment
+                      key={`teste_${table.tableid}_${index}_${eindex}`}
+                    >
+                      <td className={styles.tab}>
+                        <div>{ething.e}</div>
                       </td>
-                      <td
-                        key={`td_esep_${tindex}_${index}_${eindex}`}
-                        className={styles.sep}
-                      >
-                        |
-                      </td>
-                    </>
+                      <td className={styles.sep}>|</td>
+                    </React.Fragment>
                   ))}
                 </tr>
-                <tr
-                  key={`tr_space_${tindex}_${index}`}
-                  className={styles.spacer}
-                />
+                <tr className={styles.spacer} />
               </tbody>
-            </>
+            </React.Fragment>
           ))}
         </table>
       ))}
