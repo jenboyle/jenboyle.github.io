@@ -70,6 +70,7 @@
   border: none;
   border-bottom: 1px solid #ddd;
   background-color: lavenderblush;
+  color: black;
 }
 
 .myInputtheory:focus {

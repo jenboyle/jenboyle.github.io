@@ -23,6 +23,7 @@ function BassTheoryFretboard({
   const [fretDrone, setFretDrone] = useState(
     theoryJson.fret_displays![0].drone
   );
+  const [searchQuery, setSearchQuery] = useState("");
 
   //type Allkeys = keyof typeof theoryJson;
   //type mykeys = Extract<keyof typeof theoryJson, `fret_name${number}`>;
@@ -94,6 +95,13 @@ function BassTheoryFretboard({
     [context, theoryJson]
   );
 
+  const searchedFretDisplays =
+    searchQuery.length > 0
+      ? theoryJson.fret_displays!.filter((fretd) =>
+          fretd.fret_name.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+      : theoryJson.fret_displays;
+
   //[theoryJson.fret_name1, buttonText]
   function handleClick() {
     setShowOption(!showOption);
@@ -133,6 +141,10 @@ function BassTheoryFretboard({
   //   </div>
   // }
 
+  function handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
+    setSearchQuery(e.target.value);
+  }
+
   return (
     <>
       {theoryJson.when ? <p className={styles.p}>{theoryJson.when}</p> : null}
@@ -161,10 +173,11 @@ function BassTheoryFretboard({
             type="text"
             placeholder="Search..."
             className={styles.myInputtheory}
+            onChange={handleSearch}
           ></input>
           <>
             <ul>
-              {theoryJson.fret_displays!.map((fret_display) => (
+              {searchedFretDisplays!.map((fret_display) => (
                 <li
                   key={fret_display.fret_id}
                   id={fret_display.fret_id}
