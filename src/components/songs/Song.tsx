@@ -150,6 +150,7 @@ function Song({ jsonfile }: SongProps) {
               <iframe
                 src={`https://www.tiktok.com/embed/${songJson.video}`}
                 className={styles.iframe}
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope"
               ></iframe>
             </div>
           ) : null}
