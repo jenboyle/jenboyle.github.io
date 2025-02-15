@@ -132,6 +132,32 @@ export default Tips;
           <GroovyTipFretboard />
           <img
             src="./images/theory/chords/circle.png"
+            className={styles.d72oneloc}
+          ></img>
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.d72twoloc}
+          ></img>
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.d72threeloc}
+          ></img>
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.d72fourloc}
+          ></img>
+          <img
+            src="./images/theory/chords/circle.png"
+            className={styles.d72fiveloc}
+          ></img>
+        </div>
+      </GroovyArticle>
+      
+  <GroovyArticle customStyles={styles.overridegeneralarticle}>
+        <div className={styles.hovers}>
+          <GroovyTipFretboard />
+          <img
+            src="./images/theory/chords/circle.png"
             className={styles.cnewloc}
           ></img>
           <img

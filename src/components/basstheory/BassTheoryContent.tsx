@@ -562,14 +562,43 @@ function BassTheoryContent({
                           Minor
                         </BassTheoryTableLink>
                       ) : (
-                        <BassTheoryTableLink
-                          handleNavTheory={handleNavTheory}
-                          chord={chord}
-                          specifyfile="fret_majortriadarpeggios"
-                          hoverimg="./theory/shapes/majortriad.png"
-                        >
-                          Major
-                        </BassTheoryTableLink>
+                        <>
+                          <BassTheoryTableLink
+                            handleNavTheory={handleNavTheory}
+                            chord={chord}
+                            specifyfile="fret_majortriadarpeggios"
+                            hoverimg="./theory/shapes/majortriad.png"
+                          >
+                            Major
+                          </BassTheoryTableLink>
+                          {theoryJson.song.indexOf("Major") != -1 &&
+                          index == 4 ? (
+                            <>
+                              <span>, </span>
+                              <BassTheoryTableLink
+                                handleNavTheory={handleNavTheory}
+                                chord={chord}
+                                specifyfile="fret_dominant7arpeggios"
+                                hoverimg="./theory/shapes/dom7.png"
+                              >
+                                Dom7
+                              </BassTheoryTableLink>
+                            </>
+                          ) : theoryJson.song.indexOf("Minor") != -1 &&
+                            index == 6 ? (
+                            <>
+                              <span>, </span>
+                              <BassTheoryTableLink
+                                handleNavTheory={handleNavTheory}
+                                chord={chord}
+                                specifyfile="fret_dominant7arpeggios"
+                                hoverimg="./theory/shapes/dom7.png"
+                              >
+                                Dom7
+                              </BassTheoryTableLink>
+                            </>
+                          ) : null}
+                        </>
                       )}
                     </td>
                   </tr>

@@ -108,3 +108,33 @@
   top: -13px;
   left: 68px;
 }
+
+.d72oneloc {
+  position: relative;
+  top: -13px;
+  left: 68px;
+}
+
+.d72twoloc {
+  position: relative;
+  top: -33px;
+  left: 0px;
+}
+
+.d72threeloc {
+  position: relative;
+  top: -33px;
+  left: 127px;
+}
+
+.d72fourloc {
+  position: relative;
+  top: -53px;
+  left: 8px;
+}
+
+.d72fiveloc {
+  position: relative;
+  top: -53px;
+  left: 87px;
+}
