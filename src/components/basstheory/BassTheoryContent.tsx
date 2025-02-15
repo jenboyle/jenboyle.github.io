@@ -9,6 +9,7 @@ import GroovyTab from "../general/GroovyTab";
 import BassTheoryTableLink from "./BassTheoryTableLink";
 import GroovyTools from "../groovytools/GroovyTools";
 import BassChord from "./BassChord";
+import { HashLink } from "react-router-hash-link";
 //import {useNavigate } from "react-router-dom";
 interface TheoryProps {
   jsonfile: string;
@@ -417,7 +418,9 @@ function BassTheoryContent({
                 {theoryJson.chords.split(",").map((chord, index) => (
                   <tr key={index}>
                     <td>{index + 1}</td>
-                    <td id={`chord${index + 1}`}>{chord}</td>
+                    <td id={`chord${index + 1}`}>
+                      <HashLink to="/#chordsection">{chord}</HashLink>
+                    </td>
 
                     <td>{theoryJson.chordtones.split(",")[index]}</td>
 
@@ -655,7 +658,7 @@ function BassTheoryContent({
           {theoryJson.e33 ? (
             <GroovyTab json={theoryJson} rowBeginning={33} />
           ) : null}
-
+          <div id="chordsection" className={styles.chordsectiondiv} />
           {theoryJson.chord1 ? (
             <>
               <div className={styles.chorddiv}>

@@ -71,3 +71,7 @@
 .chorddiv {
   display: flex;
 }
+
+.chordsectiondiv {
+  height: 30px;
+}
