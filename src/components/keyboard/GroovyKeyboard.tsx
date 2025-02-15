@@ -22,7 +22,6 @@ function GroovyKeyboard() {
   return (
     <>
       <GroovyArticle customStyles={styles.overridegeneralarticle}>
-        Keyboard Intervals for 25 keys keyboard
         <GroovyButton handleClick={showDD}>
           {keyboardList.map((kb) =>
             kb.displaykey === selKeyboard ? kb.displaykey : null
@@ -49,10 +48,30 @@ function GroovyKeyboard() {
       ) : null}
       <GroovyArticle customStyles={styles.overridegeneralarticle}>
         Key of {selKeyboard}
+      </GroovyArticle>
+      <GroovyArticle customStyles={styles.overridegeneralarticle}>
+        Keyboard Intervals for 25 keys keyboard
         <div>
           <img src={`./images/theory/keys/${selKeyImage}`} width="95%"></img>
         </div>
       </GroovyArticle>
+
+      {keyboardList.map((kb) =>
+        kb.displaykey === selKeyboard ? (
+          kb.pentatonic ? (
+            <GroovyArticle customStyles={styles.overridegeneralarticle}>
+              {`${kb.displaykey} Pentatonic (Right hand fingerings)`}
+
+              <div>
+                <img
+                  src={`./images/theory/keys/${kb.pentatonic}`}
+                  width="95%"
+                ></img>
+              </div>
+            </GroovyArticle>
+          ) : null
+        ) : null
+      )}
     </>
   );
 }

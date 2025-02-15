@@ -26,6 +26,7 @@ export const keyboardList = [
   {
     displaykey: "F#/Gb",
     keyimage: "keyboard_fsharp.png",
+    pentatonic: "fsharp_pentatonic.png",
   },
   {
     displaykey: "G",
