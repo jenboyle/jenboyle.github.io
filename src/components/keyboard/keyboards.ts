@@ -2,6 +2,7 @@ export const keyboardList = [
   {
     displaykey: "C",
     keyimage: "keyboard_c.png",
+    pentatonic: "c_pentatonic.png",
   },
   {
     displaykey: "C#/Db",
