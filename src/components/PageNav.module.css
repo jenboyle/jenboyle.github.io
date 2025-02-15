@@ -52,6 +52,10 @@
   display: inline-grid;
   background-color: rgb(198, 190, 205);
   align-items: center;
+  max-height: 65vh;
+  overflow-y: auto;
+  position: relative;
+  z-index: 999;
 }
 
 .nav {

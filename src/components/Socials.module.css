@@ -10,5 +10,5 @@
   position: fixed;
   height: 60px;
   top: calc (110vh - 60px);
-  z-index: 999;
+  z-index: 800;
 }
