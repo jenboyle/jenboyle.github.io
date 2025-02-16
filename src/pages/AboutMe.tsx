@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import GroovyArticle from "../components/general/GroovyArticle";
+import styles from "./AboutMe.module.css";
 
 function AboutMe() {
   return (
@@ -20,10 +21,21 @@ function AboutMe() {
         learn more <Link to="/">theory</Link>. A practice{" "}
         <Link to="/jam_time">jam</Link> area.
       </GroovyArticle>
-      <GroovyArticle>
+      <GroovyArticle customStyles={styles.overridegeneralarticleheader}>
         Qualifications
-        <p>Bass Grade 1 (RSL) - Distinction 🎸 - Jan 2025</p>
-        <p>Bass Grade 2 (RSL) - Distinction 🎸 - Feb 2025</p>
+      </GroovyArticle>
+      <GroovyArticle customStyles={styles.overridegeneralarticle}>
+        Bass Grade 1 (RSL) - Distinction 🎸 - Jan 2025
+      </GroovyArticle>
+      <GroovyArticle customStyles={styles.overridegeneralarticle}>
+        Bass Grade 2 (RSL) - Distinction 🎸 - Feb 2025
+      </GroovyArticle>
+      <GroovyArticle customStyles={styles.overridegeneralarticle}>
+        Bass Grade 4 (RSL) - Merit 🎸 - Feb 2025
+      </GroovyArticle>
+
+      <GroovyArticle customStyles={styles.overridegeneralarticle}>
+        <p>Guitar Grade 1 (RSL) - Merit 🎸 - Feb 2025</p>
       </GroovyArticle>
     </>
   );

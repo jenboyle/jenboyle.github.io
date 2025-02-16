@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import AboutMe from "./AboutMe";
 import { MemoryRouter } from "react-router-dom";
 
-const aboutMePageText = "About Me";
+const aboutMePageText = "Qualifications";
 test("AboutMe Page", async () => {
   render(
     <MemoryRouter>
