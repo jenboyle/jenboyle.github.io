@@ -20,7 +20,7 @@ function JamProgression() {
     <>
       <GroovyButton handleClick={handleClick}>Guitar Progression</GroovyButton>
 
-      <div className={styles.div}>
+      <div className={styles.div} data-testid="jamProgDiv">
         <table className={styles.table}>
           <tbody>
             <tr>

@@ -27,7 +27,7 @@ function JamKey() {
   return (
     <>
       <GroovyButton handleClick={handleClick}>Key Generator</GroovyButton>
-      <div className={styles.div}>
+      <div className={styles.div} data-testid="jamKeyDiv">
         {randomKey > -1 ? (
           allKeys[0].keys[randomKey].link ? (
             <Link

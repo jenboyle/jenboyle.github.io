@@ -22,7 +22,7 @@ function JamSpice() {
     <>
       <GroovyButton handleClick={handleClick}>Spice It Up</GroovyButton>
 
-      <div className={styles.div}>
+      <div className={styles.div} data-testid="jamSpiceDiv">
         {random > -1 ? spices[0].spices[random].spice : null}
       </div>
     </>

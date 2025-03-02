@@ -19,7 +19,7 @@ function JamGuitarStrum() {
       <div className={styles.jambtn}>
         <GroovyButton handleClick={handleClick}>Guitar Strum</GroovyButton>
       </div>
-      <div className={styles.div}>
+      <div className={styles.div} data-testid="jamStrum">
         <table className={styles.table}>
           <tbody>
             <tr>
