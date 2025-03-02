@@ -26,9 +26,10 @@ function GroovyDesigns() {
 
       <GroovyArticle customStyles={styles.overridegeneralarticle}>
         <p>Percussion Design 2</p>
-        
+
         <img src="./designs/percussion2_1.png" className={styles.boximg}></img>
         <img src="./designs/percussion2_2.png" className={styles.boximg}></img>
+        <img src="./designs/percussion2_3.png" className={styles.boximg}></img>
       </GroovyArticle>
     </>
   );
