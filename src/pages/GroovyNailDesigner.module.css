@@ -1,0 +1,67 @@
+.pinky {
+  height: 80px;
+  width: 40px;
+
+  border-radius: 50%;
+  display: inline-block;
+}
+.ring {
+  height: 100px;
+  width: 45px;
+  background-color: #d18686;
+  border-radius: 50%;
+  display: inline-block;
+}
+.middle {
+  height: 110px;
+  width: 50px;
+  background-color: #d18686;
+  border-radius: 50%;
+  display: inline-block;
+}
+.pointer {
+  height: 100px;
+  width: 45px;
+  background-color: #d18686;
+  border-radius: 50%;
+  display: inline-block;
+}
+.thumb {
+  height: 80px;
+  width: 60px;
+  background-color: #d18686;
+  border-radius: 50%;
+  display: inline-block;
+}
+.spacer {
+  width: 30px;
+  display: inline-block;
+}
+
+.base {
+  background-color: #d18686;
+}
+
+.option {
+  color: #d18686;
+}
+
+option:hover,
+option:checked,
+option:active,
+option:focus {
+  background: linear-gradient(#ffffd4, #ffffd4);
+  position: relative;
+}
+
+.nude {
+  background-color: #d18686;
+}
+
+.black {
+  background-color: #000;
+}
+
+.white {
+  background-color: #fff;
+}

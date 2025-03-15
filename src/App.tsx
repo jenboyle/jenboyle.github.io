@@ -16,6 +16,7 @@ const Blogs = lazy(() => import("./pages/Blogs"));
 const Percussion = lazy(() => import("./pages/Percussion"));
 const Tips = lazy(() => import("./pages/Tips"));
 const GroovyDesigns = lazy(() => import("./pages/GroovyDesigns"));
+const GroovyNailDesigner = lazy(() => import("./pages/GroovyNailDesigner"));
 const MyContent = lazy(() => import("./pages/MyContent"));
 const MyGear = lazy(() => import("./pages/MyGear"));
 const PedalCreation = lazy(() => import("./pages/PedalCreation"));
@@ -51,6 +52,10 @@ function App() {
                 <Route
                   path="groovy_designs"
                   element={<GroovyDesigns />}
+                ></Route>
+                <Route
+                  path="groovy_nail_designer"
+                  element={<GroovyNailDesigner />}
                 ></Route>
                 <Route path="percussion" element={<Percussion />}></Route>
                 <Route path="practice_plan" element={<PracticePlan />}></Route>

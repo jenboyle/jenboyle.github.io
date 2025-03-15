@@ -76,6 +76,9 @@ function PageNav() {
             <NavLink to="/groovy_designs">Groovy Designs</NavLink>
           </li>
           <li onClick={hideExcess}>
+            <NavLink to="/groovy_nail_designer">Groovy Nail Designer</NavLink>
+          </li>
+          <li onClick={hideExcess}>
             <NavLink to="/improvisation">Improvisation</NavLink>
           </li>
           <li onClick={hideExcess}>

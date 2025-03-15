@@ -8,8 +8,9 @@ function Header() {
   if (whereami.pathname !== "/") {
     currentPage = whereami.pathname.substring(1);
     currentPage = currentPage.charAt(0).toUpperCase() + currentPage.slice(1);
-    const underscorePresent = currentPage.indexOf("_");
-    if (underscorePresent != -1) {
+    //const underscorePresent = currentPage.indexOf("_");
+    while (currentPage.indexOf("_") != -1) {
+      const underscorePresent = currentPage.indexOf("_");
       currentPage = currentPage.replace("_", " ");
       currentPage =
         currentPage.substring(0, underscorePresent + 1) +

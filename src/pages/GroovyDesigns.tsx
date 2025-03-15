@@ -31,6 +31,9 @@ function GroovyDesigns() {
         <img src="./designs/percussion2_2.png" className={styles.boximg}></img>
         <img src="./designs/percussion2_3.png" className={styles.boximg}></img>
       </GroovyArticle>
+      <p>Reflect with engraved sunflower picture taken from my garden. </p>
+      <p>Should have put join on the bottom side. </p>
+      <p>Although intended equal noise, two were quieter.</p>
     </>
   );
 }
