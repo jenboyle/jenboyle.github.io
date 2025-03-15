@@ -12,31 +12,26 @@
 .pinky {
   height: 80px;
   width: 40px;
-
   border-radius: 50%;
 }
 .ring {
   height: 100px;
   width: 45px;
-  background-color: #d18686;
   border-radius: 50%;
 }
 .middle {
   height: 110px;
   width: 50px;
-  background-color: #d18686;
   border-radius: 50%;
 }
 .pointer {
   height: 100px;
   width: 45px;
-  background-color: #d18686;
   border-radius: 50%;
 }
 .thumb {
   height: 80px;
   width: 60px;
-  background-color: #d18686;
   border-radius: 50%;
 }
 .spacer {
@@ -60,8 +55,14 @@ option:focus {
   position: relative;
 }
 
+.tddropdowns {
+  width: 60px;
+  height: 60px;
+}
+
 .colorpicker {
-  position: relative;
+  position: absolute;
+  width: 40px;
   display: block;
   text-align: left;
   border: 1px solid grey;
