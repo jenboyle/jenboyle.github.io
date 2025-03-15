@@ -1,37 +1,43 @@
+.trs td {
+  text-align: center;
+  vertical-align: bottom;
+  width: 60px;
+}
+
+.allnails div {
+  border: 1px solid grey;
+  display: inline-block;
+}
+
 .pinky {
   height: 80px;
   width: 40px;
 
   border-radius: 50%;
-  display: inline-block;
 }
 .ring {
   height: 100px;
   width: 45px;
   background-color: #d18686;
   border-radius: 50%;
-  display: inline-block;
 }
 .middle {
   height: 110px;
   width: 50px;
   background-color: #d18686;
   border-radius: 50%;
-  display: inline-block;
 }
 .pointer {
   height: 100px;
   width: 45px;
   background-color: #d18686;
   border-radius: 50%;
-  display: inline-block;
 }
 .thumb {
   height: 80px;
   width: 60px;
   background-color: #d18686;
   border-radius: 50%;
-  display: inline-block;
 }
 .spacer {
   width: 30px;
@@ -54,14 +60,44 @@ option:focus {
   position: relative;
 }
 
+.colorpicker {
+  position: relative;
+  display: block;
+  text-align: left;
+  border: 1px solid grey;
+}
+
+.colorpicker ul {
+  margin: 0;
+  padding: 0;
+}
+
+.colorpicker li {
+  list-style-type: none;
+  text-align: left;
+}
+
+.closeddd {
+  color: #000 !important;
+  text-align: right;
+}
+
 .nude {
   background-color: #d18686;
+  color: #d18686;
 }
 
 .black {
   background-color: #000;
+  color: #000;
 }
 
 .white {
   background-color: #fff;
+  color: #fff;
+}
+
+.red {
+  background-color: #ff0000;
+  color: #ff0000;
 }
