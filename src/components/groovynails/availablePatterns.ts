@@ -15,6 +15,9 @@ export const availablePatterns = [
     pattern: "./images/nails/animal_1.png",
   },
   {
+    pattern: "./images/nails/speckle.png",
+  },
+  {
     pattern: "./images/nails/flower1.png",
   },
   {
