@@ -16,7 +16,10 @@ function BaseColorPicker({
   handleColorChoice,
 }: BaseColorPickerProps) {
   return (
-    <div className={styles.colorpicker} onClick={handleShowBaseColorPicker}>
+    <div
+      className={`${styles.colorpicker} ${styles.colorpickerz}`}
+      onClick={handleShowBaseColorPicker}
+    >
       <div
         className={` ${showBaseColorPicker ? "" : currentBaseColor} ${
           showBaseColorPicker ? "" : styles.closeddd
@@ -32,7 +35,7 @@ function BaseColorPicker({
                 className={polish.polish}
                 onClick={handleColorChoice}
               >
-                test
+                .
               </li>
             ))}
           </ul>

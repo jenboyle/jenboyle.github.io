@@ -1,12 +1,55 @@
+.nailtable {
+  table-layout: fixed;
+  width: 660px;
+  height: 100px;
+  display: table;
+}
+
+.tbody {
+  display: block;
+}
+
+.trs {
+  height: 118px;
+}
 .trs td {
   text-align: center;
-  vertical-align: bottom;
+  vertical-align: top;
   width: 60px;
+  height: 118px;
+  display: table-cell;
+}
+
+.allnailsdivoverlaying {
+  position: relative;
 }
 
 .allnails div {
   border: 1px solid grey;
   display: inline-block;
+}
+
+.overlay {
+  position: relative;
+  top: -4px;
+}
+
+.overlaymedium {
+  position: relative;
+  top: 8px;
+  left: 2px;
+}
+
+.overlaylarge {
+  position: relative;
+  top: 8px;
+  left: 2px;
+}
+
+.overlaythumb {
+  position: relative;
+  top: -4px;
+  left: 2px;
 }
 
 .pinky {
@@ -60,6 +103,14 @@ option:focus {
   height: 60px;
 }
 
+.colorpickerz {
+  z-index: 100;
+}
+
+.patternpicker {
+  z-index: 50;
+}
+
 .colorpicker {
   position: absolute;
   width: 40px;
@@ -101,4 +152,82 @@ option:focus {
 .red {
   background-color: #ff0000;
   color: #ff0000;
+}
+
+.silver2 {
+  background: linear-gradient(
+    90deg,
+    #7e7e7e 0%,
+    #e3e3e3 25%,
+    #787878 50%,
+    #e3e3e3 75%,
+    #7e7e7e 100%
+  );
+  color: #7e7e7e;
+}
+
+.silver {
+  background: conic-gradient(
+    #d7d7d7,
+    #c3c3c3,
+    #cccccc,
+    #c6c6c6,
+    #d7d7d7,
+    #c3c3c3,
+    #cccccc,
+    #c6c6c6,
+    #d7d7d7,
+    #c3c3c3,
+    #cccccc,
+    #c6c6c6,
+    #d7d7d7,
+    #c3c3c3,
+    #cccccc,
+    #c6c6c6
+  );
+  color: #cccccc;
+}
+
+.gold {
+  background: conic-gradient(
+    #edc800,
+    #e3b600,
+    #f3cf00,
+    #ffe800,
+    #edc800,
+    #e3b600,
+    #f3cf00,
+    #ffe800,
+    #edc800,
+    #e3b600,
+    #f3cf00,
+    #ffe800,
+    #edc800,
+    #e3b600,
+    #f3cf00,
+    #ffe800
+  );
+  color: #ffe800;
+}
+
+.pinkchrome {
+  background: conic-gradient(
+    #e6e9bf,
+    #d2b5aa,
+    #cbaea3,
+    #d4b5ab,
+    #e6e9bf,
+    #d2b5aa,
+    #cbaea3,
+    #d4b5ab,
+    #e6e9bf,
+    #d2b5aa,
+    #cbaea3,
+    #d4b5ab,
+    #e6e9bf,
+    #d2b5aa,
+    #cbaea3,
+    #d4b5ab
+  );
+  color: #d4b5ab;
 }

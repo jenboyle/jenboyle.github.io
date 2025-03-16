@@ -11,6 +11,19 @@ export const availablePolish = [
     polish: styles.white,
   },
   {
+    polish: styles.silver2,
+  },
+  {
+    polish: styles.silver,
+  },
+  {
+    polish: styles.gold,
+  },
+  {
+    polish: styles.pinkchrome,
+  },
+
+  {
     polish: styles.black,
   },
 ];
