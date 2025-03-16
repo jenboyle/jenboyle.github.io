@@ -122,6 +122,8 @@ option:focus {
 .colorpicker ul {
   margin: 0;
   padding: 0;
+  height: 200px;
+  overflow-y: scroll;
 }
 
 .colorpicker li {
@@ -138,15 +140,93 @@ option:focus {
   background-color: #d18686;
   color: #d18686;
 }
+.white {
+  background-color: #fff;
+  color: #fff;
+}
+.tanlight {
+  background-color: #fee9cd;
+  color: #fee9cd;
+}
+.tan {
+  background-color: #d2b48c;
+  color: #d2b48c;
+}
+
+.greenlight {
+  background-color: #90ee90;
+  color: #90ee90;
+}
+.greenmedium {
+  background-color: #9bd69b;
+  color: #9bd69b;
+}
+.green {
+  background-color: #008000;
+  color: #008000;
+}
+.greendark {
+  background-color: #006400;
+  color: #006400;
+}
+.bluelight {
+  background-color: #add8e6;
+  color: #add8e6;
+}
+.bluedark {
+  background-color: #0000ff;
+  color: #0000ff;
+}
 
 .black {
   background-color: #000;
   color: #000;
 }
 
-.white {
-  background-color: #fff;
-  color: #fff;
+.orangelight {
+  background-color: #ffa07a;
+  color: #ffa07a;
+}
+.orange {
+  background-color: #ffa500;
+  color: #ffa500;
+}
+.orangedark {
+  background-color: #ff8c00;
+  color: #ff8c00;
+}
+.pinklight {
+  background-color: #ffc0cb;
+  color: #ffc0cb;
+}
+.coral {
+  background-color: #ff507f;
+  color: #ff507f;
+}
+.pinkbright {
+  background-color: #fb57d5;
+  color: #fb57d5;
+}
+.pink {
+  background-color: #f26fae;
+  color: #f26fae;
+}
+.pinkdark {
+  background-color: #ff00ff;
+  color: #ff00ff;
+}
+
+.purplelight {
+  background-color: #dda0dd;
+  color: #dda0dd;
+}
+.purple {
+  background-color: #800080;
+  color: #800080;
+}
+.purpledark {
+  background-color: #3c123c;
+  color: #3c123c;
 }
 
 .red {
@@ -210,7 +290,7 @@ option:focus {
   color: #ffe800;
 }
 
-.pinkchrome {
+.pinklightchrome {
   background: conic-gradient(
     #e6e9bf,
     #d2b5aa,
