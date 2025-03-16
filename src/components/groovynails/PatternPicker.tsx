@@ -43,7 +43,7 @@ function PatternPicker({
                       id={pattern.pattern}
                     ></img>
                   ) : (
-                    "-"
+                    <span id={pattern.pattern}>👸</span>
                   )}
                 </div>
               </li>
@@ -54,7 +54,7 @@ function PatternPicker({
             {currentPattern ? (
               <img src={currentPattern} width="10px" height="20px"></img>
             ) : (
-              <span>⡑</span>
+              <span>👸</span>
             )}
 
             <IoIosArrowDown />

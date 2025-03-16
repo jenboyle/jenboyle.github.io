@@ -59,6 +59,13 @@ export const availablePolish = [
     polish: styles.bluedark,
   },
   {
+    polish: styles.ombreblueandgreen,
+  },
+
+  {
+    polish: styles.ombrepinkandgreen,
+  },
+  {
     polish: styles.silver2,
   },
   {

@@ -234,6 +234,16 @@ option:focus {
   color: #ff0000;
 }
 
+.ombreblueandgreen {
+  background: linear-gradient(0deg, #70c2d7 16%, #c3eea7 87%);
+  color: #70c2d7;
+}
+
+.ombrepinkandgreen {
+  background: radial-gradient(circle, #c9e2af 29%, #eeaeca 100%);
+  color: #eeaeca;
+}
+
 .silver2 {
   background: linear-gradient(
     90deg,
