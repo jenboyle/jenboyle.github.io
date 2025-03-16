@@ -152,6 +152,14 @@ option:focus {
   background-color: #d2b48c;
   color: #d2b48c;
 }
+.yellowlight {
+  background-color: #ffffe0;
+  color: #ffffe0;
+}
+.yellow {
+  background-color: #ffff00;
+  color: #ffff00;
+}
 
 .greenlight {
   background-color: #90ee90;

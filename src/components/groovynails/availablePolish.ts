@@ -14,6 +14,12 @@ export const availablePolish = [
     polish: styles.tan,
   },
   {
+    polish: styles.yellowlight,
+  },
+  {
+    polish: styles.yellow,
+  },
+  {
     polish: styles.orangelight,
   },
   {
