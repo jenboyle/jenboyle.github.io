@@ -14,6 +14,20 @@ export const songs = [
     link: "aminor",
   },
   {
+    jsonfile: "swimmingpool",
+    songtype: "mine",
+    songname: "Swimming Pool",
+    key: "F Blues",
+    link: "fret_blues",
+  },
+  {
+    jsonfile: "tresamigos",
+    songtype: "mine",
+    songname: "Tres Amigos",
+    key: "Key G#m",
+    link: "gsharpminor",
+  },
+  {
     jsonfile: "trolls",
     songtype: "mine",
     songname: "Trolls Have Feelings Too",
