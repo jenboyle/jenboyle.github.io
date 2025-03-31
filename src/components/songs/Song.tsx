@@ -41,6 +41,7 @@ export type SongType = {
   by: string;
   key: string;
   theorylink: string;
+  context?: string;
   tuning: string;
   tab?: GroovyTabTableType[];
   drum?: string;
@@ -126,7 +127,14 @@ function Song({ jsonfile }: SongProps) {
             <>
               <p>
                 Key -{" "}
-                {songJson.theorylink ? (
+                {songJson.theorylink && songJson.context ? (
+                  <Link
+                    to={`/?jamkey=${songJson.theorylink}&jamkeycontext=${songJson.context}`}
+                    state={{ selkey: songJson.theorylink }}
+                  >
+                    {songJson.key}
+                  </Link>
+                ) : songJson.theorylink ? (
                   <Link
                     to={`/?jamkey=${songJson.theorylink}`}
                     state={{ selkey: songJson.theorylink }}
@@ -150,7 +158,7 @@ function Song({ jsonfile }: SongProps) {
               <iframe
                 src={`https://www.tiktok.com/embed/${songJson.video}`}
                 className={styles.iframe}
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope;"
               ></iframe>
             </div>
           ) : null}

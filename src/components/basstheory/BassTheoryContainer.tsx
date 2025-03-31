@@ -15,13 +15,18 @@ function BassTheory({ initialKey = "aflatmajor" }) {
   const { dronePlaying, toggleDronePlaying } = useTool();
   const [ddVis, setDdVis] = useState(false);
   const jamkey = searchParams.get("jamkey");
+  const jamkeycontext = searchParams.get("jamkeycontext");
   useEffect(() => {
     if (jamkey) {
       setSelectedKey(jamkey);
       searchParams.delete("jamkey");
+      if (jamkeycontext) {
+        setContext(jamkeycontext);
+        searchParams.delete("jamkeycontext");
+      }
       setSearchParams(searchParams);
     }
-  }, [jamkey, searchParams, setSearchParams]);
+  }, [jamkey, jamkeycontext, searchParams, setSearchParams]);
 
   // useEffect(() => {
   //   document.body.addEventListener("click", (e) => {

@@ -228,7 +228,6 @@ function BassTheoryContent({
             <table className={styles.chord}>
               <tbody>
                 <tr>
-                  <th></th>
                   <th>Chord</th>
                   <th>Tones</th>
                   <th>Mode</th>
@@ -237,9 +236,14 @@ function BassTheoryContent({
 
                 {theoryJson.chords.split(",").map((chord, index) => (
                   <tr key={index}>
-                    <td>{index + 1}</td>
                     <td id={`chord${index + 1}`}>
-                      <HashLink to="/#chordsection">{chord}</HashLink>
+                      <span className={styles.item}>
+                        <HashLink to="/#chordsection">{chord}</HashLink>
+                        <img
+                          className={styles.quicklook}
+                          src={`./theory/shapes/${index + 1}.png`}
+                        ></img>
+                      </span>
                     </td>
 
                     <td>{theoryJson.chordtones.split(",")[index]}</td>
