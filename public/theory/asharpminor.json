@@ -6,7 +6,7 @@
   "notes": "A#, B#, C#, D#, E#, F#, G# (7 sharps/Bbm 5 flats) - Relative major: ",
   "relativelink": "csharpmajor",
   "relativelinktext": "C#",
-  "drone": "./audio/drones/drone_bb.mp3",
+  "drone": "./audio/drones/drone_asharp.mp3",
   "chords": "A#m,B#dim,C#,D#m,E#m,F#,G#",
   "chordtones": "A#|C#|E#, B#|D#|F#, C#|E#|G#, D#|F#|A#, E#|G#|B#, F#|A#|C#, G#|B#|D#",
 

@@ -26,6 +26,10 @@ function GroovyToolDrone({
   //const [dronePlaying, setDronePlaying] = useState(false);
   //const droneRef = useRef<HTMLSpanElement>();
 
+  const droneName = drone
+    .substring(drone.indexOf("_") + 1, drone.indexOf(".mp3"))
+    .replace("sharp", "#");
+
   useEffect(
     function () {
       function handleClick(e: MouseEvent) {
@@ -86,7 +90,7 @@ function GroovyToolDrone({
 
   return (
     <div className={styles.tool}>
-      Drone
+      {droneName} Drone
       <span ref={droneRef} className={styles.play} onClick={toggleDronePlaying}>
         {dronePlaying ? <PauseCircleIcon /> : <PlayCircleOutlineIcon />}
       </span>
