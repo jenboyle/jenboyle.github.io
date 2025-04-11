@@ -5,10 +5,6 @@
   color: white;
 }
 
-.tool::first-letter {
-  text-transform: capitalize;
-}
-
 .play {
   position: relative;
   bottom: -6px;

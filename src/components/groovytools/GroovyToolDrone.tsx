@@ -3,6 +3,7 @@ import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import PauseCircleIcon from "@mui/icons-material/PauseCircle";
 import { useEffect, useRef, useState } from "react";
 import { useTool } from "../../context/ToolContext";
+import { allDrones } from "./allDrones";
 
 // dronePlaying: boolean;
 // toggleDronePlay(): void;
@@ -16,8 +17,8 @@ interface GroovyToolsProps {
 function GroovyToolDrone({
   drone = "./audio/drones/drone_c.mp3",
 }: GroovyToolsProps) {
-  const [audio] = useState(new Audio(drone));
-  const [audiotwo] = useState(new Audio(drone));
+  const [audio, setAudio] = useState(new Audio(drone));
+  const [audiotwo, setAudioTwo] = useState(new Audio(drone));
   const droneRef = useRef<HTMLSpanElement>(null);
   const { dronePlaying, toggleDronePlaying } = useTool();
   //const { dronePlaying, toggleDronePlaying, setAudio } = useTool();
@@ -26,9 +27,9 @@ function GroovyToolDrone({
   //const [dronePlaying, setDronePlaying] = useState(false);
   //const droneRef = useRef<HTMLSpanElement>();
 
-  const droneName = drone
-    .substring(drone.indexOf("_") + 1, drone.indexOf(".mp3"))
-    .replace("sharp", "#");
+  // const droneName = drone
+  //   .substring(drone.indexOf("_") + 1, drone.indexOf(".mp3"))
+  //   .replace("sharp", "#");
 
   useEffect(
     function () {
@@ -88,9 +89,22 @@ function GroovyToolDrone({
 
   //onClick={handleDrone}
 
+  function handleDroneSelect(e: React.FormEvent<HTMLSelectElement>) {
+    audio.pause();
+    audiotwo.pause();
+    setAudio(new Audio((e.target as HTMLSelectElement).value));
+    setAudioTwo(new Audio((e.target as HTMLSelectElement).value));
+  }
+
   return (
     <div className={styles.tool}>
-      {droneName} Drone
+      <select onChange={handleDroneSelect} defaultValue={drone}>
+        {allDrones.map((droneEle) => (
+          <option key={droneEle.key} value={droneEle.drone}>
+            {droneEle.key}
+          </option>
+        ))}
+      </select>
       <span ref={droneRef} className={styles.play} onClick={toggleDronePlaying}>
         {dronePlaying ? <PauseCircleIcon /> : <PlayCircleOutlineIcon />}
       </span>
