@@ -99,6 +99,7 @@ function GroovyToolDrone({
   return (
     <div className={styles.tool}>
       <select
+        name="droneSelect"
         className={styles.select}
         onChange={handleDroneSelect}
         defaultValue={drone}
