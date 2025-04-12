@@ -98,7 +98,11 @@ function GroovyToolDrone({
 
   return (
     <div className={styles.tool}>
-      <select onChange={handleDroneSelect} defaultValue={drone}>
+      <select
+        className={styles.select}
+        onChange={handleDroneSelect}
+        defaultValue={drone}
+      >
         {allDrones.map((droneEle) => (
           <option key={droneEle.key} value={droneEle.drone}>
             {droneEle.key}
