@@ -33,10 +33,14 @@ function AboutMe() {
       <GroovyArticle customStyles={styles.overridegeneralarticle}>
         Bass Grade 4 (RSL) - Merit 🎸 - Feb 2025
       </GroovyArticle>
-
-      <GroovyArticle customStyles={styles.overridegeneralarticle}>
-        <p>Guitar Grade 1 (RSL) - Merit 🎸 - Feb 2025</p>
-      </GroovyArticle>
+      <p>
+        <GroovyArticle customStyles={styles.overridegeneralarticle}>
+          Guitar Grade 1 (RSL) - Merit 🎸 - Feb 2025
+        </GroovyArticle>
+        <GroovyArticle customStyles={styles.overridegeneralarticle}>
+          Guitar Grade 2 (RSL) - Distinction 🎸 - Apr 2025
+        </GroovyArticle>
+      </p>
     </>
   );
 }

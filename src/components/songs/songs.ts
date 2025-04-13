@@ -42,6 +42,13 @@ export const songs = [
     link: "aminor",
   },
   {
+    jsonfile: "fools",
+    songtype: "transcribe",
+    songname: "Fools Gold - Thin Lizzy",
+    key: "Key Eb",
+    link: "eflatmajor",
+  },
+  {
     jsonfile: "gangsta",
     songtype: "transcribe",
     songname: "Gangsta Luv - Snoop Dogg ft The Dream",
@@ -119,6 +126,13 @@ export const songs = [
     link: "gmajor",
   },
   {
+    jsonfile: "suede",
+    songtype: "transcribe",
+    songname: "Suede - NxWorries",
+    key: "Key Am",
+    link: "aminor",
+  },
+  {
     jsonfile: "superstar",
     songtype: "transcribe",
     songname: "Superstar Intro - The Carpenters",
@@ -131,5 +145,12 @@ export const songs = [
     songname: "The Masterplan Intro - Oasis",
     key: "Key Am",
     link: "aminor",
+  },
+  {
+    jsonfile: "whatmemories",
+    songtype: "transcribe",
+    songname: "What the Memories Say - Jason Tyrello",
+    key: "Key D#m",
+    link: "dsharpminor",
   },
 ];
