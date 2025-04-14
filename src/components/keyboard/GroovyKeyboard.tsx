@@ -59,7 +59,10 @@ function GroovyKeyboard() {
       {keyboardList.map((kb) =>
         kb.displaykey === selKeyboard ? (
           kb.pentatonic ? (
-            <GroovyArticle customStyles={styles.overridegeneralarticle}>
+            <GroovyArticle
+              key={kb.displaykey}
+              customStyles={styles.overridegeneralarticle}
+            >
               {`${kb.displaykey} Pentatonic (Right hand fingerings)`}
 
               <div>

@@ -443,6 +443,7 @@ function BassTheoryContent({
           {theoryJson.tab ? <GroovyTabV2 tab={theoryJson.tab} /> : null}
 
           <div id="chordsection" className={styles.chordsectiondiv} />
+          <p className={styles.p}>Bass Chords</p>
           {theoryJson.chord1 ? (
             <>
               <div className={styles.chorddiv}>

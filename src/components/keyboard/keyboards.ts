@@ -11,6 +11,7 @@ export const keyboardList = [
   {
     displaykey: "D",
     keyimage: "keyboard_d.png",
+    pentatonic: "d_pentatonic.png",
   },
   {
     displaykey: "Eb",
@@ -32,6 +33,7 @@ export const keyboardList = [
   {
     displaykey: "G",
     keyimage: "keyboard_g.png",
+    pentatonic: "g_pentatonic.png",
   },
   {
     displaykey: "Ab",
@@ -40,6 +42,7 @@ export const keyboardList = [
   {
     displaykey: "A",
     keyimage: "keyboard_a.png",
+    pentatonic: "a_pentatonic.png",
   },
   {
     displaykey: "Bb",
