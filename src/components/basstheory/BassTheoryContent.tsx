@@ -29,6 +29,16 @@ export type FretType = {
   drone: string;
 };
 
+type GuitarChord = {
+  chord: string;
+  highe: string;
+  b: string;
+  g: string;
+  d: string;
+  a: string;
+  e: string;
+};
+
 export type TheoryType = {
   song: string;
   by: string;
@@ -108,6 +118,8 @@ export type TheoryType = {
   chord8a?: string;
   chord8d?: string;
   chord8g?: string;
+
+  guitar?: GuitarChord[];
 };
 // dronePlaying,
 // toggleDronePlay,
@@ -443,9 +455,10 @@ function BassTheoryContent({
           {theoryJson.tab ? <GroovyTabV2 tab={theoryJson.tab} /> : null}
 
           <div id="chordsection" className={styles.chordsectiondiv} />
-          <p className={styles.p}>Bass Chords</p>
+
           {theoryJson.chord1 ? (
             <>
+              <p className={styles.p}>Bass Chords</p>
               <div className={styles.chorddiv}>
                 {theoryJson.chord1 ? (
                   <BassChord
@@ -550,6 +563,10 @@ function BassTheoryContent({
               </div>
             </>
           ) : null}
+
+          <div id="guitarsection" className={styles.chordsectiondiv} />
+
+          {theoryJson.guitar ? <p className={styles.p}>Guitar Chords</p> : null}
         </div>
       ) : null}
     </div>

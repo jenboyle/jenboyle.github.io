@@ -123,6 +123,11 @@ function BassTheoryTableFifths() {
       </table>
       <p className={styles.p}>Order of Sharps: F C G D A E B</p>
       <p className={styles.p}>Order of Flats: B E A D G C F</p>
+      <p className={styles.p}>
+        Think of an acronym such as one I have heard: Father Christmas Got Dad
+        An Electric Blanket, Blanket Exploded And Dad Got Charred Feet. Notice
+        how these are the reverse of each other.
+      </p>
     </div>
   );
 }

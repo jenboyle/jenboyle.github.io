@@ -60,14 +60,16 @@ function GroovyToolDrone({
   useEffect(() => {
     if (dronePlaying) {
       audio.loop = true;
-      audio.setAttribute("type", "audio/ogg");
+      //audio.setAttribute("type", "audio/ogg");
+      audio.setAttribute("type", "audio/mp3");
       audio.play();
       audiotwo.loop = true;
-      audiotwo.setAttribute("type", "audio/ogg");
+      //audiotwo.setAttribute("type", "audio/ogg");
+      audiotwo.setAttribute("type", "audio/mp3");
 
       setTimeout(() => {
         audiotwo.play();
-      }, 500);
+      }, 3000);
     } else {
       audio.pause();
       audiotwo.pause();

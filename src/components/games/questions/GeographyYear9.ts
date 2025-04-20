@@ -35,7 +35,7 @@ export const geographyyear9qs = shuffle([
   {
     question: "This layer of Earth is made of liquid nickel and iron?",
     answer: "CONTAINS(CORE)ANDCONTAINS(OUTER)",
-    help: "Outer Core, it is 5km to 70km thick",
+    help: "Outer Core",
   },
   {
     question: "This layer of Earth controls magnetic field?",
