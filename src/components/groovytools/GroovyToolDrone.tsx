@@ -69,7 +69,7 @@ function GroovyToolDrone({
 
       setTimeout(() => {
         audiotwo.play();
-      }, 3000);
+      }, 500);
     } else {
       audio.pause();
       audiotwo.pause();
