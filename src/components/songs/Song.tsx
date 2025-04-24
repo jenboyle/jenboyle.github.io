@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 import GroovyTabV2 from "../general/GroovyTabV2";
 import styles from "./Song.module.css";
 
-// export type SongObject = {
-//   transcription: SongType;
-// };
-
 export type EType = {
   e: string;
 };
@@ -46,13 +42,13 @@ export type SongType = {
   tab?: GroovyTabTableType[];
   drum?: string;
   video?: string;
+  insta?: string;
 };
 
 interface SongProps {
   jsonfile: string;
 }
-//const [songJson, setSongJson] = useState<SongType[]>([]);
-//const data: SongType[] = await res.json();
+
 function Song({ jsonfile }: SongProps) {
   const [songJson, setSongJson] = useState<SongType>();
   const [isLoading, setIsLoading] = useState(false);
@@ -64,7 +60,6 @@ function Song({ jsonfile }: SongProps) {
         try {
           setIsLoading(true);
           const res = await fetch(`./songs/${jsonfile}.json`);
-          //const data: SongObject = await res.json();
           const data: SongType = await res.json();
           setSongJson(data);
         } catch (err) {
@@ -78,43 +73,13 @@ function Song({ jsonfile }: SongProps) {
     [jsonfile]
   );
 
-  // const song = fetch(`./songs/${jsonfile}.json`)
-  //   .then((res) => res.json())
-  //   .then((data) => console.log(data));
-  // console.log("in here");
+  // allows unmute but more errors in console
+  //header:
+  //<meta https-equiv="Content-Security-Policy" content="default-src *;" />
+  // src={`https://www.tiktok.com/player/v1/${songJson.video}?loop=1`}
+  //               className={styles.iframe}
+  //               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; autoplay;"
 
-  //<p>{`${songJson} - ${songJson.by}`}</p>
-  //{songJson ? <div>blah{songJson.by}</div> : <div>nah</div>}
-
-  //<div className={styles.div}>Song was clicked</div>
-
-  //   <div>
-  //   {Array.from(songJson).map((songitem, index) => (
-  //     <div>{songitem.song}</div>
-  //   ))}
-  // </div>
-
-  // <div>
-  //   {Object.keys(songJson).map((songitem, index) => (
-  //     <>
-  //       <div>{songJson[songitem]}</div>
-  //       {songitem === "song" ? <div>{songJson[songitem]}</div> : null}
-  //       {songitem === "by" ? (
-  //         <div>{`by ${songJson[songitem]}`}</div>
-  //       ) : null}
-  //     </>
-  //   ))}
-  // </div>
-
-  // <article>
-  //   {JSON.stringify(songJson).indexOf("song") != -1 ? (
-  //     <p>{`${songJson!.song} - ${songJson.by}`}</p>
-  //   ) : null}
-  //   {songJson.key ? <p>{`Key: - ${songJson.key}`}</p> : null}
-  //   {songJson.tuning ? <p>{`Tuning: - ${songJson.tuning}`}</p> : null}
-  // </article>
-
-  //<td>{songJson.transcription[`e${1 + 0}`]}|</td>
   return (
     <>
       {isLoading ? <div>Loading...</div> : null}
@@ -148,17 +113,25 @@ function Song({ jsonfile }: SongProps) {
             </>
           ) : null}
           {songJson.tuning ? <p>{`Tuning - ${songJson.tuning}`}</p> : null}
-
           {songJson.drum ? <p>{`Drum - ${songJson.drum}`}</p> : null}
-
           {songJson.tab ? <GroovyTabV2 tab={songJson.tab} /> : null}
 
           {songJson.video ? (
             <div className={styles.icont}>
               <iframe
-                src={`https://www.tiktok.com/embed/${songJson.video}`}
+                src={`https://www.tiktok.com/embed/${songJson.video}?loop=1`}
                 className={styles.iframe}
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope;"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; autoplay;"
+              ></iframe>
+            </div>
+          ) : null}
+
+          {songJson.insta ? (
+            <div className={styles.icont}>
+              <iframe
+                src={`https://www.instagram.com/p/${songJson.insta}/embed`}
+                className={styles.iframe}
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; autoplay;"
               ></iframe>
             </div>
           ) : null}
