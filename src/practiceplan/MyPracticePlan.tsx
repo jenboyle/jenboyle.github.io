@@ -55,13 +55,7 @@ function MyPracticePlan() {
         setItemText("");
       }
     }
-    // else {
-    // }
-
-    //console.log(valArr);
   }
-
-  //{value}
 
   return (
     <>
@@ -76,6 +70,7 @@ function MyPracticePlan() {
       <div className={styles.additem}>
         <input
           type="text"
+          name="practicegoal"
           onChange={handleItemChange}
           maxLength={25}
           placeholder="Enter goal here..."
@@ -110,6 +105,7 @@ function MyPracticePlan() {
                   key={`check${item}${index}`}
                   value={item}
                   className={styles.itembox}
+                  name={item}
                 ></input>
                 <span>{item}</span>
 
