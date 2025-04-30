@@ -30,7 +30,7 @@ export const religionyear9qs: QuestionType[] = shuffle([
     help: "God, the universe is so well put together proves that God existed",
   },
   {
-    question: "What is Wiilliam Paley's watch theory?",
+    question: "What is William Paley's watch theory?",
     answer: "CONTAINS(COMPL)",
     help: "Complicated watch pieces fit together. The universe is more complex and must have had a maker. The universe proves God exists",
   },

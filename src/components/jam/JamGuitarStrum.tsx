@@ -11,7 +11,7 @@ function JamGuitarStrum() {
   };
 
   function handleClick() {
-    setRandomPattern(randomNumInRange(0, 9));
+    setRandomPattern(randomNumInRange(0, strums[0].strums.length - 1));
   }
 
   return (
