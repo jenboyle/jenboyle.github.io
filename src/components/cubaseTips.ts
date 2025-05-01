@@ -77,7 +77,7 @@ export const cubaseTips = [
   },
 
   {
-    topic: "Mixing (6❎)",
+    topic: "Mixing",
     tips: [
       {
         tip: "For mixing set the audio interface buffer high in the control panel on device eg 1024 or 2048, (recording next project set to low eg 128 or 384 if hear pops and clicks)",
@@ -98,7 +98,7 @@ export const cubaseTips = [
   },
 
   {
-    topic: "Inserts, Sends, FX Channels (7❎)",
+    topic: "Inserts, Sends, FX Channels",
     tips: [
       {
         tip: "Inserts are plugins that alter volume e.g. Distortion, Dynamics, EQ, Filter, Pitch Shift, Spatial Panner, Surround, Tools, Mastering",
