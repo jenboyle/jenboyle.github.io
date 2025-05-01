@@ -46,6 +46,10 @@ export const allschoolgames = [
         gametext: "History",
       },
       {
+        gameid: "homeeconomics_year9",
+        gametext: "Home Economics",
+      },
+      {
         gameid: "religion_year9",
         gametext: "Religion",
       },
