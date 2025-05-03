@@ -40,6 +40,12 @@ function StandardGame({ questions }: StandardGameProps) {
     setPlayerAnswer(e.target.value);
   }
 
+  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === "Enter") {
+      handlePlayerAnswerSubmitted();
+    }
+  }
+
   function handlePlayerAnswerSubmitted() {
     setPlayerAnswerSubmitted(true);
     setShowHelp(false);
@@ -111,6 +117,7 @@ function StandardGame({ questions }: StandardGameProps) {
               id="schoolText"
               type="text"
               onChange={handlePlayerAnswer}
+              onKeyDown={handleKeyDown}
             ></input>
           )}
           <button className={styles.pad} onClick={handlePlayerAnswerSubmitted}>
