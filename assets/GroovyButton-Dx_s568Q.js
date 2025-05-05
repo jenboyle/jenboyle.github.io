@@ -1,0 +1,1 @@
+import{j as a}from"./index-4-SwF9J6.js";const i="_jambuttons_1rkh6_1",r="_div_1rkh6_22",d="_disabled_1rkh6_28",_={jambuttons:i,div:r,disabled:d};function e({children:s,handleClick:o,customStyles:t,disabled:n=!1}){return a.jsx("button",{className:`${_.jambuttons} ${t||""}`,onClick:o,disabled:n,children:s})}export{e as G};
