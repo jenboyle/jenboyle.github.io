@@ -50,8 +50,9 @@ function Improvisation() {
         mixing and mastering tips I have learned.
       </GroovyArticle>
       <GroovyArticle>
-        Walking bass books advise play roots, octaves either direction, upper or
-        lower fifths, upper or lower chromatic notes.
+        Walking bass books advise playing roots, octaves either direction, upper
+        or lower fifths, upper or lower chromatic notes, scales, modes, triads,
+        chord tones.
       </GroovyArticle>
       <GroovyArticle customStyles={styles.spacebelow}>
         It can be daunting but my advice is to try and you might surprise
