@@ -49,6 +49,10 @@ function Improvisation() {
         Cubase and I try to use some of the <Link to="/cubase">cubase</Link>{" "}
         mixing and mastering tips I have learned.
       </GroovyArticle>
+      <GroovyArticle>
+        Walking bass books advise play roots, octaves either direction, upper or
+        lower fifths, upper or lower chromatic notes.
+      </GroovyArticle>
       <GroovyArticle customStyles={styles.spacebelow}>
         It can be daunting but my advice is to try and you might surprise
         yourself. Some of my noodles I recorded I am most happy with and I
