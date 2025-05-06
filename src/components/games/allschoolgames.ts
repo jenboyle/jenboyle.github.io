@@ -57,6 +57,10 @@ export const allschoolgames = [
         gameid: "science_year9",
         gametext: "Science",
       },
+      {
+        gameid: "spanish_year9",
+        gametext: "Spanish",
+      },
     ],
   },
 ];
