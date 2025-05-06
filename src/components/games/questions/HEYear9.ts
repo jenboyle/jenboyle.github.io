@@ -3,41 +3,49 @@ export const heyear9qs = [
     question: "What is the recommended amount of fibre a day?",
     answer: "ONEOF(30_THIRTY)",
     help: "30g per day",
+    img: "./images/games/school/homeeconomics/fibre.png",
   },
   {
     question: "One reason why fibre is important?",
     answer: "ONEOF(DIGEST_CONSTIPAT_CANCER_HEART_DIABETES)",
     help: "Keeps digestive system healthy - food waste travels easily, Prevents constipation and cancer of the bowel, reduces chance of heart disease and type 2 diabetes",
+    img: "./images/games/school/homeeconomics/fibre.png",
   },
   {
     question: "What is the function of Fibre",
     answer: "ONEOF(CONSTIPAT_TOXINS_BULK_FULL_SATISFIED)",
     help: "Prevents constipation, like a sponge mops harmful toxins, bulks food to feel full and satisfied",
+    img: "./images/games/school/homeeconomics/fibre.png",
   },
   {
     question: "Name a source of Fibre",
     answer: "ONEOF(WHOLEMEAL_FRUIT_VEG)",
     help: "Wholemeal bread, wholemeal pasta, fruit and vegetables",
+    img: "./images/games/school/homeeconomics/fibre.png",
   },
   {
     question: "What is the function of Protein",
     answer: "ONEOF(GROWTH_REPAIR_TISSUE_MUSCLES_CELLS_ENERGY)",
     help: "Growth and repair of body tissue, muscles, blood cells. Secondary source of energy",
+    img: "./images/games/school/homeeconomics/eggs.png",
   },
   {
     question: "Name a source of Protein",
     answer: "ONEOF(RED MEAT_FISH_EGGS_PULSES_NUTS)",
     help: "Red meat, fish, eggs, pulses, nuts",
+    img: "./images/games/school/homeeconomics/eggs.png",
   },
   {
     question: "What is the function of Fat",
     answer: "ONEOF(ENERGY_ORGANS_INSULAT_CELLS_VITAMIN)",
     help: "Concentrated source of energy, protect vital organs, insulate body, structure for body cells, provides vitamins ADEK",
+    img: "./images/games/school/homeeconomics/fat.png",
   },
   {
     question: "Name a source of Fat",
     answer: "ONEOF(RED MEAT_BUTTER_MILK_YOGURT_CHEESE)",
     help: "Red meat, butter, milk, yogurt, cheese",
+    img: "./images/games/school/homeeconomics/fat.png",
   },
   {
     question: "What is the function of Carbohydrates",
@@ -94,11 +102,13 @@ export const heyear9qs = [
     question: "What is the function of Vitamin A",
     answer: "ONEOF(NIGHT VISION_SKIN_TISSUE)",
     help: "Night Vision, healthy skin and tissue",
+    img: "./images/games/school/homeeconomics/carrot.png",
   },
   {
     question: "Name a source of Vitamin A",
     answer: "ONEOF(CARROT_MILK_EGGS_LIVER)",
     help: "Carrots, milk, eggs, liver",
+    img: "./images/games/school/homeeconomics/carrot.png",
   },
   {
     question: "What is the function of Vitamin D",
@@ -109,6 +119,7 @@ export const heyear9qs = [
     question: "Name a source of Vitamin D",
     answer: "ONEOF(SUN_MARGARINE_EGGS_FORTIFIED BREAKFAST CEREAL)",
     help: "Sunlight, margarine, eggs, fortified breakfast cereals",
+    img: "./images/games/school/homeeconomics/sun.png",
   },
   {
     question: "What is the function of Water",
@@ -156,6 +167,7 @@ export const heyear9qs = [
     question: "What is a Lacto-ovo vegetarian",
     answer: "CONTAINS(DAIRY)ANDCONTAINS(EGGS)",
     help: "Eats dairy and eggs, no meat. Think O-vo O-nly dairy and eggs",
+    img: "./images/games/school/homeeconomics/eggs.png",
   },
   {
     question: "What is a Lacto-vegetarian",

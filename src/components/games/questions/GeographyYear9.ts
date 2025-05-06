@@ -104,8 +104,77 @@ export const geographyyear9qs = shuffle([
     help: "A large slab of the Earth's crust which floats on the mantle",
   },
   {
+    question: "Why do plates move?",
+    answer: "CONTAINS(CONVECTION)ANDCONTAINS(CURRENTS)",
+    help: "Heat from Earth's interior causes CONVECTION CURRENTS in the mantle. These currents create forces that push and pull the plates",
+  },
+  {
     question: "Where are earthquakes and volcanoes mostly found?",
     answer: "CONTAINS(PLATE)ANDCONTAINS(BOUNDARIES)",
     help: "Along plate boundaries where 2 or more plates move towards, awy from or slide past each other. These movements are caused by convection currents and cause earthquakes and volcanic activity",
+  },
+  {
+    question: "Positive impact of volcanoes?",
+    answer: "ONEOF(TOURISM_ENERGY_FARM)",
+    help: "Tourism - money for country, geothermal energy production - renewable, Farming - volcanic ash good for soil",
+  },
+  {
+    question: "Negative impact of volcanoes?",
+    answer: "ONEOF(LIFE_LIVE_PROPERT)",
+    help: "Loss of life and property",
+  },
+  {
+    question:
+      "An active volcano has had 1 eruption in last 10000 years. More than 700 in world. Most active mt ____ Italy",
+    answer: "CONTAINS(ETNA)",
+    help: "Etna",
+  },
+  {
+    question:
+      "A dormant volcano has erupted in last 10000 years but not recently. It is dangerous. It is also known as ________.  Can't predict if it will erupt eg Mt Kea in Hawaii",
+    answer: "CONTAINS(SLEEPING)",
+    help: "Sleeping",
+  },
+  {
+    question: "An extinct dead volcano is unlikely to _____ again?",
+    answer: "CONTAINS(ERUPT)",
+    help: "Erupt: It has not erupted in the last 10000 years eg Mt Kilimanjaro",
+  },
+
+  {
+    question: "What affects birth and death rates?",
+    answer: "ONEOF(FOOD SHORT_HARVEST_WATER_HOSPITAL_HEALTH_WAR_BIRTH CONTROL)",
+    help: "Food shortages, good harvest, improved water supply, new hospitals, poor health care, war, birth control available",
+  },
+  {
+    question: "What is rock?",
+    answer: "ONEOF(NATURAL_SOLID_CRUST)",
+    help: "Naturally occuring solid material forming part of Earth's crust",
+  },
+  {
+    question: "3 types of rock?",
+    answer:
+      "CONTAINS(IGNEOUS)ANDCONTAINS(SEDIMENTARY)ANDCONTAINSTHREE(METAMORPHIC)",
+    help: "Igneous, Sedimentary, metamorphic",
+  },
+  {
+    question: "2 main examples of igneous rock?",
+    answer: "CONTAINS(BASALT)ANDCONTAINS(GRANITE)",
+    help: "Basalt and granite",
+  },
+  {
+    question: "2 main examples of sedimentary rock?",
+    answer: "CONTAINS(LIMESTONE)ANDCONTAINS(SANDSTONE)",
+    help: "Limestone and sandstone",
+  },
+  {
+    question: "2 main examples of metamorphic rock?",
+    answer: "CONTAINS(MARBLE)ANDCONTAINS(SLATE)",
+    help: "Marble and slate",
+  },
+  {
+    question: "How do humans use rock?",
+    answer: "ONEOF(WORKTOP_KITCHEN_ROOF_TILE_CHALK_TOURISM)",
+    help: "Granite worktops in kitchen, chalk teacher blackboard, basalt Game of thrones tourism, slate roof tiles",
   },
 ]);
