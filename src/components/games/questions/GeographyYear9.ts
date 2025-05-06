@@ -99,6 +99,11 @@ export const geographyyear9qs = shuffle([
     help: "8",
   },
   {
+    question: "What plate do we live on?",
+    answer: "CONTAINS(EURASIAN PLATE)",
+    help: "Eurasian plate",
+  },
+  {
     question: "What is a tectonic plate?",
     answer: "CONTAINS(CRUST)",
     help: "A large slab of the Earth's crust which floats on the mantle",
@@ -113,6 +118,31 @@ export const geographyyear9qs = shuffle([
     answer: "CONTAINS(PLATE)ANDCONTAINS(BOUNDARIES)",
     help: "Along plate boundaries where 2 or more plates move towards, awy from or slide past each other. These movements are caused by convection currents and cause earthquakes and volcanic activity",
   },
+  {
+    question: "What is a destructive plate boundary?",
+    answer: "CONTAINS(OCEANIC)ANDCONTAINS(TOWARD)ANDCONTAINSTHREE(CONTINENTAL)",
+    help: "Destructive: Convection currents cause OCEANIC plate to move TOWARDS CONTINENTAL plate. Oceanic plate more dense so subducted beneath continental. Deep ocean trench = point ocean plate subducted. Oceanic plate grinds, friction, pressure, jolt free = earthquake. Oceanic plate melted due to heat and friction, magma - less dense - rises through continetal plate eruption. Volcanoes and earthquakes",
+    img: "./images/games/school/geography/destructive.png",
+  },
+  {
+    question: "What is a constructive plate boundary?",
+    answer: "CONTAINS(APART)ANDCONTAINS(MAGMA)",
+    help: "Constructive: Convection currents cause 2 plates to move APART. Magma rises, lava. Regular weak earthquakes. Underwater mountain range = mid ocean ridge",
+    img: "./images/games/school/geography/constructive.png",
+  },
+  {
+    question: "What is a collision plate boundary?",
+    answer: "CONTAINS(CONTINENTAL)ANDCONTAINS(TOWARDS)",
+    help: "Collision: Convection currents cause 2 CONTINENTAL plates to move TOWARDS. Rocks buckle upwards forming FOLD MOUNTAINS. Strong earthquakes no volcanoes.",
+    img: "./images/games/school/geography/collision.png",
+  },
+  {
+    question: "What is a conservative plate boundary?",
+    answer: "CONTAINS(SLIDE)",
+    help: "Any 2 plates SLIDE past each other. Plates stick by FRICTION. PRESSURE builds = strong earthquake no volcanoes, Line of weakness = fault line",
+    img: "./images/games/school/geography/conservative.png",
+  },
+
   {
     question: "Positive impact of volcanoes?",
     answer: "ONEOF(TOURISM_ENERGY_FARM)",
@@ -176,5 +206,37 @@ export const geographyyear9qs = shuffle([
     question: "How do humans use rock?",
     answer: "ONEOF(WORKTOP_KITCHEN_ROOF_TILE_CHALK_TOURISM)",
     help: "Granite worktops in kitchen, chalk teacher blackboard, basalt Game of thrones tourism, slate roof tiles",
+  },
+  {
+    question: "What is MEDC?",
+    answer:
+      "CONTAINS(MORE)ANDCONTAINS(ECONOMICALLY)ANDCONTAINSTHREE(DEVELOPED)ANDCONTAINSFOUR(COUNTRY)",
+    help: "More Economically developed country eg UK, America. Wealth, high standard of living. Difference between birth and death rates is small. Population changes slowly.",
+  },
+  {
+    question: "What is LEDC?",
+    answer:
+      "CONTAINS(Less)ANDCONTAINS(ECONOMICALLY)ANDCONTAINSTHREE(DEVELOPED)ANDCONTAINSFOUR(COUNTRY)",
+    help: "Less Economically developed country eg Bangladesh, Ethiopia. Poor standard of living. Big difference between birth and death rates. Population increasing rapidly.",
+  },
+  {
+    question: "What is birth rate?",
+    answer: "CONTAINS(BIRTHS)ANDCONTAINSOR(1000_THOUSAND)",
+    help: "Number of live births per thousand of population per year",
+  },
+  {
+    question: "What is death rate?",
+    answer: "CONTAINS(DEATHS)ANDCONTAINSOR(1000_THOUSAND)",
+    help: "Number of deaths per thousand of population per year",
+  },
+  {
+    question: "What is natural increase?",
+    answer: "CONTAINS(BIRTH)",
+    help: "Higher birth rate than death rate (Birth rate minus death rate over a year)",
+  },
+  {
+    question: "What is natural decrease?",
+    answer: "CONTAINS(DEATH)",
+    help: "Higher death rate than birth rate",
   },
 ]);
