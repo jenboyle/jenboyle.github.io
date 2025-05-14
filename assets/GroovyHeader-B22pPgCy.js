@@ -1,1 +1,0 @@
-import{j as r}from"./index-4NcvIf5i.js";import{G as o}from"./GroovyArticle-Cll2pMNh.js";const t="_overridegeneralarticle_1j7ej_1",i={overridegeneralarticle:t};function l({children:e}){return r.jsx(o,{customStyles:i.overridegeneralarticle,children:e})}export{l as G};
