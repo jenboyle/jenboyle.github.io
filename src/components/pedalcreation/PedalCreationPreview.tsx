@@ -3,6 +3,7 @@ import GroovyArticle from "../general/GroovyArticle";
 import GroovyHeader from "../general/GroovyHeader";
 import { pedalcreationpreviews, pedalcreations } from "./pedalcreations";
 import styles from "./PedalCreationPreview.module.css";
+import { Link } from "react-router-dom";
 
 function PedalCreationPreview() {
   const [creationSelected, setCreationSelected] = useState(-1);
@@ -72,6 +73,10 @@ function PedalCreationPreview() {
               </GroovyArticle>
             </>
           ))}
+
+          <Link to="/my_gear" className={`${styles.a} ${styles.back}`}>
+            Back
+          </Link>
         </>
       )}
     </>
