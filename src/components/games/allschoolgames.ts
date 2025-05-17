@@ -50,6 +50,10 @@ export const allschoolgames = [
         gametext: "Home Economics",
       },
       {
+        gameid: "ict_year9",
+        gametext: "ICT",
+      },
+      {
         gameid: "religion_year9",
         gametext: "Religion",
       },

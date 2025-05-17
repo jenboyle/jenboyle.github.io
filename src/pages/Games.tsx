@@ -21,6 +21,7 @@ import { chemistryyear8qs } from "../components/games/questions/ChemistryYear8";
 import { heyear9qs } from "../components/games/questions/HEYear9";
 import { scienceyear9qs } from "../components/games/questions/ScienceYear9";
 import { spanishyear9qs } from "../components/games/questions/SpanishYear9";
+import { ictyear9qs } from "../components/games/questions/ICTYear9";
 
 function Games() {
   const [selectedGameTopic, setSelectedGameTopic] = useState("");
@@ -87,6 +88,8 @@ function Games() {
           <StandardGame questions={scienceyear9qs}></StandardGame>
         ) : selectedGame === "spanish_year9" ? (
           <StandardGame questions={spanishyear9qs}></StandardGame>
+        ) : selectedGame === "ict_year9" ? (
+          <StandardGame questions={ictyear9qs}></StandardGame>
         ) : (
           <div>{selectedGame}</div>
         )
