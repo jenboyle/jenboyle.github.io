@@ -7,6 +7,13 @@ export const songs = [
     link: "bminor",
   },
   {
+    jsonfile: "chainofevents",
+    songtype: "mine",
+    songname: "Chain of Events",
+    key: "Key Fm",
+    link: "fminor",
+  },
+  {
     jsonfile: "communitysucks",
     songtype: "mine",
     songname: "Community Sucks",
