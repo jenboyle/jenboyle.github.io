@@ -62,4 +62,11 @@ export const songs = [
     key: "Key Ab",
     link: "aflatmajor",
   },
+  {
+    jsonfile: "wingingit",
+    songtype: "mine",
+    songname: "Winging it",
+    key: "Key C",
+    link: "cmajor",
+  },
 ];
