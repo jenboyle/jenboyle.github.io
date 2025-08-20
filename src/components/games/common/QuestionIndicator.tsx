@@ -1,6 +1,8 @@
 import styles from "./QuestionIndicator.module.css";
+import { ReactNode } from "react";
+
 type QuestionIndicatorProps = {
-  children: string | JSX.Element | JSX.Element[];
+  children: ReactNode;
 };
 function QuestionIndicator({ children }: QuestionIndicatorProps) {
   return <div className={styles.questionindicator}>{children}</div>;

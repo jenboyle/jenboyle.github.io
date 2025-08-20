@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import { createContext, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useState } from "react";
 
 const ToolContext = createContext({
   dronePlaying: false,
@@ -7,7 +7,7 @@ const ToolContext = createContext({
 });
 
 type childProps = {
-  children: string | string[] | JSX.Element | JSX.Element[];
+  children: ReactNode;
 };
 
 function ToolProvider({ children }: childProps) {

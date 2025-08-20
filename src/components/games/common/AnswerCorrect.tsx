@@ -1,7 +1,8 @@
+import { ReactNode } from "react";
 import styles from "./AnswerCorrect.module.css";
 
 type AnswerCorrectProps = {
-  children: string | string[] | JSX.Element | JSX.Element[];
+  children: ReactNode;
 };
 
 function AnswerCorrect({ children }: AnswerCorrectProps) {
