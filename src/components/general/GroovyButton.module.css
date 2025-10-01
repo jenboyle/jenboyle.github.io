@@ -1,22 +1,32 @@
 .jambuttons:hover {
-  background-color: whitesmoke;
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .jambuttons {
-  color: black;
+  color: white;
   display: block;
-  padding: 16px;
-  background-color: #dda5c5;
-  font-size: 20px;
-  border-radius: 15px;
-  border: 2px solid rgb(134, 133, 124);
-  box-shadow: 0 4px #999;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(255, 105, 180, 0.8)
+  );
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: none;
   margin: 0 auto;
 }
 
 .jambuttons:active {
-  box-shadow: 0 2px #666;
-  transform: translateY(4px);
+  transform: translateY(1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .div {
@@ -25,10 +35,10 @@
   font-size: 20px;
 }
 
-.disabled {
-  background-color: #a17590;
-}
-
-.jambuttons:disabled {
-  background-color: #a17590;
+.jambuttons:disabled,
+.jambuttons.disabled {
+  background: #444;
+  cursor: not-allowed;
+  opacity: 0.5;
+  box-shadow: none;
 }

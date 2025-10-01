@@ -22,6 +22,7 @@ import { heyear9qs } from "../components/games/questions/HEYear9";
 import { scienceyear9qs } from "../components/games/questions/ScienceYear9";
 import { spanishyear9qs } from "../components/games/questions/SpanishYear9";
 import { ictyear9qs } from "../components/games/questions/ICTYear9";
+import GroovyButton from "../components/general/GroovyButton";
 
 function Games() {
   const [selectedGameTopic, setSelectedGameTopic] = useState("");
@@ -55,107 +56,104 @@ function Games() {
   // )
   return (
     <>
-      {selectedGame ? (
-        selectedGame === "relatives" ? (
-          <Relatives />
-        ) : selectedGame === "circleoffifths" ? (
-          <Circleoffifths />
-        ) : selectedGame === "easy" ? (
-          <Notationeasy />
-        ) : selectedGame === "biology_year8" ? (
-          <StandardGame questions={biologyyear8qs}></StandardGame>
-        ) : selectedGame === "chemistry_year8" ? (
-          <StandardGame questions={chemistryyear8qs}></StandardGame>
-        ) : selectedGame === "geography_year8" ? (
-          <StandardGame questions={geographyyear8qs}></StandardGame>
-        ) : selectedGame === "geography_year9" ? (
-          <StandardGame questions={geographyyear9qs}></StandardGame>
-        ) : selectedGame === "history_year8" ? (
-          <StandardGame questions={historyyear8qs}></StandardGame>
-        ) : selectedGame === "history_year9" ? (
-          <StandardGame questions={historyyear9qs}></StandardGame>
-        ) : selectedGame === "religion_year8" ? (
-          <StandardGame questions={religionyear8qs}></StandardGame>
-        ) : selectedGame === "religion_year9" ? (
-          <StandardGame questions={religionyear9qs}></StandardGame>
-        ) : selectedGame === "spanish_year8" ? (
-          <StandardGame questions={spanishyear8qs}></StandardGame>
-        ) : selectedGame === "technology_year8" ? (
-          <StandardGame questions={techyear8qs}></StandardGame>
-        ) : selectedGame === "homeeconomics_year9" ? (
-          <StandardGame questions={heyear9qs}></StandardGame>
-        ) : selectedGame === "science_year9" ? (
-          <StandardGame questions={scienceyear9qs}></StandardGame>
-        ) : selectedGame === "spanish_year9" ? (
-          <StandardGame questions={spanishyear9qs}></StandardGame>
-        ) : selectedGame === "ict_year9" ? (
-          <StandardGame questions={ictyear9qs}></StandardGame>
+      <div className={styles.buttonContainer}>
+        {selectedGame ? (
+          selectedGame === "relatives" ? (
+            <Relatives />
+          ) : selectedGame === "circleoffifths" ? (
+            <Circleoffifths />
+          ) : selectedGame === "easy" ? (
+            <Notationeasy />
+          ) : selectedGame === "biology_year8" ? (
+            <StandardGame questions={biologyyear8qs}></StandardGame>
+          ) : selectedGame === "chemistry_year8" ? (
+            <StandardGame questions={chemistryyear8qs}></StandardGame>
+          ) : selectedGame === "geography_year8" ? (
+            <StandardGame questions={geographyyear8qs}></StandardGame>
+          ) : selectedGame === "geography_year9" ? (
+            <StandardGame questions={geographyyear9qs}></StandardGame>
+          ) : selectedGame === "history_year8" ? (
+            <StandardGame questions={historyyear8qs}></StandardGame>
+          ) : selectedGame === "history_year9" ? (
+            <StandardGame questions={historyyear9qs}></StandardGame>
+          ) : selectedGame === "religion_year8" ? (
+            <StandardGame questions={religionyear8qs}></StandardGame>
+          ) : selectedGame === "religion_year9" ? (
+            <StandardGame questions={religionyear9qs}></StandardGame>
+          ) : selectedGame === "spanish_year8" ? (
+            <StandardGame questions={spanishyear8qs}></StandardGame>
+          ) : selectedGame === "technology_year8" ? (
+            <StandardGame questions={techyear8qs}></StandardGame>
+          ) : selectedGame === "homeeconomics_year9" ? (
+            <StandardGame questions={heyear9qs}></StandardGame>
+          ) : selectedGame === "science_year9" ? (
+            <StandardGame questions={scienceyear9qs}></StandardGame>
+          ) : selectedGame === "spanish_year9" ? (
+            <StandardGame questions={spanishyear9qs}></StandardGame>
+          ) : selectedGame === "ict_year9" ? (
+            <StandardGame questions={ictyear9qs}></StandardGame>
+          ) : (
+            <div>{selectedGame}</div>
+          )
+        ) : selectedGameTopic ? (
+          selectedGameTopic === "school" ? (
+            allschoolgames.map((game) => (
+              <GroovyButton
+                id={game.id}
+                key={game.id}
+                handleClick={handleGameTopicSelection}
+              >
+                {game.gametopic}
+              </GroovyButton>
+            ))
+          ) : selectedSchoolTopic ? (
+            allschoolgames.map((parentgame) =>
+              parentgame.id === selectedGameTopic
+                ? parentgame.games.map((game) => (
+                    <GroovyButton
+                      id={game.gameid}
+                      key={game.gameid}
+                      handleClick={handleGameSelection}
+                    >
+                      {game.gametext}
+                    </GroovyButton>
+                  ))
+                : null
+            )
+          ) : (
+            allgames.map((parentgame) =>
+              parentgame.id === selectedGameTopic
+                ? parentgame.games.map((game) => (
+                    <GroovyButton
+                      id={game.gameid}
+                      key={game.gameid}
+                      handleClick={handleGameSelection}
+                    >
+                      {game.gametext}
+                    </GroovyButton>
+                  ))
+                : null
+            )
+          )
         ) : (
-          <div>{selectedGame}</div>
-        )
-      ) : selectedGameTopic ? (
-        selectedGameTopic === "school" ? (
-          allschoolgames.map((game) => (
-            <button
-              id={game.id}
+          allgames.map((game) => (
+            <GroovyButton
               key={game.id}
-              onClick={handleGameTopicSelection}
-              className={styles.buttonpad}
+              id={game.id}
+              handleClick={handleGameTopicSelection}
             >
               {game.gametopic}
-            </button>
+            </GroovyButton>
           ))
-        ) : selectedSchoolTopic ? (
-          allschoolgames.map((parentgame) =>
-            parentgame.id === selectedGameTopic
-              ? parentgame.games.map((game) => (
-                  <button
-                    id={game.gameid}
-                    key={game.gameid}
-                    onClick={handleGameSelection}
-                    className={styles.buttonpad}
-                  >
-                    {game.gametext}
-                  </button>
-                ))
-              : null
-          )
-        ) : (
-          allgames.map((parentgame) =>
-            parentgame.id === selectedGameTopic
-              ? parentgame.games.map((game) => (
-                  <button
-                    id={game.gameid}
-                    key={game.gameid}
-                    onClick={handleGameSelection}
-                    className={styles.buttonpad}
-                  >
-                    {game.gametext}
-                  </button>
-                ))
-              : null
-          )
-        )
-      ) : (
-        allgames.map((game) => (
-          <button
-            id={game.id}
-            key={game.id}
-            onClick={handleGameTopicSelection}
-            className={styles.buttonpad}
-          >
-            {game.gametopic}
-          </button>
-        ))
-      )}
-
+        )}
+      </div>
       {selectedGameTopic ? (
-        <button
-          className={`${styles.allgames} ${styles.buttonpad}`}
-          onClick={handleAllGames}
+        <GroovyButton
+          handleClick={handleAllGames}
+          customStyles={styles.allgames}
         >
           All Games
-        </button>
+        </GroovyButton>
       ) : null}
     </>
   );

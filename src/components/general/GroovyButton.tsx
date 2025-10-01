@@ -5,11 +5,13 @@ type GroovyButtonProps = {
   handleClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
   customStyles?: string;
   disabled?: boolean;
+  id?: string;
 };
 function GroovyButton({
   children,
   handleClick,
   customStyles,
+  id,
   disabled = false,
 }: GroovyButtonProps) {
   return (
@@ -17,6 +19,7 @@ function GroovyButton({
       className={`${styles.jambuttons} ${customStyles ? customStyles : ""}`}
       onClick={handleClick}
       disabled={disabled}
+      id={id}
     >
       {children}
     </button>
