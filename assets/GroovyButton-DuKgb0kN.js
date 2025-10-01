@@ -1,0 +1,1 @@
+import{j}from"./index-CGOmSKVR.js";const u="_jambuttons_9j3tl_1",m={jambuttons:u};function b({children:o,handleClick:s,customStyles:t,id:n,disabled:a=!1}){return j.jsx("button",{className:`${m.jambuttons} ${t||""}`,onClick:s,disabled:a,id:n,children:o})}export{b as G};
