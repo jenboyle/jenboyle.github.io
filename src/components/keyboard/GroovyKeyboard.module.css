@@ -11,37 +11,56 @@
 .overlay {
   width: 100%;
   height: 100%;
-  display: inline-grid;
-  background-color: rgb(198, 190, 205);
-  align-items: center;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.4),
+      transparent 70%
+    ),
+    linear-gradient(135deg, #cdb4db 0%, #e3d6ed 40%, #f3e9f8 80%, #f3c2e8 100%);
+  padding: 20px;
 }
 
 .li {
-  display: block;
+  padding: 12px 16px;
   text-align: center;
-  color: rgb(39, 35, 35);
-  padding: 0 10px;
-  font-size: 1em;
-  line-height: 30px;
-  text-decoration: none;
-  background-color: rgb(198, 190, 205);
+  font-size: 1rem;
+  color: #2c2c2c;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-radius: 0;
 }
 
 .overlay li:hover {
-  background-color: rgb(93, 47, 93);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8),
+    rgba(255, 105, 180, 0.8)
+  );
   color: white;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .overlay li.active {
-  background-color: rgb(138 112 158);
-  color: white;
+  background: radial-gradient(circle at center, #555, #2a1b26, #50253f);
+  color: #ff69b4;
+  text-shadow: 0 0 2px rgba(255, 105, 180, 0.6);
+  font-weight: 600;
+  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
 }
 
 .ul {
-  color: black;
   list-style: none;
   padding: 0;
   margin: 0;
-  position: relative;
-  float: left;
+  background: #fce6f3;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-width: 200px;
 }
