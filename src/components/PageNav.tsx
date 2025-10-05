@@ -44,11 +44,9 @@ function PageNav() {
         </li>
 
         <li>
-          {showNavExcess ? (
-            <CgClose onClick={handleNavExcess} />
-          ) : (
-            <GiGuitarBassHead onClick={handleNavExcess} />
-          )}
+          <div className={styles.bassIcon} onClick={handleNavExcess}>
+            {showNavExcess ? <CgClose /> : <GiGuitarBassHead />}
+          </div>
         </li>
       </ul>
       {showNavExcess && (
