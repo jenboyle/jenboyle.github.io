@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { spices } from "./spices.ts";
-import styles from "./JamSpice.module.css";
+import commonStyles from "../general/GroovyStyles.module.css";
 import GroovyButton from "../general/GroovyButton.tsx";
 
 function JamSpice() {
@@ -22,7 +22,7 @@ function JamSpice() {
     <>
       <GroovyButton handleClick={handleClick}>Spice It Up</GroovyButton>
 
-      <div className={styles.div} data-testid="jamSpiceDiv">
+      <div className={commonStyles.div} data-testid="jamSpiceDiv">
         {random > -1 ? spices[0].spices[random].spice : null}
       </div>
     </>

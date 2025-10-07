@@ -1,4 +1,5 @@
 import { useState } from "react";
+import commonStyles from "../general/GroovyStyles.module.css";
 import styles from "./JamGuitarStrum.module.css";
 import { progressions } from "./progressions";
 import GroovyButton from "../general/GroovyButton";
@@ -20,7 +21,7 @@ function JamProgression() {
     <>
       <GroovyButton handleClick={handleClick}>Guitar Progression</GroovyButton>
 
-      <div className={styles.div} data-testid="jamProgDiv">
+      <div className={commonStyles.div} data-testid="jamProgDiv">
         <table className={styles.table}>
           <tbody>
             <tr>

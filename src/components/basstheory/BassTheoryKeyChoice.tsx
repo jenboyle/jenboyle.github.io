@@ -1,4 +1,5 @@
 import styles from "./BassTheoryKeyChoice.module.css";
+import commonStyles from "../general/GroovyStyles.module.css";
 import { theoryNavList } from "./theoryNavList";
 
 interface BassTheorySideNavProps {
@@ -13,7 +14,7 @@ function BassTheoryKeyChoice({
 }: BassTheorySideNavProps) {
   // console.log(currentKey);
   return (
-    <div className={styles.overlay}>
+    <div className={commonStyles.overlay}>
       <ul className={styles.ul}>
         {theoryNavList.map((item) => (
           <li

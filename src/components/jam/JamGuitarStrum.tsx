@@ -1,4 +1,5 @@
 import { useState } from "react";
+import commonStyles from "../general/GroovyStyles.module.css";
 import styles from "./JamGuitarStrum.module.css";
 import { strums } from "./strums";
 import GroovyButton from "../general/GroovyButton";
@@ -19,7 +20,7 @@ function JamGuitarStrum() {
       <div className={styles.jambtn}>
         <GroovyButton handleClick={handleClick}>Guitar Strum</GroovyButton>
       </div>
-      <div className={styles.div} data-testid="jamStrum">
+      <div className={commonStyles.div} data-testid="jamStrum">
         <table className={styles.table}>
           <tbody>
             <tr>

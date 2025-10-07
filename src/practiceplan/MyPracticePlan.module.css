@@ -2,9 +2,6 @@
   background-color: #9494a8;
   margin-bottom: 20px;
 }
-.button {
-  margin-bottom: 20px;
-}
 
 .item {
   text-align: left;
@@ -13,10 +10,6 @@
 
 .itembox {
   margin-right: 10px;
-}
-
-.additem {
-  margin-bottom: 20px;
 }
 
 .trash {

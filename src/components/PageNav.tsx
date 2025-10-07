@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import commonStyles from "../components/general/GroovyStyles.module.css";
 import styles from "./PageNav.module.css";
 import { CgClose } from "react-icons/cg";
 import { GiGuitarBassHead } from "react-icons/gi";
@@ -50,7 +51,7 @@ function PageNav() {
         </li>
       </ul>
       {showNavExcess && (
-        <div className={styles.overlay}>
+        <div className={commonStyles.overlay}>
           <ul onClick={handleNavChange} className={styles.excessnav}>
             <li onClick={hideExcess}>
               <NavLink to="/about_me">About Me</NavLink>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { allKeys } from "../allKeys";
-import styles from "./JamKey.module.css";
+import commonStyles from "../general/GroovyStyles.module.css";
 import GroovyButton from "../general/GroovyButton";
 import { Link } from "react-router-dom";
 
@@ -27,7 +27,7 @@ function JamKey() {
   return (
     <>
       <GroovyButton handleClick={handleClick}>Key Generator</GroovyButton>
-      <div className={styles.div} data-testid="jamKeyDiv">
+      <div className={commonStyles.div} data-testid="jamKeyDiv">
         {randomKey > -1 ? (
           allKeys[0].keys[randomKey].link ? (
             <Link

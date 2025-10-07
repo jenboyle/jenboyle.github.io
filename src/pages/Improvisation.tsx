@@ -4,7 +4,7 @@ import { useState } from "react";
 import { songs } from "../components/songs/improvisationsongs";
 import SongSearch from "../components/songs/SongSearch";
 import Song from "../components/songs/Song";
-import styles from "./Improvisation.module.css";
+import commonStyles from "../components/general/GroovyStyles.module.css";
 import GroovySongList from "../components/general/GroovySongList";
 
 function Improvisation() {
@@ -54,7 +54,7 @@ function Improvisation() {
         or lower fifths, upper or lower chromatic notes, scales, modes, triads,
         chord tones.
       </GroovyArticle>
-      <GroovyArticle customStyles={styles.spacebelow}>
+      <GroovyArticle customStyles={commonStyles.bot20}>
         It can be daunting but my advice is to try and you might surprise
         yourself. Some of my noodles I recorded I am most happy with and I
         probably cannot replicate them! The last year I have started thinking of

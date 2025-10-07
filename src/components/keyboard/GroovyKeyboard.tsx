@@ -2,6 +2,7 @@ import { useState } from "react";
 import GroovyArticle from "../general/GroovyArticle";
 import GroovyButton from "../general/GroovyButton";
 import { keyboardList } from "./keyboards";
+import commonStyles from "../general/GroovyStyles.module.css";
 import styles from "./GroovyKeyboard.module.css";
 
 function GroovyKeyboard() {
@@ -30,7 +31,7 @@ function GroovyKeyboard() {
       </GroovyArticle>
 
       {showKeyboardOptions ? (
-        <div className={styles.overlay}>
+        <div className={commonStyles.overlay}>
           <ul className={styles.ul}>
             {keyboardList.map((kb) => (
               <li

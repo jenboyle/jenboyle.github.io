@@ -4,6 +4,7 @@ import { LuListMusic } from "react-icons/lu";
 import { IoTrash } from "react-icons/io5";
 import { FaBucket } from "react-icons/fa6";
 import Tooltip from "@mui/material/Tooltip";
+import commonStyles from "../components/general/GroovyStyles.module.css";
 import styles from "./MyPracticePlan.module.css";
 import { ChangeEvent, useState } from "react";
 import Help from "../components/games/common/Help";
@@ -67,7 +68,7 @@ function MyPracticePlan() {
           </span>
         </Tooltip>
       </div>
-      <div className={styles.additem}>
+      <div className={commonStyles.bot20}>
         <input
           type="text"
           name="practicegoal"
@@ -85,7 +86,7 @@ function MyPracticePlan() {
               className={
                 valArr.length == 10
                   ? `${styles.buttondisabled}`
-                  : `${styles.button}`
+                  : `${commonStyles.bot20}`
               }
               disabled={valArr.length == 10 ? true : false}
               onClick={handleAddItem}
