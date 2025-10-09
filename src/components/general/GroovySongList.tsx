@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./GroovySongList.module.css";
+import commonStyles from "../general/GroovyStyles.module.css";
 
 type song = {
   jsonfile: string;
@@ -19,7 +20,10 @@ function GroovySongList({ searchedSongs, onSelectSong }: GroovySongListProps) {
     <ul className={styles.list}>
       {searchedSongs.map((song, index) => (
         <li className={styles.li} key={index}>
-          <a className={styles.a} onClick={() => onSelectSong(index)}>
+          <a
+            className={`${styles.a} ${commonStyles.hover}`}
+            onClick={() => onSelectSong(index)}
+          >
             {song.songname}
           </a>
           <div className={styles.div}>

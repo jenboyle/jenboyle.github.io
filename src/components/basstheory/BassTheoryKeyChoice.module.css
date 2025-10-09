@@ -19,7 +19,7 @@
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-.overlay li.active {
+.li.active {
   background: radial-gradient(circle at center, #555, #2a1b26, #50253f);
   color: #ff69b4;
   text-shadow: 0 0 2px rgba(255, 105, 180, 0.6);
