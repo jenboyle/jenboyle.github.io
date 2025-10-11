@@ -37,3 +37,21 @@
     linear-gradient(135deg, #cdb4db 0%, #e3d6ed 40%, #f3e9f8 80%, #f3c2e8 100%);
   padding: 20px;
 }
+
+.p {
+  text-align: left;
+  margin-left: 15px;
+}
+.p:first-letter {
+  font-size: 2em;
+  color: rgb(93, 47, 93);
+}
+
+.p a {
+  text-decoration: none;
+  color: darkslateblue;
+}
+
+.p a:hover {
+  background-color: whitesmoke;
+}

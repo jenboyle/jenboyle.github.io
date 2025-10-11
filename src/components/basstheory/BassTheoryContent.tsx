@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import commonStyles from "../general/GroovyStyles.module.css";
 import styles from "./BassTheoryContent.module.css";
 //import TheoryTab from "./TheoryTab";
 
@@ -208,7 +209,7 @@ function BassTheoryContent({
     <div>
       {theoryJson && !isLoading ? (
         <div>
-          <p className={styles.p}>
+          <p className={commonStyles.p}>
             {theoryJson.song}{" "}
             <span className={styles.back}>
               {previousKey?.length > 0 ? (
@@ -219,8 +220,8 @@ function BassTheoryContent({
 
           {theoryJson.key ? (
             <>
-              <p className={styles.p}>{aka(theoryJson.song)}</p>
-              <p className={styles.p}>Key:{theoryJson.key}</p>
+              <p className={commonStyles.p}>{aka(theoryJson.song)}</p>
+              <p className={commonStyles.p}>Key:{theoryJson.key}</p>
               <GroovyTools
                 key={theoryJson.drone}
                 drone={
@@ -444,7 +445,7 @@ function BassTheoryContent({
           ) : null}
 
           {theoryJson.notes ? (
-            <p className={styles.p}>
+            <p className={commonStyles.p}>
               Notes:{theoryJson.notes}
               <a onClick={() => handleNavTheory(theoryJson.relativelink, "C")}>
                 {theoryJson.relativelinktext}
@@ -458,7 +459,7 @@ function BassTheoryContent({
 
           {theoryJson.chord1 ? (
             <>
-              <p className={styles.p}>Bass Chords</p>
+              <p className={commonStyles.p}>Bass Chords</p>
               <div className={styles.chorddiv}>
                 {theoryJson.chord1 ? (
                   <BassChord
@@ -566,7 +567,9 @@ function BassTheoryContent({
 
           <div id="guitarsection" className={styles.chordsectiondiv} />
 
-          {theoryJson.guitar ? <p className={styles.p}>Guitar Chords</p> : null}
+          {theoryJson.guitar ? (
+            <p className={commonStyles.p}>Guitar Chords</p>
+          ) : null}
         </div>
       ) : null}
     </div>

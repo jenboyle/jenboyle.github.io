@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import commonStyles from "../general/GroovyStyles.module.css";
 import styles from "./BassTheoryFretboard.module.css";
 import { TheoryType } from "./BassTheoryContent";
 import BassTheoryTip from "./BassTheoryTip";
@@ -147,9 +148,11 @@ function BassTheoryFretboard({
 
   return (
     <>
-      {theoryJson.when ? <p className={styles.p}>{theoryJson.when}</p> : null}
+      {theoryJson.when ? (
+        <p className={commonStyles.p}>{theoryJson.when}</p>
+      ) : null}
       {theoryJson.formula ? (
-        <p className={styles.p}>Formula: {theoryJson.formula}</p>
+        <p className={commonStyles.p}>Formula: {theoryJson.formula}</p>
       ) : null}
       <GroovyTools key={fretDrone} drone={fretDrone} />
       <div className={styles.dropdowntheory}>
@@ -192,96 +195,28 @@ function BassTheoryFretboard({
         </div>
       </div>
 
-      <img
-        src="/images/theory/fretboarddos.jpg"
-        className={styles.fretboard}
-      ></img>
-
-      {fretLocs!.split(",").map((fretLoc, index) => (
+      <div className={styles.fretboardContainer}>
         <img
-          key={index}
-          src={
-            theoryJson.song != "Major Pentatonic"
-              ? index == 0 || index == fretLocs!.split(",").length - 1
-                ? "/images/theory/diamond3.png"
-                : "/images/theory/diamond1.png"
-              : "/images/theory/diamond1.png"
-          }
-          className={`${styles.alllocs} ${styles[fretLoc]} ${
-            fretLocs!.match(/,/g)!.length == 7
-              ? index == 0
-                ? styles.leftOffset
-                : index == 1
-                ? styles.leftOffsetOne
-                : index == 2
-                ? styles.leftOffsetTwo
-                : index == 3
-                ? styles.leftOffsetThree
-                : index == 4
-                ? styles.leftOffsetFour
-                : index == 5
-                ? styles.leftOffsetFive
-                : index == 6
-                ? styles.leftOffsetSix
-                : index == 7
-                ? styles.leftOffsetSeven
-                : ""
-              : fretLocs!.match(/,/g)!.length == 3
-              ? index == 0
-                ? styles.leftOffsetTwo
-                : index == 1
-                ? styles.leftOffsetThree
-                : index == 2
-                ? styles.leftOffsetFour
-                : index == 3
-                ? styles.leftOffsetFive
-                : ""
-              : fretLocs!.match(/,/g)!.length == 4
-              ? index == 0
-                ? styles.leftOffsetHalfTwo
-                : index == 1
-                ? styles.leftOffsetHalfThree
-                : index == 2
-                ? styles.leftOffsetHalfFour
-                : index == 3
-                ? styles.leftOffsetHalfFive
-                : index == 4
-                ? styles.leftOffsetHalfSix
-                : ""
-              : fretLocs!.match(/,/g)!.length == 5
-              ? index == 0
-                ? styles.leftOffsetOne
-                : index == 1
-                ? styles.leftOffsetTwo
-                : index == 2
-                ? styles.leftOffsetThree
-                : index == 3
-                ? styles.leftOffsetFour
-                : index == 4
-                ? styles.leftOffsetFive
-                : index == 5
-                ? styles.leftOffsetSix
-                : ""
-              : fretLocs!.match(/,/g)!.length == 6
-              ? index == 0
-                ? styles.leftOffsetHalfOne
-                : index == 1
-                ? styles.leftOffsetHalfTwo
-                : index == 2
-                ? styles.leftOffsetHalfThree
-                : index == 3
-                ? styles.leftOffsetHalfFour
-                : index == 4
-                ? styles.leftOffsetHalfFive
-                : index == 5
-                ? styles.leftOffsetHalfSix
-                : index == 6
-                ? styles.leftOffsetHalfSeven
-                : ""
-              : ""
-          }`}
+          src="/images/theory/fretboarddos.jpg"
+          className={styles.fretboard}
+          alt="Bass Fretboard"
         ></img>
-      ))}
+
+        {fretLocs!.split(",").map((fretLoc, index) => (
+          <img
+            key={index}
+            src={
+              theoryJson.song != "Major Pentatonic"
+                ? index == 0 || index == fretLocs!.split(",").length - 1
+                  ? "/images/theory/diamond3.png"
+                  : "/images/theory/diamond1.png"
+                : "/images/theory/diamond1.png"
+            }
+            className={`${styles.pic} ${styles[fretLoc]}
+`}
+          ></img>
+        ))}
+      </div>
 
       <BassTheoryTip tip="Continue the pattern on the Octave" />
     </>

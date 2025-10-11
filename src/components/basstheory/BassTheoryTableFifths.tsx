@@ -1,10 +1,11 @@
+import commonStyles from "../general/GroovyStyles.module.css";
 import styles from "./BassTheoryTableFifths.module.css";
 
 function BassTheoryTableFifths() {
   return (
     <div>
       <img className={styles.img} src="./images/theory/circlefifths2.png" />
-      <p className={styles.p}>Table of Fifths</p>
+      <p className={commonStyles.p}>Table of Fifths</p>
       <table className={styles.fifthstable}>
         <caption>Sharps Side</caption>
         <tbody>
@@ -121,9 +122,9 @@ function BassTheoryTableFifths() {
           </tr>
         </tbody>
       </table>
-      <p className={styles.p}>Order of Sharps: F C G D A E B</p>
-      <p className={styles.p}>Order of Flats: B E A D G C F</p>
-      <p className={styles.p}>
+      <p className={commonStyles.p}>Order of Sharps: F C G D A E B</p>
+      <p className={commonStyles.p}>Order of Flats: B E A D G C F</p>
+      <p className={commonStyles.p}>
         Think of an acronym such as one I have heard: Father Christmas Got Dad
         An Electric Blanket, Blanket Exploded And Dad Got Charred Feet. Notice
         how these are the reverse of each other.
