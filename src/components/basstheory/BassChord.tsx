@@ -20,7 +20,7 @@ function BassChord({
   // flex-direction: column;
   // flex: 1 1 0%;
   return (
-    <div className={styles.div}>
+    <div className={styles.basschord}>
       <table className={styles.chordtable}>
         <caption>{chord}</caption>
         <tbody>
@@ -48,7 +48,7 @@ function BassChord({
       </table>
       <img
         src={`./images/theory/chords/${chordout}.png`}
-        className={`${styles.numfret} ${styles.leftOffsetnumfret}`}
+        className={`${styles.pic} ${styles.numfret}`}
       ></img>
 
       <img
@@ -59,13 +59,13 @@ function BassChord({
             ? "./images/theory/chords/open.png"
             : "./images/theory/chords/circle.png"
         }`}
-        className={`${styles.e} ${
+        className={`${styles.pic} ${styles.e} ${
           chorde == "x" || chorde == "0" ? styles.fret0 : ""
         } ${chorde == "1" ? styles.fret1 : ""} ${
           chorde == "2" ? styles.fret2 : ""
         } ${chorde == "3" ? styles.fret3 : ""} ${
           chorde == "4" ? styles.fret4 : ""
-        } ${styles.leftOffsete}`}
+        } `}
       ></img>
       <img
         src={`${
@@ -75,13 +75,13 @@ function BassChord({
             ? "./images/theory/chords/open.png"
             : "./images/theory/chords/circle.png"
         }`}
-        className={`${styles.a} ${
+        className={`${styles.pic} ${styles.a} ${
           chorda == "x" || chorda == "0" ? styles.fret0 : ""
         } ${chorda == "1" ? styles.fret1 : ""} ${
           chorda == "2" ? styles.fret2 : ""
         } ${chorda == "3" ? styles.fret3 : ""} ${
           chorda == "4" ? styles.fret4 : ""
-        } ${styles.leftOffseta}`}
+        }`}
       ></img>
       <img
         src={`${
@@ -91,13 +91,13 @@ function BassChord({
             ? "./images/theory/chords/open.png"
             : "./images/theory/chords/circle.png"
         }`}
-        className={`${styles.d} ${
+        className={`${styles.pic} ${styles.d} ${
           chordd == "x" || chordd == "0" ? styles.fret0 : ""
         } ${chordd == "1" ? styles.fret1 : ""} ${
           chordd == "2" ? styles.fret2 : ""
         } ${chordd == "3" ? styles.fret3 : ""} ${
           chordd == "4" ? styles.fret4 : ""
-        } ${styles.leftOffsetd}`}
+        } `}
       ></img>
       <img
         src={`${
@@ -107,13 +107,13 @@ function BassChord({
             ? "./images/theory/chords/open.png"
             : "./images/theory/chords/circle.png"
         }`}
-        className={`${styles.g} ${
+        className={`${styles.pic} ${styles.g} ${
           chordg == "x" || chordg == "0" ? styles.fret0 : ""
         } ${chordg == "1" ? styles.fret1 : ""} ${
           chordg == "2" ? styles.fret2 : ""
         } ${chordg == "3" ? styles.fret3 : ""} ${
           chordg == "4" ? styles.fret4 : ""
-        } ${styles.leftOffsetg}`}
+        } `}
       ></img>
     </div>
   );
