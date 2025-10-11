@@ -1,0 +1,1 @@
+import{j as o}from"./index-lIUfiglT.js";import{c}from"./GroovyStyles.module-ClfXQdNW.js";const e="_article_1ou0k_1",s={article:e};function l({children:t,customStyles:r}){return o.jsx("article",{className:`${s.article} ${c.p} ${r||""}`,children:t})}export{l as G};
