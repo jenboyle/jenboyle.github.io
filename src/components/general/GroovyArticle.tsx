@@ -5,12 +5,13 @@ type GroovyArticleProps = {
   children: React.ReactNode;
   customStyles?: string;
 };
-function GroovyArticle({ children, customStyles }: GroovyArticleProps) {
+function GroovyArticle({
+  children,
+  customStyles,
+}: Readonly<GroovyArticleProps>) {
   return (
     <article
-      className={`${styles.article} ${commonStyles.p} ${
-        customStyles ? customStyles : ""
-      }`}
+      className={`${styles.article} ${commonStyles.p} ${customStyles || ""}`}
     >
       {children}
     </article>

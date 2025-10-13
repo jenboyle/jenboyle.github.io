@@ -8,15 +8,6 @@ function MyContent() {
   const [selectedSong, setSelectedSong] = useState(-1);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // const searchedSongs =
-  // searchQuery.length > 0
-  //   ? songs.filter((song) =>
-  //       `${song.songs[0].songname}`
-  //         .toLowerCase()
-  //         .includes(searchQuery.toLowerCase())
-  //     )
-  //   : songs;
-
   let searchedSongs =
     searchQuery.length > 0
       ? songs.filter((song) =>

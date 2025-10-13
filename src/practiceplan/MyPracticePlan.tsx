@@ -100,7 +100,7 @@ function MyPracticePlan() {
       <div>
         {valArr.length > 0
           ? valArr.map((item: string, index: number) => (
-              <div key={`div${item}${index}`} className={styles.item}>
+              <div key={`div${item}${index}`} className={commonStyles.plainP}>
                 <input
                   type="checkbox"
                   key={`check${item}${index}`}

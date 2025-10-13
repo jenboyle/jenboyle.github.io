@@ -1,17 +1,12 @@
-.a:hover {
-  background-color: whitesmoke;
-}
-
 .a {
-  border: 1px solid #ddd;
-  margin-top: -1px;
   background-color: lavenderblush;
-  padding: 12px;
+  padding: 10px;
   text-decoration: none;
-  font-size: 18px;
+  font: inherit;
   color: darkslateblue;
-  display: block;
-  width: 80%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .list {
@@ -25,10 +20,33 @@
   justify-content: space-between;
   display: flex;
   background-color: lavenderblush;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 15px;
 }
 
 .div {
   background-color: lavenderblush;
   align-self: center;
   margin-right: 15px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.btnReset {
+  border: none;
+  background: none;
+  padding: 10px;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  width: 80%;
+  box-sizing: border-box;
+  text-align: left;
+  flex-grow: 1;
+  flex-shrink: 0;
+  white-space: nowrap;
 }

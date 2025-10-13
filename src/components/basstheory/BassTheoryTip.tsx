@@ -1,4 +1,5 @@
 import { useState } from "react";
+import commonStyles from "../general/GroovyStyles.module.css";
 import styles from "./BassTheoryTip.module.css";
 import CloseFullscreenOutlinedIcon from "@mui/icons-material/CloseFullscreenOutlined";
 
@@ -15,7 +16,9 @@ function BassTheoryTip({ tip }: tipType) {
   return (
     <>
       <p
-        className={`${styles.tip} ${!toggleTip ? styles.tipclosed : ""}`}
+        className={`${commonStyles.plainP} ${
+          !toggleTip ? styles.tipclosed : ""
+        }`}
         data-testid="bassTheoryTip"
         onClick={handleToggleTip}
       >

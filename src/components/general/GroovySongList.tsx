@@ -15,20 +15,28 @@ interface GroovySongListProps {
   onSelectSong: React.Dispatch<React.SetStateAction<number>>;
 }
 
-function GroovySongList({ searchedSongs, onSelectSong }: GroovySongListProps) {
+function GroovySongList({
+  searchedSongs,
+  onSelectSong,
+}: Readonly<GroovySongListProps>) {
   return (
     <ul className={styles.list}>
       {searchedSongs.map((song, index) => (
         <li className={styles.li} key={index}>
-          <a
-            className={`${styles.a} ${commonStyles.hover}`}
+          <button
+            className={`${styles.btnReset} ${commonStyles.hover}`}
             onClick={() => onSelectSong(index)}
+            type="button"
           >
             {song.songname}
-          </a>
+          </button>
           <div className={styles.div}>
             {song.link ? (
-              <Link to={`/?jamkey=${song.link}`} state={{ selkey: song.link }}>
+              <Link
+                className={`${styles.a} ${commonStyles.hover}`}
+                to={`/?jamkey=${song.link}`}
+                state={{ selkey: song.link }}
+              >
                 {song.key}
               </Link>
             ) : (

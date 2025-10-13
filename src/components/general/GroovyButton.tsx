@@ -13,10 +13,10 @@ function GroovyButton({
   customStyles,
   id,
   disabled = false,
-}: GroovyButtonProps) {
+}: Readonly<GroovyButtonProps>) {
   return (
     <button
-      className={`${styles.jambuttons} ${customStyles ? customStyles : ""}`}
+      className={`${styles.jambuttons} ${customStyles || ""}`}
       onClick={handleClick}
       disabled={disabled}
       id={id}
