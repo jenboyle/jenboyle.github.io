@@ -20,17 +20,25 @@ function Header() {
   }
   return (
     <header className={styles.header}>
-      <div>
-        <img
-          className={styles.logo}
-          src="./me/gig1.png"
-          width="100px"
-          height="75px"
-        />
+      <div className={styles.headerWrapper}>
+        <div className={styles.branding}>
+          <img
+            className={styles.logo}
+            src="./me/gig1.png"
+            width="75px"
+            height="56px"
+            alt="gigging"
+          />
 
-        <h1>Groovy Jen Bass</h1>
-        <h2>{currentPage}</h2>
-        <PageNav />
+          <h1 className={styles.siteTitle}>
+            <span className={styles.titleLine1}>Groovy Jen</span>
+            <span className={styles.titleLine2}>Bass</span>
+          </h1>
+        </div>
+
+        <div className={styles.navWrapper}>
+          <PageNav />
+        </div>
       </div>
     </header>
   );
