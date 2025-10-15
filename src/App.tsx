@@ -3,6 +3,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import LoadingSpinner from "./components/LoadingSpinner";
 import { ToolProvider } from "./context/ToolContext";
+import ScrollToTop from "./ScrollToTop";
 
 const Transcriptions = lazy(() => import("./pages/Transcriptions"));
 const Cubase = lazy(() => import("./pages/Cubase"));
@@ -29,6 +30,7 @@ function App() {
   return (
     <>
       <HashRouter>
+        <ScrollToTop />
         <ToolProvider>
           <Header />
           <main>
