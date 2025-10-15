@@ -1,7 +1,6 @@
 import Blog from "../components/blogs/Blog";
 import { useEffect, useState } from "react";
 import PreviewBlogs from "../components/blogs/PreviewBlogs";
-import GroovyButton from "../components/general/GroovyButton";
 import styles from "./Blogs.module.css";
 
 function Blogs() {
@@ -10,10 +9,6 @@ function Blogs() {
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
     setBlogSelected((e.target as HTMLAnchorElement).id);
     // console.log(blogSelected);
-  }
-
-  function handleBack() {
-    setBlogSelected("");
   }
 
   useEffect(() => {
@@ -27,7 +22,7 @@ function Blogs() {
       {blogSelected === "" ? (
         <PreviewBlogs handleClick={handleClick} />
       ) : (
-        <div className="blogContainer">
+        <div className={styles.blogContainer}>
           <Blog
             jsonfile={blogSelected}
             handleBack={() => setBlogSelected("")}
