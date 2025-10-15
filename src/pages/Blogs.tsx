@@ -1,7 +1,8 @@
 import Blog from "../components/blogs/Blog";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PreviewBlogs from "../components/blogs/PreviewBlogs";
 import GroovyButton from "../components/general/GroovyButton";
+import styles from "./Blogs.module.css";
 
 function Blogs() {
   const [blogSelected, setBlogSelected] = useState("");
@@ -15,15 +16,23 @@ function Blogs() {
     setBlogSelected("");
   }
 
+  useEffect(() => {
+    if (blogSelected !== "") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [blogSelected]);
+
   return (
     <>
       {blogSelected === "" ? (
         <PreviewBlogs handleClick={handleClick} />
       ) : (
-        <>
-          <Blog jsonfile={blogSelected}></Blog>
-          <GroovyButton handleClick={handleBack}>Back</GroovyButton>
-        </>
+        <div className="blogContainer">
+          <Blog
+            jsonfile={blogSelected}
+            handleBack={() => setBlogSelected("")}
+          ></Blog>
+        </div>
       )}
     </>
   );

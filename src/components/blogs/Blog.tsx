@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./Blog.module.css";
 import GroovyArticle from "../general/GroovyArticle";
+import GroovyButton from "../general/GroovyButton";
 
 export type BlogObject = {
   blog: BlogType;
@@ -19,9 +20,10 @@ export type BlogType = {
 
 interface BlogProps {
   jsonfile: string;
+  handleBack: () => void;
 }
 
-function Blog({ jsonfile }: BlogProps) {
+function Blog({ jsonfile, handleBack }: BlogProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [blogJson, setBlogJson] = useState<BlogObject>();
   const [error, setError] = useState("");
@@ -64,9 +66,11 @@ function Blog({ jsonfile }: BlogProps) {
             {blogJson.blog.img ? <img src={blogJson.blog.img}></img> : null}
           </p>
 
-          {blogJson.blog.paras.map((blog) => (
-            <p>{blog.para}</p>
+          {blogJson.blog.paras.map((blog, index) => (
+            <p key={index}>{blog.para}</p>
           ))}
+
+          <GroovyButton handleClick={handleBack}>Back</GroovyButton>
         </article>
       ) : null}
     </>
