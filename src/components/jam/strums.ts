@@ -2,6 +2,8 @@ export const strums = [
   {
     strums: [
       { pattern: "D,,D,,D,,D,", beat: "1,&,2,&,3,&,4,&" },
+      { pattern: "D,G,D,G,D,G,D,G", beat: "1,&,2,&,3,&,4,&" },
+      { pattern: "D,,D,,D,,D,U", beat: "1,&,2,&,3,&,4,&" },
       { pattern: "D,D,D,D,D,D,D,D", beat: "1,&,2,&,3,&,4,&" },
       { pattern: "D,,D,,D,U,D,U", beat: "1,&,2,&,3,&,4,&" },
       { pattern: "D,,D,,D,U,D,", beat: "1,&,2,&,3,&,4,&" },
@@ -21,6 +23,18 @@ export const strums = [
       },
       {
         pattern: "D,,D,,D,,,U,D,U,D,,D,,D,U",
+        beat: "1,e,&,a,2,e,&,a,3,e,&,a,4,e,&,a",
+      },
+      {
+        pattern: "D,,D,,D,,D,,D,,D,,D,,D,,D,,D,,D,U,D,U,D,,D,,D,U,D,U",
+        beat: "1,e,&,a,2,e,&,a,3,e,&,a,4,e,&,a,1,e,&,a,2,e,&,a,3,e,&,a,4,e,&,a",
+      },
+      {
+        pattern: "D,,D,,D,U,D,D,U,,U,,U,D,U,D",
+        beat: "1,e,&,a,2,e,&,a,3,e,&,a,4,e,&,a",
+      },
+      {
+        pattern: "D,,D,,D,U,D,D,U,U,,U,D,U,D,D",
         beat: "1,e,&,a,2,e,&,a,3,e,&,a,4,e,&,a",
       },
       {

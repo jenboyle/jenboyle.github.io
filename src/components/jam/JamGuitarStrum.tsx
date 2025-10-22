@@ -41,7 +41,9 @@ function JamGuitarStrum() {
                     .map((item, index) => (
                       <td key={index} className={styles.td}>{`${
                         item === "D" ? "⬇" : ""
-                      }${item === "U" ? "🔺" : ""}`}</td>
+                      }${item === "U" ? "🔺" : ""}${
+                        item === "G" ? "👻" : ""
+                      }`}</td>
                     ))
                 : null}
             </tr>
