@@ -19,7 +19,7 @@ interface GroovyToolsProps {
 
 function GroovyTools({
   drone = "./audio/drones/drone_c.mp3",
-}: GroovyToolsProps) {
+}: Readonly<GroovyToolsProps>) {
   return (
     <div className={styles.toolbar}>
       <GroovyToolDrone drone={drone} />

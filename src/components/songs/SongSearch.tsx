@@ -8,7 +8,7 @@ interface SongSearchProps {
   onChange: React.Dispatch<React.SetStateAction<string>>;
 }
 
-function SongSearch({ onClick, onChange }: SongSearchProps) {
+function SongSearch({ onClick, onChange }: Readonly<SongSearchProps>) {
   const inputHandler = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     onChange((e.target as HTMLTextAreaElement).value);
   };

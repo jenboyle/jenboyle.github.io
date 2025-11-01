@@ -16,7 +16,7 @@ interface GroovyToolsProps {
 // stopDronePlay,
 function GroovyToolDrone({
   drone = "./audio/drones/drone_c.mp3",
-}: GroovyToolsProps) {
+}: Readonly<GroovyToolsProps>) {
   const [audio, setAudio] = useState(new Audio(drone));
   const [audiotwo, setAudioTwo] = useState(new Audio(drone));
   const droneRef = useRef<HTMLSpanElement>(null);

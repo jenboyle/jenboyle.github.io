@@ -3,7 +3,7 @@ import styles from "./AnswerIncorrect.module.css";
 type AnswerIncorrectProps = {
   children: ReactNode;
 };
-function AnswerIncorrect({ children }: AnswerIncorrectProps) {
+function AnswerIncorrect({ children }: Readonly<AnswerIncorrectProps>) {
   return <div className={styles.incorrect}>{children}</div>;
 }
 

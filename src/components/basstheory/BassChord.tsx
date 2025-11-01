@@ -15,7 +15,7 @@ function BassChord({
   chorda,
   chordd,
   chordg,
-}: BassChordProps) {
+}: Readonly<BassChordProps>) {
   //justify-content: space-between;
   // flex-direction: column;
   // flex: 1 1 0%;

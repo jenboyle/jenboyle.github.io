@@ -14,7 +14,7 @@ function BaseColorPicker({
   handleShowBaseColorPicker,
   currentBaseColor,
   handleColorChoice,
-}: BaseColorPickerProps) {
+}: Readonly<BaseColorPickerProps>) {
   return (
     <div
       className={`${styles.colorpicker} ${styles.colorpickerz}`}

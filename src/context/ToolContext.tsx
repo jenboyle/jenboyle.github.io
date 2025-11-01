@@ -10,7 +10,7 @@ type childProps = {
   children: ReactNode;
 };
 
-function ToolProvider({ children }: childProps) {
+function ToolProvider({ children }: Readonly<childProps>) {
   const [dronePlaying, setDronePlaying] = useState(false);
   //const [audio, setAudio] = useState(new Audio("./audio/drones/drone_c.mp3"));
 

@@ -14,7 +14,7 @@ function PatternPicker({
   handleShowPatternPicker,
   currentPattern,
   handlePatternChoice,
-}: PatternPickerProps) {
+}: Readonly<PatternPickerProps>) {
   return (
     <div
       className={`${styles.colorpicker} ${styles.patternpicker}`}

@@ -27,7 +27,7 @@ interface StandardGameProps {
   questions: QuestionType[];
 }
 
-function StandardGame({ questions }: StandardGameProps) {
+function StandardGame({ questions }: Readonly<StandardGameProps>) {
   const [playerAnswer, setPlayerAnswer] = useState("");
   const [playerAnswerSubmitted, setPlayerAnswerSubmitted] = useState(false);
   const [currentResult, setCurrentResult] = useState(false);

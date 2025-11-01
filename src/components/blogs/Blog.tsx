@@ -23,7 +23,7 @@ interface BlogProps {
   handleBack: () => void;
 }
 
-function Blog({ jsonfile, handleBack }: BlogProps) {
+function Blog({ jsonfile, handleBack }: Readonly<BlogProps>) {
   const [isLoading, setIsLoading] = useState(false);
   const [blogJson, setBlogJson] = useState<BlogObject>();
   const [error, setError] = useState("");

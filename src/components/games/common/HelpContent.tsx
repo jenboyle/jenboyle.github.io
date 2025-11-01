@@ -3,7 +3,7 @@ import styles from "./HelpContent.module.css";
 type HelpContentProps = {
   children: ReactNode;
 };
-function HelpContent({ children }: HelpContentProps) {
+function HelpContent({ children }: Readonly<HelpContentProps>) {
   return <div className={styles.helpcontent}>{children}</div>;
 }
 

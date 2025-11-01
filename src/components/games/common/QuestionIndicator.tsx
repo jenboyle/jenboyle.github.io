@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 type QuestionIndicatorProps = {
   children: ReactNode;
 };
-function QuestionIndicator({ children }: QuestionIndicatorProps) {
+function QuestionIndicator({ children }: Readonly<QuestionIndicatorProps>) {
   return <div className={styles.questionindicator}>{children}</div>;
 }
 

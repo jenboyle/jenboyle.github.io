@@ -11,7 +11,7 @@ interface BassTheorySideNavProps {
 function BassTheoryKeyChoice({
   handleTheorySelection,
   currentKey,
-}: BassTheorySideNavProps) {
+}: Readonly<BassTheorySideNavProps>) {
   // console.log(currentKey);
   return (
     <div className={commonStyles.overlay}>

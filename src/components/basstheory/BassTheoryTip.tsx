@@ -6,7 +6,7 @@ import CloseFullscreenOutlinedIcon from "@mui/icons-material/CloseFullscreenOutl
 interface tipType {
   tip: string;
 }
-function BassTheoryTip({ tip }: tipType) {
+function BassTheoryTip({ tip }: Readonly<tipType>) {
   const [toggleTip, setToggleTip] = useState(false);
 
   function handleToggleTip() {

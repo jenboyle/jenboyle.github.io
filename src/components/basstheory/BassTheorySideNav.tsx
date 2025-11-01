@@ -10,7 +10,7 @@ interface BassTheorySideNavProps {
 function BassTheorySideNav({
   handleTheorySelection,
   currentKey,
-}: BassTheorySideNavProps) {
+}: Readonly<BassTheorySideNavProps>) {
   // console.log(currentKey);
   return (
     <nav className={styles.nav}>

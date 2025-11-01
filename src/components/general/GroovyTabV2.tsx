@@ -8,7 +8,7 @@ type GroovyTabProps = {
   tab: GroovyTabTableType[];
 };
 
-function GroovyTabV2({ tab }: GroovyTabProps) {
+function GroovyTabV2({ tab }: Readonly<GroovyTabProps>) {
   //const mobile = useMediaQuery("min-width:600px");
   //console.log(mobile);
   return (

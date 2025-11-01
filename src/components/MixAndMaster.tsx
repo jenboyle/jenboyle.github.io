@@ -9,7 +9,7 @@ export interface TopicButtonProps {
   onClick: React.Dispatch<React.SetStateAction<number>>;
 }
 
-function TopicButton({ topicNum, onClick }: TopicButtonProps) {
+function TopicButton({ topicNum, onClick }: Readonly<TopicButtonProps>) {
   return (
     <GroovyButton
       handleClick={() => onClick(topicNum)}

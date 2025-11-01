@@ -15,7 +15,7 @@ interface BassTheoryFretboardProps {
 function BassTheoryFretboard({
   theoryJson,
   context,
-}: BassTheoryFretboardProps) {
+}: Readonly<BassTheoryFretboardProps>) {
   const [buttonText, setButtonText] = useState("");
   const [showOption, setShowOption] = useState(false);
   const [fretLocs, setFretLocs] = useState(

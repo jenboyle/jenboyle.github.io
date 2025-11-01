@@ -5,7 +5,7 @@ type AnswerCorrectProps = {
   children: ReactNode;
 };
 
-function AnswerCorrect({ children }: AnswerCorrectProps) {
+function AnswerCorrect({ children }: Readonly<AnswerCorrectProps>) {
   return <div className={styles.correct}>{children}</div>;
 }
 

@@ -5,7 +5,7 @@ interface HelpProps {
   children: React.ReactNode;
 }
 
-function Help({ handleHelp, children }: HelpProps) {
+function Help({ handleHelp, children }: Readonly<HelpProps>) {
   return (
     <div className={styles.help} onClick={handleHelp}>
       {children}

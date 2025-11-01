@@ -6,7 +6,7 @@ interface NextQuestionProps {
   handleNext: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-function NextQuestion({ handleNext }: NextQuestionProps) {
+function NextQuestion({ handleNext }: Readonly<NextQuestionProps>) {
   return (
     <Tooltip title="Next">
       <Button variant="outlined" color="secondary" onClick={handleNext}>
