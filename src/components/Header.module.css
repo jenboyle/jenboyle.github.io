@@ -1,5 +1,5 @@
 .header {
-  background-color: rgba(234, 217, 234, 0.94);
+  background-color: rgba(190, 174, 190, 0.94);
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +22,7 @@
   top: 0;
   left: 0;
   padding: 10px;
-  background-color: rgba(234, 217, 234, 0.95);
+  background-color: rgba(190, 174, 190, 0.94);
   z-index: 1001;
 }
 

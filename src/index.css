@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: rgba(255, 255, 255, 0.85);
+  color: rgba(235, 235, 235, 0.85);
+  background-color: rgba(235, 235, 235, 0.85);
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.15),
       rgba(255, 255, 255, 0.15)
@@ -69,7 +69,7 @@ button {
   font-family: inherit;
   background-color: #32324c;
   cursor: pointer;
-  color: rgb(224, 217, 227);
+  color: rgb(232, 230, 232);
 }
 button:hover {
   background-color: #a2a2ba;
