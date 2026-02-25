@@ -1,3 +1,40 @@
 .help {
-  font-size: 1.7em;
+  font-size: 1.9em;
+  line-height: 1;
+  font-weight: inherit;
+  vertical-align: middle;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  text-align: inherit;
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.help:focus,
+.help:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.35);
+  border-radius: 4px;
+}
+
+.help:active {
+  opacity: 0.9;
+}
+
+.help:disabled {
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
 }
