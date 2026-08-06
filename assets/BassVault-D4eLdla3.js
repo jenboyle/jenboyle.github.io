@@ -1,0 +1,1 @@
+import{j as r}from"./index-uDOegtTM.js";import{G as t}from"./GroovyArticle-B8I0gw4S.js";import"./GroovyStyles.module-BLKEGhw-.js";function e(){return r.jsx(t,{children:"The bass vault"})}export{e as default};
