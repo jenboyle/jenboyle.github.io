@@ -6,10 +6,8 @@
   color-scheme: light dark;
   color: rgba(235, 235, 235, 0.85);
   background-color: rgba(235, 235, 235, 0.85);
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.15),
-      rgba(255, 255, 255, 0.15)
-    ),
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)),
     url(/images/bg2.svg);
   background-repeat: repeat; /* tiles the image */
   background-size: 200px 200px; /* size of each tile - adjust as needed */
@@ -19,7 +17,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --top-spacing: 120px;
+  --top-spacing: 80px;
   --bottom-spacing: 75px;
   scroll-padding-top: var(--top-spacing);
 }
@@ -30,6 +28,7 @@
 
 main {
   clear: both;
+  padding-top: var(--top-spacing);
 }
 
 div {
@@ -46,7 +45,7 @@ a:hover {
 }
 
 body {
-  margin-top: var(--top-spacing);
+  margin-top: 0;
   margin-bottom: var(--bottom-spacing);
 
   min-width: 320px;

@@ -10,6 +10,7 @@ const Cubase = lazy(() => import("./pages/Cubase"));
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
 const AboutMe = lazy(() => import("./pages/AboutMe"));
 const BassTheory = lazy(() => import("./pages/BassTheory"));
+const BassVault = lazy(() => import("./pages/BassVault"));
 const JamTime = lazy(() => import("./pages/JamTime"));
 const Games = lazy(() => import("./pages/Games"));
 const Keys = lazy(() => import("./pages/Keys"));
@@ -39,6 +40,7 @@ function App() {
                 <Route path="/" element={<BassTheory />}></Route>
                 <Route path="about_me" element={<AboutMe />}></Route>
                 <Route path="improvisation" element={<Improvisation />}></Route>
+                <Route path="bass_vault" element={<BassVault />}></Route>
                 <Route path="my_gear" element={<MyGear />}></Route>
                 <Route path="my_content" element={<MyContent />}></Route>
                 <Route
